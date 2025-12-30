@@ -51,7 +51,5 @@
         - type: StationNameSetup
           mapNameTemplate: "TEG"
         - type: StationJobs
-          overflowJobs:
-            - ChiefEngineer
           availableJobs:
             ChiefEngineer: [ -1, -1 ]
