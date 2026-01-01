@@ -30,18 +30,6 @@
     state: whistle
 
 - type: entity
-  parent: BaseWhistle
-  id: SecurityWhistle
-  description: The sound of it brings fear.
-  components:
-  - type: Sprite
-    state: sec
-  - type: Clothing
-    equippedPrefix: sec
-  - type: Whistle
-    distance: 5
-
-- type: entity
   parent: [BaseWhistle]
   id: SyndicateWhistle
   name: trench whistle

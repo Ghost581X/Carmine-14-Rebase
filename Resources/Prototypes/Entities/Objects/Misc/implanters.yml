@@ -93,18 +93,6 @@
     - Trash
 
 - type: entity
-  id: ImplanterAdmeme
-  parent: Implanter
-  suffix: Admeme
-  components:
-  - type: Implanter
-    # go wild with sentient chairs with macrobombs
-    whitelist: null
-    blacklist: null
-    implantTime: 5
-    drawTime: 5
-
-- type: entity
   id: BaseImplantOnlyImplanter
   parent: Implanter
   description: A disposable syringe exclusively designed for the injection of subdermal implants.
@@ -155,42 +143,6 @@
   - type: Tag
     tags: []
 
-#Fun implanters
-
-- type: entity
-  id: SadTromboneImplanter
-  name: sad trombone implanter
-  parent: BaseImplantOnlyImplanter
-  components:
-  - type: Implanter
-    implant: SadTromboneImplant
-
-- type: entity
-  id: LightImplanter
-  name: light implanter
-  parent: BaseImplantOnlyImplanter
-  components:
-  - type: Implanter
-    implant: LightImplant
-
-- type: entity
-  id: BikeHornImplanter
-  name: bike horn implanter
-  parent: BaseImplantOnlyImplanter
-  components:
-  - type: Implanter
-    implant: BikeHornImplant
-
-#Security implanters
-
-- type: entity
-  id: TrackingImplanter
-  name: tracking implanter
-  parent: BaseImplantOnlyImplanter
-  components:
-  - type: Implanter
-    implant: TrackingImplant
-
 #Traitor implanters
 
 - type: entity
@@ -208,22 +160,6 @@
   components:
   - type: Implanter
     implant: FreedomImplant
-
-- type: entity
-  id: RadioImplanter
-  name: syndicate radio implanter
-  parent: BaseImplantOnlyImplanterSyndi
-  components:
-  - type: Implanter
-    implant: RadioImplant
-
-- type: entity
-  id: UplinkImplanter
-  name: uplink implanter
-  parent: BaseImplantOnlyImplanterSyndi
-  components:
-  - type: Implanter
-    implant: UplinkImplant
 
 - type: entity
   id: EmpImplanter
@@ -265,32 +201,6 @@
   - type: Implanter
     implant: VoiceMaskImplant
 
-#Nuclear Operative/Special implanters
-
-- type: entity
-  id: MicroBombImplanter
-  name: micro-bomb implanter
-  parent: BaseImplantOnlyImplanterSyndi
-  components:
-  - type: Implanter
-    implant: MicroBombImplant
-
-- type: entity
-  id: MacroBombImplanter
-  name: macro-bomb implanter
-  parent: BaseImplantOnlyImplanterSyndi
-  components:
-  - type: Implanter
-    implant: MacroBombImplant
-
-- type: entity
-  id: DeathRattleImplanter
-  name: death rattle implanter
-  parent: BaseImplantOnlyImplanterSyndi
-  components:
-  - type: Implanter
-    implant: DeathRattleImplant
-
 - type: entity
   id: DeathAcidifierImplanter
   name: death acidifier implanter
@@ -298,39 +208,3 @@
   components:
   - type: Implanter
     implant: DeathAcidifierImplant
-
-- type: entity
-  id: FakeMindShieldImplanter
-  name: fake mindshield implanter
-  parent: BaseImplantOnlyImplanterSyndi
-  components:
-  - type: Implanter
-    implant: FakeMindShieldImplant
-
-# Security and Command implanters
-
-- type: entity
-  id: MindShieldImplanter
-  name: mindshield implanter
-  parent: BaseImplantOnlyImplanter
-  components:
-  - type: Implanter
-    implant: MindShieldImplant
-
-# Centcomm implanters
-
-- type: entity
-  id: RadioImplanterCentcomm
-  name: centcomm radio implanter
-  parent: BaseImplantOnlyImplanter
-  components:
-  - type: Implanter
-    implant: RadioImplantCentcomm
-
-- type: entity
-  id: DeathRattleImplanterCentcomm
-  name: centcomm death rattle implanter
-  parent: BaseImplantOnlyImplanter
-  components:
-  - type: Implanter
-    implant: DeathRattleImplantCentcomm

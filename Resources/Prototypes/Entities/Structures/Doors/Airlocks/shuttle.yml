@@ -88,23 +88,6 @@
     group: null
 
 - type: entity
-  id: AirlockGlassShuttle
-  parent: AirlockShuttle
-  suffix: Glass, Docking
-  components:
-  - type: Sprite
-    sprite: Structures/Doors/Airlocks/Glass/shuttle.rsi
-  - type: Occluder
-    enabled: false
-  - type: Door
-    occludes: false
-  - type: Fixtures
-    fixtures:
-      fix1:
-        layer:     #removed opaque from the layer, allowing lasers to pass through glass airlocks
-        - GlassAirlockLayer
-
-- type: entity
   id: AirlockShuttleAssembly
   parent: AirlockAssembly
   name: external airlock assembly
@@ -122,24 +105,3 @@
   - type: Construction
     graph: AirlockShuttle
     node: assembly
-
-- type: entity
-  id: AirlockGlassShuttleSyndicate
-  parent: AirlockGlassShuttle
-  components:
-  - type: Sprite
-    sprite: Structures/Doors/Airlocks/Glass/shuttle_syndicate.rsi
-
-- type: entity
-  parent: AirlockShuttle
-  id: AirlockShuttleSyndicate
-  components:
-  - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/shuttle_syndicate.rsi
-
-- type: entity
-  parent: AirlockShuttle
-  id: AirlockShuttleXenoborg
-  components:
-  - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/shuttle_xenoborg.rsi

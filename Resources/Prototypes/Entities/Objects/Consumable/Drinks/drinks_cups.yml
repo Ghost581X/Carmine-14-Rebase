@@ -33,17 +33,6 @@
 ## Misc Cups
 
 - type: entity
-  parent: [DrinkBaseMaterialGold, DrinkBaseCup]
-  id: DrinkGoldenCup
-  name: golden cup
-  description: A golden cup.
-  components:
-  - type: Sprite
-    sprite: Objects/Consumable/Drinks/golden_cup.rsi
-  - type: StaticPrice
-    price: 125
-
-- type: entity
   parent: DrinkBaseMug # a teacup is basically a mug
   id: DrinkTeacupEmpty
   name: teacup
@@ -198,30 +187,6 @@
 
 - type: entity
   parent: DrinkBaseMug
-  id: DrinkHotCoco
-  name: hot chocolate
-  suffix: Full
-  description: A heated drink consisting melted chocolate and heated milk.
-  components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: HotCocoa
-          Quantity: 20
-  - type: Icon
-    sprite: Objects/Consumable/Drinks/mug.rsi
-    state: icon-vend-brown
-  - type: Sprite
-    layers:
-    - state: icon
-    - state: fill-3
-      map: ["enum.SolutionContainerLayers.Fill"]
-  - type: TrashOnSolutionEmpty
-    solution: drink
-
-- type: entity
-  parent: DrinkBaseMug
   id: DrinkHotCoffee
   name: coffee
   suffix: Full
@@ -241,34 +206,6 @@
     - state: icon
     - state: fill-3
       map: ["enum.SolutionContainerLayers.Fill"]
-  - type: TrashOnSolutionEmpty
-    solution: drink
-
-- type: entity
-  parent: DrinkBaseMug
-  id: DrinkCafeLatte
-  name: cafe latte
-  suffix: Full
-  description: A nice, strong and tasty beverage while you are reading.
-  components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: CafeLatte
-          Quantity: 20
-  - type: Icon
-    sprite: Objects/Consumable/Drinks/cafe_latte.rsi
-    state: icon-vend
-  - type: Sprite
-    sprite: Objects/Consumable/Drinks/cafe_latte.rsi
-    layers:
-    - state: icon
-    - state: fill-1
-      map: ["enum.SolutionContainerLayers.Fill"]
-  - type: SolutionContainerVisuals
-    maxFillLevels: 1
-    changeColor: false
   - type: TrashOnSolutionEmpty
     solution: drink
 
@@ -305,26 +242,3 @@
     state: icon-vend-green-tea
   - type: TrashOnSolutionEmpty
     solution: drink
-
-# TODO this needs fill levels
-- type: entity
-  parent: [DrinkBaseMaterialPlastic, DrinkBaseCup]
-  id: DrinkLean
-  name: grape juice
-  description: Damn, no fun allowed.
-  components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: JuiceGrape
-          Quantity: 20
-  - type: Sprite
-    sprite: Objects/Consumable/Drinks/lean.rsi
-  - type: Item
-    sprite: Objects/Consumable/Drinks/lean.rsi
-  - type: TrashOnSolutionEmpty
-    solution: drink
-
-#[1] https://en.wikipedia.org/wiki/Cup
-#[2] https://en.wikipedia.org/wiki/Mug

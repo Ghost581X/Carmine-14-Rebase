@@ -103,13 +103,6 @@
       offset: 0, 1
 
 - type: entity
-  parent: Thruster
-  id: ThrusterXenoborg
-  components:
-  - type: Sprite
-    sprite: Structures/Shuttles/xenoborg_thruster.rsi
-
-- type: entity
   id: ThrusterLarge
   name: large thruster
   parent: [ BaseThruster]
@@ -181,31 +174,6 @@
       anchored: false
     - type: Physics
       bodyType: Dynamic
-
-- type: entity
-  id: DebugThruster
-  parent: BaseThruster
-  suffix: DEBUG
-  components:
-  - type: Thruster
-    requireSpace: false
-  - type: ApcPowerReceiver
-    needsPower: false
-    powerLoad: 0
-  - type: Sprite
-    sprite: Structures/Shuttles/thruster.rsi
-    layers:
-    - state: base
-      map: ["enum.ThrusterVisualLayers.Base"]
-    - state: thrust
-      map: ["enum.ThrusterVisualLayers.ThrustOn"]
-      shader: unshaded
-      visible: false
-    - state: thrust_burn_unshaded
-      map: ["enum.ThrusterVisualLayers.ThrustingUnshaded"]
-      shader: unshaded
-      visible: false
-      offset: 0, 1
 
 - type: entity
   id: Gyroscope
@@ -280,33 +248,6 @@
       anchored: false
     - type: Physics
       bodyType: Dynamic
-
-- type: entity
-  id: DebugGyroscope
-  parent: BaseThruster
-  suffix: DEBUG
-  components:
-  - type: Thruster
-    thrusterType: Angular
-    requireSpace: false
-    thrust: 100
-  - type: ApcPowerReceiver
-    needsPower: false
-    powerLoad: 0
-  - type: Sprite
-    sprite: Structures/Shuttles/gyroscope.rsi
-    snapCardinals: true
-    layers:
-    - state: base
-      map: ["enum.ThrusterVisualLayers.Base"]
-    - state: thrust
-      map: ["enum.ThrusterVisualLayers.ThrustOn"]
-      shader: unshaded
-      visible: false
-    - state: thrust_burn_unshaded
-      map: ["enum.ThrusterVisualLayers.ThrustingUnshaded"]
-      shader: unshaded
-      visible: false
 
 - type: entity
   id: RustedThruster

@@ -122,7 +122,6 @@
         - id: DrinkMREFlask
         - id: FoodSnackNutribrick
         - id: FoodSnackMREBrownie
-        - id: FoodCondimentPacketKetchup
   - type: Sprite
     layers:
       - state: box
