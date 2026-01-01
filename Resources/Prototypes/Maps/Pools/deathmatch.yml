@@ -1,0 +1,4 @@
+- type: gameMapPool
+  id: DeathMatchMapPool
+  maps:
+  - Empty #carmine edit so the yaml linter doesnt yell at us

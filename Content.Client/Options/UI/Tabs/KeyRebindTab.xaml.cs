@@ -172,6 +172,7 @@ namespace Content.Client.Options.UI.Tabs
             AddButton(ContentKeyFunctions.ResetZoom);
 
             AddHeader("ui-options-header-interaction-basic");
+            AddButton(ContentKeyFunctions.ToggleCombatMode);
             AddButton(EngineKeyFunctions.Use);
             AddButton(EngineKeyFunctions.UseSecondary);
             AddButton(ContentKeyFunctions.UseItemInHand);

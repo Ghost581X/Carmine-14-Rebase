@@ -1,5 +1,6 @@
 using Content.Shared.DisplacementMap;
 using Content.Shared.Hands.EntitySystems;
+using Content.Shared.Throwing;
 using Content.Shared.Whitelist;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
@@ -41,11 +42,11 @@ public sealed partial class HandsComponent : Component
     [DataField]
     public bool DisableExplosionRecursion;
 
-    /// <summary>
-    ///     Modifies the speed at which items are thrown.
-    /// </summary>
     [DataField]
-    public float BaseThrowspeed = 11f;
+    [ViewVariables(VVAccess.ReadWrite)]
+    // ES START
+    public float BaseThrowspeed = ThrowingSystem.ESThrowSpeedDefault;
+    // ES END
 
     /// <summary>
     ///     Distance after which longer throw targets stop increasing throw impulse.

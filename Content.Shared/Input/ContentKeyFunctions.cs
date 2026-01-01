@@ -5,6 +5,9 @@ namespace Content.Shared.Input
     [KeyFunctions]
     public static class ContentKeyFunctions
     {
+        //carmine specific begin
+        public static readonly BoundKeyFunction ToggleCombatMode = "ToggleCombatMode";
+        //carmine specific end
         public static readonly BoundKeyFunction ToggleKnockdown = "ToggleKnockdown";
         public static readonly BoundKeyFunction UseItemInHand = "ActivateItemInHand";
         public static readonly BoundKeyFunction AltUseItemInHand = "AltActivateItemInHand";
