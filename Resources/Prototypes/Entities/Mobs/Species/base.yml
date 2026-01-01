@@ -209,6 +209,7 @@
     - FootstepSound
     - DoorBumpOpener
     - AnomalyHost
+  - type: ExaminableCharacter # WWDP
 
 - type: entity
   save: false
