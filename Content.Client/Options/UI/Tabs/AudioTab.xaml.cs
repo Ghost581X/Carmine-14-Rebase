@@ -7,6 +7,7 @@ using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.XAML;
 using Robust.Shared;
 using Robust.Shared.Configuration;
+using Content.Shared._White.CCVar;
 
 namespace Content.Client.Options.UI.Tabs;
 
@@ -64,6 +65,7 @@ public sealed partial class AudioTab : Control
         Control.AddOptionCheckBox(CCVars.EventMusicEnabled, EventMusicCheckBox);
         Control.AddOptionCheckBox(CCVars.AdminSoundsEnabled, AdminSoundsCheckBox);
         Control.AddOptionCheckBox(CCVars.BwoinkSoundEnabled, BwoinkSoundCheckBox);
+        Control.AddOptionCheckBox(WhiteCVars.ToggleCombatModeSound, ToggleCombatModeCheckBox);
 
         Control.Initialize();
     }

@@ -496,8 +496,8 @@
     - VimPilot
     - ChefPilot
     - Meat
-  - type: CombatMode
-    combatToggleAction: ActionCombatModeToggleOff
+  # - type: CombatMode
+  #   combatToggleAction: ActionCombatModeToggleOff
   - type: Bloodstream
     bloodReferenceSolution:
       reagents:
