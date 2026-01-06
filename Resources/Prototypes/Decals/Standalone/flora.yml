@@ -619,117 +619,117 @@
   id: FloraBranch1
   parent: Flora
   sprite:
-    sprite: _Nuclear14/Structures/Decoration/flora.rsi
+    sprite: Structures/Decoration/flora.rsi
     state: branch
 
 - type: decal
   id: FloraBranchBroken
   parent: Flora
   sprite:
-    sprite: _Nuclear14/Structures/Decoration/flora.rsi
+    sprite: Structures/Decoration/flora.rsi
     state: branch_broken
 
 - type: decal
   id: FloraBranchBrushwood
   parent: Flora
   sprite:
-    sprite: _Nuclear14/Structures/Decoration/flora.rsi
+    sprite: Structures/Decoration/flora.rsi
     state: brushwood
 
 - type: decal
   id: FloraBranchBrushwoodAlt
   parent: Flora
   sprite:
-    sprite: _Nuclear14/Structures/Decoration/flora.rsi
+    sprite: Structures/Decoration/flora.rsi
     state: brushwood_alt
 
 - type: decal
   id: FloraTallGrass1
   parent: Flora
   sprite:
-    sprite: _Nuclear14/Structures/Decoration/flora.rsi
+    sprite: Structures/Decoration/flora.rsi
     state: tall_grass_1
 
 - type: decal
   id: FloraTallGrass2
   parent: Flora
   sprite:
-    sprite: _Nuclear14/Structures/Decoration/flora.rsi
+    sprite: Structures/Decoration/flora.rsi
     state: tall_grass_2
 
 - type: decal
   id: FloraTallGrass3
   parent: Flora
   sprite:
-    sprite: _Nuclear14/Structures/Decoration/flora.rsi
+    sprite: Structures/Decoration/flora.rsi
     state: tall_grass_3
 
 - type: decal
   id: FloraTallGrass4
   parent: Flora
   sprite:
-    sprite: _Nuclear14/Structures/Decoration/flora.rsi
+    sprite: Structures/Decoration/flora.rsi
     state: tall_grass_4
 
 - type: decal
   id: FloraTallGrass5
   parent: Flora
   sprite:
-    sprite: _Nuclear14/Structures/Decoration/flora.rsi
+    sprite: Structures/Decoration/flora.rsi
     state: tall_grass_5
 
 - type: decal
   id: FloraTallGrass6
   parent: Flora
   sprite:
-    sprite: _Nuclear14/Structures/Decoration/flora.rsi
+    sprite: Structures/Decoration/flora.rsi
     state: tall_grass_6
 
 - type: decal
   id: FloraTallGrass7
   parent: Flora
   sprite:
-    sprite: _Nuclear14/Structures/Decoration/flora.rsi
+    sprite: Structures/Decoration/flora.rsi
     state: tall_grass_7
 
 - type: decal
   id: FloraTallGrass8
   parent: Flora
   sprite:
-    sprite: _Nuclear14/Structures/Decoration/flora.rsi
+    sprite: Structures/Decoration/flora.rsi
     state: tall_grass_8
 
 - type: decal
   id: FloraDeadBroc
   parent: Flora
   sprite:
-    sprite: _Nuclear14/Structures/Decoration/flora.rsi
+    sprite: Structures/Decoration/flora.rsi
     state: broc-dead
 
 - type: decal
   id: FloraDeadXander
   parent: Flora
   sprite:
-    sprite: _Nuclear14/Structures/Decoration/flora.rsi
+    sprite: Structures/Decoration/flora.rsi
     state: xander-dead
 
 - type: decal
   id: FloraDeadMutfruit
   parent: Flora
   sprite:
-    sprite: _Nuclear14/Structures/Decoration/flora.rsi
+    sprite: Structures/Decoration/flora.rsi
     state: mutfruit-dead
 
 - type: decal
   id: FloraDeadFerocactus
   parent: Flora
   sprite:
-    sprite: _Nuclear14/Structures/Decoration/flora.rsi
+    sprite: Structures/Decoration/flora.rsi
     state: ferocactus-dead
 
 - type: decal
   id: FloraDeadAgave
   parent: Flora
   sprite:
-    sprite: _Nuclear14/Structures/Decoration/flora.rsi
+    sprite: Structures/Decoration/flora.rsi
     state: agave-dead
