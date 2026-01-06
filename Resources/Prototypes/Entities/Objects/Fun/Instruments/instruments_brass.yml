@@ -2,10 +2,6 @@
   parent: BaseHandheldInstrument
   id: BaseBrassInstrument
   abstract: true
-  components:
-  - type: Tag
-    tags:
-    - BrassInstrument
 
 - type: entity
   parent: BaseBrassInstrument

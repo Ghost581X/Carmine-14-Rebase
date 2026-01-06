@@ -11,4 +11,4 @@
     - type: Transform
     - type: NpcFactionMember
       factions:
-      - NanoTrasen
+      - SimpleNeutral

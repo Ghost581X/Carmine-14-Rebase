@@ -652,3 +652,10 @@
         effectProto: StatusEffectSeeingRainbow
         time: 16
         type: Add
+        
+- type: ssdIcon #yes even if it doesnt render the game complains
+  id: SSDIcon
+  icon:
+    sprite: /Textures/Effects/ssd.rsi
+    state: default0
+  locationPreference: Left

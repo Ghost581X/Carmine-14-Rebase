@@ -5,18 +5,7 @@
   id: SimpleNeutral
 
 - type: npcFaction
-  id: AllHostile
+  id: SimpleHostile
   hostile:
-  - NanoTrasen
-  - Dragon
-  - Mouse
-  - Passive
-  - PetsNT
-  - SimpleHostile
   - SimpleNeutral
-  - Syndicate
-  - Xeno
-  - Zombie
-  - Revolutionary
-  - Wizard
-  - Xenoborg
+  - Passive

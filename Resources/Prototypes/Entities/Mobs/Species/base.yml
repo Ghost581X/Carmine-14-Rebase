@@ -173,7 +173,7 @@
   - type: CanHostGuardian
   - type: NpcFactionMember
     factions:
-    - NanoTrasen
+    - SimpleNeutral
   - type: CreamPied
   - type: ParcelWrapOverride
     parcelPrototype: WrappedParcelHumanoid
