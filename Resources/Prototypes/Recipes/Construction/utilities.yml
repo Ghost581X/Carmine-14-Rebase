@@ -1,13 +1,3 @@
-# SURVEILLANCE
-- type: construction
-  id: camera
-  graph: SurveillanceCamera
-  startNode: start
-  targetNode: camera
-  category: construction-category-utilities
-  objectType: Structure
-  placementMode: SnapgridCenter
-
 # POWER
 - type: construction
   id: APC

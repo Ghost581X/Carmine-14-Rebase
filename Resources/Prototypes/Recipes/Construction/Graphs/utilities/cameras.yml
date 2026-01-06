@@ -27,11 +27,3 @@
           steps:
             - tool: Welding
               doAfter: 2
-
-    - node: wired
-      entity: SurveillanceCameraAssembly
-      edges:
-        - to: camera
-          steps:
-            - tool: Screwing
-              doAfter: 2
