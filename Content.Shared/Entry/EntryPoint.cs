@@ -20,6 +20,8 @@ namespace Content.Shared.Entry
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
         [Dependency] private readonly ITileDefinitionManager _tileDefinitionManager = default!;
         [Dependency] private readonly IResourceManager _resMan = default!;
+
+        [Dependency] private readonly EntityManager _entityManager = default!; //directional tiling req
 #if DEBUG
         [Dependency] private readonly IConfigurationManager _configurationManager = default!;
 #endif
@@ -47,6 +49,7 @@ namespace Content.Shared.Entry
 
             InitTileDefinitions();
             Dependencies.Resolve<MarkingManager>().Initialize();
+            _entityManager.EventBus.RaiseEvent(EventSource.Local, new PostInitEvent()); //directional tiling system req
 
 #if DEBUG
             _configurationManager.OverrideDefault(CVars.NetFakeLagMin, 0.075f);

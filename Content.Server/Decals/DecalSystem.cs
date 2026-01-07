@@ -308,7 +308,8 @@ namespace Content.Server.Decals
             if (!TryComp(gridId, out MapGridComponent? grid))
                 return false;
 
-            if (_turf.IsSpace(_mapSystem.GetTileRef(gridId.Value, grid, coordinates)))
+            // hullrot edit , let directionals bypass the space verificaton! SPCR 2025
+            if (_turf.IsSpace(_mapSystem.GetTileRef(gridId.Value, grid, coordinates)) && !decal.Directional)
                 return false;
 
             if (!TryComp(gridId, out DecalGridComponent? comp))

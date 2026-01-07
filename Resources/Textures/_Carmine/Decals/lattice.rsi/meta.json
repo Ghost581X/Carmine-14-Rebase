@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "license": "CC-BY-4.0",
+  "copyright": "taken from https://github.com/Sector-Crescent/Hullrot/pull/191, by MLGTASTIC",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "EdgeN"
+    },
+    {
+      "name": "CornerNE"
+    },
+    {
+      "name": "OuterNE"
+    },
+    {
+      "name": "EdgeW"
+    },
+    {
+      "name": "EdgeS"
+    },
+    {
+      "name": "EdgeE"
+    },
+    {
+      "name": "OuterNW"
+    },
+    {
+      "name": "OuterSE"
+    },
+    {
+      "name": "OuterSW"
+    },
+    {
+      "name": "CornerNW"
+    },
+    {
+      "name": "CornerSW"
+    },
+    {
+      "name": "CornerSE"
+    }
+  ]
+}
