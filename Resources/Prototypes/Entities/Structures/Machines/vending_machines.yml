@@ -1026,8 +1026,6 @@
       shader: unshaded
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
-  - type: AccessReader
-    access: [["Security"]]
   - type: PointLight
     radius: 1
     energy: 2.0
@@ -1614,8 +1612,6 @@
     radius: 1.5
     energy: 3.0
     color: "#d82929"
-  - type: AccessReader
-    access: [["Security"]]
 
 - type: entity
   parent: VendingMachine

@@ -98,7 +98,6 @@
   - type: Item
     heldPrefix: produce
   - type: Produce
-    seedId: banana
   - type: Tag
     tags:
     - Fruit

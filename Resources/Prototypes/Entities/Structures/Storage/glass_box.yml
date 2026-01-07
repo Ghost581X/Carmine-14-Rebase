@@ -117,50 +117,6 @@
         acts: [ "Destruction" ]
 
 - type: entity
-  parent: GlassBox
-  id: GlassBoxLaser
-  suffix: AntiqueLaser
-  components:
-  - type: AccessReader
-    access: [["Captain"]]
-  - type: Construction
-    graph: GlassBox
-    node: glassBox
-  - type: ItemSlots
-    slots:
-      ItemCabinet:
-        ejectOnInteract: true
-        whitelist:
-          tags:
-          - WeaponAntiqueLaser
-        ejectSound: /Audio/Machines/machine_switch.ogg
-
-- type: entity
-  parent: GlassBoxLaser
-  id: GlassBoxLaserOpen
-  suffix: AntiqueLaser, Open
-  components:
-  - type: Openable
-    opened: true
-  - type: Lock
-    locked: false
-
-- type: entity
-  parent: GlassBoxLaser
-  id: GlassBoxLaserFilled
-  suffix: AntiqueLaser, Filled
-  components:
-  - type: ContainerFill
-    containers:
-      ItemCabinet:
-      - WeaponAntiqueLaser
-
-- type: entity
-  parent: [GlassBoxLaserFilled, GlassBoxLaserOpen]
-  id: GlassBoxLaserFilledOpen
-  suffix: AntiqueLaser, Filled, Open
-
-- type: entity
   parent: BaseGlassBox
   id: GlassBoxFrame
   name: glass box frame

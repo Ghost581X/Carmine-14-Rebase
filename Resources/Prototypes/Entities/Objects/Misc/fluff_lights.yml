@@ -51,8 +51,6 @@
   - type: Appearance
   - type: Physics
     canCollide: false
-  - type: StealTarget
-    stealGroup: LAMP
 
 - type: entity
   name: lamp
@@ -71,10 +69,6 @@
         map: [ "light" ]
   - type: Item
     sprite: Objects/Misc/Lights/lamp.rsi
-  - type: HolidayVisuals
-    holidays:
-      festive:
-      - FestiveSeason
   - type: GenericVisualizer
     visuals:
       enum.HolidayVisuals.Holiday:
@@ -201,7 +195,7 @@
     materialComposition:
       Glass: 500
       Steel: 200
-      
+
 - type: entity
   name: broken floodlight
   id: FloodlightBroken

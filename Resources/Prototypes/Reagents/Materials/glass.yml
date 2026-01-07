@@ -11,17 +11,3 @@
   name: materials-reinforced-glass
   icon: { sprite: Objects/Materials/Sheets/glass.rsi, state: rglass }
   color: "#549bb0"
-
-- type: material
-  id: PlasmaGlass
-  stackEntity: SheetPGlass1
-  name: materials-plasma-glass
-  icon: { sprite: Objects/Materials/Sheets/glass.rsi, state: pglass }
-  color: "#b35989"
-
-- type: material
-  id: ReinforcedPlasmaGlass
-  stackEntity: SheetRPGlass1
-  name: materials-reinforced-plasma-glass
-  icon: { sprite: Objects/Materials/Sheets/glass.rsi, state: rpglass }
-  color: "#8c4069"

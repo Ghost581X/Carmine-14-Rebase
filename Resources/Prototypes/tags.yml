@@ -881,9 +881,6 @@
 
 #endregion
 
-- type: Tag
-  id: MailingUnitElectronics # ConstructionGraph: DisposalMachine
-
 - type: Tag # Used on DungeonRoom prototypes.
   id: Maints # RoomFill spawner whitelist for MaintsRoomMarker.
 
@@ -981,6 +978,9 @@
 ## O ##
 
 - type: Tag
+  id: Ore # Orebox
+
+- type: Tag
   id: Ointment # Storage whitelist: ClothingBeltMedical
 
 ## P ##
@@ -1054,9 +1054,6 @@
 
 - type: Tag
   id: PlantSampleTaker # Used by PlantHolderSystem to make tagged entities a pseudo-tool for trimming seeds. TODO this sucks!
-
-- type: Tag
-  id: PlasmaGlassShard # ConstructionGraph, PlasmaShiv, SpearPlasma
 
 - type: Tag
   id: Plastic # Used by MicrowaveSystem to turn tagged entities into trash.
@@ -1204,9 +1201,6 @@
 
 - type: Tag
   id: SecBeltEquip # Storage whitelist: ClothingBeltSecurity
-
-- type: Tag
-  id: SecurePlasmaWindoor # Used in ConstructionGraph "Windoor" to navigate between Windoor, PlasmaWindoor, airlocks.
 
 - type: Tag
   id: SecureWindoor # Used in ConstructionGraph "Windoor" to navigate between Windoor, PlasmaWindoor, airlocks.

@@ -197,7 +197,7 @@
     - Lattice
     - TrainLattice
     replacementTiles:
-    - FloorMetalFoam
+    - Plating
   - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: Metallic

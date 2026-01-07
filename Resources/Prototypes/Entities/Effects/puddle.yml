@@ -105,19 +105,6 @@
           Quantity: 15
 
 - type: entity
-  id: PuddleWatermelon
-  parent: PuddleTemporary
-  suffix: Watermelon
-  components:
-  - type: SolutionContainerManager
-    solutions:
-      puddle:
-        maxVol: 1000
-        reagents:
-        - ReagentId: JuiceWatermelon
-          Quantity: 30
-
-- type: entity
   id: PuddleFlour
   parent: PuddleTemporary
   suffix: Flour

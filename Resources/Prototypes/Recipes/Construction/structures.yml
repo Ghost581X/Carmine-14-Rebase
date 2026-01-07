@@ -106,34 +106,6 @@
   canRotate: false
 
 - type: construction
-  id: PlasmaWindow
-  graph: Window
-  startNode: start
-  targetNode: plasmaWindow
-  category: construction-category-structures
-  canBuildInImpassable: true
-  conditions:
-    - !type:EmptyOrWindowValidInTile
-    - !type:NoWindowsInTile
-  objectType: Structure
-  placementMode: SnapgridCenter
-  canRotate: false
-
-- type: construction
-  id: ReinforcedPlasmaWindow
-  graph: Window
-  startNode: start
-  targetNode: reinforcedPlasmaWindow
-  category: construction-category-structures
-  canBuildInImpassable: true
-  conditions:
-    - !type:EmptyOrWindowValidInTile
-    - !type:NoWindowsInTile
-  objectType: Structure
-  placementMode: SnapgridCenter
-  canRotate: false
-
-- type: construction
   id: WindowDirectional
   graph: WindowDirectional
   startNode: start
@@ -151,32 +123,6 @@
   graph: WindowDirectional
   startNode: start
   targetNode: windowReinforcedDirectional
-  category: construction-category-structures
-  canBuildInImpassable: true
-  conditions:
-    - !type:EmptyOrWindowValidInTile
-    - !type:NoWindowsInTile
-  objectType: Structure
-  placementMode: SnapgridCenter
-
-- type: construction
-  id: PlasmaWindowDirectional
-  graph: WindowDirectional
-  startNode: start
-  targetNode: plasmaWindowDirectional
-  category: construction-category-structures
-  canBuildInImpassable: true
-  conditions:
-    - !type:EmptyOrWindowValidInTile
-    - !type:NoWindowsInTile
-  objectType: Structure
-  placementMode: SnapgridCenter
-
-- type: construction
-  id: PlasmaReinforcedWindowDirectional
-  graph: WindowDirectional
-  startNode: start
-  targetNode: plasmaReinforcedWindowDirectional
   category: construction-category-structures
   canBuildInImpassable: true
   conditions:

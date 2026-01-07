@@ -15,38 +15,6 @@
   objectType: Item
 
 - type: construction
-  id: SheetPGlass
-  graph: Glass
-  startNode: start
-  targetNode: SheetPGlass
-  category: construction-category-materials
-  objectType: Item
-
-- type: construction
-  id: SheetRPGlass
-  graph: Glass
-  startNode: start
-  targetNode: SheetRPGlass
-  category: construction-category-materials
-  objectType: Item
-
-- type: construction
-  id: SheetRPGlass0
-  graph: Glass
-  startNode: start
-  targetNode: SheetRPGlass0
-  category: construction-category-materials
-  objectType: Item
-
-- type: construction
-  id: SheetRPGlass1
-  graph: Glass
-  startNode: start
-  targetNode: SheetRPGlass1
-  category: construction-category-materials
-  objectType: Item
-
-- type: construction
   id: MaterialDurathread
   graph: Durathread
   startNode: start

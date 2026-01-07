@@ -23,8 +23,6 @@
     - DoorBumpOpener
     - WhitelistChameleon
     - WhitelistChameleonIdCard
-  - type: StealTarget
-    stealGroup: IDCard
 
 #IDs with layers
 
@@ -69,9 +67,6 @@
     - WhitelistChameleon
     - WhitelistChameleonIdCard
     - HighRiskItem
-  - type: StealTarget
-    stealGroup: CaptainIDCard
-
 #Admin
 
 - type: entity

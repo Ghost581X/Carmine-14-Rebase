@@ -80,9 +80,6 @@
     interfaces:
       enum.DisposalUnitUiKey.Key:
         type: DisposalUnitBoundUserInterface
-  - type: Rummageable
-    table: !type:NestedSelector
-      tableId: RatKingLoot
   - type: SolutionContainerManager
     solutions:
       drainBuffer:

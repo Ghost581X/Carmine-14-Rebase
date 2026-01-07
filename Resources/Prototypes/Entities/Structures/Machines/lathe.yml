@@ -118,29 +118,6 @@
     runningState: building
     unlitIdleState: unlit
     unlitRunningState: unlit-building
-    staticPacks:
-    - ToolsStatic
-    - PartsStatic
-    - AtmosStatic
-    - CablesStatic
-    - PaperworkStatic
-    - TowelsStatic
-    - CargoStatic
-    - MaterialsStatic
-    - BasicChemistryStatic
-    - RollerBedsStatic
-    - LightsStatic
-    - ServiceStatic
-    - PowerCellsStatic
-    - ElectronicsStatic
-  - type: EmagLatheRecipes
-    emagStaticPacks:
-    - SecurityAmmoStatic
-    - SyndicateAmmoStatic
-  - type: BlueprintReceiver
-    whitelist:
-      tags:
-      - BlueprintAutolathe
   - type: ContainerContainer
     containers:
       machine_board: !type:Container
@@ -190,29 +167,6 @@
     runningState: building
     unlitIdleState: unlit
     unlitRunningState: unlit-building
-    staticPacks:
-    - ChemistryStatic
-    - SurgeryStatic
-    dynamicPacks:
-    - AdvancedTools
-    - ScienceEquipment
-    - ScienceExplosives
-    - ScienceClothing
-    - PowerCells
-    - ScienceWeapons
-    - Mining
-    - AtmosTools
-    - EngineeringWeapons
-    - Chemistry
-    - Janitor
-    - Instruments
-    - Equipment
-  - type: EmagLatheRecipes
-    emagDynamicPacks:
-    - SecurityAmmo
-    - SecurityExplosives
-    - SecurityEquipment
-    - SecurityWeapons
 
 - type: entity
   id: ProtolatheHyperConvection
@@ -248,24 +202,6 @@
     producingSound: /Audio/Machines/circuitprinter.ogg
     idleState: icon
     runningState: building
-    staticPacks:
-    - ScienceBoardsStatic
-    - ServiceBoardsStatic
-    - CargoBoardsStatic
-    - MedicalBoardsStatic
-    - EngineeringBoardsStatic
-    dynamicPacks:
-    - EngineeringBoards
-    - CargoBoards
-    - MedicalBoards
-    - ServiceBoards
-    - ScienceBoards
-    - CameraBoards
-    - MechBoards
-    - ShuttleBoards
-  - type: EmagLatheRecipes
-    emagDynamicPacks:
-    - SecurityBoards
   - type: MaterialStorage
     whitelist: *StandardMaterialWhitelist
   - type: OreSiloClient
@@ -302,15 +238,6 @@
   - type: Lathe
     idleState: fab-idle
     runningState: fab-active
-    staticPacks:
-    - RoboticsStatic
-    - BorgModulesStatic
-    - BorgLimbsStatic
-    dynamicPacks:
-    - Robotics
-    - BorgModules
-    - MechParts
-    - MechEquipment
   - type: MaterialStorage
     whitelist: *StandardMaterialWhitelist
   - type: OreSiloClient
@@ -351,11 +278,6 @@
   - type: Lathe
     idleState: icon
     runningState: building
-    staticPacks:
-    - FriendlyCubesStatic
-  - type: EmagLatheRecipes
-    emagStaticPacks:
-    - HostileCubesStatic
 
 - type: entity
   id: SecurityTechFab
@@ -381,23 +303,6 @@
   - type: Lathe
     idleState: icon
     runningState: icon
-    staticPacks:
-    - SecurityEquipmentStatic
-    - SecurityPracticeStatic
-    - SecurityAmmoStatic
-    - SecurityWeaponsStatic
-    dynamicPacks:
-    - SalvageSecurityBoards
-    - SalvageSecurityWeapons
-    - SecurityEquipment
-    - SecurityBoards
-    - SecurityExplosives
-    - SecurityAmmo
-    - SecurityWeapons
-    - SecurityDisablers
-  - type: EmagLatheRecipes
-    emagStaticPacks:
-    - SyndicateAmmoStatic
   - type: MaterialStorage
     whitelist: *StandardMaterialWhitelist
   - type: OreSiloClient
@@ -428,11 +333,6 @@
     - type: Lathe
       idleState: icon
       runningState: icon
-      staticPacks:
-      - SecurityAmmoStatic
-    - type: EmagLatheRecipes
-      emagStaticPacks:
-      - SyndicateAmmoStatic
     - type: MaterialStorage
       whitelist: *StandardMaterialWhitelist
     - type: OreSiloClient
@@ -459,20 +359,8 @@
   - type: Lathe
     idleState: icon
     runningState: icon
-    staticPacks:
-    - TopicalsStatic
-    - ChemistryStatic
-    - MedicalStatic
-    - RollerBedsStatic
-    - MedicalClothingStatic
-    - EmptyMedkitsStatic
-    - SurgeryStatic
-    dynamicPacks:
-    - Chemistry
   - type: Machine
     board: MedicalTechFabCircuitboard
-  - type: StealTarget
-    stealGroup: MedicalTechFabCircuitboard
   - type: OreSiloClient
   - type: LatheAnnouncing
     channels: [Medical]
@@ -497,25 +385,6 @@
     producingSound: /Audio/Machines/uniformprinter.ogg
     idleState: icon
     runningState: building
-    staticPacks:
-    - TowelsStatic
-    - ClothingCivilian
-    - ClothingCargo
-    - ClothingCommand
-    - ClothingEngineering
-    - ClothingMedical
-    - ClothingScience
-    - ClothingSecurity
-    - ClothingService
-    - WinterCoats
-    - Ties
-    - Scarves
-    - Carpets
-    - Bedsheets
-  - type: EmagLatheRecipes
-    emagStaticPacks:
-    - ClothingCentComm
-    - ClothingSyndie
   - type: MaterialStorage
     whitelist: *StandardMaterialWhitelist
   - type: OreSiloClient
@@ -559,13 +428,6 @@
     reagentOutputSlotId: beaker_slot
     idleState: icon
     runningState: building
-    staticPacks:
-    - BioGenIngredientsStatic
-    - BioGenMaterialsStatic
-  - type: EmagLatheRecipes
-    emagStaticPacks:
-    - BioGenEmagStatic
-    - HostileCubesStatic
 
 - type: entity
   parent: BaseLathe
@@ -596,9 +458,6 @@
       idleState: icon
       runningState: building
       defaultProductionAmount: 10
-      staticPacks:
-      - OreSmelting
-      - RGlassSmelting
 
 - type: entity
   parent: OreProcessor
@@ -613,10 +472,6 @@
   - type: Lathe
     materialUseMultiplier: 0.75
     timeMultiplier: 0.5
-    staticPacks:
-    - OreSmelting
-    - RGlassSmelting
-    - AdvancedSmelting
 
 - type: entity
   parent: BaseLathe
@@ -646,8 +501,6 @@
   - type: Lathe
     idleState: base_machine
     runningState: base_machine_processing
-    staticPacks:
-    - SheetifierStatic
 
 - type: entity
   parent: BaseLathe
@@ -674,17 +527,6 @@
     producingSound: /Audio/Machines/cutter.ogg
     idleState: icon
     runningState: building
-    staticPacks:
-    - FloorDarkTilesStatic
-    - FloorSteelTilesStatic
-    - FloorWhiteTilesStatic
-    - FloorMaintsTilesStatic
-    - FloorWoodTilesStatic
-    - FloorConcreteTilesStatic
-    - CircuitFloorsStatic
-    - FloorMarbleTilesStatic
-    dynamicPacks:
-    - FauxTiles
   - type: MaterialStorage
     whitelist: *StandardMaterialWhitelist
   - type: OreSiloClient
