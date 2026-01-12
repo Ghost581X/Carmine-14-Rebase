@@ -46,7 +46,6 @@ The [color=#1b67a5]Captain[/color] and the [color=#9fed58]Head of Personnel[/col
 [color=#a4885c]Don't waste this vital advantage![/color]
   <Box>
     <GuideEntityEmbed Entity="ClothingHeadsetCommand"/>
-    <GuideEntityEmbed Entity="EncryptionKeyStationMaster"/>
   </Box>
 
 To make the swamp of paperwork (that will definitely overwhelm you) even harder to deal with, you have generously been given a [color=#a4885c]stamp[/color] in your locker. Use this to sign paperwork. After you stamp it, it can't be edited. Look it over first.

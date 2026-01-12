@@ -68,8 +68,6 @@
   - type: InteractionOutline
   - type: ApcPowerReceiver
   - type: ExtensionCableReceiver
-  - type: AccessReader
-    access: [ [ "Atmospherics" ] ]
   - type: Construction
     graph: AirSensor
     node: sensor

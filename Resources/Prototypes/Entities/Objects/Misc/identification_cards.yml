@@ -93,13 +93,6 @@
   - type: Access
     groups:
     - AllAccess
-    - Silicon
-    tags:
-    - CentralCommand
-    - NuclearOperative
-    - SyndicateAgent
-    - Wizard
-    - Xenoborg
   - type: Tag #  Ignore Chameleon tags
     tags:
     - DoorBumpOpener

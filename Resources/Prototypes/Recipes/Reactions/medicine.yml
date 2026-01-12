@@ -289,19 +289,6 @@
     Mannitol: 3
 
 - type: reaction
-  id: MindbreakerToxin
-  minTemp: 370
-  reactants:
-    Silicon:
-      amount: 1
-    Hydrogen:
-      amount: 1
-    Dylovene:
-      amount: 1
-  products:
-    MindbreakerToxin: 3
-
-- type: reaction
   id: SpaceDrugs
   reactants:
     Mercury:

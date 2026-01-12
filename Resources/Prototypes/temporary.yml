@@ -677,8 +677,7 @@
   group: Toxins
   desc: reagent-desc-fluorosulfuric-acid
   physicalDesc: reagent-physical-desc-strong-smelling
-  contrabandSeverity: Minor
-  flavor: acid
+  flavor: salty
   color: "#5050ff"
   boilingPoint: 165
   meltingPoint: -87
@@ -717,3 +716,41 @@
   speechVerbStrings:
   - chat-speech-verb-robotic-1
   - chat-speech-verb-robotic-2
+  
+- type: entity
+  parent: BaseItem
+  id: WeaponMeleeNeedle
+  name: official security anti-inflatable armament
+  description: A specialty weapon used in the destruction of unique syndicate morale-boosting equipment.
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Melee/needle.rsi
+    state: icon
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    damage:
+      types:
+        Piercing: 1
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Piercing: 1
+  - type: EmbeddableProjectile
+    removalTime: 0
+  - type: Item
+    size: Tiny
+  - type: BalloonPopper
+  - type: ThrowingAngle
+    angle: -135
+  - type: LandAtCursor
+  
+- type: Tag #ofc its hardcoded
+  id: Balloon
+  
+- type: weightedRandomFillSolution
+  id: RandomPickBotanyReagent
+  fills:
+  - quantity: 5
+    weight: 0.5
+    reagents:
+    - Omnizine

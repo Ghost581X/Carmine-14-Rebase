@@ -42,38 +42,8 @@ public sealed partial class IdCardConsoleComponent : Component
     [DataField, AutoNetworkedField]
     public List<ProtoId<AccessLevelPrototype>> AccessLevels = new()
     {
-        "Armory",
-        "Atmospherics",
-        "Bar",
-        "Brig",
-        "Detective",
-        "Captain",
-        "Cargo",
-        "Chapel",
-        "Chemistry",
-        "ChiefEngineer",
-        "ChiefMedicalOfficer",
-        "Command",
-        "Cryogenics",
-        "Engineering",
         "External",
-        "GenpopEnter",
-        "GenpopLeave",
-        "HeadOfPersonnel",
-        "HeadOfSecurity",
-        "Hydroponics",
-        "Janitor",
-        "Kitchen",
-        "Lawyer",
         "Maintenance",
-        "Medical",
-        "Quartermaster",
-        "Research",
-        "ResearchDirector",
-        "Salvage",
-        "Security",
-        "Service",
-        "Theatre",
     };
 
     [Serializable, NetSerializable]

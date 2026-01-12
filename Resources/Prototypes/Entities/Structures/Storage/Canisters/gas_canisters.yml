@@ -123,8 +123,6 @@
             - GasTank
     - type: StaticPrice
       price: 200
-    - type: AccessReader
-      access: [["Atmospherics"], ["Engineering"], ["Research"]]
     - type: Lock
       locked: false
     - type: GuideHelp
@@ -262,8 +260,6 @@
       moles:
         Oxygen: 18710.71051 # oxygen
       temperature: 72
-  - type: AccessReader
-    access: [["Atmospherics"]]
 
 - type: entity
   parent: GasCanister
@@ -316,8 +312,6 @@
       moles:
         Nitrogen: 18710.71051 # nitrogen
       temperature: 72
-  - type: AccessReader
-    access: [["Atmospherics"]]
 
 - type: entity
   parent: GasCanister
@@ -372,8 +366,6 @@
       moles:
         CarbonDioxide: 18710.71051 # CO2
       temperature: 72
-  - type: AccessReader
-    access: [["Atmospherics"]]
 
 - type: entity
   parent: GasCanister
