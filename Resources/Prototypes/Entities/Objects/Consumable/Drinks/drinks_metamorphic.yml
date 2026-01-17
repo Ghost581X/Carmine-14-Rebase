@@ -175,38 +175,6 @@
 
 - type: entity
   parent: DrinkGlass
-  id: XenoBasherGlass
-  suffix: xeno basher
-  components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 30
-        reagents:
-        - ReagentId: XenoBasher
-          Quantity: 30
-  - type: Icon
-    sprite: Objects/Consumable/Drinks/xenobasher.rsi
-    state: icon
-
-- type: entity
-  parent: DrinkGlass
-  id: DrinkCaipirinha
-  suffix: caipirinha
-  components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 30
-        reagents:
-        - ReagentId: Caipirinha
-          Quantity: 30
-  - type: Icon
-    sprite: Objects/Consumable/Drinks/caipirinha.rsi
-    state: icon
-
-- type: entity
-  parent: DrinkGlass
   id: DrinkBloodGlass
   suffix: blood
   components:

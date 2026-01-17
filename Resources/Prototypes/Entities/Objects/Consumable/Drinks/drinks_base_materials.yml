@@ -181,8 +181,6 @@
       types:
         Blunt: 1
   - type: PhysicalComposition
-    materialComposition:
-      Cardboard: 25
 
 # Weak metal
 - type: entity

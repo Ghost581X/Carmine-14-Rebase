@@ -1,0 +1,15 @@
+- type: stack
+  parent: BaseVeryLargeStack
+  id: Biomass
+  name: stack-biomass
+  icon: { sprite: /Textures/Objects/Misc/monkeycube.rsi, state: cube }
+  spawn: MaterialBiomass1
+
+# Stacks which come from plants
+
+- type: stack
+  parent: BaseMediumStack
+  id: WoodPlank
+  name: stack-wood-plank
+  icon: { sprite: /Textures/Objects/Materials/materials.rsi, state: wood }
+  spawn: MaterialWoodPlank1

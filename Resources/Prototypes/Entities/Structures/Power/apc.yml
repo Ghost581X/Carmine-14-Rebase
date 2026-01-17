@@ -21,7 +21,7 @@
     castShadows: false
     netsync: false
   - type: AccessReader
-    access: [["Engineering"]]
+    access: [["AllAccess"]]
   - type: Sprite
     drawdepth: WallMountedItems
     sprite: Structures/Power/apc.rsi

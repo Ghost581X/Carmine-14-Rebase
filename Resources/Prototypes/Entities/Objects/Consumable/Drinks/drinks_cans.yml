@@ -80,44 +80,6 @@
 
 - type: entity
   parent: DrinkCanBaseFull
-  id: DrinkSodaWaterCan
-  name: soda water can
-  description: Soda water. Why not make a scotch and soda?
-  components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 30
-        reagents:
-        - ReagentId: SodaWater
-          Quantity: 30
-      grindable: *grindable
-  - type: Sprite
-    sprite: Objects/Consumable/Drinks/sodawater.rsi
-  - type: Item
-    sprite: Objects/Consumable/Drinks/sodawater.rsi
-
-- type: entity
-  parent: DrinkCanBaseFull
-  id: DrinkTonicWaterCan
-  name: tonic water can
-  description: Quinine tastes funny, but at least it'll keep that Space Malaria away.
-  components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 30
-        reagents:
-        - ReagentId: TonicWater
-          Quantity: 30
-      grindable: *grindable
-  - type: Sprite
-    sprite: Objects/Consumable/Drinks/tonic.rsi
-  - type: Item
-    sprite: Objects/Consumable/Drinks/tonic.rsi
-
-- type: entity
-  parent: DrinkCanBaseFull
   id: DrinkBeerCan
   name: beer can
   description: Small joy, big taste, no worries!

@@ -307,7 +307,7 @@
     whitelist: *StandardMaterialWhitelist
   - type: OreSiloClient
   - type: LatheAnnouncing
-    channels: [Security]
+    channels: [Common]
 
 - type: entity
   id: AmmoTechFab
@@ -363,7 +363,7 @@
     board: MedicalTechFabCircuitboard
   - type: OreSiloClient
   - type: LatheAnnouncing
-    channels: [Medical]
+    channels: [Common]
 
 - type: entity
   parent: BaseLathe

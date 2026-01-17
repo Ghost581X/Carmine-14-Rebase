@@ -482,7 +482,7 @@
   - type: ResearchConsole
   - type: ActiveRadio
     channels:
-    - Science
+    - Common
   - type: TechnologyDatabase
   - type: ActivatableUI
     key: enum.ResearchConsoleUiKey.Key
@@ -499,7 +499,7 @@
   - type: Computer
     board: ResearchComputerCircuitboard
   - type: AccessReader
-    access: [["Research"]]
+    access: [["AllAccess"]]
   - type: PointLight
     radius: 1.5
     energy: 4.0
@@ -654,7 +654,7 @@
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
   - type: AccessReader
-    access: [[ "Command" ]]
+    access: [[ "AllAccess" ]]
   - type: CommunicationsConsole
     title: comms-console-announcement-title-station
   - type: DeviceNetwork
@@ -697,7 +697,7 @@
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
   - type: AccessReader
-    access: [[ "NuclearOperative" ]]
+    access: [[ "AllAccess" ]]
   - type: CommunicationsConsole
     title: comms-console-announcement-title-nukie
     color: "#ff0000"
@@ -731,7 +731,7 @@
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
   - type: AccessReader
-    access: [[ "Wizard" ]]
+    access: [[ "AllAccess" ]]
   - type: CommunicationsConsole
     title: comms-console-announcement-title-wizard
     color: "#ff00ff"
@@ -765,7 +765,7 @@
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
   - type: AccessReader
-    access: [[ "CentralCommand" ]]
+    access: [[ "AllAccess" ]]
   - type: CommunicationsConsole
     title: comms-console-announcement-title-centcom
     color: "#1d8bad"
@@ -869,10 +869,10 @@
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
   - type: CargoOrderConsole
-    removeLimitAccess: [ "Quartermaster" ]
+    removeLimitAccess: [ "AllAccess" ]
   - type: ActiveRadio
     channels:
-    - Supply
+    - Common
   - type: ActivatableUI
     key: enum.CargoConsoleUiKey.Orders
   - type: UserInterface
@@ -888,7 +888,7 @@
     energy: 4.0
     color: "#b89f25"
   - type: AccessReader
-    access: [["Cargo"]]
+    access: [["AllAccess"]]
   - type: DeviceNetwork
     deviceNetId: Wireless
     receiveFrequencyId: BasicDevice
@@ -923,18 +923,18 @@
       state: generic_panel_open
   - type: CargoOrderConsole
     account: Engineering
-    announcementChannel: Engineering
-    removeLimitAccess: [ "ChiefEngineer" ]
+    announcementChannel: Common
+    removeLimitAccess: [ "AllAccess" ]
     mode: SendToPrimary
   - type: ActiveRadio
     channels:
-    - Engineering
+    - Common
   - type: Computer
     board: CargoRequestEngineeringComputerCircuitboard
   - type: PointLight
     color: "#c9c042"
   - type: AccessReader
-    access: [["Engineering"]]
+    access: [["AllAccess"]]
 
 - type: entity
   id: ComputerCargoOrdersMedical
@@ -956,18 +956,18 @@
       state: generic_panel_open
   - type: CargoOrderConsole
     account: Medical
-    announcementChannel: Medical
-    removeLimitAccess: [ "ChiefMedicalOfficer" ]
+    announcementChannel: Common
+    removeLimitAccess: [ "AllAccess" ]
     mode: SendToPrimary
   - type: ActiveRadio
     channels:
-    - Medical
+    - Common
   - type: Computer
     board: CargoRequestMedicalComputerCircuitboard
   - type: PointLight
     color: "#41e0fc"
   - type: AccessReader
-    access: [["Medical"]]
+    access: [["AllAccess"]]
 
 - type: entity
   id: ComputerCargoOrdersScience
@@ -989,18 +989,18 @@
       state: generic_panel_open
   - type: CargoOrderConsole
     account: Science
-    announcementChannel: Science
-    removeLimitAccess: [ "ResearchDirector" ]
+    announcementChannel: Common
+    removeLimitAccess: [ "AllAccess" ]
     mode: SendToPrimary
   - type: ActiveRadio
     channels:
-    - Science
+    - Common
   - type: Computer
     board: CargoRequestScienceComputerCircuitboard
   - type: PointLight
     color: "#b53ca1"
   - type: AccessReader
-    access: [["Research"]]
+    access: [["AllAccess"]]
 
 - type: entity
   id: ComputerCargoOrdersSecurity
@@ -1022,12 +1022,12 @@
       state: generic_panel_open
   - type: CargoOrderConsole
     account: Security
-    announcementChannel: Security
-    removeLimitAccess: [ "HeadOfSecurity" ]
+    announcementChannel: Common
+    removeLimitAccess: [ "AllAccess" ]
     mode: SendToPrimary
   - type: ActiveRadio
     channels:
-    - Security
+    - Common
   - type: Computer
     board: CargoRequestSecurityComputerCircuitboard
   - type: PointLight
@@ -1053,18 +1053,18 @@
       state: generic_panel_open
   - type: CargoOrderConsole
     account: Service
-    announcementChannel: Service
-    removeLimitAccess: [ "HeadOfPersonnel" ]
+    announcementChannel: Common
+    removeLimitAccess: [ "AllAccess" ]
     mode: SendToPrimary
   - type: ActiveRadio
     channels:
-    - Service
+    - Common
   - type: Computer
     board: CargoRequestServiceComputerCircuitboard
   - type: PointLight
     color: "#afe837"
   - type: AccessReader
-    access: [["Service"], ["Theatre"]]
+    access: [["AllAccess"], ["Maintenance"]]
 
 - type: entity
   id: ComputerCargoBounty
@@ -1100,7 +1100,7 @@
     energy: 4.0
     color: "#b89f25"
   - type: AccessReader
-    access: [["Quartermaster"]]
+    access: [["AllAccess"]]
   - type: GuideHelp
     guides:
     - CargoBounties
@@ -1129,7 +1129,7 @@
     key: enum.FundingAllocationConsoleUiKey.Key
   - type: ActivatableUIRequiresAccess
   - type: AccessReader
-    access: [["HeadOfPersonnel"]]
+    access: [["AllAccess"]]
   - type: UserInterface
     interfaces:
       enum.FundingAllocationConsoleUiKey.Key:
@@ -1224,7 +1224,7 @@
       enum.WiresUiKey.Key:
         type: WiresBoundUserInterface
   - type: ActiveRadio
-    channels: [ Supply ]
+    channels: [ Common ]
   - type: Computer
     board: SalvageJobBoardComputerCircuitboard
   - type: PointLight
@@ -1281,7 +1281,7 @@
       energy: 4.0
       color: "#b89f25"
     - type: AccessReader
-      access: [["Salvage"]]
+      access: [["AllAccess"]]
 
 - type: entity
   parent: BaseComputer
@@ -1441,7 +1441,7 @@
   - type: DeviceNetworkRequiresPower
   - type: NewsWriter
   - type: AccessReader
-    access: [[ "Service" ]]
+    access: [[ "AllAccess" ]]
   - type: ActivatableUI
     key: enum.NewsWriterUiKey.Key
   - type: ActivatableUIRequiresVision
@@ -1524,7 +1524,7 @@
     allowBorgControl: false
   - type: ActiveRadio
     channels:
-    - Science
+    - Common
   - type: ActivatableUI
     key: enum.RoboticsConsoleUiKey.Key
   - type: UserInterface
@@ -1542,7 +1542,7 @@
   - type: Computer
     board: RoboticsConsoleCircuitboard
   - type: AccessReader # only used for dangerous things
-    access: [["ResearchDirector"]]
+    access: [["AllAccess"]]
   - type: Lock
     unlockOnClick: false
 
@@ -1574,10 +1574,10 @@
         type: WiresBoundUserInterface
   - type: RoboticsConsole
     allowBorgControl: false
-    radioChannel: Xenoborg
+    radioChannel: Common
   - type: ActiveRadio
     channels:
-    - Xenoborg
+    - AllAccess
   - type: ApcPowerReceiver
     powerLoad: 1000
   - type: DeviceNetwork
@@ -1610,7 +1610,7 @@
   - type: Computer
     board: StationAiUploadCircuitboard
   - type: AccessReader
-    access: [ [ "ResearchDirector" ] ]
+    access: [ [ "AllAccess" ] ]
   - type: Lock
     unlockOnClick: false
   - type: SiliconLawUpdater
@@ -1686,7 +1686,7 @@
   - type: Computer
     board: StationAiFixerCircuitboard
   - type: AccessReader
-    access: [ [ "ResearchDirector" ] ]
+    access: [ [ "AllAccess" ] ]
   - type: Lock
     unlockOnClick: false
   - type: StationAiFixerConsole

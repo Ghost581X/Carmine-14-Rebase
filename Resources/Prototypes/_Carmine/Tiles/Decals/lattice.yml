@@ -3,7 +3,7 @@
   parent: Lattice
   tags: ["station", "markings"]
   sprite:
-    sprite: _Crescent/Decals/lattice.rsi
+    sprite: _Carmine/Decals/lattice.rsi
     state: EdgeN
 
 - type: decal
@@ -11,7 +11,7 @@
   parent: Lattice
   tags: ["station", "markings"]
   sprite:
-    sprite: _Crescent/Decals/lattice.rsi
+    sprite: _Carmine/Decals/lattice.rsi
     state: EdgeE
 
 - type: decal
@@ -19,7 +19,7 @@
   parent: Lattice
   tags: ["station", "markings"]
   sprite:
-    sprite: _Crescent/Decals/lattice.rsi
+    sprite: _Carmine/Decals/lattice.rsi
     state: EdgeS
 
 - type: decal
@@ -27,7 +27,7 @@
   parent: Lattice
   tags: ["station", "markings"]
   sprite:
-    sprite: _Crescent/Decals/lattice.rsi
+    sprite: _Carmine/Decals/lattice.rsi
     state: EdgeW
 
 - type: decal
@@ -35,7 +35,7 @@
   parent: Lattice
   tags: ["station", "markings"]
   sprite:
-    sprite: _Crescent/Decals/lattice.rsi
+    sprite: _Carmine/Decals/lattice.rsi
     state: CornerNE
 
 - type: decal
@@ -43,7 +43,7 @@
   parent: Lattice
   tags: ["station", "markings"]
   sprite:
-    sprite: _Crescent/Decals/lattice.rsi
+    sprite: _Carmine/Decals/lattice.rsi
     state: CornerNW
 
 - type: decal
@@ -51,7 +51,7 @@
   parent: Lattice
   tags: ["station", "markings"]
   sprite:
-    sprite: _Crescent/Decals/lattice.rsi
+    sprite: _Carmine/Decals/lattice.rsi
     state: CornerSE
 
 - type: decal
@@ -59,7 +59,7 @@
   parent: Lattice
   tags: ["station", "markings"]
   sprite:
-    sprite: _Crescent/Decals/lattice.rsi
+    sprite: _Carmine/Decals/lattice.rsi
     state: CornerSW
 
 - type: decal
@@ -67,7 +67,7 @@
   parent: Lattice
   tags: ["station", "markings"]
   sprite:
-    sprite: _Crescent/Decals/lattice.rsi
+    sprite: _Carmine/Decals/lattice.rsi
     state: OuterNE
 
 - type: decal
@@ -75,7 +75,7 @@
   parent: Lattice
   tags: ["station", "markings"]
   sprite:
-    sprite: _Crescent/Decals/lattice.rsi
+    sprite: _Carmine/Decals/lattice.rsi
     state: OuterNW
 
 - type: decal
@@ -83,7 +83,7 @@
   parent: Lattice
   tags: ["station", "markings"]
   sprite:
-    sprite: _Crescent/Decals/lattice.rsi
+    sprite: _Carmine/Decals/lattice.rsi
     state: OuterSE
 
 - type: decal
@@ -91,7 +91,5 @@
   parent: Lattice
   tags: ["station", "markings"]
   sprite:
-    sprite: _Crescent/Decals/lattice.rsi
+    sprite: _Carmine/Decals/lattice.rsi
     state: OuterSW
-
-

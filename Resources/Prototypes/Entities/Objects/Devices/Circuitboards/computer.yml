@@ -418,24 +418,6 @@
 
 - type: entity
   parent: BaseComputerCircuitboard
-  id: SpaceVillainArcadeComputerCircuitboard
-  name: space villain arcade board
-  description: A computer printed circuit board for a space villain arcade cabinet.
-  components:
-    - type: ComputerBoard
-      prototype: SpaceVillainArcade
-
-- type: entity
-  parent: BaseComputerCircuitboard
-  id: BlockGameArcadeComputerCircuitboard
-  name: block game arcade board
-  description: A computer printed circuit board for a block game arcade cabinet.
-  components:
-    - type: ComputerBoard
-      prototype: BlockGameArcade
-
-- type: entity
-  parent: BaseComputerCircuitboard
   id: ShuttleConsoleCircuitboard
   name: shuttle console board
   description: A computer printed circuit board for a shuttle console.
