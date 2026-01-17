@@ -146,7 +146,7 @@
       pen:
         maxVol: 15
         reagents:
-        - ReagentId: Ultravasculine
+        - ReagentId: Dylovene
           Quantity: 10
         - ReagentId: Epinephrine
           Quantity: 5

@@ -241,30 +241,6 @@
     Tricordrazine: 2
 
 - type: reaction
-  id: Impedrezene
-  minTemp: 370
-  reactants:
-    Mercury:
-      amount: 1
-    Oxygen:
-      amount: 1
-    Water:
-      amount: 1
-  products:
-    Impedrezene: 1
-
-- type: reaction
-  id: Lexorin
-  impact: High
-  reactants:
-    Plasma:
-      amount: 1
-    Vestine:
-      amount: 1
-  products:
-    Lexorin: 2
-
-- type: reaction
   id: Lipozine
   reactants:
     TableSalt:
@@ -301,17 +277,6 @@
     SpaceDrugs: 3
 
 - type: reaction
-  id: Ultravasculine
-  reactants:
-    Histamine:
-      amount: 2
-    Plasma:
-      amount: 1
-      catalyst: true
-  products:
-    Ultravasculine: 2
-
-- type: reaction
   id: Oculine
   reactants:
     TableSalt:
@@ -322,16 +287,6 @@
       amount: 2
   products:
     Oculine: 4
-
-- type: reaction
-  id: Siderlac
-  reactants:
-    Aloe:
-      amount: 1
-    Stellibinin:
-      amount: 1
-  products:
-    Siderlac: 2
 
 - type: reaction
   id: Cognizine
@@ -477,24 +432,6 @@
     Razorium: 1
 
 - type: reaction
-  id: Diphenhydramine
-  impact: Medium
-  minTemp: 377.59
-  reactants:
-    Diethylamine:
-      amount: 1
-    Oil:
-      amount: 1
-    TableSalt:
-      amount: 1
-    Carbon:
-      amount: 1
-    Ethanol:
-      amount: 1
-  products:
-    Diphenhydramine: 3
-
-- type: reaction
   id: Pyrazine
   impact: Medium
   minTemp: 540
@@ -574,31 +511,6 @@
       amount: 2
   products:
       Aloxadone: 4
-
-- type: reaction
-  id: Psicodine
-  impact: Medium
-  reactants:
-    Mannitol:
-      amount: 2
-    Impedrezene:
-      amount: 1
-    Water:
-      amount: 2
-  products:
-      Psicodine: 4
-
-- type: reaction
-  id: Lipolicide
-  reactants:
-    Ephedrine:
-      amount: 1
-    Diethylamine:
-      amount: 1
-    Mercury:
-      amount: 1
-  products:
-    Lipolicide: 3
 
 - type: reaction
   id: Happiness

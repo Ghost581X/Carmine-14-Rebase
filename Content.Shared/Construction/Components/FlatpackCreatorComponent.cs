@@ -39,7 +39,7 @@ public sealed partial class FlatpackCreatorComponent : Component
     /// The prototype used when spawning a flatpack.
     /// </summary>
     [DataField, ViewVariables(VVAccess.ReadWrite)]
-    public EntProtoId BaseFlatpackPrototype = "BaseFlatpack";
+    public EntProtoId BaseFlatpackPrototype = "Crowbar"; //CARMINE: FIX LATER
 
     /// <summary>
     /// A default cost applied to all flatpacks outside of the cost of constructing the machine.

@@ -32,7 +32,6 @@
   - type: SmokingPipe
     bowl_slot:
       name: smoking-pipe-slot-component-slot-name-bowl
-      startingItem: GroundTobacco
       whitelist:
         tags:
           - Smokable
@@ -55,7 +54,6 @@
   - type: SmokingPipe
     bowl_slot:
       name: smoking-pipe-slot-component-slot-name-bowl
-      startingItem: GroundCannabis
       whitelist:
         tags:
           - Smokable
@@ -78,7 +76,6 @@
   - type: SmokingPipe
     bowl_slot:
       name: smoking-pipe-slot-component-slot-name-bowl
-      startingItem: GroundCannabisRainbow
       whitelist:
         tags:
           - Smokable

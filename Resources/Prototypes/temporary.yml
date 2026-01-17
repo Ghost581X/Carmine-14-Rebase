@@ -754,3 +754,107 @@
     weight: 0.5
     reagents:
     - Omnizine
+    
+- type: cargoMarket
+  id: SalvageJobRewardMAX
+  
+- type: cargoAccount
+  id: Cargo
+  name: cargo-account-cargo-name
+  code: cargo-account-cargo-code
+  color: "#b48b57"
+  radioChannel: Common
+  acquisitionSlip: PaperAcquisitionSlipCargo
+  
+- type: entity #this shit is hardcoded
+  parent: BaseAction
+  id: ActionStethoscope
+  name: Listen with stethoscope
+  components:
+  - type: Action
+    icon:
+      sprite: Clothing/Neck/Misc/stethoscope.rsi
+      state: icon
+    priority: -1
+    itemIconStyle: BigAction
+    checkCanInteract: false
+  - type: TargetAction
+  - type: EntityTargetAction
+    event: !type:StethoscopeActionEvent
+    
+- type: soundCollection #accidentally removed because it was in bikehorn.yml
+  id: DeskBell
+  files:
+  - /Audio/Items/desk_bell_ring.ogg
+  
+- type: material #hardcoded somewhere
+  id: Paper
+  stackEntity: SheetPaper1
+  name: materials-paper
+  icon: { sprite: Objects/Materials/Sheets/other.rsi, state: paper }
+  color: "#d9d9d9"
+  
+- type: reagent
+  id: PolytrinicAcid
+  name: reagent-name-polytrinic-acid
+  group: Toxins
+  desc: reagent-desc-polytrinic-acid
+  physicalDesc: reagent-physical-desc-strong-smelling
+  flavor: salty
+  color: "#a1000b"
+  boilingPoint: 78.2 # This isn't a real chemical...
+  meltingPoint: -19.4
+  plantMetabolism:
+  - !type:PlantAdjustToxins
+    amount: 20
+  - !type:PlantAdjustWeeds
+    amount: -4
+  - !type:PlantAdjustHealth
+    amount: -8
+  reactiveEffects:
+    Acidic:
+      methods: [ Touch ]
+      effects:
+      - !type:HealthChange
+        ignoreResistances: false
+        damage:
+          types:
+            Caustic: 0.5
+      - !type:Emote
+        emote: Scream
+        probability: 0.3
+  metabolisms:
+    Poison:
+      metabolismRate : 3.00 # High damage, high metabolism rate. You need a lot of units to crit. Simulates acid burning through you fast.
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Caustic: 11.0
+      - !type:PopupMessage
+        type: Local
+        visualType: Large
+        messages: [ "generic-reagent-effect-burning-insides" ]
+        probability: 0.33
+      - !type:Emote
+        emote: Scream
+        probability: 0.3
+        
+
+- type: reagent
+  id: Pax
+  name: reagent-name-pax
+  group: Narcotics
+  desc: reagent-desc-pax
+  physicalDesc: reagent-physical-desc-soothing
+  allowedDepartments:
+  - Security
+  - Medical
+  color: "#AAAAAA"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:GenericStatusEffect
+        key: Pacified
+        component: Pacified
+        time: 4

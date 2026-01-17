@@ -657,9 +657,6 @@
     access: [[ "AllAccess" ]]
   - type: CommunicationsConsole
     title: comms-console-announcement-title-station
-  - type: DeviceNetwork
-    deviceNetId: Wireless
-    transmitFrequencyId: ShuttleTimer
   - type: ActivatableUI
     key: enum.CommunicationsConsoleUiKey.Key
   - type: UserInterface

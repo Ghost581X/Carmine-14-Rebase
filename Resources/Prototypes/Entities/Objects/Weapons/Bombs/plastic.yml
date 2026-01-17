@@ -76,7 +76,7 @@
     ports:
     - Trigger
   - type: Explosive # Powerful explosion in a very small radius. Doesn't break underplating.
-    explosionType: DemolitionCharge
+    explosionType: Default
     totalIntensity: 60
     intensitySlope: 5
     maxIntensity: 30
@@ -124,7 +124,7 @@
     ports:
     - Trigger
   - type: Explosive
-    explosionType: Cryo
+    explosionType: Default
     totalIntensity: 120
     intensitySlope: 2
     maxIntensity: 30

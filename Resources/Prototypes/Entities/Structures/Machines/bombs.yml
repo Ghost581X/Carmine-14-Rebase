@@ -46,10 +46,6 @@
           layer:
             - MachineLayer
     - type: WiresPanel
-    - type: GuideHelp
-      openOnActivation: true
-      guides:
-      - Defusal
 
 - type: entity
   parent: BaseHardBomb
@@ -124,7 +120,7 @@
       radius: 1.1
       softness: 1
     - type: Explosive
-      explosionType: HardBomb
+      explosionType: Default
       totalIntensity: 4000.0
       intensitySlope: 3
       maxIntensity: 400

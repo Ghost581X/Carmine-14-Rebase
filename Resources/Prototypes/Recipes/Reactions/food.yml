@@ -283,18 +283,6 @@
     Soysauce: 3
 
 - type: reaction
-  id: CookingVinaigrette
-  reactants:
-    Vinegar:
-      amount: 1
-    OilOlive:
-      amount: 1
-    Blackpepper:
-      amount: 1
-  products:
-    Vinaigrette: 3
-
-- type: reaction
   id: OilBreakdown
   requiredMixerCategories:
   - Centrifuge

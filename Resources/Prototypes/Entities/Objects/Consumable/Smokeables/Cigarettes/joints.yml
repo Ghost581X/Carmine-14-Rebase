@@ -18,9 +18,6 @@
     equippedPrefix: unlit
   - type: Item
     size: Tiny
-  - type: Construction
-    graph: smokeableJoint
-    node: joint
   - type: SolutionContainerManager
     solutions:
       smokable:
@@ -28,8 +25,6 @@
         reagents:
           - ReagentId: THC
             Quantity: 20
-  - type: RandomMetadata
-    nameSegments: [NamesRollie]
 
 - type: entity
   id: Blunt
@@ -51,9 +46,6 @@
     equippedPrefix: unlit
   - type: Item
     size: Tiny
-  - type: Construction
-    graph: smokeableBlunt
-    node: blunt
   - type: SolutionContainerManager
     solutions:
       smokable:
@@ -61,5 +53,3 @@
         reagents:
           - ReagentId: THC
             Quantity: 20
-  - type: RandomMetadata
-    nameSegments: [NamesRollie]

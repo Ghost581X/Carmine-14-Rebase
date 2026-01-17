@@ -29,7 +29,7 @@
     min: 0
     max: 15
   - type: Explosive # Weak explosion in a very small radius. Ignites surrounding entities.
-    explosionType: FireBomb
+    explosionType: Default
     totalIntensity: 25
     intensitySlope: 5
     maxIntensity: 3
@@ -52,9 +52,6 @@
       - !type:DoActsBehavior
         acts: ["Destruction"]
       - !type:ExplodeBehavior
-  - type: Construction
-    graph: FireBomb
-    node: firebomb
 
 # has igniter but no fuel or wires
 - type: entity
@@ -76,10 +73,6 @@
         enum.OpenableVisuals.Layer:
           True: {state: "base"}
           False: {state: "base"}
-  - type: Construction
-    graph: FireBomb
-    node: empty
-    defaultTarget: firebomb
   - type: Tag
     tags:
     - Trash

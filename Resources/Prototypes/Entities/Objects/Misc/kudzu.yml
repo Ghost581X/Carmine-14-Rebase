@@ -71,7 +71,7 @@
         Flammable: [Touch]
         Extinguish: [Touch]
       reactions:
-      - reagents: [WeedKiller, PlantBGone]
+      - reagents: [WeedKiller]
         methods: [Touch]
         effects:
         - !type:HealthChange

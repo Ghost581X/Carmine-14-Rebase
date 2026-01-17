@@ -21,16 +21,6 @@
     Carbon: 1
 
 - type: reaction
-  id: Diethylamine
-  reactants:
-    Ammonia:
-      amount: 1
-    Ethanol:
-      amount: 1
-  products:
-    Diethylamine: 2
-
-- type: reaction
   id: Phenol
   reactants:
     Hydroxide:
@@ -316,20 +306,6 @@
     Desoxyephedrine: 4 #I kinda remember having to heat this up, and if you heated it up too much, it went boom, I can't remember the specific values tho.
 
 - type: reaction
-  id: Stimulants
-  impact: Medium
-  minTemp: 370
-  reactants:
-    Ephedrine:
-      amount: 1
-    Vestine:
-      amount: 1
-    Oxygen:
-      amount: 2
-  products:
-    Stimulants: 2
-
-- type: reaction
   id: Ephedrine
   impact: Medium
   reactants:
@@ -339,8 +315,8 @@
       amount: 1
     Sugar:
       amount: 1
-    Diethylamine:
-     amount: 1
+#    Diethylamine:
+#     amount: 1
   products:
     Ephedrine: 4
 
@@ -351,8 +327,8 @@
   reactants:
     Uranium:
       amount: 1
-    Vestine:
-      amount: 2
+#    Vestine:
+#      amount: 2
     SpaceGlue:
       amount: 2
   products:
@@ -391,41 +367,6 @@
       amount: 1
   products:
     Charcoal: 1
-
-- type: reaction
-  id: NorepinephricAcid
-  impact: Medium
-  reactants:
-    Uranium:
-      amount: 1
-    Epinephrine:
-      amount: 1
-  products:
-    NorepinephricAcid: 2
-
-- type: reaction
-  id: Ethyloxyephedrine
-  impact: Medium
-  reactants:
-    Desoxyephedrine:
-      amount: 1
-    Stellibinin:
-      amount: 1
-  products:
-    Ethyloxyephedrine: 2
-
-- type: reaction
-  id: Diphenylmethylamine
-  impact: Medium
-  reactants:
-    Ethyloxyephedrine:
-      amount: 1
-    SodiumCarbonate:
-      amount: 1
-    Coffee:
-      amount: 1
-  products:
-    Diphenylmethylamine: 3
 
 - type: reaction
   id: SodiumCarbonate
@@ -498,38 +439,6 @@
       amount: 1
   products:
     SodiumPolyacrylate: 4
-
-- type: reaction
-  id: Nocturine
-  impact: High
-  reactants:
-    Impedrezene:
-      amount: 2
-    Vestine:
-      amount: 1
-  products:
-    Nocturine: 1
-
-- type: reaction
-  id: Tazinide
-  impact: Medium
-  reactants:
-    Licoxide:
-      amount: 1
-    Vestine:
-      amount: 1
-  products:
-    Tazinide: 1
-
-- type: reaction
-  id: ArtifactGlue
-  reactants:
-    SpaceGlue:
-      amount: 1
-    Artifexium:
-      amount: 1
-  products:
-    ArtifactGlue: 2
 
 - type: reaction
   id: Lye

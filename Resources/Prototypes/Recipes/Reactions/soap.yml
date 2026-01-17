@@ -70,24 +70,6 @@
       entity: SoapHomemade
 
 - type: reaction
-  id: CreateSoapSyndie
-  impact: Medium
-  quantized: true
-  minTemp: 373
-  reactants:
-    Oil:
-      amount: 15
-    Lye:
-      amount: 20
-    TableSalt:
-      amount: 5
-    Stimulants:
-      amount: 5
-  effects:
-    - !type:SpawnEntity
-      entity: SoapSyndie
-
-- type: reaction
   id: CreateSoapOmega
   impact: Medium
   quantized: true
@@ -103,8 +85,6 @@
       amount: 5
     Honk:
       amount: 10
-    SpaceLube:
-      amount: 5
     SpaceDrugs:
       amount: 3
     THC:

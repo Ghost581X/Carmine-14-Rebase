@@ -41,11 +41,6 @@
   - type: Access
     groups:
     - AllAccess
-    - Silicon
-    tags:
-    - NuclearOperative
-    - SyndicateAgent
-    - CentralCommand
   - type: UserInterface
     interfaces:
       enum.SolarControlConsoleUiKey.Key:
@@ -88,10 +83,6 @@
   - type: CrewMonitoringConsole
   - type: GeneralStationRecordConsole
     canDeleteEntries: true
-  - type: DeviceNetwork
-    deviceNetId: Wireless
-    receiveFrequencyId: CrewMonitor
-    transmitFrequencyId: ShuttleTimer
   - type: WirelessNetworkConnection
     range: 500
   - type: StationLimitedNetwork
@@ -105,8 +96,6 @@
   - type: ShowContrabandDetails
   - type: Inventory
     templateId: aghost
-  - type: Loadout
-    prototypes: [ MobAghostGear ]
   - type: BypassInteractionChecks
   - type: ExplosionResistance
     damageCoefficient: 0

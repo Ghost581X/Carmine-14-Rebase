@@ -30,9 +30,6 @@
     canCreateVacuum: false
   - type: Appearance
   - type: TimerTriggerVisuals
-  - type: Construction
-    graph: PipeBomb
-    node: pipebomb
 
 - type: entity
   parent: [ BaseItem ]
@@ -44,10 +41,6 @@
   - type: Sprite
     sprite: Objects/Weapons/Bombs/pipebomb.rsi
     state: base
-  - type: Construction
-    graph: PipeBomb
-    node: gunpowder
-    defaultTarget: pipebomb
 
 - type: entity
   parent: [ BaseItem ]
@@ -59,7 +52,3 @@
   - type: Sprite
     sprite: Objects/Weapons/Bombs/pipebomb.rsi
     state: base
-  - type: Construction
-    graph: PipeBomb
-    node: cable
-    defaultTarget: pipebomb

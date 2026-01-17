@@ -448,21 +448,6 @@
 
 - type: entity
   parent: Jug
-  suffix: Plant-B-Gone
-  id: JugPlantBGone
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: Label
-    currentLabel: reagent-name-plant-b-gone
-  - type: SolutionContainerManager
-    solutions:
-      beaker:
-        reagents:
-        - ReagentId: PlantBGone
-          Quantity: 200
-
-- type: entity
-  parent: Jug
   suffix: welding fuel
   id: JugWeldingFuel
   categories: [ HideSpawnMenu ]

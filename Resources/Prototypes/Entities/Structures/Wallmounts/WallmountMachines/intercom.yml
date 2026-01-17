@@ -21,11 +21,6 @@
   - type: RadioSpeaker
     toggleOnInteract: false
   - type: Intercom
-  - type: Speech
-    speechVerb: Robotic
-  - type: VoiceOverride # This is for the wire that makes an electricity zapping noise.
-    speechVerbOverride: Electricity
-    enabled: false
   - type: Appearance
   - type: WiresVisuals
   - type: WiresPanelSecurity

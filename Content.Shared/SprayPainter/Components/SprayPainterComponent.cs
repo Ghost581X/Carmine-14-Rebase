@@ -13,7 +13,7 @@ namespace Content.Shared.SprayPainter.Components;
 public sealed partial class SprayPainterComponent : Component
 {
     public const string DefaultPickedColor = "red";
-    public static readonly ProtoId<DecalPrototype> DefaultDecal = "Arrows";
+    public static readonly ProtoId<DecalPrototype> DefaultDecal = "WarnBox";
 
     /// <summary>
     /// The sound to be played after painting the entities.

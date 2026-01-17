@@ -44,13 +44,13 @@ public sealed partial class CloningPodComponent : Component
     /// The mob to spawn on emag.
     /// </summary>
     [DataField]
-    public EntProtoId MobSpawnId = "MobAbomination";
+    public EntProtoId MobSpawnId = "MobHuman";
 
     /// <summary>
     /// The sound played when a mob is spawned from an emagged cloning pod.
     /// </summary>
     [DataField]
-    public SoundSpecifier ScreamSound = new SoundCollectionSpecifier("ZombieScreams")
+    public SoundSpecifier ScreamSound = new SoundCollectionSpecifier("DeathGasp")
     {
         Params = AudioParams.Default.WithVolume(4),
     };
