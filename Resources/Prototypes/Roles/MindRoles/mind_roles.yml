@@ -31,3 +31,30 @@
   name: Job Role
   # JobPrototype is filled by SharedJobSystem
 
+
+- type: entity
+  parent: MindRoleGhostRoleNeutral
+  id: MindRoleGhostRoleFreeAgent
+  name: Ghost Role (Free Agent)
+  components:
+  - type: MindRole
+    roleType: FreeAgent
+    sortWeight: 0 # Maybe 10?
+
+- type: entity
+  parent: MindRoleGhostRoleNeutral
+  id: MindRoleGhostRoleSilicon
+  name: Ghost Role (Silicon)
+  components:
+  - type: MindRole
+    roleType: Silicon
+
+# Silicon
+- type: entity
+  parent: BaseMindRole
+  id: MindRoleSiliconBrain
+  name: Borg Brain Role
+  components:
+  - type: MindRole
+    roleType: Silicon
+  - type: SiliconBrainRole

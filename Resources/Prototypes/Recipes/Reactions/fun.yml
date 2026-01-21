@@ -1,30 +1,4 @@
 - type: reaction
-  id: Carpetium
-  reactants:
-    SpaceDrugs:
-      amount: 1
-    Fiber:
-      amount: 2
-  products:
-    Carpetium: 3
-
-- type: reaction
-  id: BuzzochloricBees
-  reactants:
-    Saxoite: # do you like jazz (not sorry)
-      amount: 1
-    Fiber: # bees are fuzzy
-      amount: 1
-    GroundBee: # you need bee for the bees
-      amount: 1
-    Chlorine: # the chloric part of buzzochloric
-      amount: 1
-    UnstableMutagen: # to bring the buzz to life
-      amount: 1
-  products:
-    BuzzochloricBees: 3
-
-- type: reaction
   id: Meatification
   impact: Low
   quantized: true
@@ -86,21 +60,6 @@
     Sugar: 2
 
 - type: reaction
-  id: CreateCrystals
-  quantized: true
-  minTemp: 374
-  reactants:
-    Sugar:
-      amount: 15
-    Water:
-      amount: 15
-    Ethanol:
-      amount: 5
-  effects:
-    - !type:SpawnEntity
-      entity: ShardCrystalRandom
-
-- type: reaction
   id: Gunpowder
   impact: Low
   quantized: true
@@ -120,11 +79,10 @@
   id: SolidifyGold
   impact: Low
   quantized: true
+  minTemp: 374
   reactants:
     Gold:
       amount: 10
-    FrostOil:
-      amount: 5
   effects:
   - !type:SpawnEntity
     entity: IngotGold1
@@ -133,84 +91,10 @@
   id: SolidifySilver
   impact: Low
   quantized: true
+  minTemp: 374
   reactants:
     Silver:
       amount: 10
-    FrostOil:
-      amount: 5
   effects:
   - !type:SpawnEntity
     entity: IngotSilver1
-
-- type: reaction
-  id: WehHewExplosion
-  impact: High
-  priority: 20
-  reactants:
-    JuiceThatMakesYouWeh:
-      amount: 1
-    JuiceThatMakesYouHew:
-      amount: 1
-  effects:
-  - !type:Explosion
-    explosionType: Radioactive
-    maxIntensity: 200
-    intensityPerUnit: 2
-    intensitySlope: 1
-    maxTotalIntensity: 250
-    tileBreakScale: 0.00001
-
-- type: reaction
-  id: CorgiJuice
-  reactants:
-    UncookedAnimalProteins:
-      amount: 1
-    JuiceThatMakesYouWeh:
-      amount: 1
-    Happiness:
-      amount: 1
-  products:
-    CorgiJuice: 2
-
-- type: reaction
-  id: Felinase
-  reactants:
-    Psicodine:
-      amount: 2
-    CarpoToxin:
-      amount: 2
-    Enzyme:
-      amount: 1
-  products:
-    Felinase: 2
-
-- type: reaction
-  id: Caninase
-  reactants:
-    Psicodine:
-      amount: 2
-    Happiness:
-      amount: 2
-    Enzyme:
-      amount: 1
-  products:
-    Caninase: 2
-
-- type: reaction
-  id: CaninaseFelinaseReaction
-  impact: High
-  priority: 20
-  reactants:
-    Caninase:
-      amount: 1
-    Felinase:
-      amount: 1
-  products:
-    Razorium: 2
-  effects:
-  - !type:Explosion
-    explosionType: Radioactive
-    maxIntensity: 5
-    intensityPerUnit: 1
-    intensitySlope: 2.7
-    maxTotalIntensity: 50

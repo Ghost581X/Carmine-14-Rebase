@@ -239,9 +239,6 @@
   - type: MaterialStorage
     whitelist: *StandardMaterialWhitelist
   - type: OreSiloClient
-  - type: GuideHelp
-    guides:
-    - Robotics
 
 - type: entity
   id: Biofabricator

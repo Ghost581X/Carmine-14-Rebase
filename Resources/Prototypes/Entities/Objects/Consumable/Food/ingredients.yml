@@ -1,0 +1,407 @@
+# Lots of misc stuff in here, hard to parent it.
+# ^ Yeah, this stuff should probably get split into different files but not my fight today.
+
+# Powder (For when you throw stuff like flour and it explodes)
+
+# Reagent Containers
+
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: ReagentContainerBase
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/Food/ingredients.rsi
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 50
+  - type: SolutionTransfer
+    # This is potentially badly-handled due to 'drink opening',
+    #  but it lets the flour be tampered with, refilled, etc.
+  - type: DrawableSolution
+    solution: food
+  - type: RefillableSolution
+    solution: food
+  - type: DrainableSolution
+    solution: food
+  - type: Edible
+    edible: Food # usually contains powders like flour or condiments like ketchup
+    solution: food
+    utensil: Spoon
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Spillable
+    solution: food
+  - type: TrashOnSolutionEmpty
+    solution: food
+- type: entity
+  abstract: true
+  parent: ReagentContainerBase
+  id: ReagentPacketBase
+  components:
+  - type: Openable
+    sound:
+      collection: packetOpenSounds
+  # packet can be broken open
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 2
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: desecration
+      - !type:SpillBehavior
+        solution: food
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  # packet contents can be splashed when open
+  - type: MeleeWeapon
+    soundNoDamage:
+      path: "/Audio/Effects/Fluids/splat.ogg"
+    damage:
+      types:
+        Blunt: 0
+
+- type: entity
+  abstract: true
+  id: ItemHeftyBase
+  components:
+  - type: DamageOnLand
+    damage:
+      types:
+        Blunt: 1
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 1
+
+- type: entity
+  parent: [ReagentPacketBase, ItemHeftyBase]
+  id: ReagentContainerFlour
+  name: flour bag
+  description: A big bag of flour. Good for baking!
+  components:
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.OpenableVisuals.Opened:
+        enum.OpenableVisuals.Layer:
+          True: {state: "flour-big_open"} # open
+          False: {state: "flour-big"} # closed
+  - type: Sprite
+    layers:
+    - state: flour-big
+      map: ["enum.OpenableVisuals.Layer"]
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 50
+        reagents:
+        - ReagentId: Flour
+          Quantity: 50
+
+- type: entity
+  parent: [ReagentPacketBase, ItemHeftyBase]
+  id: ReagentContainerFlourSmall
+  name: flour pack
+  description: A pack of flour. Good for baking!
+  components:
+  - type: Sprite
+    state: flour-small
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: Flour
+          Quantity: 20
+
+- type: entity
+  parent: ReagentPacketBase
+  id: ReagentContainerRice
+  name: rice bag
+  description: A big bag of rice. Good for cooking!
+  components:
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.OpenableVisuals.Opened:
+        enum.OpenableVisuals.Layer:
+          True: {state: "rice-big_open"} # open
+          False: {state: "rice-big"} # closed
+  - type: Sprite
+    layers:
+    - state: rice-big
+      map: ["enum.OpenableVisuals.Layer"]
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: Rice
+          Quantity: 50
+
+- type: entity
+  parent: ReagentPacketBase
+  id: ReagentContainerRiceSmall
+  name: rice pack
+  description: A pack of rice. Good for cooking!
+  components:
+  - type: Sprite
+    state: rice-small
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: Rice
+          Quantity: 20
+
+- type: entity
+  abstract: true
+  parent: FoodBase
+  id: FoodBakingBase
+  description: Used in various recipes.
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/Food/ingredients.rsi
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 18
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 15
+
+- type: entity
+  parent: FoodBakingBase
+  id: FoodDough
+  name: dough
+  description: A piece of dough.
+  components:
+  - type: Item
+    size: Normal
+  - type: FlavorProfile
+    flavors:
+      - dough
+  - type: Sprite
+    state: dough
+  - type: SliceableFood
+    count: 3
+    slice: FoodDoughSlice
+  - type: Construction
+    graph: Pizza
+    node: start
+
+- type: entity
+  parent: FoodBakingBase
+  id: FoodDoughSlice
+  name: dough slice
+  description: A slice of dough. Can be cooked into a bun.
+  components:
+  - type: Item
+    size: Tiny
+  - type: FlavorProfile
+    flavors:
+      - dough
+  - type: Sprite
+    state: dough-slice
+  - type: Tag
+    tags:
+    - Slice
+  - type: Construction
+    graph: DoughRope
+    node: start
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 6
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 5
+
+- type: entity
+  parent: FoodBakingBase
+  id: FoodDoughRope
+  name: dough rope
+  description: A thin noodle of dough. Can be cooked into a bagel.
+  components:
+  - type: Item
+    storedRotation: -45
+  - type: FlavorProfile
+    flavors:
+      - dough
+  - type: Sprite
+    state: dough-rope
+  - type: Construction
+    graph: DoughRope
+    node: rolled
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 6
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 5
+
+- type: entity
+  parent: FoodBakingBase
+  id: FoodDoughFlat
+  name: flat dough
+  description: A flattened dough.
+  components:
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,2,1
+  - type: Sprite
+    state: dough-flat
+  - type: Construction
+    graph: Pizza
+    node: flat
+  - type: SliceableFood
+    count: 3
+    slice: FoodCroissantRaw
+
+- type: entity
+  parent: FoodBakingBase
+  id: FoodButter
+  name: stick of butter
+  description: A stick of delicious, golden, fatty goodness.
+  components:
+  - type: Item
+    shape:
+    - 0,0,1,0
+  - type: Sprite
+    state: butter
+  - type: Slippery
+  - type: StepTrigger
+    intersectRatio: 0.2
+  - type: CollisionWake
+    enabled: false
+  - type: Physics
+    bodyType: Dynamic
+  - type: Fixtures
+    fixtures:
+      slips:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.3,-0.2,0.3,0.2"
+        layer:
+        - SlipLayer
+        hard: false
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.3,-0.2,0.3,0.2"
+        density: 10
+        mask:
+        - ItemMask
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 18
+        reagents:
+        - ReagentId: Butter
+          Quantity: 15
+  - type: SliceableFood
+    count: 3
+    slice: FoodButterSlice
+
+- type: entity
+  parent: FoodBakingBase
+  id: FoodButterSlice
+  name: butter slice
+  description: A pat of delicious, golden, fatty goodness.
+  components:
+  - type: Item
+    size: Tiny
+  - type: Sprite
+    state: butter-slice
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 6
+        reagents:
+        - ReagentId: Butter
+          Quantity: 5
+  - type: Tag
+    tags:
+    - Slice
+
+- type: entity
+  name: cheese wheel
+  parent: FoodBakingBase
+  id: FoodCheese
+  description: A big wheel of delicious Cheddar.
+  components:
+  - type: Item
+    size: Normal
+  - type: FlavorProfile
+    flavors:
+      - cheesy
+  - type: Sprite
+    state: cheesewheel
+  - type: SliceableFood
+    count: 4
+    slice: FoodCheeseSlice
+
+- type: entity
+  parent: FoodBakingBase
+  id: FoodCheeseSlice
+  name: cheese wedge
+  description: A wedge of delicious Cheddar. The cheese wheel it was cut from can't have gone far.
+  components:
+  - type: FlavorProfile
+    flavors:
+      - cheesy
+  - type: Sprite
+    state: cheesewedge
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 6
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 3.75
+  - type: Tag
+    tags:
+    - Slice
+#  - type: FoodSequenceElement
+#    entries:
+#      Taco: CheeseTaco
+#      Burger: CheeseBurger
+  - type: Item
+    size: Tiny
+    storedOffset: 0,-3
+    inhandVisuals:
+      left:
+      - state: cheesewedge-inhand-left
+      right:
+      - state: cheesewedge-inhand-right
+
+- type: entity
+  name: burned mess
+  parent: FoodBakingBase
+  id: FoodBadRecipe
+  description: Someone should be demoted from cook for this.
+  components:
+  - type: FlavorProfile
+    flavors:
+      - terrible
+  - type: Sprite
+    state: badrecipe
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 8
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 2
+        - ReagentId: GastroToxin
+          Quantity: 3
+  - type: Tag
+    tags:
+    - Trash

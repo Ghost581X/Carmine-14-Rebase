@@ -24,6 +24,14 @@
   color: "#8291a1"
 
 - type: material
+  id: Paper
+  stackEntity: SheetPaper1
+  name: materials-paper
+  icon: { sprite: Objects/Materials/Sheets/other.rsi, state: paper }
+  color: "#d9d9d9"
+  price: 0.01 # it's paper bro what do you expect?
+
+- type: material
   id: Plasma
   stackEntity: SheetPlasma1
   name: materials-plasma

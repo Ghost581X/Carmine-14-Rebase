@@ -1,9 +1,3 @@
-- type: loadout
-  id: Hairflower
-  storage:
-    back:
-    - ClothingHeadHatHairflower
-
 # Headphones
 - type: loadout
   id: Headphones
@@ -17,34 +11,6 @@
   storage:
     back:
     - Lighter
-  groupBy: "smokeables"
-
-- type: loadout
-  id: CigPackGreen
-  storage:
-    back:
-    - CigPackGreen
-  groupBy: "smokeables"
-
-- type: loadout
-  id: CigPackRed
-  storage:
-    back:
-    - CigPackRed
-  groupBy: "smokeables"
-
-- type: loadout
-  id: CigPackBlue
-  storage:
-    back:
-    - CigPackBlue
-  groupBy: "smokeables"
-
-- type: loadout
-  id: CigPackBlack
-  storage:
-    back:
-    - CigPackBlack
   groupBy: "smokeables"
 
 - type: loadout

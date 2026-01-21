@@ -4,7 +4,7 @@
   id: Blindness
   name: trait-blindness-name
   description: trait-blindness-desc
-  traitGear: WhiteCane
+#  traitGear: WhiteCane
   category: Disabilities
   whitelist:
     components:
@@ -102,7 +102,7 @@
   id: ImpairedMobility
   name: trait-impaired-mobility-name
   description: trait-impaired-mobility-desc
-  traitGear: OffsetCane
+#  traitGear: OffsetCane
   category: Disabilities
   components:
     - type: ImpairedMobility

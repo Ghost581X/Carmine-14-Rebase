@@ -21,7 +21,6 @@
     board: SodaDispenserMachineCircuitboard
   - type: GuideHelp
     guides:
-    - Bartender
     - Drinks
 
 - type: entity

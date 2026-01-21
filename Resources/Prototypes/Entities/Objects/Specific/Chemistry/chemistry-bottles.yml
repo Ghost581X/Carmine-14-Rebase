@@ -452,3 +452,50 @@
         reagents:
         - ReagentId: Sulfur
           Quantity: 30
+
+# Medicine bottles
+
+- type: entity
+  id: ChemistryBottleBicaridine
+  suffix: bicaridine
+  parent: BaseChemistryBottleFilled
+  components:
+  - type: Label
+    currentLabel: reagent-name-bicaridine
+  - type: SolutionContainerManager
+    solutions:
+      drink: # This solution name and target volume is hard-coded in ChemMasterComponent
+        maxVol: 30
+        reagents:
+        - ReagentId: Bicaridine
+          Quantity: 30
+
+- type: entity
+  id: ChemistryBottleEpinephrine
+  suffix: epinephrine
+  parent: BaseChemistryBottleFilled
+  components:
+  - type: Label
+    currentLabel: reagent-name-epinephrine
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: Epinephrine
+          Quantity: 30
+
+- type: entity
+  id: ChemistryBottleHolywater
+  suffix: holy water
+  parent: BaseChemistryBottleFilled
+  components:
+  - type: Label
+    currentLabel: reagent-name-holywater
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: Holywater
+          Quantity: 30

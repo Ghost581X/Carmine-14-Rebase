@@ -105,7 +105,7 @@
       fuelSlot: !type:ContainerSlot
   - type: GuideHelp
     guides:
-    - AME
+    #- AME
     - Power
   - type: Electrified
     onHandInteract: false
@@ -216,7 +216,7 @@
     node: ameShielding
   - type: GuideHelp
     guides:
-    - AME
+    #- AME
     - Power
   - type: Electrified
     onHandInteract: false

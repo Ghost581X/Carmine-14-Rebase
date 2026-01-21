@@ -1,0 +1,7 @@
+# Regular steel tiles
+
+- type: stack
+  parent: BaseMediumStack
+  id: FloorTileSteel
+  name: stack-steel-tile
+  spawn: FloorTileItemSteel

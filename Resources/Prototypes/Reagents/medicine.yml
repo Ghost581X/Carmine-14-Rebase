@@ -295,8 +295,6 @@
   group: Medicine
   desc: reagent-desc-ipecac
   physicalDesc: reagent-physical-desc-inky
-  allowedDepartments:
-  - Medical
   flavor: medicine
   color: "#422912"
   metabolisms:
@@ -598,6 +596,50 @@
     Medicine:
       effects:
       - !type:EyeDamage
+
+- type: reagent
+  id: Holywater
+  name: reagent-name-holywater
+  group: Medicine
+  desc: reagent-desc-holywater
+  evaporationSpeed: 0.3
+  physicalDesc: reagent-physical-desc-holy
+  flavor: holy
+  color: "#91C3F7"
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 3
+      - !type:HealthChange
+        conditions:
+        - !type:TotalDamageCondition
+          max: 50
+        damage:
+          types:
+            Blunt: -0.2
+            Poison: -0.2
+            Heat: -0.2
+            Shock: -0.2
+            Cold: -0.2
+  reactiveEffects:
+    Extinguish:
+      methods: [ Touch ]
+      effects:
+      - !type:Extinguish
+    Acidic:
+      methods: [ Touch ]
+      effects:
+      - !type:HealthChange
+        ignoreResistances: false
+        damage:
+          types:
+            Holy: 0.5
+  plantMetabolism:
+  - !type:PlantAdjustWater
+    amount: 1
+  tileReactions:
+  - !type:ExtinguishTileReaction { }
 
 - type: reagent
   id: Opporozidone #Name based of an altered version of the startreck chem "Opporozine"

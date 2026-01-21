@@ -1,0 +1,8 @@
+# Smokeables
+
+- type: stack
+  parent: BaseVerySmallStack
+  id: CigaretteFilter
+  name: stack-cigarette-filter
+  icon: { sprite: /Textures/Objects/Consumable/Smokeables/Cigarettes/paper.rsi, state: cigfilter }
+  spawn: CigaretteFilter

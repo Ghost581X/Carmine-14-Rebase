@@ -37,16 +37,6 @@
 
 - type: entity
   parent: SeedBase
-  name: packet of garlic seeds
-  id: GarlicSeeds
-  components:
-    - type: Seed
-      seedId: garlic
-    - type: Sprite
-      sprite: Objects/Specific/Hydroponics/garlic.rsi
-
-- type: entity
-  parent: SeedBase
   name: packet of potato seeds
   id: PotatoSeeds
   components:
@@ -57,36 +47,6 @@
 
 - type: entity
   parent: SeedBase
-  name: packet of sugarcane seeds
-  id: SugarcaneSeeds
-  components:
-    - type: Seed
-      seedId: sugarcane
-    - type: Sprite
-      sprite: Objects/Specific/Hydroponics/sugarcane.rsi
-
-- type: entity
-  parent: SeedBase
-  name: packet of tea plant seeds
-  id: TeaPlantSeeds
-  components:
-    - type: Seed
-      seedId: teaPlant
-    - type: Sprite
-      sprite: Objects/Specific/Hydroponics/tea_plant.rsi
-
-- type: entity
-  parent: SeedBase
-  name: packet of tomato seeds
-  id: TomatoSeeds
-  components:
-    - type: Seed
-      seedId: tomato
-    - type: Sprite
-      sprite: Objects/Specific/Hydroponics/tomato.rsi
-
-- type: entity
-  parent: SeedBase
   name: packet of chanterelle spores
   id: ChanterelleSeeds
   components:
@@ -94,17 +54,6 @@
       seedId: chanterelle
     - type: Sprite
       sprite: Objects/Specific/Hydroponics/chanterelle.rsi
-
-- type: entity
-  parent: SeedBase
-  name: packet of onion seeds
-  description: "Not a shallot."
-  id: OnionSeeds
-  components:
-    - type: Seed
-      seedId: onion
-    - type: Sprite
-      sprite: Objects/Specific/Hydroponics/onion.rsi
 
 - type: entity
   parent: SeedBase

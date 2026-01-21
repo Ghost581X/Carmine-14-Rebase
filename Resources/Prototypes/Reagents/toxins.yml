@@ -6,7 +6,6 @@
   flavor: bitter
   color: "#cf3600"
   physicalDesc: reagent-physical-desc-opaque
-  contrabandSeverity: Minor
   plantMetabolism:
   - !type:PlantAdjustToxins
     amount: 10
@@ -28,8 +27,6 @@
   flavor: bitter
   color: "#000067"
   physicalDesc: reagent-physical-desc-nondescript
-  allowedDepartments:
-  - Medical
   metabolisms:
     Poison:
       effects:
@@ -76,8 +73,6 @@
   group: Toxins
   desc: reagent-desc-sulfuric-acid
   physicalDesc: reagent-physical-desc-oily
-  allowedJobs:
-  - Chemist
   flavor: acid
   color: "#BF8C00"
   recognizable: true
@@ -125,9 +120,6 @@
   group: Toxins
   desc: reagent-desc-unstable-mutagen
   physicalDesc: reagent-physical-desc-glowing
-  allowedJobs:
-  - Chemist
-  - Botanist
   flavor: bitter
   color: "#00ff5f"
   boilingPoint: 340282300000000000000000000000000000000 # Ethidium bromide, which doesn't boil.
@@ -257,8 +249,7 @@
   group: Toxins
   desc: reagent-desc-hemorrhinol
   physicalDesc: reagent-physical-desc-thin
-  contrabandSeverity: Major
-  flavor: sharp
+  flavor: metallic
   color: "#96424f"
   metabolisms:
     Poison:
@@ -269,3 +260,20 @@
         type: Update
       - !type:ModifyBleed
         amount: 0.5
+
+- type: reagent
+  id: Amatoxin
+  name: reagent-name-amatoxin
+  group: Toxins
+  desc: reagent-desc-amatoxin
+  physicalDesc: reagent-physical-desc-nondescript
+  contrabandSeverity: Major
+  color: "#D6CE7B"
+  metabolisms:
+    Poison:
+      metabolismRate: 0.2
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 3

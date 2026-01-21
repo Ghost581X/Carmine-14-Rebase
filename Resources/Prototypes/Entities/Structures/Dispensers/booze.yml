@@ -21,7 +21,6 @@
     board: BoozeDispenserMachineCircuitboard
   - type: GuideHelp
     guides:
-    - Bartender
     - Drinks
 
 - type: entity

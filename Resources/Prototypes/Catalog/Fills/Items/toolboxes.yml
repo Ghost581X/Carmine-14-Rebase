@@ -17,10 +17,7 @@
           children:
           - id: FlashlightLantern
           - id: Flare
-          - id: GlowstickGreen
         # Low-chance items
-        - id: FoodSnackChocolate
-          prob: 0.15
         - id: HarmonicaInstrument
           prob: 0.15
 

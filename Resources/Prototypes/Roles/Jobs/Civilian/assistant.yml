@@ -8,3 +8,9 @@
   supervisors: job-supervisors-everyone
   access:
   - Maintenance
+
+- type: startingGear
+  id: AssistantGear
+  equipment:
+    id: AssistantPDA
+    ears: ClothingHeadsetGrey

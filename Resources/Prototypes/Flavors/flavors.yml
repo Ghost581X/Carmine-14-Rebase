@@ -27,3 +27,223 @@
   id: spicy
   flavorType: Base
   description: flavor-base-spicy
+
+- type: flavor
+  id: metallic
+  flavorType: Base
+  description: flavor-base-metallic
+
+- type: flavor
+  id: chalky
+  flavorType: Base
+  description: flavor-base-chalky
+
+- type: flavor
+  id: acid
+  flavorType: Base
+  description: flavor-base-acid
+
+- type: flavor
+  id: oily
+  flavorType: Base
+  description: flavor-base-oily
+
+- type: flavor
+  id: slimy
+  flavorType: Base
+  description: flavor-base-slimy
+
+- type: flavor
+  id: fiber
+  flavorType: Base
+  description: flavor-base-fiber
+
+- type: flavor
+  id: cold
+  flavorType: Base
+  description: flavor-base-cold
+
+- type: flavor
+  id: creamy
+  flavorType: Base
+  description: flavor-base-creamy
+
+- type: flavor
+  id: fizzy
+  flavorType: Base
+  description: flavor-base-fizzy
+
+- type: flavor
+  id: terrible
+  flavorType: Base
+  description: flavor-base-terrible
+
+- type: flavor
+  id: nutriment
+  flavorType: Complex
+  description: flavor-complex-nutriment
+
+- type: flavor
+  id: vitamin
+  flavorType: Complex
+  description: flavor-complex-vitamin
+
+- type: flavor
+  id: protein
+  flavorType: Complex
+  description: flavor-complex-protein
+
+- type: flavor
+  id: batter
+  flavorType: Complex
+  description: flavor-complex-batter
+
+- type: flavor
+  id: butter
+  flavorType: Complex
+  description: flavor-complex-butter
+
+- type: flavor
+  id: egg
+  flavorType: Complex
+  description: flavor-complex-egg
+
+- type: flavor
+  id: raw-egg
+  flavorType: Complex
+  description: flavor-complex-raw-egg
+
+- type: flavor
+  id: rice
+  flavorType: Complex
+  description: flavor-complex-rice
+
+- type: flavor
+  id: dough
+  flavorType: Complex
+  description: flavor-complex-dough
+
+- type: flavor
+  id: mushroom
+  flavorType: Complex
+  description: flavor-complex-mushroom
+
+- type: flavor
+  id: people
+  flavorType: Complex
+  description: flavor-complex-people
+
+- type: flavor
+  id: alcohol
+  flavorType: Complex
+  description: flavor-complex-alcohol
+
+- type: flavor
+  id: juice
+  flavorType: Complex
+  description: flavor-complex-juice
+
+- type: flavor
+  id: water
+  flavorType: Complex
+  description: flavor-complex-water
+
+- type: flavor
+  id: beer
+  flavorType: Complex
+  description: flavor-complex-beer
+
+- type: flavor
+  id: soda
+  flavorType: Complex
+  description: flavor-complex-soda
+
+- type: flavor
+  id: cola
+  flavorType: Complex
+  description: flavor-complex-cola
+
+- type: flavor
+  id: vodka
+  flavorType: Complex
+  description: flavor-complex-vodka
+
+- type: flavor
+  id: rum
+  flavorType: Complex
+  description: flavor-complex-rum
+
+- type: flavor
+  id: whiskey
+  flavorType: Complex
+  description: flavor-complex-whiskey
+
+- type: flavor
+  id: champagne
+  flavorType: Complex
+  description: flavor-complex-champagne
+
+- type: flavor
+  id: coffee
+  flavorType: Complex
+  description: flavor-complex-coffee
+
+- type: flavor
+  id: milk
+  flavorType: Complex
+  description: flavor-complex-milk
+
+- type: flavor
+  id: tea
+  flavorType: Complex
+  description: flavor-complex-tea
+
+- type: flavor
+  id: ice
+  flavorType: Complex
+  description: flavor-complex-ice
+
+- type: flavor
+  id: painkiller
+  flavorType: Complex
+  description: flavor-complex-painkiller
+
+- type: flavor
+  id: absinthe
+  flavorType: Complex
+  description: flavor-complex-absinthe
+
+- type: flavor
+  id: medicine
+  flavorType: Complex
+  description: flavor-complex-medicine
+
+- type: flavor
+  id: plastic
+  flavorType: Complex
+  description: flavor-complex-plastic
+
+- type: flavor
+  id: glue
+  flavorType: Complex
+  description: flavor-complex-glue
+
+- type: flavor
+  id: spaceshroom
+  flavorType: Base
+  description: flavor-base-spaceshroom
+
+- type: flavor
+  id: spaceshroomcooked
+  flavorType: Complex
+  description: flavor-complex-spaceshroom-cooked
+
+- type: flavor
+  id: holy
+  flavorType: Base
+  description: flavor-base-holy
+
+- type: flavor
+  id: dogfood
+  flavorType: Base
+  description: flavor-complex-dog-food

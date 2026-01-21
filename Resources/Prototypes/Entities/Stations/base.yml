@@ -26,6 +26,25 @@
       alertLevelPrototype: stationAlerts
 
 - type: entity
+  id: BaseStationSiliconLawCrewsimov
+  abstract: true
+  components:
+  - type: SiliconLawProvider
+    laws: Crewsimov
+
+- type: entity
+  id: BaseStationNews
+  abstract: true
+  components:
+    - type: StationNews
+
+- type: entity
+  id: BaseStationDeliveries
+  abstract: true
+  components:
+  - type: CargoDeliveryData
+
+- type: entity
   id: BaseStationAllEventsEligible
   abstract: true
   components:

@@ -96,8 +96,8 @@
         reagents:
         - ReagentId: WeldingFuel
           Quantity: 30
-  - type: Construction
-    node: fuel
-    defaultTarget: firebomb
+#  - type: Construction
+#    node: fuel
+#    defaultTarget: firebomb
   - type: Tag
     tags: []

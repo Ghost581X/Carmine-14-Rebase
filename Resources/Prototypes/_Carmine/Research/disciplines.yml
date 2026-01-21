@@ -1,0 +1,11 @@
+- type: techDiscipline
+  id: Industrial
+  name: research-discipline-industrial
+  color: "#eeac34"
+  icon:
+    sprite: Interface/Misc/research_disciplines.rsi
+    state: industrial
+  tierPrerequisites:
+    1: 0
+    2: 0.75
+    3: 0.75

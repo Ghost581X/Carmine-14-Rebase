@@ -1,9 +1,21 @@
 - type: accessGroup
   id: AllAccess
   tags:
+  - EmergencyShuttleRepealAll
+  - Command
   - Maintenance
+  - Cryogenics
 
 - type: accessGroup
   id: General
   tags:
   - Maintenance
+
+- type: accessLevel
+  id: Maintenance
+  name: id-card-access-level-maintenance
+
+- type: accessLevel
+  id: EmergencyShuttleRepealAll
+  name: id-card-access-level-emergency-shuttle-repeal
+  canAddToIdCard: false

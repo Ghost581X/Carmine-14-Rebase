@@ -35,3 +35,42 @@
   speechVerbStrings:
   - chat-speech-verb-exclamation-strong
   priority: 10
+
+- type: speechVerb
+  id: Robotic
+  name: chat-speech-verb-name-robotic
+  speechVerbStrings:
+  - chat-speech-verb-robotic-1
+  - chat-speech-verb-robotic-2
+
+- type: speechVerb
+  id: LargeMob
+  name: chat-speech-verb-name-large-mob
+  speechVerbStrings:
+  - chat-speech-verb-large-mob-1
+  - chat-speech-verb-large-mob-2
+
+- type: speechVerb
+  id: SmallMob
+  name: chat-speech-verb-name-small-mob
+  speechVerbStrings:
+  - chat-speech-verb-small-mob-1
+  - chat-speech-verb-small-mob-2
+
+- type: speechVerb
+  id: Ghost
+  name: chat-speech-verb-name-ghost
+  speechVerbStrings:
+  - chat-speech-verb-ghost-1
+  - chat-speech-verb-ghost-2
+  - chat-speech-verb-ghost-3
+  - chat-speech-verb-ghost-4
+  - chat-speech-verb-mumble
+
+- type: speechVerb
+  id: Electricity
+  name: chat-speech-verb-name-electricity
+  speechVerbStrings:
+  - chat-speech-verb-electricity-1
+  - chat-speech-verb-electricity-2
+  - chat-speech-verb-electricity-3

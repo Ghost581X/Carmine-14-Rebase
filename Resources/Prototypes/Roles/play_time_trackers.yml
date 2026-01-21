@@ -2,3 +2,15 @@
 # This tracker must exist, it is used directly by PlayTimeTrackingManager
 - type: playTimeTracker
   id: Overall
+
+- type: playTimeTracker
+  id: JobAssistant
+
+- type: playTimeTracker
+  id: JobCaptain
+
+- type: playTimeTracker
+  id: JobBorg
+
+- type: playTimeTracker
+  id: JobStationAi

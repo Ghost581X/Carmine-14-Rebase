@@ -65,6 +65,54 @@
     count: 1
 
 - type: entity
+  name: regenerative mesh
+  description: Used to treat even the nastiest burns. Also effective against caustic burns.
+  parent: BaseHealingItem
+  id: RegenerativeMesh
+  suffix: Full
+  components:
+  - type: Tag
+    tags:
+    - Ointment
+  - type: Sprite
+    state: regenerative-mesh
+  - type: Item
+    heldPrefix: regenerative-mesh
+  - type: Healing
+    damageContainers:
+      - Biological
+    damage:
+      types:
+        Heat: -10
+        Cold: -10
+        Shock: -10
+        Caustic: -10
+    healingBeginSound:
+      path: "/Audio/Items/Medical/ointment_begin.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+    healingEndSound:
+      path: "/Audio/Items/Medical/ointment_end.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+  - type: Stack
+    stackType: RegenerativeMesh
+    count: 10
+  - type: StackPrice
+    price: 20
+
+- type: entity
+  id: OintmentAdvanced1
+  parent: RegenerativeMesh
+  suffix: Single
+  components:
+  - type: Stack
+    stackType: RegenerativeMesh
+    count: 1
+
+- type: entity
   name: bruise pack
   description: A therapeutic gel pack and bandages designed to treat blunt-force trauma.
   parent: BaseHealingItem
@@ -107,6 +155,53 @@
   components:
   - type: Stack
     stackType: Brutepack
+    count: 1
+
+- type: entity
+  name: medicated suture
+  description: A suture soaked in medicine, treats blunt-force trauma effectively and closes wounds.
+  parent: BaseHealingItem
+  id: MedicatedSuture
+  suffix: Full
+  components:
+  - type: Tag
+    tags:
+    - Brutepack
+  - type: Sprite
+    state: medicated-suture
+  - type: Item
+    heldPrefix: medicated-suture
+    storedRotation: -90
+  - type: Healing
+    damageContainers:
+      - Biological
+    damage:
+      groups:
+        Brute: -30 # 10 for each type in the group
+    bloodlossModifier: -10 # a suture should stop ongoing bleeding
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+  - type: Stack
+    stackType: MedicatedSuture
+    count: 10
+  - type: StackPrice
+    price: 20
+
+- type: entity
+  id: BrutepackAdvanced1
+  parent: MedicatedSuture
+  suffix: Single
+  components:
+  - type: Stack
+    stackType: MedicatedSuture
     count: 1
 
 - type: entity
@@ -239,6 +334,38 @@
   components:
   - type: Stack
     count: 1
+
+- type: entity
+  parent: BaseHealingItem
+  id: HealingToolbox
+  name: healing toolbox
+  description: A powerful toolbox imbued with robust energy. It can heal your wounds and fill you with murderous intent.
+  categories: [ DoNotMap ]
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Medical/healing_toolbox.rsi
+    state: icon
+  - type: Healing
+    damageContainers:
+    - Biological
+    damage:
+      groups: # these are all split across multiple types
+        Brute: -150
+        Burn: -150
+        Toxin: -150
+    bloodlossModifier: -20
+    delay: 1
+    selfHealPenaltyMultiplier: 0
+    healingBeginSound:
+      path: "/Audio/Items/Medical/ointment_begin.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+    healingEndSound:
+      path: "/Audio/Items/Medical/ointment_end.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
 
 # Pills
 - type: entity
@@ -398,6 +525,26 @@
           Quantity: 10
 
 - type: entity
+  name: pill
+  suffix: Copper 10u
+  parent: Pill
+  id: PillCopper
+  components:
+  - type: Pill
+    pillType: 12
+  - type: Sprite
+    state: pill13
+  - type: Label
+    currentLabel: copper 10u
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: Copper
+          Quantity: 10
+
+- type: entity
   name: pill canister
   parent: PillCanister
   id: PillCanisterIron
@@ -409,6 +556,20 @@
     containers:
       storagebase:
         id: PillIron
+        amount: 5
+
+- type: entity
+  name: pill canister
+  parent: PillCanister
+  id: PillCanisterCopper
+  suffix: Copper 10u, 5
+  components:
+  - type: Label
+    currentLabel: copper 10u
+  - type: EntityTableContainerFill
+    containers:
+      storagebase:
+        id: PillCopper
         amount: 5
 
 - type: entity
@@ -478,6 +639,19 @@
       storagebase:
         id: PillDermaline
         amount: 5
+
+- type: entity
+  name: space mirage
+  parent: Pill
+  id: PillSpaceDrugs
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: SpaceDrugs
+          Quantity: 15
 
 - type: entity
   name: pill
@@ -580,6 +754,49 @@
       storagebase:
         id: PillCharcoal
         amount: 3
+
+- type: entity
+  name: romerol pill
+  parent: Pill
+  id: PillRomerol
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: Romerol
+          Quantity: 10
+
+- type: entity
+  name: ambuzol pill
+  parent: Pill
+  id: PillAmbuzol
+  components:
+    - type: SolutionContainerManager
+      solutions:
+        food:
+          maxVol: 20
+          reagents:
+            - ReagentId: Ambuzol
+              Quantity: 10
+
+- type: entity
+  name: ambuzol plus pill
+  parent: Pill
+  id: PillAmbuzolPlus
+  components:
+    - type: Pill
+      pillType: 2
+    - type: Sprite
+      state: pill3
+    - type: SolutionContainerManager
+      solutions:
+        food:
+          maxVol: 20
+          reagents:
+            - ReagentId: AmbuzolPlus
+              Quantity: 5
 
 # Syringes
 - type: entity
@@ -688,6 +905,51 @@
           Quantity: 15
 
 - type: entity
+  suffix: ambuzol
+  parent: PrefilledSyringe
+  id: SyringeAmbuzol
+  components:
+  - type: Label
+    currentLabel: reagent-name-ambuzol
+  - type: SolutionContainerManager
+    solutions:
+      injector:
+        maxVol: 15
+        reagents:
+          - ReagentId: Ambuzol
+            Quantity: 15
+
+- type: entity
+  suffix: sigynate
+  parent: PrefilledSyringe
+  id: SyringeSigynate
+  components:
+  - type: Label
+    currentLabel: reagent-name-sigynate
+  - type: SolutionContainerManager
+    solutions:
+      injector:
+        maxVol: 15
+        reagents:
+          - ReagentId: Sigynate
+            Quantity: 15
+
+- type: entity
+  suffix: ethylredoxrazine
+  parent: PrefilledSyringe
+  id: SyringeEthylredoxrazine
+  components:
+  - type: Label
+    currentLabel: reagent-name-ethylredoxrazine
+  - type: SolutionContainerManager
+    solutions:
+      injector:
+        maxVol: 15
+        reagents:
+          - ReagentId: Ethylredoxrazine
+            Quantity: 15
+
+- type: entity
   suffix: phalanximine
   parent: PrefilledSyringe
   id: SyringePhalanximine
@@ -716,3 +978,34 @@
         reagents:
           - ReagentId: Saline
             Quantity: 15
+
+#this is where all the syringes are so i didn't know where to put it
+- type: entity
+  suffix: romerol
+  parent: PrefilledSyringe
+  id: SyringeRomerol
+  components:
+  - type: Label
+    currentLabel: reagent-name-romerol
+  - type: SolutionContainerManager
+    solutions:
+      injector:
+        maxVol: 15
+        reagents:
+        - ReagentId: Romerol
+          Quantity: 15
+
+- type: entity
+  suffix: hyperzine
+  parent: PrefilledSyringe
+  id: SyringeStimulants
+  components:
+  - type: Label
+    currentLabel: reagent-name-stimulants
+  - type: SolutionContainerManager
+    solutions:
+      injector:
+        maxVol: 15
+        reagents:
+        - ReagentId: Stimulants
+          Quantity: 15

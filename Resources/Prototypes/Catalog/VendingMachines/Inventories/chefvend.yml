@@ -1,6 +1,0 @@
-- type: vendingMachineInventory
-  id: ChefvendInventory
-  startingInventory:
-    FoodButter: 3
-    FoodCheese: 1
-    FoodMeat: 6

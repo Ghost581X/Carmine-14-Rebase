@@ -85,6 +85,9 @@
       "name": "flour-big"
     },
     {
+      "name": "flour-big_open"
+    },
+    {
       "name": "flour-small"
     },
     {
@@ -98,6 +101,9 @@
     },
     {
       "name": "rice-big"
+    },
+    {
+      "name": "rice-big_open"
     },
     {
       "name": "rice-small"

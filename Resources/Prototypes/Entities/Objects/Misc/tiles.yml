@@ -1,0 +1,18 @@
+- type: entity
+  name: steel tile
+  parent: FloorTileItemBase
+  id: FloorTileItemSteel
+  components:
+  - type: Sprite
+    state: steel
+  - type: Item
+    heldPrefix: steel
+  - type: FloorTile
+    outputs:
+      - Plating
+      - FloorSteel
+  - type: Stack
+    stackType: FloorTileSteel
+#  - type: Construction
+#    graph: TileSteel
+#    node: steeltile

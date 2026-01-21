@@ -1,0 +1,5 @@
+- type: antag
+  id: GenericFreeAgent
+  name: roles-antag-generic-free-agent-name
+  antagonist: true
+  objective: never-shown

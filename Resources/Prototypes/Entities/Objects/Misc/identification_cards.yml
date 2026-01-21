@@ -93,6 +93,7 @@
   - type: Access
     groups:
     - AllAccess
+    - Silicon
   - type: Tag #  Ignore Chameleon tags
     tags:
     - DoorBumpOpener

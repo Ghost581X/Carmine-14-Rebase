@@ -103,7 +103,7 @@
   group: Biological
   desc: reagent-desc-grey-matter
   physicalDesc: reagent-physical-desc-neural
-  flavor: mindful
+  flavor: people
   color: "#C584B8"
   metabolisms:
     Drink:

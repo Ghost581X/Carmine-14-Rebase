@@ -1,0 +1,18 @@
+- type: accessGroup
+  id: Command
+  tags:
+  - Captain
+  - Command
+  - Cryogenics
+
+- type: accessLevel
+  id: Command
+  name: id-card-access-level-command
+
+- type: accessLevel
+  id: Captain
+  name: id-card-access-level-captain
+
+- type: accessLevel
+  id: Cryogenics
+  name: id-card-access-level-cryogenics

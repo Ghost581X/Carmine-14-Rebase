@@ -82,68 +82,6 @@
 - type: entity
   abstract: true
   parent: BaseItem
-  id: ReagentContainerBase
-  components:
-  - type: Sprite
-    sprite: Objects/Consumable/Food/ingredients.rsi
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 50
-  - type: SolutionTransfer
-    # This is potentially badly-handled due to 'drink opening',
-    #  but it lets the flour be tampered with, refilled, etc.
-  - type: DrawableSolution
-    solution: food
-  - type: RefillableSolution
-    solution: food
-  - type: DrainableSolution
-    solution: food
-  - type: Edible
-    edible: Food # usually contains powders like flour or condiments like ketchup
-    solution: food
-    utensil: Spoon
-  - type: Damageable
-    damageContainer: Inorganic
-  - type: Spillable
-    solution: food
-  - type: TrashOnSolutionEmpty
-    solution: food
-
-- type: entity
-  abstract: true
-  parent: ReagentContainerBase
-  id: ReagentPacketBase
-  components:
-  - type: Openable
-    sound:
-      collection: packetOpenSounds
-  # packet can be broken open
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 2
-      behaviors:
-      - !type:PlaySoundBehavior
-        sound:
-          collection: desecration
-      - !type:SpillBehavior
-        solution: food
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
-  # packet contents can be splashed when open
-  - type: MeleeWeapon
-    soundNoDamage:
-      path: "/Audio/Effects/Fluids/splat.ogg"
-    damage:
-      types:
-        Blunt: 0
-
-
-- type: entity
-  abstract: true
-  parent: BaseItem
   id: BaseAmmoProvider
   components:
   - type: ContainerContainer
@@ -263,19 +201,6 @@
         acts: ["Destruction"]
   - type: Occluder
   - type: BlockWeather
-
-- type: entity
-  abstract: true
-  id: ItemHeftyBase
-  components:
-  - type: DamageOnLand
-    damage:
-      types:
-        Blunt: 1
-  - type: DamageOtherOnHit
-    damage:
-      types:
-        Blunt: 1
 
 - type: RandomPlantMutationList
   id: RandomPlantMutations
@@ -709,13 +634,6 @@
       - !type:Emote
         emote: Scream
         probability: 0.25
-        
-- type: speechVerb
-  id: Robotic
-  name: chat-speech-verb-name-robotic
-  speechVerbStrings:
-  - chat-speech-verb-robotic-1
-  - chat-speech-verb-robotic-2
   
 - type: entity
   parent: BaseItem
@@ -787,13 +705,6 @@
   files:
   - /Audio/Items/desk_bell_ring.ogg
   
-- type: material #hardcoded somewhere
-  id: Paper
-  stackEntity: SheetPaper1
-  name: materials-paper
-  icon: { sprite: Objects/Materials/Sheets/other.rsi, state: paper }
-  color: "#d9d9d9"
-  
 - type: reagent
   id: PolytrinicAcid
   name: reagent-name-polytrinic-acid
@@ -848,8 +759,7 @@
   desc: reagent-desc-pax
   physicalDesc: reagent-physical-desc-soothing
   allowedDepartments:
-  - Security
-  - Medical
+  - Command
   color: "#AAAAAA"
   metabolisms:
     Poison:

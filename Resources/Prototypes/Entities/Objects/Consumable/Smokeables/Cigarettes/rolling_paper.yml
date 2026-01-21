@@ -44,6 +44,9 @@
   suffix: Full
   parent: BaseItem
   components:
+  - type: Stack
+    stackType: PaperRolling
+    count: 5
   - type: Sprite
     sprite: Objects/Consumable/Smokeables/Cigarettes/paper.rsi
     state: cigpaper
@@ -57,12 +60,23 @@
   - type: SpaceGarbage
 
 - type: entity
+  id: PaperRolling1
+  suffix: Single
+  parent: PaperRolling
+  components:
+    - type: Stack
+      count: 1
+
+- type: entity
   id: CigaretteFilter
   name: cigarette filter
   description: A strip of firm paper used as a filter for handmade cigarettes.
   suffix: Full
   parent: BaseItem
   components:
+  - type: Stack
+    stackType: CigaretteFilter
+    count: 5
   - type: Sprite
     sprite: Objects/Consumable/Smokeables/Cigarettes/paper.rsi
     state: cigfilter

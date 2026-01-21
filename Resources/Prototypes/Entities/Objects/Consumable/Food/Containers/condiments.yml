@@ -113,25 +113,6 @@
     maxFillLevels: 2
     fillBaseName: packet-solid-
 
-- type: entity
-  parent: BaseFoodCondimentPacket
-  id: FoodCondimentPacketSugar
-  name: sugar
-  description: Tasty spacey sugar!
-  components:
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        reagents:
-        - ReagentId: Sugar
-          Quantity: 10
-  - type: Icon
-    state: packet-sugar
-  - type: Appearance
-  - type: SolutionContainerVisuals
-    maxFillLevels: 2
-    fillBaseName: packet-solid-
-
 # Bottles
 
 - type: entity
@@ -226,32 +207,6 @@
       visible: true
   - type: Icon
     state: bottle-vinegar
-
-- type: entity
-  parent: BaseFoodCondimentBottle
-  id: FoodCondimentBottleKetchup
-  name: ketchup bottle
-  description: You feel more American already.
-  components:
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        reagents:
-        - ReagentId: Ketchup
-          Quantity: 30
-  - type: Sprite
-    layers:
-    - state: bottle-empty
-      map: ["enum.OpenableVisuals.Layer"]
-    - state: label-k
-    - state: bottle-alpha-6
-      map: ["enum.SolutionContainerLayers.Fill"]
-      visible: true
-  - type: Icon
-    state: bottle-ketchup
-  - type: Tag
-    tags:
-      - Ketchup
 
 # Shakers
 

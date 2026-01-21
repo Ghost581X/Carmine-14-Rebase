@@ -27,6 +27,20 @@
   metamorphicChangeColor: false
 
 - type: reagent
+  id: Cream
+  name: reagent-name-cream
+  group: Drinks
+  desc: reagent-desc-cream
+  physicalDesc: reagent-physical-desc-creamy
+  flavor: creamy
+  color: "#DFD7AF"
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 1
+
+- type: reagent
   id: GreenTea
   name: reagent-name-green-tea
   parent: BaseDrink
@@ -104,3 +118,32 @@
       effects:
       - !type:SatiateThirst
         factor: 4
+
+- type: reagent
+  id: Ice
+  name: reagent-name-ice
+  desc: reagent-desc-ice
+  slipData:
+    requiredSlipSpeed: 3.5
+  evaporationSpeed: 0.15 # TODO: Ideally Ice should just turn into Water if the room is warm enough (and vis versa), rather than Ice directly evaporating
+  physicalDesc: reagent-physical-desc-frosty
+  flavor: cold
+  color: "#bed8e6"
+  recognizable: true
+  meltingPoint: 0.0
+  boilingPoint: 100.0
+  friction: 0.05 # Copied from Ice Crust
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 3 # Slightly worse for quenching thirst than just straight water
+  plantMetabolism:
+  - !type:PlantAdjustWater
+    amount: 1 # The internet tells me I should avoid watering plants with ice, but mostly because of temperature, so this value being the same as water should probably be fine?
+  metamorphicSprite:
+    sprite: Objects/Consumable/Drinks/iceglass.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 3
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false

@@ -195,3 +195,21 @@
     qualities:
       - Sawing
 
+- type: entity
+  name: circular saw
+  id: SawElectric
+  parent: Saw
+  description: For heavy duty cutting.
+  components:
+  - type: Sprite
+    state: electric
+  - type: Item
+    heldPrefix: electric
+  - type: MeleeWeapon
+    damage:
+      groups:
+        Brute: 15
+    soundHit:
+      path: /Audio/Items/drill_hit.ogg
+  - type: Tool
+    speedModifier: 1.5

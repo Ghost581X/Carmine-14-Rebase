@@ -5,6 +5,9 @@
     - BaseStationJobsSpawning
     - BaseStationRecords
     - BaseStationAlertLevels
+    - BaseStationSiliconLawCrewsimov
+    - BaseStationNews
+    - BaseStationDeliveries
     - BaseStationAllEventsEligible
   categories: [ HideSpawnMenu ]
   components:

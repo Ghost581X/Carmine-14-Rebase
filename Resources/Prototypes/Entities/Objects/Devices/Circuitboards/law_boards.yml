@@ -1,0 +1,32 @@
+- type: entity
+  abstract: true
+  parent: BaseElectronics
+  id: BaseSiliconLawboard
+  description: An electronics board containing a silicon lawset.
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/module.rsi
+    state: std_mod
+  - type: SiliconLawProvider
+    laws: NTDefault
+  - type: GuideHelp
+    guides:
+    - Lawsets
+
+- type: entity
+  id: NTDefaultCircuitBoard
+  parent: BaseSiliconLawboard
+  name: law board (NT Default)
+  description: An electronics board containing the NT Default lawset.
+  components:
+  - type: SiliconLawProvider
+    laws: NTDefault
+
+- type: entity
+  id: AsimovCircuitBoard
+  parent: BaseSiliconLawboard
+  name: law board (Crewsimov)
+  description: An electronics board containing the Crewsimov lawset.
+  components:
+  - type: SiliconLawProvider
+    laws: Crewsimov

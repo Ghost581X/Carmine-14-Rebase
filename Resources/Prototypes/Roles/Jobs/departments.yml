@@ -6,3 +6,13 @@
   weight: -10
   roles:
   - Assistant
+
+- type: department
+  id: Command
+  name: department-Command
+  description: department-Command-description
+  color: "#334E6D"
+  roles:
+  - Captain
+  primary: false
+  weight: 100
