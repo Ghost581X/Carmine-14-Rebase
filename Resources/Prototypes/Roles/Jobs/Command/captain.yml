@@ -11,7 +11,7 @@
   startingGear: CaptainGear
   icon: "JobIconCaptain"
   joinNotifyCrew: true
-  supervisors: job-supervisors-centcom
+  supervisors: job-supervisors-captain
   canBeAntag: false
   accessGroups:
   - AllAccess
