@@ -41,7 +41,6 @@
   cost: 2
   defaultStyle: basic
   styles:
-    atmospherics: ClosetWallAtmospherics
     basic: ClosetWall
 
 - type: paintableGroup

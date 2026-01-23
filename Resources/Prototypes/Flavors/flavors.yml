@@ -129,6 +129,11 @@
   description: flavor-complex-mushroom
 
 - type: flavor
+  id: gunpowder
+  flavorType: Complex
+  description: flavor-complex-gunpowder
+
+- type: flavor
   id: people
   flavorType: Complex
   description: flavor-complex-people
@@ -247,3 +252,8 @@
   id: dogfood
   flavorType: Base
   description: flavor-complex-dog-food
+
+- type: flavor
+  id: alkaline
+  flavorType: Base
+  description: flavor-base-alkaline

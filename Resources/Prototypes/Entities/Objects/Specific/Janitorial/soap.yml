@@ -96,7 +96,6 @@
     heldPrefix: gibs
   - type: FlavorProfile
     flavors:
-      - clean
-      - meaty
+      - bitter
   - type: Residue
     residueColor: residue-red

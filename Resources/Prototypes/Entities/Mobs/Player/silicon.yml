@@ -47,7 +47,6 @@
   - type: DeviceNetwork
     deviceNetId: Wireless
     receiveFrequencyId: CrewMonitor
-    transmitFrequencyId: ShuttleTimer
   - type: RadarConsole
     followEntity: false
   - type: CommunicationsConsole

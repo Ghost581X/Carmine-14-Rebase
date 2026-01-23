@@ -45,10 +45,6 @@
     sprite: Objects/Weapons/Melee/kitchen_knife.rsi
     storedOffset: -1,1
     storedRotation: -45
-  - type: GuideHelp
-    guides:
-    - Chef
-    - FoodRecipes
   - type: Fixtures
     fixtures:
       fix1:

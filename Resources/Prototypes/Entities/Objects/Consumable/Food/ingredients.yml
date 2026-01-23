@@ -263,7 +263,7 @@
     node: flat
   - type: SliceableFood
     count: 3
-    slice: FoodCroissantRaw
+    slice: FoodDoughRope
 
 - type: entity
   parent: FoodBakingBase

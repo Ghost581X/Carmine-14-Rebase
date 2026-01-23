@@ -61,6 +61,14 @@
   color: "#32a852"
 
 - type: material
+  id: Meaterial # you can't take this pun from me
+  name: materials-meat
+  unit: materials-unit-slab
+  icon: { sprite: Objects/Materials/Sheets/meaterial.rsi, state: meat }
+  color: "#c53648"
+  price: 0.05
+
+- type: material
   id: Coal
   stackEntity: Coal1
   name: materials-coal

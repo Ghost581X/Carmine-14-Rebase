@@ -148,7 +148,7 @@
   parent: BaseAlcohol
   desc: reagent-desc-wine
   physicalDesc: reagent-physical-desc-translucent
-  flavor: shittywine
+  flavor: alcohol
   color: "#7E4043"
   recognizable: true
   metamorphicSprite:
@@ -182,3 +182,18 @@
         reagent: Ethanol
         amount: 0.3
   fizziness: 0.8
+
+- type: reagent
+  id: Aloe
+  name: reagent-name-aloe
+  parent: BaseAlcohol
+  desc: reagent-desc-aloe
+  physicalDesc: reagent-physical-desc-aromatic
+  flavor: aloe
+  color: "#192c00"
+  metamorphicSprite:
+    sprite: Objects/Consumable/Drinks/aloe.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false

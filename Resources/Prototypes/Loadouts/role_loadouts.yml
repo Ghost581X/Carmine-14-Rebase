@@ -1,17 +1,3 @@
-# Command
-- type: roleLoadout
-  id: JobCaptain
-  groups:
-  - CaptainHead
-  - CaptainNeck
-  - CaptainJumpsuit
-  - CaptainBackpack
-  - CaptainOuterClothing
-  - Survival
-  - Trinkets
-  - CaptainJobTrinkets
-  - GroupSpeciesBreathTool
-
 # Silicons
 - type: roleLoadout
   id: JobBorg
@@ -22,21 +8,3 @@
   id: JobStationAi
   nameDataset: NamesAI
   canCustomizeName: true
-
-# Civilian
-- type: roleLoadout
-  id: JobAssistant
-  groups:
-  - GroupTankHarness
-  - AssistantJumpsuit
-  - CommonBackpack
-  - AssistantNeck
-  - AssistantFace
-  - AssistantGloves
-  - AssistantOuterClothing
-  - AssistantShoes
-  - Glasses
-  - Survival
-  - Trinkets
-  - AssistantJobTrinkets
-  - GroupSpeciesBreathTool

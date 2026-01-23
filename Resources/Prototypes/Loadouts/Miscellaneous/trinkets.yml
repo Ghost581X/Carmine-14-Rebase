@@ -15,9 +15,6 @@
 
 - type: loadout
   id: CigarCase
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: Command
   storage:
     back:
     - CigarCase
@@ -25,9 +22,6 @@
 
 - type: loadout
   id: CigarGold
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: Command
   storage:
     back:
     - CigarGold

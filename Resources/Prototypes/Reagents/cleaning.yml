@@ -34,7 +34,7 @@
   name: reagent-name-soap
   desc: reagent-desc-soap
   physicalDesc: reagent-physical-desc-soapy
-  flavor: clean
+  flavor: bitter
   color: "#c8dfc9"
   recognizable: true
   boilingPoint: 100.0

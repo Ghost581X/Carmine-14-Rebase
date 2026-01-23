@@ -23,6 +23,14 @@
     state: Unknown
   jobName: job-name-unknown
 
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconAdmin
+  icon:
+    sprite: *icon-rsi
+    state: Admin
+  allowSelection: false
+
 # Assistant
 
 - type: jobIcon

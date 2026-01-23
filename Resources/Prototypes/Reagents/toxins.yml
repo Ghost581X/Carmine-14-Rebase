@@ -267,7 +267,6 @@
   group: Toxins
   desc: reagent-desc-amatoxin
   physicalDesc: reagent-physical-desc-nondescript
-  contrabandSeverity: Major
   color: "#D6CE7B"
   metabolisms:
     Poison:

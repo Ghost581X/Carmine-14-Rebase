@@ -394,9 +394,6 @@
     color: "#b89f25"
   - type: AccessReader
     access: [["AllAccess"]]
-  - type: GuideHelp
-    guides:
-    - Salvage
 
 # Gas Tank Dispenser
 

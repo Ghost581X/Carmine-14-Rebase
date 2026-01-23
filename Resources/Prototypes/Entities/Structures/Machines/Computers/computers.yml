@@ -392,9 +392,6 @@
     color: "#1f8c28"
   - type: Computer
     board: CriminalRecordsComputerCircuitboard
-  - type: GuideHelp
-    guides:
-    - CriminalRecords
 
 - type: entity
   parent: BaseComputerAiAccess
@@ -417,9 +414,6 @@
     color: "#1f8c28"
   - type: Computer
     board: StationRecordsComputerCircuitboard
-  - type: GuideHelp
-    guides:
-    - Forensics
 
 - type: entity
   parent: BaseComputerAiAccess
@@ -504,9 +498,6 @@
     radius: 1.5
     energy: 4.0
     color: "#b53ca1"
-  - type: GuideHelp
-    guides:
-    - Science
 
 - type: entity
   parent: BaseComputerAiAccess
@@ -553,9 +544,6 @@
     radius: 1.5
     energy: 4.0
     color: "#b53ca1"
-  - type: GuideHelp
-    guides:
-    - AnalysisConsole
 
 - type: entity
   parent: BaseComputerAiAccess
@@ -895,9 +883,6 @@
     range: 200
     ports:
       - OrderSender
-  - type: GuideHelp
-    guides:
-    - Cargo
 
 # Request console variants.
 - type: entity
@@ -1098,10 +1083,6 @@
     color: "#b89f25"
   - type: AccessReader
     access: [["AllAccess"]]
-  - type: GuideHelp
-    guides:
-    - CargoBounties
-    - Cargo
 
 - type: entity
   parent: BaseComputerAiAccess
@@ -1361,21 +1342,6 @@
           type: WiresBoundUserInterface
 
 - type: entity
-  parent: ComputerSurveillanceWirelessCameraMonitor
-  id: ComputerSurveillanceWirelessXenoborgCameraMonitor
-  name: xenoborg camera monitor
-  description: A wireless xenoborg camera monitor. You're watching them. Maybe.
-  components:
-  - type: Computer
-    board: XenoborgCameraMonitorCircuitboard
-  - type: DeviceNetwork
-    deviceNetId: Wireless
-    receiveFrequencyId: Mothership
-    transmitFrequencyId: Mothership
-  - type: WirelessNetworkConnection
-    range: 2000
-
-- type: entity
   id: ComputerPalletConsole
   parent: BaseComputerAiAccess
   name: cargo sale computer
@@ -1411,9 +1377,6 @@
     radius: 1.5
     energy: 4.0
     color: "#b89f25"
-  - type: GuideHelp
-    guides:
-    - Cargo
 
 - type: entity
   parent: BaseComputerAiAccess
@@ -1542,47 +1505,6 @@
     access: [["AllAccess"]]
   - type: Lock
     unlockOnClick: false
-
-- type: entity
-  parent: BaseComputer
-  id: ComputerXenoborgsControl
-  name: xenoborgs control console
-  description: Used to remotely monitor all xenoborgs.
-  components:
-  - type: Sprite
-    layers:
-    - map: ["computerLayerBody"]
-      state: computer
-    - map: ["computerLayerKeyboard"]
-      state: generic_keyboard
-    - map: ["computerLayerScreen"]
-      state: xenorobot
-    - map: ["computerLayerKeys"]
-      state: rd_key
-    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
-      state: generic_panel_open
-  - type: ActivatableUI
-    key: enum.RoboticsConsoleUiKey.Key
-  - type: UserInterface
-    interfaces:
-      enum.RoboticsConsoleUiKey.Key:
-        type: RoboticsConsoleBoundUserInterface
-      enum.WiresUiKey.Key:
-        type: WiresBoundUserInterface
-  - type: RoboticsConsole
-    allowBorgControl: false
-    radioChannel: Common
-  - type: ActiveRadio
-    channels:
-    - AllAccess
-  - type: ApcPowerReceiver
-    powerLoad: 1000
-  - type: DeviceNetwork
-    deviceNetId: Wireless
-    receiveFrequencyId: Mothership
-    transmitFrequencyId: Xenoborg
-  - type: Computer
-    board: ComputerXenoborgsControlCircuitboard
 
 - type: entity
   id: StationAiUploadComputer

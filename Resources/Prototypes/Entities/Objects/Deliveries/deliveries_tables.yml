@@ -1,0 +1,61 @@
+### Spawners
+- type: entityTable
+  id: RandomDeliveryBasic
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector
+      tableId: RandomDeliveryLetterBasic
+      weight: 0.7
+    - !type:NestedSelector
+      tableId: RandomDeliveryPackageBasic
+      weight: 0.3
+
+# Letters
+
+- type: entityTable # Used to pick between all different letter types, if there will be more
+  id: RandomDeliveryLetterBasic
+  table: !type:GroupSelector
+    children:
+    - id: LetterDelivery
+
+# Packages
+
+- type: entityTable # Used to pick between all different package types, if there will be more
+  id: RandomDeliveryPackageBasic
+  table: !type:GroupSelector
+    children:
+    - id: PackageDelivery
+
+### Reward Tables
+
+- type: entityTable
+  id: LetterDeliveryRewards
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector
+      tableId: LetterCommonEntityTable
+      weight: 1
+
+- type: entityTable
+  id: PackageDeliveryRewards
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector
+      tableId: PackageCommonEntityTable
+      weight: 1
+
+### Loot Tables
+# Letters
+- type: entityTable
+  id: LetterCommonEntityTable # Basically trash and spam mail, maybe something barely useful here and there
+  table: !type:GroupSelector
+    children:
+    - id: SpaceCash100
+
+# Packages
+# TODO: Currently mostly maints loot, should be updated in the future.
+- type: entityTable # TODO: Add more variety!
+  id: PackageCommonEntityTable
+  table: !type:GroupSelector
+    children:
+    - id: SpaceCash100

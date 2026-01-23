@@ -65,6 +65,8 @@
     bodyType: Dynamic
     linearDamping: 0
     angularDamping: 0
+  - type: TileFrictionModifier
+    modifier: 0
   - type: Fixtures
     fixtures:
       projectile:
@@ -117,3 +119,53 @@
         - Impassable
         - BulletImpassable
       fly-by: *flybyfixture
+
+- type: entity
+  id: BaseBulletPractice
+  name: base bullet practice
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    layers:
+    - state: practice
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 1
+
+- type: entity
+  id: BaseBulletIncendiary
+  name: base bullet incendiary
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 10
+        Heat: 4
+  - type: PointLight
+    enabled: true
+    color: "#ff4300"
+    radius: 2.0
+    energy: 7.0
+  - type: IgniteOnCollide
+    fireStacks: 0.25
+
+- type: entity
+  id: BaseBulletAP
+  name: base bullet armor-piercing
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    layers:
+    - state: piercing
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 11 # 20% decrease
+    ignoreResistances: true

@@ -179,17 +179,3 @@
       steps:
       - tool: Screwing
         doAfter: 2
-
-  - node: airlockGlass
-    entity: AirlockGlassShuttle
-    edges:
-      - to: skeletonGlass
-        conditions:
-          - !type:EntityAnchored {}
-          - !type:DoorWelded {}
-          - !type:DoorBolted
-            value: false
-          - !type:WirePanel {}
-        steps:
-          - tool: Prying
-            doAfter: 5

@@ -1,0 +1,10 @@
+# Potato
+
+- type: foodSequenceElement
+  id: Potato
+  name: food-sequence-content-potato
+  sprites:
+  - sprite: Objects/Specific/Hydroponics/potato.rsi
+    state: produce
+  tags:
+    - Vegetable

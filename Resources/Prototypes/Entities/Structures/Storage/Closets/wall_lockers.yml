@@ -1,0 +1,10 @@
+- type: entity
+  id: ClosetWall
+  parent: BaseWallCloset
+  name: maintenance wall closet
+  description: It's a storage unit.
+  components:
+  - type: EntityStorageVisuals
+    stateBaseClosed: generic
+    stateDoorOpen: generic_open
+    stateDoorClosed: generic_door

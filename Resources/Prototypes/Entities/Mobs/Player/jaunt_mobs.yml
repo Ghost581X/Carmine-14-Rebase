@@ -1,0 +1,20 @@
+- type: entity
+  name: jaunt
+  parent: [Incorporeal, BaseMob]
+  id: BaseMobJaunt
+  description: Faint traces of a humanoid figure linger here
+  suffix: Ethereal
+  components:
+  - type: ContentEye
+    maxZoom: 1.44,1.44
+  - type: Eye
+    drawFov: false
+  - type: Input
+    context: "ghost"
+  - type: InputMover
+  - type: MovementSpeedModifier
+    baseSprintSpeed: 12
+    baseWalkSpeed: 8
+  - type: Visibility
+    layer: 2
+  - type: Spectral
