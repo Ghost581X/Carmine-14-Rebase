@@ -12,10 +12,4 @@
       densityNoiseChannel: Density
     - type: SimpleDebrisSelector
       debrisTable:
-        - id: AsteroidDebrisSmall
-        - id: AsteroidDebrisMedium
-        - id: AsteroidDebrisLarge
-          prob: 0.7
-        - id: AsteroidDebrisLarger
-          prob: 0.4
 

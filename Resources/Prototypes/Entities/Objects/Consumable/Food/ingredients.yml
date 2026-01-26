@@ -399,9 +399,7 @@
         maxVol: 8
         reagents:
         - ReagentId: Nutriment
-          Quantity: 2
-        - ReagentId: GastroToxin
-          Quantity: 3
+          Quantity: 1
   - type: Tag
     tags:
     - Trash
