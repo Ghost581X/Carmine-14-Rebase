@@ -1,10 +1,8 @@
-# Draupnir
-
 - type: entity
-  id: ShipgunTestMagazineBallistic
-  name: shipgun - test - magazine - ballistic
-  parent: BallisticArtilleryMagazine
-  description: A heavy duty rapid rife autocannon, originally mounted as a dogfighting weapon on atmospheric craft.
+  id: ShipgunTestMagazine20mm
+  name: shipgun - test - magazine - 20mm - impact
+  parent: ShipgunMagazine
+  description: A debug weapon that is ballistic and uses a Magazine20mm magazine.
   components:
   - type: StaticPrice
     price: 1000
@@ -22,7 +20,7 @@
     ports:
     - Toggle
   - type: Gun
-    fireRate: 25
+    fireRate: 8
     projectileSpeed: 180
     minAngle: 0
     maxAngle: 8
@@ -42,13 +40,88 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazineRifle
+        startingItem: ShipgunMagazine20mm
         insertSound: /Audio/Weapons/Guns/MagIn/hpistol_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/sfrifle_magout.ogg
         priority: 2
         whitelist:
           tags:
-          - MagazineRifle
+          - Magazine20mm
+        whitelistFailPopup: gun-magazine-whitelist-fail
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 10000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+  - type: RadiationBlocker
+    resistance: 8
+  - type: RadarBlip
+    radarColor: "#FF0000"
+    scale: 1.5
+    visibleFromOtherGrids: true
+  - type: ShipGunType
+    shipType: Ballistic
+  - type: ShipGunClass
+    shipClass: Medium
+  - type: ShipRepairable
+    repairTime: 15
+    repairCost: 40
+
+- type: entity
+  id: ShipgunTestMagazine70mm
+  name: shipgun - test - magazine - 70mm - explosive
+  parent: ShipgunMagazine
+  description: A debug weapon that is ballistic and uses a Magazine70mm magazine.
+  components:
+  - type: StaticPrice
+    price: 1000
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Shuttles/kinetic.rsi
+    layers:
+    - state: ptk-800
+  - type: Appearance
+  - type: FireControlRotate
+  - type: AutoShootGun
+  - type: GunSignalControl
+  - type: WirelessNetworkConnection
+    range: 700
+  - type: DeviceLinkSink
+    ports:
+    - Toggle
+  - type: Gun
+    fireRate: 2
+    projectileSpeed: 180
+    minAngle: 0
+    maxAngle: 8
+    shootThermalSignature: 100000 # ~4.5km if firing continuously
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/ship_friendship.ogg
+    soundEmpty:
+      path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
+  - type: SpaceArtillery
+    powerChargeRate: 100
+    powerUsePassive: 100
+  - type: Actions
+  - type: CombatMode
+    isInCombatMode: true
+  - type: Airtight
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: ShipgunMagazine70mm
+        insertSound: /Audio/Weapons/Guns/MagIn/hpistol_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/sfrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+          - Magazine70mm
         whitelistFailPopup: gun-magazine-whitelist-fail
   - type: Destructible
     thresholds:
@@ -79,8 +152,8 @@
 - type: entity
   id: ShipgunTestRechargingBallistic
   name: shipgun - test - Recharging - ballistic
-  parent: BallisticArtilleryMagazine
-  description: A heavy duty rapid rife autocannon, originally mounted as a dogfighting weapon on atmospheric craft.
+  parent: ShipgunMagazine
+  description: A debug weapon that recharges ammo automatically and is ballistic.
   components:
   - type: StaticPrice
     price: 1000
@@ -157,3 +230,147 @@
   - type: ShipRepairable
     repairTime: 15
     repairCost: 40
+
+- type: entity
+  id: ShipgunTestRechargingLaserImpact
+  parent: ShipgunUnanchorable
+  name: shipgun - test - Recharging - laser - impact
+  description: A debug weapon that recharges ammo automatically and fires a hitscan laser.
+  components:
+  - type: StaticPrice
+    price: 15000
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Shuttles/kinetic.rsi
+    layers:
+    - state: ptk-800
+  - type: Appearance
+  - type: AmmoCounter
+  - type: Battery
+    maxCharge: 50000
+    startingCharge: 50000
+  - type: BatterySelfRecharger
+    autoRechargeRate: 50000
+  - type: FireControlRotate
+  - type: ExaminableBattery
+  - type: WirelessNetworkConnection
+    range: 500
+  - type: Gun
+    fireRate: 20
+    minAngle: 0
+    maxAngle: 0
+    shootThermalSignature: 5000000
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/ship_perforator.ogg
+    soundEmpty:
+      path: /Audio/Weapons/Guns/EmptyAlarm/smg_empty_alarm.ogg
+  - type: ShipGunClass
+    shipClass: Heavy
+  - type: BatteryAmmoProvider
+    proto: HitscanLaserShipgunImpact
+    fireCost: 50
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 9000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 5000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+  - type: RadarBlip
+    radarColor: "#e67a22"
+    scale: 2
+    visibleFromOtherGrids: true
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.75,-0.75,0.75,0.75"
+        density: 1500
+  - type: ShipGunType
+    shipType: Energy
+  - type: ShipRepairable
+    repairTime: 25
+    repairCost: 100
+
+- type: entity
+  id: ShipgunTestRechargingLaserExplosive
+  parent: ShipgunUnanchorable
+  name: shipgun - test - Recharging - laser - explosive
+  description: A debug weapon that recharges ammo automatically and fires a hitscan laser that explodes on contact.
+  components:
+  - type: StaticPrice
+    price: 15000
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Shuttles/kinetic.rsi
+    layers:
+    - state: ptk-800
+  - type: Appearance
+  - type: AmmoCounter
+  - type: Battery
+    maxCharge: 50000
+    startingCharge: 50000
+  - type: BatterySelfRecharger
+    # autoRechargePause: true
+    # autoRechargePauseTime: 30
+    autoRechargeRate: 50000
+  - type: FireControlRotate
+  - type: ExaminableBattery
+  - type: WirelessNetworkConnection
+    range: 500
+  - type: Gun
+    fireRate: 20
+    minAngle: 0
+    maxAngle: 0
+    shootThermalSignature: 5000000
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/ship_perforator.ogg
+    soundEmpty:
+      path: /Audio/Weapons/Guns/EmptyAlarm/smg_empty_alarm.ogg
+  - type: ShipGunClass
+    shipClass: Heavy
+  - type: BatteryAmmoProvider
+    proto: HitscanLaserShipgunExplosive
+    fireCost: 150
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 9000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 5000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+  - type: RadarBlip
+    radarColor: "#e67a22"
+    scale: 2
+    visibleFromOtherGrids: true
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.75,-0.75,0.75,0.75"
+        density: 1500
+  - type: ShipGunType
+    shipType: Energy
+  - type: ShipRepairable
+    repairTime: 25
+    repairCost: 100
