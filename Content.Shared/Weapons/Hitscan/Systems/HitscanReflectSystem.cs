@@ -1,3 +1,4 @@
+//CARMINE: MONOPORT: HITSCAN SYSTEM FULLY TRANSPLANTED
 using Content.Shared.Weapons.Hitscan.Components;
 using Content.Shared.Weapons.Hitscan.Events;
 using Content.Shared.Weapons.Ranged.Events;
@@ -12,37 +13,36 @@ public sealed class HitscanReflectSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<HitscanReflectComponent, AttemptHitscanRaycastFiredEvent>(OnHitscanHit);
+        SubscribeLocalEvent<HitscanReflectComponent, HitscanRaycastFiredEvent>(OnHitscanHit);
     }
 
-    private void OnHitscanHit(Entity<HitscanReflectComponent> hitscan, ref AttemptHitscanRaycastFiredEvent args)
+    private void OnHitscanHit(Entity<HitscanReflectComponent> hitscan, ref HitscanRaycastFiredEvent args)
     {
-        var data = args.Data;
-
-        if (hitscan.Comp.ReflectiveType == ReflectType.None || data.HitEntity == null)
+        if (hitscan.Comp.ReflectiveType == ReflectType.None || args.HitEntity == null)
             return;
 
         if (hitscan.Comp.CurrentReflections >= hitscan.Comp.MaxReflections)
             return;
 
-        var ev = new HitScanReflectAttemptEvent(data.Shooter ?? data.Gun, data.Gun, hitscan.Comp.ReflectiveType, data.ShotDirection, false);
-        RaiseLocalEvent(data.HitEntity.Value, ref ev);
+        // Mono - Added null as default DamageSpecifier? Damage parameter
+        var ev = new HitScanReflectAttemptEvent(args.Shooter ?? args.Gun, args.Gun, hitscan.Comp.ReflectiveType, args.ShotDirection, false, null);
+        RaiseLocalEvent(args.HitEntity.Value, ref ev);
 
         if (!ev.Reflected)
             return;
 
         hitscan.Comp.CurrentReflections++;
 
-        args.Cancelled = true;
+        args.Canceled = true;
 
-        var fromEffect = Transform(data.HitEntity.Value).Coordinates;
+        var fromEffect = Transform(args.HitEntity.Value).Coordinates;
 
         var hitFiredEvent = new HitscanTraceEvent
         {
             FromCoordinates = fromEffect,
             ShotDirection = ev.Direction,
-            Gun = data.Gun,
-            Shooter = data.HitEntity.Value,
+            Gun = args.Gun,
+            Shooter = args.HitEntity.Value,
         };
 
         RaiseLocalEvent(hitscan, ref hitFiredEvent);

@@ -1,0 +1,143 @@
+- type: entity
+  id: GunneryServerBase
+  parent: BaseMachinePowered
+  name: gunnery control server
+  description: Manages the remote operation of ship weapons.
+  components:
+  - type: Sprite
+    sprite: Structures/Machines/telecomms.rsi
+    snapCardinals: true
+    layers:
+    - state: telecom-nopower
+    - state: telecom-stripe
+    - state: telecom-on
+      shader: unshaded
+      visible: false
+      map: ["telecom-on"]
+    - state: variant-nokey
+      map: ["variant-nokey"]
+    - state: variant-default
+      map: ["variant-default"]
+    - state: variant-common
+      map: ["variant-common"]
+    - state: variant-cargo
+      map: ["variant-cargo"]
+    - state: variant-engineering
+      map: ["variant-engineering"]
+    - state: variant-medical
+      map: ["variant-medical"]
+    - state: variant-science
+      map: ["variant-science"]
+    - state: variant-sec
+      map: ["variant-sec"]
+    - state: variant-service
+      map: ["variant-service"]
+    - state: variant-command
+      map: ["variant-command"]
+    - state: variant-multiple
+      map: ["variant-multiple"]
+    - state: telecom-open
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: ExtensionCableReceiver
+  - type: Appearance
+  - type: AmbientOnPowered
+  - type: AmbientSound
+    volume: -9
+    range: 5
+    sound:
+      path: /Audio/Ambience/Objects/server_fans.ogg
+  - type: GenericVisualizer
+    visuals:
+      enum.PowerDeviceVisuals.Powered:
+        enum.PowerDeviceVisualLayers.Powered:
+          True: { visible: true }
+          False: { visible: false }
+  - type: Construction # Mono
+    graph: Machine
+    node: machine
+    containers:
+      - machine_board
+      - machine_parts
+  - type: ContainerContainer # Mono
+    containers:
+      machine_board: !type:Container
+      machine_parts: !type:Container
+  - type: ExaminableBattery
+  - type: BatterySelfRecharger
+  - type: StaticPrice
+    price: 200
+
+- type: entity
+  id: GunneryServerLow
+  parent: GunneryServerBase
+  name: low-power gunnery control server
+  components:
+  - type: Machine
+    board: MachineGCSLowCircuitboard
+  - type: FireControlServer
+    processingPower: 24
+  - type: PassiveThermalSignature # no cheesing it by unanchoring
+    signature: 100000 # ~630m
+  - type: ThermalSignature
+  - type: Battery
+    maxCharge: 125
+    startingCharge: 125
+  - type: ApcPowerReceiver
+    powerLoad: 250
+  - type: ApcPowerReceiverBattery
+    idleLoad: 5
+    batteryRechargeRate: 300
+    batteryRechargeEfficiency: 0.95
+  - type: ShipRepairable
+    repairTime: 10
+    repairCost: 25
+
+- type: entity
+  id: GunneryServerMedium
+  parent: GunneryServerBase
+  name: medium-power gunnery control server
+  components:
+  - type: Machine
+    board: MachineGCSMediumCircuitboard
+  - type: FireControlServer
+    processingPower: 42
+  - type: PassiveThermalSignature
+    signature: 250000 # ~1km
+  - type: ThermalSignature
+  - type: Battery
+    maxCharge: 250
+    startingCharge: 250
+  - type: ApcPowerReceiver
+    powerLoad: 500
+  - type: ApcPowerReceiverBattery
+    idleLoad: 10
+    batteryRechargeRate: 600
+    batteryRechargeEfficiency: 0.95
+  - type: ShipRepairable
+    repairTime: 13
+    repairCost: 40
+
+- type: entity
+  id: GunneryServerHigh
+  parent: GunneryServerBase
+  name: high-power gunnery control server
+  components:
+  - type: Machine
+    board: MachineGCSHighCircuitboard
+  - type: FireControlServer
+    processingPower: 60
+  - type: PassiveThermalSignature
+    signature: 1000000 # ~2km
+  - type: ThermalSignature
+  - type: Battery
+    maxCharge: 500
+    startingCharge: 500
+  - type: ApcPowerReceiver
+    powerLoad: 1000
+  - type: ApcPowerReceiverBattery
+    idleLoad: 20
+    batteryRechargeRate: 1200
+    batteryRechargeEfficiency: 0.95
+  - type: ShipRepairable
+    repairTime: 20
+    repairCost: 70

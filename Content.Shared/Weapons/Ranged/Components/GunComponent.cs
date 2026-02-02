@@ -244,6 +244,13 @@ public sealed partial class GunComponent : Component
     [AutoNetworkedField]
     public SelectiveFire SelectedMode = SelectiveFire.SemiAuto;
 
+    // Mono
+    /// <summary>
+    /// If we have a <see cref="ThermalSignatureComponent">, how much heat to generate per shot.
+    /// </summary>
+    [DataField]
+    public float ShootThermalSignature = 0f;
+
     /// <summary>
     /// Whether or not information about
     /// the gun will be shown on examine.

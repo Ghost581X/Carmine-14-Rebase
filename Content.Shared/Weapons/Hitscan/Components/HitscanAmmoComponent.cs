@@ -1,3 +1,4 @@
+//CARMINE: MONOPORT: HITSCAN SYSTEM FULLY TRANSPLANTED
 using Content.Shared.Weapons.Ranged;
 using Robust.Shared.GameStates;
 

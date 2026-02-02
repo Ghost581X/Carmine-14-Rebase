@@ -1,3 +1,4 @@
+//CARMINE: MONOPORT: HITSCAN SYSTEM FULLY TRANSPLANTED
 using Content.Shared.Damage.Systems;
 using Content.Shared.Weapons.Hitscan.Components;
 using Content.Shared.Weapons.Hitscan.Events;
@@ -12,14 +13,14 @@ public sealed class HitscanStunSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<HitscanStaminaDamageComponent, HitscanRaycastFiredEvent>(OnHitscanHit);
+        SubscribeLocalEvent<HitscanStaminaDamageComponent, HitscanRaycastFiredEvent>(OnHitscanHit, after: [ typeof(HitscanReflectSystem) ]);
     }
 
     private void OnHitscanHit(Entity<HitscanStaminaDamageComponent> hitscan, ref HitscanRaycastFiredEvent args)
     {
-        if (args.Data.HitEntity == null)
+        if (args.Canceled || args.HitEntity == null)
             return;
 
-        _stamina.TakeStaminaDamage(args.Data.HitEntity.Value, hitscan.Comp.StaminaDamage, source: args.Data.Shooter ?? args.Data.Gun);
+        _stamina.TakeStaminaDamage(args.HitEntity.Value, hitscan.Comp.StaminaDamage, source: args.Shooter ?? args.Gun);
     }
 }

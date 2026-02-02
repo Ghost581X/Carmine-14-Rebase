@@ -1,3 +1,4 @@
+//CARMINE: MONOPORT: HITSCAN SYSTEM FULLY TRANSPLANTED
 using Robust.Shared.GameStates;
 
 namespace Content.Shared.Weapons.Hitscan.Components;

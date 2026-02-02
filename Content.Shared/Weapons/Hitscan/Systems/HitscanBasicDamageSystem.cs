@@ -1,3 +1,6 @@
+//CARMINE: MONOPORT: HITSCAN SYSTEM FULLY TRANSPLANTED
+using Content.Shared.Damage;
+using Content.Shared.Damage.Components;
 using Content.Shared.Damage.Systems;
 using Content.Shared.Weapons.Hitscan.Components;
 using Content.Shared.Weapons.Hitscan.Events;
@@ -12,22 +15,24 @@ public sealed class HitscanBasicDamageSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<HitscanBasicDamageComponent, HitscanRaycastFiredEvent>(OnHitscanHit);
+        SubscribeLocalEvent<HitscanBasicDamageComponent, HitscanRaycastFiredEvent>(OnHitscanHit, after: [ typeof(HitscanReflectSystem) ]);
     }
 
     private void OnHitscanHit(Entity<HitscanBasicDamageComponent> ent, ref HitscanRaycastFiredEvent args)
     {
-        if (args.Data.HitEntity == null)
+        if (args.Canceled || args.HitEntity == null)
             return;
 
         var dmg = ent.Comp.Damage * _damage.UniversalHitscanDamageModifier;
 
-        if(!_damage.TryChangeDamage(args.Data.HitEntity.Value, dmg, out var damageDealt, origin: args.Data.Gun))
+        _damage.TryChangeDamage(args.HitEntity.Value, dmg, out var damageDealt, origin: args.Gun);
+
+        if (damageDealt == null)
             return;
 
         var damageEvent = new HitscanDamageDealtEvent
         {
-            Target = args.Data.HitEntity.Value,
+            Target = args.HitEntity.Value,
             DamageDealt = damageDealt,
         };
 

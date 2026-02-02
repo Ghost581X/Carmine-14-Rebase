@@ -1,0 +1,43 @@
+- type: entity
+  id: MachineGCSLowCircuitboard
+  parent: BaseMachineCircuitboard
+  name: low-power gunnery control server board
+  description: A machine board for a GCS.
+  components:
+  - type: Sprite
+    state: security
+  - type: MachineBoard
+    prototype: GunneryServerLow
+
+- type: entity
+  id: MachineGCSMediumCircuitboard
+  parent: BaseMachineCircuitboard
+  name: medium-power gunnery control server board
+  description: A machine board for a GCS.
+  components:
+  - type: Sprite
+    state: security
+  - type: MachineBoard
+    prototype: GunneryServerMedium
+
+- type: entity
+  id: MachineGCSHighCircuitboard
+  parent: BaseMachineCircuitboard
+  name: high-power gunnery control server board
+  description: A machine board for a GCS.
+  components:
+  - type: Sprite
+    state: security
+  - type: MachineBoard
+    prototype: GunneryServerHigh
+
+- type: entity
+  parent: BaseComputerCircuitboard
+  id: GunneryControlComputerCircuitboard
+  name: gunnery control computer board
+  description: A computer printed circuit board for a gunnery control computer.
+  components:
+    - type: Sprite
+      state: cpu_command
+    - type: ComputerBoard
+      prototype: ComputerGunneryConsole
