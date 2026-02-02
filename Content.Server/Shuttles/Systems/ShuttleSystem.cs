@@ -82,6 +82,7 @@ public sealed partial class ShuttleSystem : SharedShuttleSystem
         InitializeGridFills();
         InitializeIFF();
         InitializeImpact();
+        NfInitialize(); // CARMINE: PORT FROM MONOLITH
 
         SubscribeLocalEvent<ShuttleComponent, ComponentStartup>(OnShuttleStartup);
         SubscribeLocalEvent<ShuttleComponent, ComponentShutdown>(OnShuttleShutdown);

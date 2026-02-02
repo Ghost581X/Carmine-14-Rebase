@@ -1,0 +1,159 @@
+# Draupnir
+
+- type: entity
+  id: ShipgunTestMagazineBallistic
+  name: shipgun - test - magazine - ballistic
+  parent: BallisticArtilleryMagazine
+  description: A heavy duty rapid rife autocannon, originally mounted as a dogfighting weapon on atmospheric craft.
+  components:
+  - type: StaticPrice
+    price: 1000
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Shuttles/kinetic.rsi
+    layers:
+    - state: ptk-800
+  - type: Appearance
+  - type: FireControlRotate
+  - type: AutoShootGun
+  - type: GunSignalControl
+  - type: WirelessNetworkConnection
+    range: 700
+  - type: DeviceLinkSink
+    ports:
+    - Toggle
+  - type: Gun
+    fireRate: 25
+    projectileSpeed: 180
+    minAngle: 0
+    maxAngle: 8
+    shootThermalSignature: 100000 # ~4.5km if firing continuously
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/ship_friendship.ogg
+    soundEmpty:
+      path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
+  - type: SpaceArtillery
+    powerChargeRate: 100
+    powerUsePassive: 100
+  - type: Actions
+  - type: CombatMode
+    isInCombatMode: true
+  - type: Airtight
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineRifle
+        insertSound: /Audio/Weapons/Guns/MagIn/hpistol_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/sfrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+          - MagazineRifle
+        whitelistFailPopup: gun-magazine-whitelist-fail
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 10000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+  - type: RadiationBlocker
+    resistance: 8
+  - type: RadarBlip
+    radarColor: "#FF0000"
+    scale: 1.5
+    visibleFromOtherGrids: true
+  - type: ShipGunType
+    shipType: Ballistic
+  - type: ShipGunClass
+    shipClass: Medium
+  - type: ShipRepairable
+    repairTime: 15
+    repairCost: 40
+
+
+- type: entity
+  id: ShipgunTestRechargingBallistic
+  name: shipgun - test - Recharging - ballistic
+  parent: BallisticArtilleryMagazine
+  description: A heavy duty rapid rife autocannon, originally mounted as a dogfighting weapon on atmospheric craft.
+  components:
+  - type: StaticPrice
+    price: 1000
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Shuttles/kinetic.rsi
+    layers:
+    - state: ptk-800
+  - type: Appearance
+  - type: FireControlRotate
+  - type: AutoShootGun
+  - type: GunSignalControl
+  - type: WirelessNetworkConnection
+    range: 700
+  - type: DeviceLinkSink
+    ports:
+    - Toggle
+  - type: Gun
+    fireRate: 25
+    projectileSpeed: 180
+    minAngle: 0
+    maxAngle: 8
+    shootThermalSignature: 100000 # ~4.5km if firing continuously
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/ship_friendship.ogg
+    soundEmpty:
+      path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
+  - type: SpaceArtillery
+    powerChargeRate: 100
+    powerUsePassive: 100
+  - type: Actions
+  - type: CombatMode
+    isInCombatMode: true
+  - type: Airtight
+  # - type: RechargeBasicEntityAmmo
+  #   rechargeCooldown: 2
+  #   rechargeSound:
+  #     path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
+  #     params:
+  #       pitch: 1.2
+  #       variation: 0.08
+  # - type: BasicEntityAmmoProvider
+  #   proto: BulletKineticShuttle
+  #   capacity: 5
+  #   count: 5
+  - type: Battery
+    maxCharge: 40000
+    startingCharge: 40000
+  - type: BatterySelfRecharger
+    autoRechargeRate: 125
+  - type: BatteryAmmoProvider
+    proto: BulletKineticShuttle
+    fireCost: 50
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 10000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+  - type: RadiationBlocker
+    resistance: 8
+  - type: RadarBlip
+    radarColor: "#FF0000"
+    scale: 1.5
+    visibleFromOtherGrids: true
+  - type: ShipGunType
+    shipType: Ballistic
+  - type: ShipGunClass
+    shipClass: Medium
+  - type: ShipRepairable
+    repairTime: 15
+    repairCost: 40

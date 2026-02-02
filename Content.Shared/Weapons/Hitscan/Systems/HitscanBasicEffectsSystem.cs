@@ -1,3 +1,4 @@
+//CARMINE: MONOPORT: HITSCAN SYSTEM FULLY TRANSPLANTED
 using Content.Shared.Damage;
 using Content.Shared.Effects;
 using Content.Shared.Weapons.Hitscan.Components;

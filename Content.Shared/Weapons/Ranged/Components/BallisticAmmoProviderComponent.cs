@@ -57,4 +57,17 @@ public sealed partial class BallisticAmmoProviderComponent : Component
     /// </summary>
     [DataField]
     public TimeSpan FillDelay = TimeSpan.FromSeconds(0.5);
+
+    /// <summary>
+    /// Monolith - whether to ignore UnspawnedCount and be able to fire infinitely
+    /// Will prioritise and fire/spend entity ammo if loaded
+    /// </summary>
+    [DataField]
+    public bool InfiniteUnspawned = false;
+
+    /// <summary>
+    /// Monolith - Ignore whitelist and allow to load any type of ammo
+    /// </summary>
+    [DataField]
+    public bool IgnoreWhitelist = false;
 }

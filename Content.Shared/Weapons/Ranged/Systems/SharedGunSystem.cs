@@ -1,4 +1,4 @@
-using System.Diagnostics.CodeAnalysis;
+    using System.Diagnostics.CodeAnalysis;
 using System.Numerics;
 using Content.Shared.ActionBlocker;
 using Content.Shared.Actions;
@@ -233,6 +233,17 @@ public abstract partial class SharedGunSystem : EntitySystem
         var result = AttemptShoot(gunUid, gunUid, gun);
         gun.ShotCounter = 0;
         return result;
+    }
+
+    /// <summary>
+    /// Mono - attempts to shoot at the target coordinates for specified duration, or refreshes duration if already shooting.
+    /// </summary>
+    public void AttemptShots(EntityUid user, EntityUid gunUid, GunComponent gun, EntityCoordinates toCoordinates, TimeSpan duration)
+    {
+        gun.ShootCoordinates = toCoordinates;
+        var autoShoot = EnsureComp<AutoShootGunComponent>(gunUid);
+        if (autoShoot.RemainingTime < duration)
+            autoShoot.RemainingTime = duration;
     }
 
     private bool AttemptShoot(EntityUid user, EntityUid gunUid, GunComponent gun)

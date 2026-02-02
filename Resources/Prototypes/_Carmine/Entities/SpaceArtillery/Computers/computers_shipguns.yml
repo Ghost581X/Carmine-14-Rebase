@@ -1,0 +1,82 @@
+# Monolith : Gunnery Computer
+- type: entity
+  parent: BaseComputerAiAccess
+  id: ComputerGunneryConsole
+  name: gunnery control console
+  description: Interfaces with the gunnery control server to operate ship weapons.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: ApcPowerReceiver
+    powerLoad: 200
+  - type: ExtensionCableReceiver
+  - type: ActivatableUIRequiresPower
+  - type: Sprite
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      sprite: Structures/Shuttles/iff.rsi
+      state: helm
+    - map: ["computerLayerKeys"]
+      state: generic_keys
+    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+      state: generic_panel_open
+  - type: FireControlConsole
+  - type: ShipNpcTarget
+    needPower: true
+  - type: ActivatableUI
+    key: enum.FireControlConsoleUiKey.Key
+  - type: UserInterface
+    interfaces:
+        enum.FireControlConsoleUiKey.Key:
+          type: FireControlConsoleBoundUserInterface
+          requireInputValidation: false
+        enum.WiresUiKey.Key:
+          type: WiresBoundUserInterface
+  - type: RadarConsole
+    relativePanning: true
+  - type: WorldLoader
+    radius: 384 # Mono
+  - type: Computer
+    board: GunneryControlComputerCircuitboard
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#ff8400"
+  - type: TargetSeekerAlert
+    targetGainSound:
+      path: /Audio/_Mono/Effects/Alerts/rwr_beep.ogg
+    distanceAlertSettings:
+    - maximumDistance: 220 # curse of...
+      sound:
+        path: /Audio/_Mono/Effects/Alerts/launchwarning.ogg
+        params:
+          loop: true
+          volume: 0.9
+          pitch: 1.05
+    - maximumDistance: 400
+      sound:
+        path: /Audio/_Mono/Effects/Alerts/master_caution.ogg
+        params:
+          loop: true
+          volume: 1.3
+          pitch: 1.15
+    - maximumDistance: 650
+      sound:
+        path: /Audio/_Mono/Effects/Alerts/master_caution.ogg
+        params:
+          loop: true
+          volume: 1.2
+          pitch: 1.05
+          variation: 0.05
+  - type: ShipRepairable
+    repairTime: 7
+    repairCost: 25
+  - type: RadarBlip
+    visibleFromOtherGrids: true
+    radarColor: "#fc9403"
+    scale: 1.5
+    shape: diamond

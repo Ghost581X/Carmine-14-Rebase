@@ -51,6 +51,13 @@ public sealed partial class ShuttleConsoleSystem
         args.Console = GetShuttleConsole(uid, component);
     }
 
+    // CARMINE: PORT FROM MONOLITH - Placeholder for NF drone functionality
+    private void InitializeNFDrone()
+    {
+        // Placeholder - NF-specific drone console functionality not needed for core shuttle console system
+    }
+    // CARMINE: PORT FROM MONOLITH END
+
     /// <summary>
     /// Gets the relevant shuttle console to proxy from the drone console.
     /// </summary>

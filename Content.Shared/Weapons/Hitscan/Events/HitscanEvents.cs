@@ -1,3 +1,4 @@
+//CARMINE: MONOPORT: HITSCAN SYSTEM FULLY TRANSPLANTED
 using System.Numerics;
 using Content.Shared.Damage;
 using Robust.Shared.Map;
@@ -38,10 +39,17 @@ public record struct HitscanTraceEvent
 }
 
 /// <summary>
-/// All data known data for when a hitscan is actually fired.
+/// Results of a hitscan raycast and will be raised on the raycast entity on itself. Stuff like the reflection system
+/// or damage system will listen for this.
 /// </summary>
-public record struct HitscanRaycastFiredData
+[ByRefEvent]
+public record struct HitscanRaycastFiredEvent
 {
+    /// <summary>
+    /// Location the hitscan was fired from.
+    /// </summary>
+    public EntityCoordinates FromCoordinates;
+
     /// <summary>
     /// Direction that the ray was fired towards.
     /// </summary>
@@ -61,38 +69,17 @@ public record struct HitscanRaycastFiredData
     /// Player who shot the gun, if null the gun was fired by itself.
     /// </summary>
     public EntityUid? Shooter;
-}
 
-/// <summary>
-/// Try to hit the targeted entity with a hitscan laser. Stuff like the reflection system should listen for this and
-/// cancel the event if the laser was reflected.
-/// </summary>
-[ByRefEvent]
-public struct AttemptHitscanRaycastFiredEvent
-{
     /// <summary>
-    /// Data for the hitscan that was fired.
+    /// How far the hitscan tried to go to intersect with a target.
     /// </summary>
-    public HitscanRaycastFiredData Data;
+    public float DistanceTried;
 
     /// <summary>
     /// Set to true the hitscan is cancelled (e.g. due to reflection).
     /// Cancelled hitscans should not apply damage or trigger follow-up effects.
     /// </summary>
-    public bool Cancelled;
-}
-
-/// <summary>
-/// Results of a hitscan raycast and will be raised on the raycast entity on itself. Stuff like the damage system should
-/// listen for this. At this point we KNOW the laser hit the entity.
-/// </summary>
-[ByRefEvent]
-public struct HitscanRaycastFiredEvent
-{
-    /// <summary>
-    /// Data for the hitscan that was fired.
-    /// </summary>
-    public HitscanRaycastFiredData Data;
+    public bool Canceled;
 }
 
 [ByRefEvent]

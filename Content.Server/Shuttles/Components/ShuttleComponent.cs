@@ -14,13 +14,14 @@ namespace Content.Server.Shuttles.Components
         /// <summary>
         /// Thrust gets multiplied by this value if it's for braking.
         /// </summary>
+//CARMINE: MONOPORT
         public const float BrakeCoefficient = 1.5f;
 
         /// <summary>
-        /// Maximum velocity.
+        /// Maximum velocity assuming TWR is BaseMaxVelocityTWR.
         /// </summary>
         [ViewVariables(VVAccess.ReadWrite)]
-        public float BaseMaxLinearVelocity = 60f;
+        public float BaseMaxLinearVelocity = 75f; // Mono
 
         public const float MaxAngularVelocity = 4f;
 
@@ -29,6 +30,12 @@ namespace Content.Server.Shuttles.Components
         /// </summary>
         [ViewVariables]
         public readonly float[] LinearThrust = new float[4];
+
+        /// <summary>
+        /// The cached thrust available for each cardinal direction, if all thrusters are T1
+        /// </summary>
+        [ViewVariables]
+        public readonly float[] BaseLinearThrust = new float[4]; //CARMINE: MONOPORT
 
         /// <summary>
         /// The thrusters contributing to each direction for impulse.
@@ -68,5 +75,31 @@ namespace Content.Server.Shuttles.Components
         /// </summary>
         [DataField]
         public float DampingModifier;
+
+        // <Mono>
+        /// <summary>
+        /// Limit to max velocity set by a shuttle console.
+        /// </summary>
+        [DataField]
+        public float SetMaxVelocity = 140f; //CARMINE: MONOPORT
+
+        /// <summary>
+        /// At what Thrust-Weight-Ratio should this ship have the base max velocity as its maximum velocity.
+        /// </summary>
+        [DataField]
+        public float BaseMaxVelocityTWR = 8f; //CARMINE: MONOPORT
+
+        /// <summary>
+        /// How much should TWR affect max velocity.
+        /// </summary>
+        [DataField]
+        public float MaxVelocityScalingExponent = 0.25f; // 16x thrust = 2x max speed //CARMINE: MONOPORT
+
+        /// <summary>
+        /// Don't allow max velocity to go beyond this value.
+        /// </summary>
+        [DataField]
+        public float UpperMaxVelocity = 140f; // we ball //CARMINE: MONOPORT
+        // </Mono>
     }
 }

@@ -30,6 +30,13 @@ namespace Content.Server.Shuttles.Components
         [ViewVariables(VVAccess.ReadWrite), DataField("highlightedRadarColor")]
         public Color HighlightedRadarColor = Color.Magenta;
 
+        //CARMINE MONOPORT
+        /// <summary>
+        /// Name that is shown on the radar screen for this dock, if any.
+        /// </summary>
+        [ViewVariables(VVAccess.ReadWrite), DataField("name")]
+        public string? Name = null;
+
         [ViewVariables]
         public int PathfindHandle = -1;
     }
