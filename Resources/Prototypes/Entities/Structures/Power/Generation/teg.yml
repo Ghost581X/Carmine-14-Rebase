@@ -100,10 +100,8 @@
         path: /Audio/Ambience/Objects/vending_machine_hum.ogg
     - type: GuideHelp
       guides:
-      - TEG
+#      - TEG
       - Power
-    - type: StealTarget
-      stealGroup: Teg
 
 - type: entity
   id: TegCirculator
@@ -160,7 +158,7 @@
     - type: Pullable
     - type: GuideHelp
       guides:
-      - TEG
+#      - TEG
       - Power
 
     # functionality
@@ -183,8 +181,6 @@
     - type: AtmosUnsafeUnanchor
     - type: PipeRestrictOverlap
     - type: TegCirculator
-    - type: StealTarget
-      stealGroup: Teg
 
 - # Spawned by the client-side circulator examine code to indicate the inlet/outlet direction.
   type: entity

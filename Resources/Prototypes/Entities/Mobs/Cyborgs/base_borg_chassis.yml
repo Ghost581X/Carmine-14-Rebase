@@ -298,7 +298,7 @@
     tags:
     - Borg
   - type: AccessReader
-    access: [["AllAccess"]]
+    access: [["Maintenance"]]
   - type: ShowJobIcons
   - type: InteractionPopup
     interactSuccessSound:

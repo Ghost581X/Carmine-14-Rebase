@@ -8,3 +8,7 @@
 - type: metabolizerType
   id: Human
   name: metabolizer-type-human
+
+- type: metabolizerType
+  id: Plant
+  name: metabolizer-type-plant

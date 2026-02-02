@@ -8,3 +8,13 @@
     stateBaseClosed: generic
     stateDoorOpen: generic_open
     stateDoorClosed: generic_door
+
+- type: entity
+  id: LockerWallMedical
+  parent: BaseWallLocker
+  name: medical wall locker
+  components:
+  - type: EntityStorageVisuals
+    stateBaseClosed: med
+    stateDoorOpen: med_open
+    stateDoorClosed: med_door

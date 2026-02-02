@@ -14,7 +14,7 @@
     requiredSlipSpeed: 3.5
   desc: reagent-desc-razorium
   physicalDesc: reagent-physical-desc-reflective
-  flavor: sharp
+  flavor: metallic
   color: "#e3fffb"
   reactiveEffects:
     Acidic:
@@ -44,26 +44,3 @@
       - !type:Emote
         emote: Scream
         probability: 0.3
-
-- type: reagent
-  id: Laughter
-  name: reagent-name-laughter
-  group: Special
-  desc: reagent-desc-laughter
-  physicalDesc: reagent-physical-desc-funny
-  flavor: funny
-  color: "#FF4DD2"
-  slipData:
-    requiredSlipSpeed: 3.5 #clown juice gotta slip
-  metabolisms:
-    Medicine:
-      effects:
-      - !type:Emote
-        emote: Laugh
-        showInGuidebook: true
-        probability: 0.3
-      - !type:PopupMessage
-        type: Local
-        visualType: Large
-        messages: [ "laughter-effect-control-laughter" ]
-        probability: 0.2

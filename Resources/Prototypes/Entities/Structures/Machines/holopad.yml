@@ -75,7 +75,7 @@
     listeningRange: 2.5
     speakerVolume: Speak
   - type: AccessReader
-    access: [[ "AllAccess" ]]
+    access: [[ "Maintenance" ]]
     examinationText: access-reader-examination-functionality-restricted
   - type: ActivatableUI
     key: enum.HolopadUiKey.InteractionWindow

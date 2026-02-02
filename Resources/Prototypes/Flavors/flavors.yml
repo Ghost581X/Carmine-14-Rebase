@@ -219,6 +219,11 @@
   description: flavor-complex-absinthe
 
 - type: flavor
+  id: aloe
+  flavorType: Complex
+  description: flavor-complex-aloe
+
+- type: flavor
   id: medicine
   flavorType: Complex
   description: flavor-complex-medicine
@@ -242,6 +247,11 @@
   id: spaceshroomcooked
   flavorType: Complex
   description: flavor-complex-spaceshroom-cooked
+
+- type: flavor
+  id: violets
+  flavorType: Complex
+  description: flavor-complex-violets
 
 - type: flavor
   id: holy

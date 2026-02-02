@@ -291,8 +291,6 @@
 - type: reaction
   id: Cognizine
   reactants:
-    CarpoToxin:
-      amount: 1
     Siderlac:
       amount: 1
     Acetone:
@@ -444,20 +442,6 @@
       amount: 1
   products:
     Pyrazine: 3
-
-- type: reaction
-  id: Insuzine
-  impact: Medium
-  minTemp: 433
-  reactants:
-    Leporazine:
-      amount: 1
-    Kelotane:
-      amount: 1
-    Silicon:
-      amount: 1
-  products:
-    Insuzine: 3
 
 - type: reaction
   id: Opporozidone

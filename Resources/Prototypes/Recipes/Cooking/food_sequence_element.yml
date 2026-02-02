@@ -8,3 +8,26 @@
     state: produce
   tags:
     - Vegetable
+
+# Steak
+
+- type: foodSequenceElement
+  id: MeatSteak
+  sprites:
+  - sprite: Objects/Consumable/Food/meat.rsi
+    state: plain-cooked
+  tags:
+  - Cooked
+  - Meat
+
+# Meat cutlet
+
+- type: foodSequenceElement
+  id: MeatCutlet
+  sprites:
+  - sprite: Objects/Consumable/Food/meat.rsi
+    state: cutlet-cooked
+  tags:
+  - Cooked
+  - Cutlet
+  - Meat

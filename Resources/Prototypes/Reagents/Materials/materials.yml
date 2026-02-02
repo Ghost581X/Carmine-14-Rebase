@@ -78,3 +78,4 @@
 
 - type: material
   id: Gunpowder #love me an upset linter but IDK if its the right way to handle gunpowder. The chem is not the same as the item.
+  icon: { sprite: Objects/Materials/ore.rsi, state: coal } #attempted fix for YAML linter.

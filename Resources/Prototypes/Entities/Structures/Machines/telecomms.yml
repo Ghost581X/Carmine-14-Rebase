@@ -55,34 +55,6 @@
         whitelist:
           tags:
           - EncryptionCommon
-      variant-cargo:
-        whitelist:
-          tags:
-          - EncryptionCargo
-      variant-engineering:
-        whitelist:
-          tags:
-          - EncryptionEngineering
-      variant-medical:
-        whitelist:
-          tags:
-          - EncryptionMedical
-      variant-science:
-        whitelist:
-          tags:
-          - EncryptionScience
-      variant-sec:
-        whitelist:
-          tags:
-          - EncryptionSecurity
-      variant-service:
-        whitelist:
-          tags:
-          - EncryptionService
-      variant-command:
-        whitelist:
-          tags:
-          - EncryptionCommand
       variant-multiple:
         whitelist:
           components:
@@ -102,27 +74,6 @@
           True: { visible: true }
           False: { visible: false }
         variant-common:
-          True: { shader: unshaded }
-          False: { shader: shaded }
-        variant-cargo:
-          True: { shader: unshaded }
-          False: { shader: shaded }
-        variant-engineering:
-          True: { shader: unshaded }
-          False: { shader: shaded }
-        variant-medical:
-          True: { shader: unshaded }
-          False: { shader: shaded }
-        variant-science:
-          True: { shader: unshaded }
-          False: { shader: shaded }
-        variant-sec:
-          True: { shader: unshaded }
-          False: { shader: shaded }
-        variant-service:
-          True: { shader: unshaded }
-          False: { shader: shaded }
-        variant-command:
           True: { shader: unshaded }
           False: { shader: shaded }
         variant-default:

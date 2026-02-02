@@ -1,0 +1,46 @@
+- type: entity
+  abstract: true
+  parent: Paper
+  id: PaperAcquisitionSlip
+  name: acquisition slip
+  description: A slip with order details on it. It can be given to Cargo to complete the order.
+  components:
+  - type: Sprite
+    layers:
+    - state: acquisition_form
+    - state: acquisition_form_words
+      map: ["enum.PaperVisualLayers.Writing"]
+      visible: false
+    - state: acquisition_form_header
+    - state: paper_stamp-generic
+      map: ["enum.PaperVisualLayers.Stamp"]
+      visible: false
+  - type: Tag
+    tags:
+    - Trash
+    - Document
+    - Paper
+  - type: Paper
+    editingDisabled: true
+  - type: PaperVisuals
+    footerImagePath: "/Textures/Interface/Paper/AcquisitionSlips/barcode.svg.192dpi.png"
+    maxWritableArea: 512.0, 512.0
+
+- type: entity
+  parent: PaperAcquisitionSlip
+  id: PaperAcquisitionSlipCargo
+  suffix: Cargo
+  components:
+  - type: Sprite
+    layers:
+    - state: acquisition_form
+    - state: acquisition_form_words
+      map: ["enum.PaperVisualLayers.Writing"]
+      visible: false
+    - state: acquisition_form_header
+      color: "#b48b57"
+    - state: paper_stamp-generic
+      map: ["enum.PaperVisualLayers.Stamp"]
+      visible: false
+  - type: PaperVisuals
+    headerImagePath: "/Textures/Interface/Paper/AcquisitionSlips/cargo.svg.192dpi.png"

@@ -48,4 +48,4 @@
   cost: 2
   defaultStyle: medical
   styles:
-    evac: LockerWallEvacRepair
+    medical: LockerWallMedical

@@ -42,7 +42,7 @@
           - FireAxe
   - type: Lock
   - type: AccessReader
-    access: [["AllAccess"], ["Maintenance"]]
+    access: [["Command"], ["Maintenance"]]
 
 - type: entity
   parent: FireAxeCabinet

@@ -12,9 +12,9 @@
   - type: Item
     size: Small
   - type: PayloadCase
-  - type: Construction
-    graph: DetonatorGraph
-    node: emptyDetonator
+#  - type: Construction
+#    graph: DetonatorGraph
+#    node: emptyDetonator
   - type: Damageable
     damageContainer: StructuralInorganic
   - type: Destructible

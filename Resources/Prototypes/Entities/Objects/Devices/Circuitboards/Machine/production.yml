@@ -863,20 +863,6 @@
       - MicrowaveMachineBoard
 
 - type: entity
-  id: SyndicateMicrowaveMachineCircuitboard
-  parent: BaseMachineCircuitboard
-  name: donk co. microwave machine board
-  components:
-    - type: Sprite
-      state: service
-    - type: MachineBoard
-      prototype: SyndicateMicrowave
-      stackRequirements:
-        Manipulator: 1
-        Glass: 2
-        Cable: 2
-
-- type: entity
   id: FatExtractorMachineCircuitboard
   parent: BaseMachineCircuitboard
   name: lipid extractor machine board
@@ -903,6 +889,61 @@
     stackRequirements:
       Manipulator: 3
       Steel: 1
+
+- type: entity
+  id: SurveillanceCameraRouterCircuitboard
+  parent: BaseMachineCircuitboard
+  name: surveillance camera router board
+  description: A machine printed circuit board for a surveillance camera router.
+  components:
+  - type: Sprite
+    state: security
+  - type: MachineBoard
+    prototype: SurveillanceCameraRouterConstructed
+    stackRequirements:
+      Cable: 1
+
+- type: entity
+  id: SurveillanceCameraWirelessRouterCircuitboard
+  parent: BaseMachineCircuitboard
+  name: surveillance camera wireless router board
+  description: A machine printed circuit board for a surveillance camera wireless router.
+  components:
+  - type: Sprite
+    state: service
+  - type: MachineBoard
+    prototype: SurveillanceCameraWirelessRouterConstructed
+    stackRequirements:
+      Cable: 2
+      Glass: 1
+
+- type: entity
+  id: SurveillanceWirelessCameraMovableCircuitboard
+  parent: BaseMachineCircuitboard
+  name: movable wireless camera board
+  description: A machine printed circuit board for a movable wireless camera.
+  components:
+  - type: Sprite
+    state: service
+  - type: MachineBoard
+    prototype: SurveillanceWirelessCameraMovableConstructed
+    stackRequirements:
+      Glass: 2
+      Cable: 2
+
+- type: entity
+  id: SurveillanceWirelessCameraAnchoredCircuitboard
+  parent: BaseMachineCircuitboard
+  name: wireless camera board
+  description: A machine printed circuit board for a wireless camera.
+  components:
+  - type: Sprite
+    state: service
+  - type: MachineBoard
+    prototype: SurveillanceWirelessCameraAnchoredConstructed
+    stackRequirements:
+      Cable: 2
+      Glass: 1
 
 - type: entity
   id: GasRecyclerMachineCircuitboard

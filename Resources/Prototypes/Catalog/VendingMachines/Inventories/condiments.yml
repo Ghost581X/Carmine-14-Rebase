@@ -1,0 +1,7 @@
+- type: vendingMachineInventory
+  id: CondimentInventory
+  startingInventory:
+    FoodCondimentPacketSalt: 5
+    ForkPlastic: 10
+    SpoonPlastic: 10
+    KnifePlastic: 10

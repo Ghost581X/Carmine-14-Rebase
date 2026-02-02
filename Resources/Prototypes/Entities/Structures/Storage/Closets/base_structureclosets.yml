@@ -108,6 +108,11 @@
   id: ClosetSteelBase
   parent: ClosetBase
   components:
+  - type: Construction
+    graph: ClosetSteel
+    node: done
+    containers:
+    - entity_storage
   - type: Paintable
     group: Closet
 

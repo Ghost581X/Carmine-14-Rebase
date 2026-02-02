@@ -1,0 +1,10 @@
+- type: entity
+  parent: BaseBullet
+  id: BulletMagnum
+  categories: [ HideSpawnMenu ]
+  name: bullet (.45 magnum)
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 35

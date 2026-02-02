@@ -46,6 +46,15 @@
 
 - type: entity
   parent: SurveillanceCameraRouterBase
+  id: SurveillanceCameraRouterConstructed
+  suffix: Constructed
+  components:
+    - type: SurveillanceCameraRouter
+      setupAvailableNetworks:
+        - SurveillanceCameraGeneral
+
+- type: entity
+  parent: SurveillanceCameraRouterBase
   id: SurveillanceCameraRouterGeneral
   name: general camera router
   suffix: General
@@ -98,3 +107,12 @@
         path: /Audio/Ambience/Objects/server_fans.ogg
     - type: WiresVisuals
     - type: WiresPanel
+
+- type: entity
+  parent: SurveillanceCameraWirelessRouterBase
+  id: SurveillanceCameraWirelessRouterConstructed
+  suffix: Constructed
+  components:
+    - type: SurveillanceCameraRouter
+      setupAvailableNetworks:
+        - SurveillanceCameraEntertainment

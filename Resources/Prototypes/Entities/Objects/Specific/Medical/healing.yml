@@ -756,19 +756,6 @@
         amount: 3
 
 - type: entity
-  name: romerol pill
-  parent: Pill
-  id: PillRomerol
-  components:
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 20
-        reagents:
-        - ReagentId: Romerol
-          Quantity: 10
-
-- type: entity
   name: ambuzol pill
   parent: Pill
   id: PillAmbuzol
@@ -980,20 +967,6 @@
             Quantity: 15
 
 #this is where all the syringes are so i didn't know where to put it
-- type: entity
-  suffix: romerol
-  parent: PrefilledSyringe
-  id: SyringeRomerol
-  components:
-  - type: Label
-    currentLabel: reagent-name-romerol
-  - type: SolutionContainerManager
-    solutions:
-      injector:
-        maxVol: 15
-        reagents:
-        - ReagentId: Romerol
-          Quantity: 15
 
 - type: entity
   suffix: hyperzine

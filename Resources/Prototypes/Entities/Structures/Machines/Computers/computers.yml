@@ -493,7 +493,7 @@
   - type: Computer
     board: ResearchComputerCircuitboard
   - type: AccessReader
-    access: [["AllAccess"]]
+    access: [["Maintenance"]]
   - type: PointLight
     radius: 1.5
     energy: 4.0
@@ -642,7 +642,7 @@
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
   - type: AccessReader
-    access: [[ "AllAccess" ]]
+    access: [[ "Maintenance" ]]
   - type: CommunicationsConsole
     title: comms-console-announcement-title-station
   - type: ActivatableUI
@@ -682,7 +682,7 @@
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
   - type: AccessReader
-    access: [[ "AllAccess" ]]
+    access: [[ "Maintenance" ]]
   - type: CommunicationsConsole
     title: comms-console-announcement-title-nukie
     color: "#ff0000"
@@ -716,7 +716,7 @@
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
   - type: AccessReader
-    access: [[ "AllAccess" ]]
+    access: [[ "Maintenance" ]]
   - type: CommunicationsConsole
     title: comms-console-announcement-title-wizard
     color: "#ff00ff"
@@ -750,7 +750,7 @@
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
   - type: AccessReader
-    access: [[ "AllAccess" ]]
+    access: [[ "Maintenance" ]]
   - type: CommunicationsConsole
     title: comms-console-announcement-title-centcom
     color: "#1d8bad"
@@ -854,7 +854,7 @@
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
   - type: CargoOrderConsole
-    removeLimitAccess: [ "AllAccess" ]
+    removeLimitAccess: [ "Command" ]
   - type: ActiveRadio
     channels:
     - Common
@@ -873,7 +873,7 @@
     energy: 4.0
     color: "#b89f25"
   - type: AccessReader
-    access: [["AllAccess"]]
+    access: [["Maintenance"]]
   - type: DeviceNetwork
     deviceNetId: Wireless
     receiveFrequencyId: BasicDevice
@@ -906,7 +906,7 @@
   - type: CargoOrderConsole
     account: Engineering
     announcementChannel: Common
-    removeLimitAccess: [ "AllAccess" ]
+    removeLimitAccess: [ "Command" ]
     mode: SendToPrimary
   - type: ActiveRadio
     channels:
@@ -916,7 +916,7 @@
   - type: PointLight
     color: "#c9c042"
   - type: AccessReader
-    access: [["AllAccess"]]
+    access: [["Maintenance"]]
 
 - type: entity
   id: ComputerCargoOrdersMedical
@@ -939,7 +939,7 @@
   - type: CargoOrderConsole
     account: Medical
     announcementChannel: Common
-    removeLimitAccess: [ "AllAccess" ]
+    removeLimitAccess: [ "Command" ]
     mode: SendToPrimary
   - type: ActiveRadio
     channels:
@@ -949,7 +949,7 @@
   - type: PointLight
     color: "#41e0fc"
   - type: AccessReader
-    access: [["AllAccess"]]
+    access: [["Maintenance"]]
 
 - type: entity
   id: ComputerCargoOrdersScience
@@ -972,7 +972,7 @@
   - type: CargoOrderConsole
     account: Science
     announcementChannel: Common
-    removeLimitAccess: [ "AllAccess" ]
+    removeLimitAccess: [ "Command" ]
     mode: SendToPrimary
   - type: ActiveRadio
     channels:
@@ -982,7 +982,7 @@
   - type: PointLight
     color: "#b53ca1"
   - type: AccessReader
-    access: [["AllAccess"]]
+    access: [["Maintenance"]]
 
 - type: entity
   id: ComputerCargoOrdersSecurity
@@ -1005,7 +1005,7 @@
   - type: CargoOrderConsole
     account: Security
     announcementChannel: Common
-    removeLimitAccess: [ "AllAccess" ]
+    removeLimitAccess: [ "Command" ]
     mode: SendToPrimary
   - type: ActiveRadio
     channels:
@@ -1036,7 +1036,7 @@
   - type: CargoOrderConsole
     account: Service
     announcementChannel: Common
-    removeLimitAccess: [ "AllAccess" ]
+    removeLimitAccess: [ "Command" ]
     mode: SendToPrimary
   - type: ActiveRadio
     channels:
@@ -1046,7 +1046,7 @@
   - type: PointLight
     color: "#afe837"
   - type: AccessReader
-    access: [["AllAccess"], ["Maintenance"]]
+    access: [["Maintenance"], ["Maintenance"]]
 
 - type: entity
   id: ComputerCargoBounty
@@ -1082,7 +1082,7 @@
     energy: 4.0
     color: "#b89f25"
   - type: AccessReader
-    access: [["AllAccess"]]
+    access: [["Maintenance"]]
 
 - type: entity
   parent: BaseComputerAiAccess
@@ -1107,7 +1107,7 @@
     key: enum.FundingAllocationConsoleUiKey.Key
   - type: ActivatableUIRequiresAccess
   - type: AccessReader
-    access: [["AllAccess"]]
+    access: [["Maintenance"]]
   - type: UserInterface
     interfaces:
       enum.FundingAllocationConsoleUiKey.Key:
@@ -1259,7 +1259,7 @@
       energy: 4.0
       color: "#b89f25"
     - type: AccessReader
-      access: [["AllAccess"]]
+      access: [["Maintenance"]]
 
 - type: entity
   parent: BaseComputer
@@ -1401,7 +1401,7 @@
   - type: DeviceNetworkRequiresPower
   - type: NewsWriter
   - type: AccessReader
-    access: [[ "AllAccess" ]]
+    access: [[ "Maintenance" ]]
   - type: ActivatableUI
     key: enum.NewsWriterUiKey.Key
   - type: ActivatableUIRequiresVision
@@ -1502,7 +1502,7 @@
   - type: Computer
     board: RoboticsConsoleCircuitboard
   - type: AccessReader # only used for dangerous things
-    access: [["AllAccess"]]
+    access: [["Maintenance"]]
   - type: Lock
     unlockOnClick: false
 
@@ -1529,7 +1529,7 @@
   - type: Computer
     board: StationAiUploadCircuitboard
   - type: AccessReader
-    access: [ [ "AllAccess" ] ]
+    access: [ [ "Maintenance" ] ]
   - type: Lock
     unlockOnClick: false
   - type: SiliconLawUpdater
@@ -1605,7 +1605,7 @@
   - type: Computer
     board: StationAiFixerCircuitboard
   - type: AccessReader
-    access: [ [ "AllAccess" ] ]
+    access: [ [ "Maintenance" ] ]
   - type: Lock
     unlockOnClick: false
   - type: StationAiFixerConsole

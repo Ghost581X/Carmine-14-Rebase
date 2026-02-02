@@ -595,7 +595,7 @@
     useDelay: 1
   - type: InstantAction
     event: !type:SummonActionEvent
-    
+
 - type: reagent
   id: FluorosulfuricAcid
   name: reagent-name-fluorosulfuric-acid
@@ -634,7 +634,7 @@
       - !type:Emote
         emote: Scream
         probability: 0.25
-  
+
 - type: entity
   parent: BaseItem
   id: WeaponMeleeNeedle
@@ -661,10 +661,10 @@
   - type: ThrowingAngle
     angle: -135
   - type: LandAtCursor
-  
+
 - type: Tag #ofc its hardcoded
   id: Balloon
-  
+
 - type: weightedRandomFillSolution
   id: RandomPickBotanyReagent
   fills:
@@ -672,18 +672,10 @@
     weight: 0.5
     reagents:
     - Omnizine
-    
+
 - type: cargoMarket
   id: SalvageJobRewardMAX
-  
-- type: cargoAccount
-  id: Cargo
-  name: cargo-account-cargo-name
-  code: cargo-account-cargo-code
-  color: "#b48b57"
-  radioChannel: Common
-  acquisitionSlip: PaperAcquisitionSlipCargo
-  
+
 - type: entity #this shit is hardcoded
   parent: BaseAction
   id: ActionStethoscope
@@ -699,12 +691,12 @@
   - type: TargetAction
   - type: EntityTargetAction
     event: !type:StethoscopeActionEvent
-    
+
 - type: soundCollection #accidentally removed because it was in bikehorn.yml
   id: DeskBell
   files:
   - /Audio/Items/desk_bell_ring.ogg
-  
+
 - type: reagent
   id: PolytrinicAcid
   name: reagent-name-polytrinic-acid
@@ -750,7 +742,7 @@
       - !type:Emote
         emote: Scream
         probability: 0.3
-        
+
 
 - type: reagent
   id: Pax
@@ -758,8 +750,6 @@
   group: Narcotics
   desc: reagent-desc-pax
   physicalDesc: reagent-physical-desc-soothing
-  allowedDepartments:
-  - Command
   color: "#AAAAAA"
   metabolisms:
     Poison:
@@ -768,3 +758,328 @@
         key: Pacified
         component: Pacified
         time: 4
+
+#Zombiesystem.cs
+- type: npcFaction
+  id: Zombie
+
+#UplinkSystem.cs and NukeOpsRuleSystem.cs
+- type: currency
+  id: Telecrystal
+  displayName: store-currency-display-telecrystal
+  cash:
+    1: Telecrystal # Mono
+  canWithdraw: true
+
+- type: entity
+  name: telecrystal
+  parent: BaseItem
+  id: Telecrystal
+  suffix: 100 TC # Mono
+  description: It seems to be pulsing with suspiciously enticing energies.
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Syndicate/telecrystal.rsi
+    state: telecrystal
+  - type: Item
+    sprite: Objects/Specific/Syndicate/telecrystal.rsi
+    size: Tiny
+  # - type: Stack
+  #   count: 100 # Mono
+  #   stackType: Telecrystal
+  - type: StackPrice
+    price: 40 # Mono
+  - type: Currency
+    price:
+      Telecrystal: 1
+
+#UplinkSystem.cs
+- type: entity
+  parent: [ BaseSubdermalImplant ]
+  id: UplinkImplant
+  name: uplink implant
+  description: This implant lets the user access a hidden Syndicate uplink at will.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SubdermalImplant
+    implantAction: ActionOpenUplinkImplant
+    whitelist:
+      components:
+      - Hands # prevent mouse buying grenade penguin since its not telepathic
+  - type: Store
+    balance:
+      Telecrystal: 0
+  - type: UserInterface
+    interfaces:
+      enum.StoreUiKey.Key:
+        type: StoreBoundUserInterface
+
+- type: entity
+  id: UplinkImplanter
+  suffix: uplink
+  parent: BaseImplantOnlyImplanterSyndi
+  components:
+  - type: Implanter
+    implant: UplinkImplant
+
+#UplinkSystem.cs
+- type: listing # Frontier - Mono Revert.
+  id: UplinkUplinkImplanter # uplink uplink real
+  name: uplink-uplink-implanter-name
+  description: uplink-uplink-implanter-desc
+  icon: { sprite: /Textures/Objects/Devices/communication.rsi, state: old-radio }
+  productEntity: UplinkImplanter
+  discountCategory: usualDiscounts
+  discountDownTo:
+    Telecrystal: 25 # Mono # Mono 1->5
+  cost:
+    Telecrystal: 50 # Mono # Mono 2->10
+  categories:
+  - UplinkImplants
+  conditions:
+    - !type:StoreWhitelistCondition
+      blacklist:
+        tags:
+          - NukeOpsUplink
+
+- type: storeCategory
+  id: UplinkImplants
+  name: store-category-implants
+  priority: 7
+
+
+#StoreDiscountSystem.cs
+- type: storeCategory
+  id: DiscountedItems
+  name: store-discounted-items
+  priority: 200
+
+- type: discountCategory
+  id: usualDiscounts # Cheap items that are used not very often.
+  weight: 80
+
+#RandomSentienceRule.cs
+- type: localizedDataset
+  id: RandomSentienceEventData
+  values:
+    prefix: random-sentience-event-data-
+    count: 6
+
+- type: localizedDataset
+  id: RandomSentienceEventStrength
+  values:
+    prefix: random-sentience-event-strength-
+    count: 8
+
+#FTLDiskCommand.cs and SalvageSystem.cs
+- type: entity
+  name: coordinates disk
+  parent: BaseItem
+  id: CoordinatesDisk
+  description: A disk containing the coordinates to a location in space. Necessary for any FTL-traversing vessel to reach their destination. Fits inside shuttle consoles.
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/cd.rsi
+    state: icon
+  - type: StaticPrice
+    price: 100
+  - type: Tag
+    tags:
+    - CoordinatesDisk
+  - type: ShuttleDestinationCoordinates
+
+#FTLDiskCommand.cs
+- type: entity
+  name: diskcase
+  parent: BaseStorageItem
+  id: DiskCase
+  description: Case for storing a coordinates disk.
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/diskcases.rsi
+    state: icon_base
+  - type: Storage
+    grid:
+    - 0,0,0,1
+    maxItemSize: Normal
+    whitelist:
+      tags:
+        - Document
+        - CoordinatesDisk
+    storageOpenSound: /Audio/Machines/screwdriveropen.ogg
+    storageCloseSound: /Audio/Machines/screwdriverclose.ogg
+    storageInsertSound: /Audio/Items/crowbar.ogg
+    storageRemoveSound: /Audio/Items/crowbar.ogg
+
+#AnomalySystem.cs
+- type: weightedRandom
+  id: AnomalyBehaviorList
+  weights:
+  #safe
+    Slow: 0.5
+  #   Light: 0.5
+  #   FullSafe: 0.1
+  # #balanced
+  #   Balanced: 3
+  #     : 1
+  #   Rapid: 1
+  #   BalancedSecret: 1
+  #   Reflect: 1
+  #   NonSensivity: 1
+  #   Sensivity: 1
+  # #Hard
+  #   Fast: 0.5
+  #   Strenght: 0.5
+  #   Inconstancy: 0.5
+  #   InconstancyParticle: 0.5
+  #   FullUnknown: 0.5
+  #   Jumping: 0.3
+  #   Invisibility: 0.5
+  # #Complex
+  #   FastUnknown: 0.2
+  #   JumpingUnknown: 0.1
+  #   InconstancyParticleUnknown: 0.1
+  #   InvisibilityJumping: 0.1
+
+- type: anomalyBehavior
+  id: Slow
+  pulseFrequencyModifier: 2
+  earnPointModifier: 0.5
+  description: anomaly-behavior-slow
+
+#GatewayGeneratorSystem.cs
+- type: localizedDataset
+  id: NamesBorer
+  values:
+    prefix: names-borer-dataset-
+    count: 69
+
+#GatewayGeneratorSystem.cs
+- type: biomeTemplate
+  id: Continental
+  # layers:
+  #   - !type:BiomeMetaLayer
+  #     template: Lava
+    # - !type:BiomeMetaLayer
+    #   template: Caves
+    #   threshold: -0.5
+    #   noise:
+    #     frequency: 0.001
+    #     noiseType: OpenSimplex2
+    #     fractalType: FBm
+    #     octaves: 2
+    #     lacunarity: 2
+    # - !type:BiomeMetaLayer
+    #   template: Grasslands
+    #   threshold: 0
+    #   noise:
+    #     frequency: 0.001
+    #     noiseType: OpenSimplex2
+    #     fractalType: FBm
+    #     octaves: 2
+    #     lacunarity: 2
+    # - !type:BiomeMetaLayer
+    #   template: Snow
+    #   threshold: 0.5
+    #   noise:
+    #     frequency: 0.001
+    #     noiseType: OpenSimplex2
+    #     fractalType: FBm
+    #     octaves: 2
+    #     lacunarity: 2
+
+- type: dungeonConfig
+  id: Experiment
+  # data:
+  #   colors:
+  #     Decals: "#D381C996"
+  #   entities:
+  #     Cabling: CableApcExtension
+  #     CornerWalls: WallReinforced
+  #     Walls: WallSolid
+  #   spawnGroups:
+  #     CornerClutter: BaseClutter
+  #     Entrance: BaseAirlock
+  #     EntranceFlank: BaseWindow
+  #     Junction: BaseAirlock
+  #     WallMounts: ScienceLabsWalls
+  #     Window: BaseWindow
+  #   tiles:
+  #     FallbackTile: FloorSteel
+  #   whitelists:
+  #     Rooms:
+  #       tags:
+  #       - SalvageExperiment
+  # layers:
+  # - !type:PrototypeDunGen
+  #   proto: PlanetBase
+
+#SharedSalvageSystem.cs
+- type: salvageLoot
+  id: SalvageLoot
+
+#MicrowaveSystem.cs
+- type: entity
+  name: lightning
+  id: BaseLightning
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: /Textures/Effects/lightning.rsi
+    drawdepth: Effects
+    layers:
+    - state: "lightning_1"
+      shader: unshaded
+  - type: Physics
+    canCollide: false
+  - type: Electrified
+    requirePower: false
+  - type: Lightning
+  - type: PointLight
+    enabled: true
+    color: "#4080FF"
+    radius: 3.5
+    softness: 1
+    autoRot: true
+    castShadows: false
+  - type: Beam
+    sound: /Audio/Effects/Lightning/lightningshock.ogg
+  - type: TimedDespawn
+    lifetime: 3
+  - type: Tag
+    tags:
+      - HideContextMenu
+
+#MicrowaveSystem.cs
+- type: entity
+  name: lightning
+  id: Spark
+  parent: BaseLightning
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: /Textures/Effects/lightning.rsi
+    drawdepth: Effects
+    layers:
+    - state: "lightning_1"
+      shader: unshaded
+  - type: Electrified
+    shockDamage: 0
+  - type: Lightning
+    lightningPrototype: Spark
+  - type: PointLight
+    radius: 0.2
+    softness: .4
+  - type: Beam
+    sound: /Audio/Effects/sparks4.ogg
+  - type: TimedDespawn
+    lifetime: .3
+  - type: Tag
+    tags:
+      - HideContextMenu
+
+#HumanoidProfileEditor.xaml.cs
+- type: guideEntry
+  id: Species
+  name: guide-entry-species
+  text: "/ServerInfo/Guidebook/Mobs/Species.xml"

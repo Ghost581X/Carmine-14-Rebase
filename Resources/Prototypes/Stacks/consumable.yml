@@ -2,6 +2,13 @@
 
 - type: stack
   parent: BaseVerySmallStack
+  id: PaperRolling
+  name: stack-rolling-paper
+  icon: { sprite: /Textures/Objects/Consumable/Smokeables/Cigarettes/paper.rsi, state: cigpaper }
+  spawn: PaperRolling
+
+- type: stack
+  parent: BaseVerySmallStack
   id: CigaretteFilter
   name: stack-cigarette-filter
   icon: { sprite: /Textures/Objects/Consumable/Smokeables/Cigarettes/paper.rsi, state: cigfilter }

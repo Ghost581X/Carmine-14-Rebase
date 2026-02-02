@@ -211,9 +211,9 @@
           Off: { visible: false }
           Weak: { state: core_weak, visible: true }
           Strong: { state: core_strong, visible: true }
-  - type: Construction
-    graph: AmeShielding
-    node: ameShielding
+#  - type: Construction
+#    graph: AmeShielding
+#    node: ameShielding
   - type: GuideHelp
     guides:
     #- AME

@@ -1,4 +1,40 @@
 - type: entity
+  abstract: true
+  parent: [ DrinkBaseMaterialPlastic, DrinkBase ]
+  id: SprayBottleBase
+  components:
+  - type: Edible
+    edible: Drink
+    solution: drink
+    transferAmount: 10
+    useSound:
+      path: /Audio/Effects/spray3.ogg
+      params:
+        variation: 0.2
+  - type: Tag
+    tags:
+    - Spray
+    - Trash
+  - type: Sprite
+    sprite: Objects/Specific/Janitorial/spray_bottle.rsi
+    state: cleaner
+  - type: Item
+    sprite: Objects/Specific/Janitorial/spray_bottle.rsi
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 100
+  - type: UseDelay
+  - type: Spray
+    solution: drink
+    transferAmount: 10
+    sprayVelocity: 2
+    spraySound:
+      path: /Audio/Effects/spray2.ogg
+  - type: TrashOnSolutionEmpty
+    solution: drink
+
+- type: entity
   name: spray bottle
   id: SprayBottle
   parent: BaseItem

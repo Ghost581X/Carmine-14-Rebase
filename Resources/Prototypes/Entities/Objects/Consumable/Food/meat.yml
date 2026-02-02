@@ -134,43 +134,6 @@
       - state: plain-inhand-right
 
 - type: entity
-  # bacon is cured so not raw = cant rot
-  parent: FoodMeatBase
-  id: FoodMeatBacon
-  name: raw bacon
-  description: A raw piece of bacon.
-  components:
-  - type: Tag
-    tags:
-    - Raw
-    - Meat
-  - type: Sprite
-    state: bacon
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        reagents:
-        - ReagentId: UncookedAnimalProteins
-          Quantity: 2
-        - ReagentId: Fat
-          Quantity: 9
-  - type: InternalTemperature
-    conductivity: 0.44
-    thickness: 0.004 # bacon is thin so faster to cook than a steak
-    area: 0.0075 # ~5x15cm
-  - type: Construction
-    graph: Bacon
-    node: start
-    defaultTarget: bacon
-  - type: Item
-    storedOffset: -1,0
-    inhandVisuals:
-      left:
-      - state: generic-pink-inhand-left
-      right:
-      - state: generic-pink-inhand-right
-
-- type: entity
   parent: FoodMeatRawBase
   id: FoodMeatRat
   name: raw rat meat
@@ -255,10 +218,10 @@
   - type: Construction
     graph: MeatSteak
     node: meat steak
-  - type: FoodSequenceElement
-    entries:
-      Burger: MeatSteak
-      Taco: MeatSteak
+#  - type: FoodSequenceElement
+#    entries:
+#      Burger: MeatSteak
+#      Taco: MeatSteak
   - type: Item
     storedOffset: -2,1
     inhandVisuals:
@@ -266,50 +229,6 @@
       - state: plain-cooked-inhand-left
       right:
       - state: plain-cooked-inhand-right
-
-- type: entity
-  parent: FoodMeatBase
-  id: FoodMeatBaconCooked
-  name: bacon
-  description: A delicious piece of cooked bacon.
-  components:
-  - type: Tag
-    tags:
-    - Cooked
-    - Meat
-  - type: Sprite
-    layers:
-    - state: bacon-cooked
-      map: [ "enum.DamageStateVisualLayers.Base" ]
-  - type: RandomSprite
-    available:
-      - enum.DamageStateVisualLayers.Base:
-          bacon-cooked: ""
-          bacon2-cooked: ""
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 5
-        - ReagentId: Protein
-          Quantity: 5
-  - type: Construction
-    graph: Bacon
-    node: bacon
-  - type: FoodSequenceElement
-    entries:
-      Burger: MeatBacon
-      Taco: MeatBacon
-  - type: Item
-    storedOffset: -1,0
-    inhandVisuals:
-      left:
-      - state: generic-pink-inhand-left
-        color: "#5B3E2A"
-      right:
-      - state: generic-pink-inhand-right
-        color: "#5B3E2A"
 
 # Cutlets
 

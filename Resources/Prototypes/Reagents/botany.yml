@@ -1,4 +1,83 @@
 - type: reagent
+  id: PestKiller
+  name: reagent-name-pest-killer
+  group: Botanical
+  desc: reagent-desc-pest-killer
+  flavor: bitter
+  color: "#9e9886"
+  physicalDesc: reagent-physical-desc-bubbling
+  plantMetabolism:
+    - !type:PlantAdjustToxins
+      amount: 4
+    - !type:PlantAdjustPests
+      amount: -6
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 3
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [Plant]
+
+- type: reagent
+  id: PlantBGone
+  name: reagent-name-plant-b-gone
+  group: Botanical
+  desc: reagent-desc-plant-b-gone
+  flavor: bitter
+  color: "#49002E"
+  physicalDesc: reagent-physical-desc-bubbling
+  plantMetabolism:
+    - !type:PlantAdjustToxins
+      amount: 6
+    - !type:PlantAdjustWeeds
+      amount: -8
+    - !type:PlantAdjustHealth
+      amount: -20
+    - !type:PlantAdjustMutationMod
+      amount: 0.1
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: -4
+            Blunt: 2
+            Slash: 1
+            Piercing: 1
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [Plant]
+
+- type: reagent
+  id: WeedKiller
+  name: reagent-name-weed-killer
+  group: Botanical
+  desc: reagent-desc-weed-killer
+  flavor: bitter
+  color: "#968395"
+  physicalDesc: reagent-physical-desc-bubbling
+  plantMetabolism:
+    - !type:PlantAdjustToxins
+      amount: 4
+    - !type:PlantAdjustWeeds
+      amount: -6
+  metabolisms:
+    Poison:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 4
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [Plant]
+
+- type: reagent
   id: Ammonia
   name: reagent-name-ammonia
   group: Botanical
