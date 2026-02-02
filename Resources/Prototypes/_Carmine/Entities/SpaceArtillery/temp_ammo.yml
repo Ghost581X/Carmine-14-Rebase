@@ -1,0 +1,70 @@
+- type: entity
+  id: ShipgunMagazine20mm
+  name: 20mm Shipgun Magazine
+  description: A magazine for 20mm debug shipguns with 250 rounds in it.
+  parent: [BaseItem]
+  components:
+  - type: Tag
+    tags:
+    - Magazine20mm
+  - type: Item
+    size: Small
+  - type: BallisticAmmoProvider
+    infiniteUnspawned: false
+    proto: 20mmCartridge
+    capacity: 250
+    mayTransfer: true
+    whitelist:
+      tags:
+      - Cartridge20mm
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Magazine/LightRifle/light_rifle_box.rsi
+    layers:
+    - state: base
+      map: [ "enum.GunVisualLayers.Base" ]
+    - state: mag-0
+      map: [ "enum.GunVisualLayers.Mag" ]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 7
+    zeroVisible: false
+  - type: Appearance
+
+
+- type: entity
+  id: ShipgunMagazine70mm
+  name: 70mm Shipgun Magazine
+  description: A magazine for 70mm debug shipguns with 50 rounds in it.
+  parent: [BaseItem]
+  components:
+  - type: Tag
+    tags:
+    - Magazine70mm
+  - type: Item
+    size: Small
+  - type: BallisticAmmoProvider
+    infiniteUnspawned: false
+    proto: 70mmCartridge
+    capacity: 50
+    mayTransfer: true
+    whitelist:
+      tags:
+      - Cartridge70mm
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Magazine/LightRifle/pk_box.rsi
+    layers:
+    - state: base
+      map: [ "enum.GunVisualLayers.Base" ]
+    - state: mag-0
+      map: [ "enum.GunVisualLayers.Mag" ]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 7
+    zeroVisible: false
+  - type: Appearance

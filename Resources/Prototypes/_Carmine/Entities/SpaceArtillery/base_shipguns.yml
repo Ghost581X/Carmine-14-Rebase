@@ -1,7 +1,7 @@
 # Base
 
 - type: entity
-  id: BallisticArtilleryBase
+  id: ShipgunBase
   abstract: true
   placement:
     mode: SnapgridCenter
@@ -79,15 +79,15 @@
     - FullAuto
 
 - type: entity
-  id: BallisticArtilleryUnanchorable
-  parent: BallisticArtilleryBase
+  id: ShipgunUnanchorable
+  parent: ShipgunBase
   abstract: true
   components:
   - type: RequiresGrid
 
 - type: entity
-  id: BallisticArtillery
-  parent: BallisticArtilleryBase
+  id: Shipgun
+  parent: ShipgunBase
   abstract: true
   components:
   - type: Anchorable
@@ -95,7 +95,7 @@
   - type: Pullable
 
 - type: entity
-  id: BallisticArtilleryBaseCartridge
+  id: ShipgunBaseCartridge
   abstract: true
   placement:
     mode: SnapgridCenter
@@ -175,8 +175,8 @@
       path: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
 
 - type: entity
-  id: BallisticArtilleryCartridge
-  parent: BallisticArtilleryBaseCartridge
+  id: ShipgunCartridge
+  parent: ShipgunBaseCartridge
   abstract: true
   components:
   - type: Anchorable
@@ -184,14 +184,14 @@
   - type: Pullable
 
 - type: entity
-  id: BallisticArtilleryUnanchorableCartridge
-  parent: BallisticArtilleryBaseCartridge
+  id: ShipgunUnanchorableCartridge
+  parent: ShipgunBaseCartridge
   abstract: true
   components:
   - type: RequiresGrid
 
 - type: entity
-  id: BallisticArtilleryBaseMagazine
+  id: ShipgunBaseMagazine
   abstract: true
   placement:
     mode: SnapgridCenter
@@ -279,8 +279,8 @@
 
 
 - type: entity
-  id: BallisticArtilleryMagazine
-  parent: BallisticArtilleryBaseMagazine
+  id: ShipgunMagazine
+  parent: ShipgunBaseMagazine
   abstract: true
   components:
   - type: Anchorable
@@ -288,8 +288,8 @@
   - type: Pullable
 
 - type: entity
-  id: BallisticArtilleryUnanchorableMagazine
-  parent: BallisticArtilleryBaseMagazine
+  id: ShipgunUnanchorableMagazine
+  parent: ShipgunBaseMagazine
   abstract: true
   components:
   - type: RequiresGrid

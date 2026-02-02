@@ -1,0 +1,11 @@
+- type: Tag
+  id: Magazine20mm # debug fast-firing shipgun magazine
+
+- type: Tag
+  id: Magazine70mm # debug slow-firing shipgun magazine
+
+- type: Tag
+  id: Cartridge20mm # debug fast-firing shipgun magazine
+
+- type: Tag
+  id: Cartridge70mm # debug slow-firing shipgun magazine
