@@ -1,0 +1,625 @@
+##GREY BARRELS
+
+- type: entity
+  parent: BaseBarrel
+  id: BarrelGrey
+  name: grey barrel
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: grey_1
+
+- type: entity
+  parent: BaseBarrel
+  id: BarrelGreyLid
+  name: grey barrel
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: grey_2
+    
+- type: entity
+  parent: BaseBarrel
+  id: BarrelGreyLidless
+  name: grey barrel
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: grey_3
+
+#-ALTERNATIVE-
+
+- type: entity #CARMINETODO: MAKE THEM EXPLODE OR SOMETHING
+  parent: BaseBarrel
+  id: BarrelGreyFlammable
+  name: grey barrel
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: flammable_1
+
+- type: entity #CARMINETODO: MAKE THEM EXPLODE OR SOMETHING
+  parent: BaseBarrel
+  id: BarrelGreyFlammableLid
+  name: grey barrel
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: flammable_2
+    
+- type: entity
+  parent: BaseBarrel
+  id: BarrelGreyFlammableLidless
+  name: grey barrel
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: flammable_3
+
+- type: entity
+  parent: BaseBarrel
+  id: BarrelGreyLabel
+  name: grey barrel
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: label_1
+
+- type: entity
+  parent: BaseBarrel
+  id: BarrelGreyLabelLid
+  name: grey barrel
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: label_2
+    
+- type: entity
+  parent: BaseBarrel
+  id: BarrelGreyLabelLidless
+  name: grey barrel
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: label_3
+
+- type: entity
+  parent: BaseBarrel
+  id: BarrelGreyHazard
+  name: grey barrel
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: hazard_1
+
+- type: entity
+  parent: BaseBarrel
+  id: BarrelGreyHazardLid
+  name: grey barrel
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: hazard_2
+    
+- type: entity
+  parent: BaseBarrel
+  id: BarrelGreyHazardLidless
+  name: grey barrel
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: hazard_3
+
+- type: entity #CARMINETODO: MAKE THEM EXPLODE OR SOMETHING
+  parent: BaseBarrel
+  id: BarrelGreyWarning
+  name: grey barrel
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: warning_1
+
+- type: entity #CARMINETODO: MAKE THEM EXPLODE OR SOMETHING
+  parent: BaseBarrel
+  id: BarrelGreyWarningLid
+  name: grey barrel
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: warning_2
+    
+- type: entity
+  parent: BaseBarrel
+  id: BarrelGreyWarningLidless
+  name: grey barrel
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: warning_3
+
+#DOUBLE
+
+- type: entity
+  parent: BaseBarrelDouble
+  id: BarrelGreyDouble
+  name: grey barrels
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: double_grey_1
+    
+- type: entity
+  parent: BaseBarrelDouble
+  id: BarrelGreyDoubleFlipped
+  name: grey barrels
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: double_grey_2
+    
+#TRIPLE
+
+- type: entity
+  parent: BaseBarrelTriple
+  id: BarrelGreyTriple
+  name: grey barrels
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: triple_grey_1
+    
+- type: entity
+  parent: BaseBarrelTriple
+  id: BarrelGreyTripleFlipped
+  name: grey barrels
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: triple_grey_2
+    
+- type: entity
+  parent: BaseBarrelTriple
+  id: BarrelGreyTripleLid
+  name: grey barrels
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: triple_grey_3
+   
+#QUAD
+
+- type: entity
+  parent: BaseBarrelQuad
+  id: BarrelGreyQuad
+  name: grey barrels
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: quad_grey_1
+    
+##RED BARRELS
+
+- type: entity
+  parent: BaseBarrel
+  id: BarrelRed
+  name: red barrel
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: red_1
+    
+- type: entity
+  parent: BaseBarrel
+  id: BarrelRedLid
+  name: red barrel
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: red_2
+    
+- type: entity
+  parent: BaseBarrel
+  id: BarrelRedLidless
+  name: red barrel
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: red_3
+    
+#-ALTERNATIVE-
+
+- type: entity
+  parent: BaseBarrel
+  id: BarrelRedAlt
+  name: red barrel
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: red_alt_1
+    
+- type: entity
+  parent: BaseBarrel
+  id: BarrelRedAltLid
+  name: red barrel
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: red_alt_2
+    
+- type: entity
+  parent: BaseBarrel
+  id: BarrelRedAltLidless
+  name: red barrel
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: red_alt_3
+  
+#DOUBLE
+
+- type: entity
+  parent: BaseBarrelDouble
+  id: BarrelRedDouble
+  name: red barrels
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: double_red_1
+    
+- type: entity
+  parent: BaseBarrelDouble
+  id: BarrelRedDoubleFlipped
+  name: red barrels
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: double_red_2
+
+#TRIPLE
+
+- type: entity
+  parent: BaseBarrelTriple
+  id: BarrelRedTriple
+  name: red barrels
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: triple_red_1
+    
+- type: entity
+  parent: BaseBarrelTriple
+  id: BarrelRedTripleFlipped
+  name: red barrels
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: triple_red_2
+    
+- type: entity
+  parent: BaseBarrelTriple
+  id: BarrelRedTripleLid
+  name: red barrels
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: triple_red_3
+    
+#QUAD
+
+- type: entity
+  parent: BaseBarrelQuad
+  id: BarrelRedQuad
+  name: red barrels
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: quad_red_1
+
+##YELLOW BARRELS
+
+- type: entity
+  parent: BaseBarrel
+  id: BarrelYellow
+  name: yellow barrel
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: yellow_1
+    
+- type: entity
+  parent: BaseBarrel
+  id: BarrelYellowLid
+  name: yellow barrel
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: yellow_2
+    
+- type: entity
+  parent: BaseBarrel
+  id: BarrelYellowLidless
+  name: yellow barrel
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: yellow_3
+
+#-ALTERNATIVE-
+
+- type: entity #CARMINETODO: APPLY RADIATION OR SOMETHING
+  parent: BaseBarrel
+  id: BarrelYellowToxic
+  name: yellow barrel
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: toxic_1
+    
+- type: entity #CARMINETODO: APPLY RADIATION OR SOMETHING
+  parent: BaseBarrel
+  id: BarrelYellowToxicLid
+  name: yellow barrel
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: toxic_2
+    
+- type: entity #CARMINETODO: APPLY RADIATION OR SOMETHING
+  parent: BaseBarrel
+  id: BarrelYellowToxicLidless
+  name: yellow barrel
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: toxic_3
+    
+- type: entity #CARMINETODO: APPLY RADIATION OR SOMETHING
+  parent: BaseBarrel
+  id: BarrelYellowToxicSpill
+  name: yellow barrel
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: toxic_4
+
+- type: entity #CARMINETODO: APPLY RADIATION OR SOMETHING
+  parent: BaseBarrel
+  id: BarrelYellowWaste
+  name: yellow barrel
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: waste_1
+    
+- type: entity #CARMINETODO: APPLY RADIATION OR SOMETHING
+  parent: BaseBarrel
+  id: BarrelYellowWasteLid
+  name: yellow barrel
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: waste_2
+    
+- type: entity #CARMINETODO: APPLY RADIATION OR SOMETHING
+  parent: BaseBarrel
+  id: BarrelYellowWasteLidless
+  name: yellow barrel
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: waste_3
+
+#DOUBLE
+
+- type: entity
+  parent: BaseBarrelDouble
+  id: BarrelYellowDouble
+  name: yellow barrels
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: double_yellow_1
+    
+- type: entity
+  parent: BaseBarrelDouble
+  id: BarrelYellowDoubleFlipped
+  name: yellow barrels
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: double_yellow_2
+
+#-ALTERNATIVE-
+
+- type: entity #CARMINETODO: APPLY RADIATION OR SOMETHING
+  parent: BaseBarrelDouble
+  id: BarrelYellowDoubleToxic
+  name: yellow barrels
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: double_toxic_1
+
+- type: entity #CARMINETODO: APPLY RADIATION OR SOMETHING
+  parent: BaseBarrelDouble
+  id: BarrelYellowDoubleWaste
+  name: yellow barrels
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: double_waste_1
+
+- type: entity #CARMINETODO: APPLY RADIATION OR SOMETHING
+  parent: BaseBarrelDouble
+  id: BarrelYellowDoubleWasteFlipped
+  name: yellow barrels
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: double_waste_2
+
+#TRIPLE
+
+- type: entity
+  parent: BaseBarrelTriple
+  id: BarrelYellowTriple
+  name: yellow barrels
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: triple_yellow_1
+    
+- type: entity
+  parent: BaseBarrelTriple
+  id: BarrelYellowTripleFlipped
+  name: yellow barrels
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: triple_yellow_2
+    
+- type: entity
+  parent: BaseBarrelTriple
+  id: BarrelYellowTripleLid
+  name: yellow barrels
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: triple_yellow_3
+    
+#-ALTERNATIVE-
+
+- type: entity #CARMINETODO: APPLY RADIATION OR SOMETHING
+  parent: BaseBarrelTriple
+  id: BarrelYellowTripleToxic
+  name: yellow barrels
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: triple_toxic_1
+    
+- type: entity #CARMINETODO: APPLY RADIATION OR SOMETHING
+  parent: BaseBarrelTriple
+  id: BarrelYellowTripleToxicLid
+  name: yellow barrels
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: triple_toxic_2
+
+- type: entity #CARMINETODO: APPLY RADIATION OR SOMETHING
+  parent: BaseBarrelTriple
+  id: BarrelYellowTripleWaste
+  name: yellow barrels
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: triple_waste_1
+
+- type: entity #CARMINETODO: APPLY RADIATION OR SOMETHING
+  parent: BaseBarrelTriple
+  id: BarrelYellowTripleWasteLid
+  name: yellow barrels
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: triple_waste_2
+
+- type: entity #CARMINETODO: APPLY RADIATION OR SOMETHING
+  parent: BaseBarrelTriple
+  id: BarrelYellowTripleWasteFlipped
+  name: yellow barrels
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: triple_waste_3
+
+#QUAD
+
+- type: entity
+  parent: BaseBarrelQuad
+  id: BarrelYellowQuad
+  name: yellow barrels
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: quad_yellow_1
+    
+#-ALTERNATIVE-
+
+- type: entity #CARMINETODO: APPLY RADIATION OR SOMETHING
+  parent: BaseBarrelQuad
+  id: BarrelYellowQuadToxic
+  name: yellow barrels
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: quad_toxic_1
+    
+- type: entity #CARMINETODO: APPLY RADIATION OR SOMETHING
+  parent: BaseBarrelQuad
+  id: BarrelYellowQuadWaste
+  name: yellow barrels
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Barrels.rsi
+    state: quad_waste_1

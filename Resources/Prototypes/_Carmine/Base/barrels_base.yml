@@ -1,0 +1,127 @@
+- type: entity
+  abstract: true
+  parent: BaseStructure
+  id: BaseBarrel
+  components:
+#  - type: MeleeSound #CARMINETODO
+#    soundGroups:
+#      Brute:
+#        path:
+#          "/Audio/Weapons/dodgeball.ogg"
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 60 #CARMINETODO
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 30 #CARMINETODO
+      behaviors:
+#      - !type:PlaySoundBehavior #CARMINETODO
+#        sound:
+#          collection: MetalBreak
+#          params:
+#            volume: -6
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 1 #CARMINETODO
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+        
+- type: entity
+  abstract: true
+  parent: BaseBarrel
+  id: BaseBarrelDouble
+  components:
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 120 #CARMINETODO
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 60 #CARMINETODO
+      behaviors:
+#      - !type:PlaySoundBehavior #CARMINETODO
+#        sound:
+#          collection: MetalBreak
+#          params:
+#            volume: -6
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 2 #CARMINETODO
+            max: 2
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+        
+- type: entity
+  abstract: true
+  parent: BaseBarrel
+  id: BaseBarrelTriple
+  components:
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 180 #CARMINETODO
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 90 #CARMINETODO
+      behaviors:
+#      - !type:PlaySoundBehavior #CARMINETODO
+#        sound:
+#          collection: MetalBreak
+#          params:
+#            volume: -6
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 3 #CARMINETODO
+            max: 3
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+        
+- type: entity
+  abstract: true
+  parent: BaseBarrel
+  id: BaseBarrelQuad
+  components:
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 240 #CARMINETODO
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 120 #CARMINETODO
+      behaviors:
+#      - !type:PlaySoundBehavior #CARMINETODO
+#        sound:
+#          collection: MetalBreak
+#          params:
+#            volume: -6
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 4 #CARMINETODO
+            max: 4
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]   
