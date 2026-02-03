@@ -19,6 +19,12 @@ public sealed class MoverController : SharedMoverController
     [Dependency] private readonly AlertsSystem _alerts = default!;
     [Dependency] private readonly IConfigurationManager _cfg = default!;
 
+    // WD EDIT START
+    public event Action<bool>? LocalPlayerInputMoverUpdated;
+    public event Action<InputMoverComponent>? LocalPlayerInputMoverAdded;
+    public event Action? LocalPlayerInputMoverRemoved;
+    // WD EDIT END
+
     public override void Initialize()
     {
         base.Initialize();
@@ -26,6 +32,10 @@ public sealed class MoverController : SharedMoverController
         SubscribeLocalEvent<RelayInputMoverComponent, LocalPlayerDetachedEvent>(OnRelayPlayerDetached);
         SubscribeLocalEvent<InputMoverComponent, LocalPlayerAttachedEvent>(OnPlayerAttached);
         SubscribeLocalEvent<InputMoverComponent, LocalPlayerDetachedEvent>(OnPlayerDetached);
+
+        // WD EDIT START
+        SubscribeLocalEvent<InputMoverComponent, ComponentShutdown>(OnShutdown);
+        // WD EDIT END
 
         SubscribeLocalEvent<InputMoverComponent, UpdateIsPredictedEvent>(OnUpdatePredicted);
         SubscribeLocalEvent<MovementRelayTargetComponent, UpdateIsPredictedEvent>(OnUpdateRelayTargetPredicted);
@@ -78,12 +88,29 @@ public sealed class MoverController : SharedMoverController
     private void OnPlayerAttached(Entity<InputMoverComponent> entity, ref LocalPlayerAttachedEvent args)
     {
         SetMoveInput(entity, MoveButtons.None);
+        LocalPlayerInputMoverAdded?.Invoke(entity.Comp); // WD EDIT
     }
 
     private void OnPlayerDetached(Entity<InputMoverComponent> entity, ref LocalPlayerDetachedEvent args)
     {
         SetMoveInput(entity, MoveButtons.None);
+        LocalPlayerInputMoverRemoved?.Invoke(); // WD EDIT
     }
+
+    // WD EDIT START
+    protected override void OnStartup(Entity<InputMoverComponent> entity, ref ComponentStartup args)
+    {
+        base.OnStartup(entity, ref args);
+        if (_playerManager.LocalEntity == entity)
+            LocalPlayerInputMoverAdded?.Invoke(entity.Comp);
+    }
+
+    private void OnShutdown(Entity<InputMoverComponent> entity, ref ComponentShutdown args)
+    {
+        if (_playerManager.LocalEntity == entity)
+            LocalPlayerInputMoverRemoved?.Invoke();
+    }
+    // WD EDIT END
 
     public override void UpdateBeforeSolve(bool prediction, float frameTime)
     {
@@ -113,15 +140,16 @@ public sealed class MoverController : SharedMoverController
     {
         return _timing is { IsFirstTimePredicted: true, InSimulation: true };
     }
-
-    public override void SetSprinting(Entity<InputMoverComponent> entity, ushort subTick, bool walking)
+    // WD EDIT START
+    protected override void SprintingMovementUpdate(Entity<InputMoverComponent> entity)
     {
-        // Logger.Info($"[{_gameTiming.CurTick}/{subTick}] Sprint: {enabled}");
-        base.SetSprinting(entity, subTick, walking);
+        if (!Timing.IsFirstTimePredicted)
+            return;
 
-        if (walking && _cfg.GetCVar(CCVars.ToggleWalk))
-            _alerts.ShowAlert(entity.Owner, WalkingAlert, showCooldown: false, autoRemove: false);
-        else
-            _alerts.ClearAlert(entity.Owner, WalkingAlert);
+        base.SprintingMovementUpdate(entity);
+
+        if (_playerManager.LocalEntity == entity)
+            LocalPlayerInputMoverUpdated?.Invoke(entity.Comp.Sprinting);
     }
+    // WD EDIT END
 }

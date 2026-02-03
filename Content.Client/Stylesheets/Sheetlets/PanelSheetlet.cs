@@ -7,15 +7,17 @@ using static Content.Client.Stylesheets.StylesheetHelpers;
 namespace Content.Client.Stylesheets.Sheetlets;
 
 [CommonSheetlet]
-public sealed class PanelSheetlet<T> : Sheetlet<T> where T : PalettedStylesheet, IButtonConfig
+public sealed class PanelSheetlet<T> : Sheetlet<T> where T : PalettedStylesheet, IPanelConfig
 {
     public override StyleRule[] GetRules(T sheet, object config)
     {
-        IButtonConfig buttonCfg = sheet;
+        IPanelConfig buttonCfg = sheet;
 
         var boxLight = new StyleBoxFlat()
         {
             BackgroundColor = sheet.SecondaryPalette.BackgroundLight,
+            // Texture = sheet.GetTextureOr(stripebackCfg.StripebackPath, NanotrasenStylesheet.TextureRoot), //this does not work
+            // Mode = StyleBoxTexture.StretchMode.Tile,
         };
         var boxDark = new StyleBoxFlat()
         {
@@ -34,24 +36,31 @@ public sealed class PanelSheetlet<T> : Sheetlet<T> where T : PalettedStylesheet,
             E<PanelContainer>().Class(StyleClass.Negative).Panel(boxNegative),
             E<PanelContainer>().Class(StyleClass.Highlight).Panel(boxHighlight),
 
-            // TODO: this should probably be cleaned up but too many UIs rely on this hardcoded color so I'm scared to touch it
             E<PanelContainer>()
                 .Class("BackgroundDark")
                 .Prop(PanelContainer.StylePropertyPanel, new StyleBoxFlat(Color.FromHex("#25252A"))),
 
-            // panels that have the same corner bezels as buttons
+            // panels that have the same corner bezels as buttons //carmine edit: no the fuck they dont anymore
             E()
                 .Class(StyleClass.BackgroundPanel)
-                .Prop(PanelContainer.StylePropertyPanel, StyleBoxHelpers.BaseStyleBox(sheet))
-                .Modulate(sheet.SecondaryPalette.Background),
+                .Prop(PanelContainer.StylePropertyPanel, StylePanelHelpers.BasePanel(sheet)),
+                //.Modulate(sheet.SecondaryPalette.Background), //CARMINE EDIT: remove modulation to keep sprites using their original colors
             E()
                 .Class(StyleClass.BackgroundPanelOpenLeft)
-                .Prop(PanelContainer.StylePropertyPanel, StyleBoxHelpers.OpenLeftStyleBox(sheet))
-                .Modulate(sheet.SecondaryPalette.Background),
+                .Prop(PanelContainer.StylePropertyPanel, StylePanelHelpers.OpenLeftPanel(sheet)),
+                //.Modulate(sheet.SecondaryPalette.Background),
             E()
                 .Class(StyleClass.BackgroundPanelOpenRight)
-                .Prop(PanelContainer.StylePropertyPanel, StyleBoxHelpers.OpenRightStyleBox(sheet))
-                .Modulate(sheet.SecondaryPalette.Background),
+                .Prop(PanelContainer.StylePropertyPanel, StylePanelHelpers.OpenRightPanel(sheet)),
+                //.Modulate(sheet.SecondaryPalette.Background),
+            E()
+                .Class(StyleClass.GargoylePanelLeft)
+                .Prop(PanelContainer.StylePropertyPanel, StylePanelHelpers.GargoylePanelLeft(sheet)),
+                //.Modulate(sheet.SecondaryPalette.Background),
+            E()
+                .Class(StyleClass.GargoylePanelRight)
+                .Prop(PanelContainer.StylePropertyPanel, StylePanelHelpers.GargoylePanelRight(sheet)),
+                //.Modulate(sheet.SecondaryPalette.Background),
         ];
     }
 }

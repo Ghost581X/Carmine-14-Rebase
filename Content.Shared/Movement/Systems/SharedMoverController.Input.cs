@@ -1,5 +1,5 @@
 using System.Numerics;
-using Content.Shared.Alert;
+// using Content.Shared.Alert;
 using Content.Shared.CCVar;
 using Content.Shared.Follower.Components;
 using Content.Shared.Input;
@@ -25,7 +25,7 @@ namespace Content.Shared.Movement.Systems
     {
         public bool CameraRotationLocked { get; set; }
 
-        public static ProtoId<AlertPrototype> WalkingAlert = "Walking";
+        // public static ProtoId<AlertPrototype> WalkingAlert = "Walking";
 
         private void InitializeInput()
         {
@@ -55,10 +55,13 @@ namespace Content.Shared.Movement.Systems
                 .Register<SharedMoverController>();
 
             SubscribeLocalEvent<InputMoverComponent, ComponentInit>(OnInputInit);
+            SubscribeLocalEvent<InputMoverComponent, ComponentStartup>(OnStartup); // WD EDIT
             SubscribeLocalEvent<InputMoverComponent, ComponentGetState>(OnMoverGetState);
             SubscribeLocalEvent<InputMoverComponent, ComponentHandleState>(OnMoverHandleState);
             SubscribeLocalEvent<InputMoverComponent, EntParentChangedMessage>(OnInputParentChange);
             SubscribeLocalEvent<InputMoverComponent, AnchorStateChangedEvent>(OnAnchorState);
+
+            SubscribeAllEvent<ToggleInputMoverRequestEvent>(OnToggleInputMoverRequest); // WD EDIT
 
             SubscribeLocalEvent<FollowedComponent, EntParentChangedMessage>(OnFollowedParentChange);
 
@@ -304,6 +307,26 @@ namespace Content.Shared.Movement.Systems
                 PhysicsSystem.SetBodyType(entity, BodyType.KinematicController);
         }
 
+        // WD EDIT START
+        private void OnToggleInputMoverRequest(ToggleInputMoverRequestEvent msg, EntitySessionEventArgs args)
+        {
+            if (Timing is { IsFirstTimePredicted: false, InPrediction: true, })
+                return;
+
+            if (args.SenderSession.AttachedEntity is not {Valid: true, } attached
+                || !TryComp<InputMoverComponent>(attached, out var inputMover))
+            {
+                Log.Warning($"User {args.SenderSession.Name} sent an invalid {nameof(ToggleInputMoverRequestEvent)}");
+                return;
+            }
+
+            inputMover.DefaultWalking = !inputMover.DefaultWalking;
+            Dirty(attached, inputMover);
+
+            SprintingMovementUpdate((attached, inputMover));
+        }
+        // WD EDIT END
+
         private void HandleDirChange(EntityUid entity, Direction dir, ushort subTick, bool state)
         {
             // Relayed movement just uses the same keybinds given we're moving the relayed entity
@@ -352,25 +375,34 @@ namespace Content.Shared.Movement.Systems
             entity.Comp.TargetRelativeRotation = Angle.Zero;
         }
 
+        // WD EDIT START
+        protected virtual void OnStartup(Entity<InputMoverComponent> entity, ref ComponentStartup args)
+        {
+            _blocker.UpdateCanMove(entity, entity.Comp);
+        }
+        // WD EDIT END
+
         private void HandleRunChange(EntityUid uid, ushort subTick, bool walking)
         {
             MoverQuery.TryGetComponent(uid, out var moverComp);
 
             if (TryComp<RelayInputMoverComponent>(uid, out var relayMover))
             {
+                HandleRunChange(relayMover.RelayEntity, subTick, !walking); // WWDP moved up & !walking
+
                 // if we swap to relay then stop our existing input if we ever change back.
                 if (moverComp != null)
                 {
                     SetMoveInput((uid, moverComp), MoveButtons.None);
+                    SprintingMovementUpdate((uid, moverComp)); // WD EDIT
                 }
 
-                HandleRunChange(relayMover.RelayEntity, subTick, walking);
-                return;
+                //return; // WWDP
             }
 
             if (moverComp == null) return;
 
-            SetSprinting((uid, moverComp), subTick, walking);
+            SetSprinting(uid, subTick, walking);
         }
 
         public (Vector2 Walking, Vector2 Sprinting) GetVelocityInput(InputMoverComponent mover)
@@ -477,12 +509,18 @@ namespace Content.Shared.Movement.Systems
             component.LastInputSubTick = 0;
         }
 
-        public virtual void SetSprinting(Entity<InputMoverComponent> entity, ushort subTick, bool walking)
+        // WWDP edited
+        public void SetSprinting(Entity<InputMoverComponent?> entity, ushort subTick, bool walking)
         {
             // Logger.Info($"[{_gameTiming.CurTick}/{subTick}] Sprint: {enabled}");
 
-            SetMoveInput(entity, subTick, walking, MoveButtons.Walk);
+            if (!Resolve(entity, ref entity.Comp))
+                return;
+
+            SetMoveInput(entity!, subTick, walking, MoveButtons.Walk);
+            SprintingMovementUpdate(entity!);
         }
+        // WWDP edit end
 
         /// <summary>
         ///     Retrieves the normalized direction vector for a specified combination of movement keys.

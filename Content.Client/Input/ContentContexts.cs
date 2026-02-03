@@ -72,7 +72,7 @@ namespace Content.Client.Input
             human.AddFunction(ContentKeyFunctions.MovePulledObject);
             human.AddFunction(ContentKeyFunctions.ReleasePulledObject);
             human.AddFunction(ContentKeyFunctions.OpenCraftingMenu);
-            human.AddFunction(ContentKeyFunctions.OpenInventoryMenu);
+            //human.AddFunction(ContentKeyFunctions.OpenInventoryMenu);
             human.AddFunction(ContentKeyFunctions.SmartEquipBackpack);
             human.AddFunction(ContentKeyFunctions.SmartEquipBelt);
             human.AddFunction(ContentKeyFunctions.SmartEquipPocket1);

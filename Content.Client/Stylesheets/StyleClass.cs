@@ -47,6 +47,8 @@ public static class StyleClass
     public const string BackgroundPanel = "BackgroundPanel"; // replaces `AngleRect`
     public const string BackgroundPanelOpenLeft = "BackgroundPanelOpenLeft"; // replaces `BackgroundOpenLeft`
     public const string BackgroundPanelOpenRight = "BackgroundPanelOpenRight"; // replaces `BackgroundOpenRight`
+    public const string GargoylePanelLeft = "GargoylePanelLeft"; // CARMINE: panel exclusively used for the lefthand menu
+    public const string GargoylePanelRight = "GargoylePanelRight"; // CARMINE: panel exclusively used for the righthand menu
 
     public const string PanelDark = "PanelDark";
     public const string PanelLight = "PanelLight";

@@ -129,14 +129,14 @@
   name: alerts-weightless-name
   description: alerts-weightless-desc
 
-- type: alert
-  id: Walking
-  icons:
-  - sprite: /Textures/Interface/Alerts/walking.rsi
-    state: walking
-  name: alerts-walking-name
-  description: alerts-walking-desc
-  clientHandled: true
+# - type: alert
+#   id: Walking
+#   icons:
+#   - sprite: /Textures/Interface/Alerts/walking.rsi
+#     state: walking
+#   name: alerts-walking-name
+#   description: alerts-walking-desc
+#   clientHandled: true
 
 - type: alert
   id: Stun
