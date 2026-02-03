@@ -11,6 +11,7 @@
     xmlns:graphics="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
     xmlns:inventory="clr-namespace:Content.Client.UserInterface.Systems.Inventory.Widgets"
     xmlns:combatMode="clr-namespace:Content.Client._White.UserInterface.Systems.CombatMode.Widgets"
+    xmlns:movement="clr-namespace:Content.Client._White.UserInterface.Systems.Movement.Widgets"
     Name="SeparatedChatHud"
     VerticalExpand="False"
     VerticalAlignment="Bottom"
@@ -19,24 +20,43 @@
         <LayoutContainer Name="ViewportContainer" HorizontalExpand="True" VerticalExpand="True">
             <controls:MainViewport Name="MainViewport"/>
             <widgets:GhostGui Name="Ghost" Access="Protected" />
-            <inventory:InventoryGui Name="Inventory" Access="Protected"/>
-            <hotbar:HotbarGui Name="Hotbar" Access="Protected"/>
-            <!-- WD EDIT START -->
-            <BoxContainer Name="BottomRightContainer" Access="Protected">
-                <combatMode:CombatModeGui Name="CombatMode" Access="Protected"/>
-                <!-- <targeting:TargetingControl Name="Targeting" Access="Protected"/> -->
-            </BoxContainer>
-            <!-- WD EDIT END -->
-            <BoxContainer Name="TopLeftContainer" Orientation="Vertical">
-                <actions:ActionsBar Name="Actions" Access="Protected" />
-                <BoxContainer Name="VoteMenu" Access="Public" Orientation="Vertical"/>
-            </BoxContainer>
-            <alerts:AlertsUI Name="Alerts" Access="Protected" />
+            <PanelContainer Name="LefthandGargoyleMenu" StyleClasses="GargoylePanelLeft" MinWidth="258">
+                <TextureRect Name="LefthandGargoyleBackground" TexturePath="/Textures/Interface/Nano/_Carmine/gargoyle_left.png" MinWidth="256" MinHeight="1024" Stretch="KeepAspectCentered" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <BoxContainer Name="LefthandGargoyleTargetInfo" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top">
+                        <!-- <TextureRect Name="LefthandGargoyleStats" TexturePath="/Textures/Interface/Nano/_Carmine/gargoyle_left_stats.png" MinWidth="256" MinHeight="128" Stretch="KeepAspectCentered" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <TextureRect Name="LefthandGargoyleTargetDoll" TexturePath="/Textures/Interface/Nano/_Carmine/gargoyle_left_doll.png" MinWidth="256" MinHeight="256" Stretch="KeepAspectCentered" HorizontalAlignment="Center" VerticalAlignment="Bottom"/> -->
+                    </BoxContainer>
+                    <BoxContainer Name="LefthandGargoyleInventoryOffGrid" Margin = "0 0 0 64" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                        <inventory:InventoryGui Name="Inventory" Access="Protected"/>
+                        <BoxContainer Name ="InventorySpacer" MinSize="64 64"/>
+                    </BoxContainer>
+                    <BoxContainer Name="LefthandGargoyleInventoryOnGrid" Margin="0 0 0 64" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                        <hotbar:HotbarGui Name="Hotbar" Access="Protected"/>
+                    </BoxContainer>
+                    <BoxContainer Name="LefthandGargoyleBottomBar" Margin="0 0 0 32" Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Center">
+                        <combatMode:CombatModeGui Name="CombatMode" Access="Protected" Margin="0 0 64 0"/>
+                        <movement:MovementGui Name="Movement" Access="Protected"/>
+                    </BoxContainer>
+                </TextureRect>
+            </PanelContainer>
+            <PanelContainer Name="RighthandGargoyleMenu" StyleClasses="GargoylePanelRight" MinWidth="100">
+                <BoxContainer Name="RighthandGargoyleContents" Orientation="Vertical" VerticalAlignment="Stretch" HorizontalAlignment="Center">
+                    <BoxContainer Name="RighthandGargoyleContentsTop" Orientation="Vertical" VerticalAlignment="Bottom" HorizontalAlignment="Center" VerticalExpand="True">
+                        <actions:ActionsBar Name="Actions" Access="Protected" />
+                    </BoxContainer>
+                    <BoxContainer Name="RighthandGargoyleContentsMiddle" Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Center" VerticalExpand="True">
+                        <alerts:AlertsUI Name="Alerts" Access="Protected" />
+                    </BoxContainer>
+                    <BoxContainer Name="RighthandGargoyleContentsBottom" Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Center" VerticalExpand="True">
+                    </BoxContainer>
+                </BoxContainer>
+            </PanelContainer>
+        <BoxContainer Name="VoteMenu" Access="Public" Orientation="Vertical"/>
         </LayoutContainer>
-        <PanelContainer Name="SeparatedChatPanel" MinWidth="300">
-            <PanelContainer.PanelOverride>
+        <PanelContainer Name="SeparatedChatPanel" MinWidth="300" StyleClasses="BackgroundPanel">
+            <!-- <PanelContainer.PanelOverride>
                 <graphics:StyleBoxFlat BackgroundColor="#2B2C3B" />
-            </PanelContainer.PanelOverride>
+            </PanelContainer.PanelOverride> -->
 
             <BoxContainer Orientation="Vertical" HorizontalExpand="True" SeparationOverride="10" Margin="10">
                 <menuBar:GameTopMenuBar Name="TopBar" HorizontalExpand="True" Access="Public" />

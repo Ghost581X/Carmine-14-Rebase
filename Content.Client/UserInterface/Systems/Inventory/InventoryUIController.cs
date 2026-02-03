@@ -59,8 +59,8 @@ public sealed class InventoryUIController : UIController, IOnStateEntered<Gamepl
         if (UIManager.ActiveScreen == null)
             return;
 
-        if (UIManager.GetActiveUIWidgetOrNull<InventoryGui>() is { } inventoryGui)
-            RegisterInventoryButton(inventoryGui.InventoryButton);
+        // if (UIManager.GetActiveUIWidgetOrNull<InventoryGui>() is { } inventoryGui)
+        //     RegisterInventoryButton(inventoryGui.InventoryButton);
     }
 
     public void OnStateEntered(GameplayState state)
@@ -70,9 +70,11 @@ public sealed class InventoryUIController : UIController, IOnStateEntered<Gamepl
         LayoutContainer.SetAnchorPreset(_strippingWindow, LayoutContainer.LayoutPreset.Center);
 
         //bind open inventory key to OpenInventoryMenu;
-        CommandBinds.Builder
-            .Bind(ContentKeyFunctions.OpenInventoryMenu, InputCmdHandler.FromDelegate(_ => ToggleInventoryBar()))
-            .Register<ClientInventorySystem>();
+        // CommandBinds.Builder
+        //     .Bind(ContentKeyFunctions.OpenInventoryMenu, InputCmdHandler.FromDelegate(_ => ToggleInventoryBar()))
+        //     .Register<ClientInventorySystem>();
+
+        ToggleInventoryBar(); //carmine edit: forces inventory to be visible on spawn. holy fuck this took too long
     }
 
     public void OnStateExited(GameplayState state)

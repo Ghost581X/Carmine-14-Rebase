@@ -6,7 +6,7 @@ namespace Content.Client.Stylesheets;
 
 public abstract class CommonStylesheet : PalettedStylesheet, IButtonConfig, IWindowConfig, IIconConfig, ITabContainerConfig,
     ISliderConfig, IRadialMenuConfig, IPlaceholderConfig, ITooltipConfig, IPanelConfig, INanoHeadingConfig,
-    ILineEditConfig, IStripebackConfig, ICheckboxConfig
+    ILineEditConfig, IStripebackConfig, ICheckboxConfig, IChatBackgroundConfig
 {
     /// <remarks>
     ///     This constructor will not access any virtual or abstract properties, so you can set them from your config.
@@ -57,10 +57,11 @@ public abstract class CommonStylesheet : PalettedStylesheet, IButtonConfig, IWin
     ResPath IWindowConfig.WindowBackgroundBorderedPath => new("window_background_bordered.png");
     ResPath IWindowConfig.TransparentWindowBackgroundBorderedPath => new("transparent_window_background_bordered.png");
 
-    ResPath IButtonConfig.BaseButtonPath => new("button.svg.96dpi.png");
-    ResPath IButtonConfig.OpenLeftButtonPath => new("button.svg.96dpi.png");
-    ResPath IButtonConfig.OpenRightButtonPath => new("button.svg.96dpi.png");
-    ResPath IButtonConfig.OpenBothButtonPath => new("button.svg.96dpi.png");
+    //carmine edit: changed buttons to carmine specific ones below
+    // ResPath IButtonConfig.BaseButtonPath => new("button.svg.96dpi.png");
+    // ResPath IButtonConfig.OpenLeftButtonPath => new("button.svg.96dpi.png");
+    // ResPath IButtonConfig.OpenRightButtonPath => new("button.svg.96dpi.png");
+    // ResPath IButtonConfig.OpenBothButtonPath => new("button.svg.96dpi.png");
     ResPath IButtonConfig.SmallButtonPath => new("button_small.svg.96dpi.png");
     ResPath IButtonConfig.RoundedButtonPath => new("rounded_button.svg.96dpi.png");
     ResPath IButtonConfig.RoundedButtonBorderedPath => new("rounded_button_bordered.svg.96dpi.png");
@@ -73,4 +74,19 @@ public abstract class CommonStylesheet : PalettedStylesheet, IButtonConfig, IWin
     ColorPalette IButtonConfig.ButtonPalette => PrimaryPalette with { PressedElement = PositivePalette.PressedElement };
     ColorPalette IButtonConfig.PositiveButtonPalette => PositivePalette;
     ColorPalette IButtonConfig.NegativeButtonPalette => NegativePalette;
+
+    //carmine specific
+
+    ResPath IChatBackgroundConfig.ChatBackgroundPath => new("_Carmine/chat_background.png");
+    ResPath IPanelConfig.PanelBorderPath => new("_Carmine/panel_border.png");
+    ResPath IPanelConfig.OpenLeftPanelBorderPath => new("_Carmine/panel_border_open_left.png");
+    ResPath IPanelConfig.OpenRightPanelBorderPath => new("_Carmine/panel_border_open_right.png");
+    ResPath IPanelConfig.PanelInnerTexturePath => new("_Carmine/panel_inner_texture.png");
+    ResPath IPanelConfig.GargoyleLeftPanelPath => new("_Carmine/gargoyle_left_panel.png");
+    ResPath IPanelConfig.GargoyleRightPanelPath => new("_Carmine/gargoyle_right_panel.png");
+
+    ResPath IButtonConfig.BaseButtonPath => new("_Carmine/button.png");
+    ResPath IButtonConfig.OpenLeftButtonPath => new("_Carmine/button.png");
+    ResPath IButtonConfig.OpenRightButtonPath => new("_Carmine/button.png");
+    ResPath IButtonConfig.OpenBothButtonPath => new("_Carmine/button.png");
 }

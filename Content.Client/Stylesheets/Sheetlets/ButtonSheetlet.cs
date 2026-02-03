@@ -113,68 +113,70 @@ public sealed class ButtonSheetlet<T> : Sheetlet<T> where T : PalettedStylesheet
     }
 }
 
+
+//CARMINE EDIT: since we do our own UI and need more helpers, i'm moving this to /helpers - .2 | 2025-01-19
 // this is currently the only other "helper" type class, if any more crop up consider making a specific directory for them
-public static class StyleBoxHelpers
-{
-    // TODO: Figure out a nicer way to store/represent these hardcoded margins. This is icky.
-    public static StyleBoxTexture BaseStyleBox<T>(T sheet) where T : PalettedStylesheet, IButtonConfig
-    {
-        var baseBox = new StyleBoxTexture
-        {
-            Texture = sheet.GetTextureOr(sheet.BaseButtonPath, NanotrasenStylesheet.TextureRoot),
-        };
-        baseBox.SetPatchMargin(StyleBox.Margin.All, 10);
-        baseBox.SetPadding(StyleBox.Margin.All, 1);
-        baseBox.SetContentMarginOverride(StyleBox.Margin.Vertical, 2);
-        baseBox.SetContentMarginOverride(StyleBox.Margin.Horizontal, 14);
-        return baseBox;
-    }
+// public static class StyleBoxHelpers
+// {
+//     // TODO: Figure out a nicer way to store/represent these hardcoded margins. This is icky.
+//     public static StyleBoxTexture BaseStyleBox<T>(T sheet) where T : PalettedStylesheet, IButtonConfig
+//     {
+//         var baseBox = new StyleBoxTexture
+//         {
+//             Texture = sheet.GetTextureOr(sheet.BaseButtonPath, NanotrasenStylesheet.TextureRoot),
+//         };
+//         baseBox.SetPatchMargin(StyleBox.Margin.All, 10);
+//         baseBox.SetPadding(StyleBox.Margin.All, 1);
+//         baseBox.SetContentMarginOverride(StyleBox.Margin.Vertical, 2);
+//         baseBox.SetContentMarginOverride(StyleBox.Margin.Horizontal, 14);
+//         return baseBox;
+//     }
 
-    public static StyleBoxTexture OpenLeftStyleBox<T>(T sheet) where T : PalettedStylesheet, IButtonConfig
-    {
-        var openLeftBox = new StyleBoxTexture(BaseStyleBox(sheet))
-        {
-            Texture = new AtlasTexture(sheet.GetTextureOr(sheet.OpenLeftButtonPath, NanotrasenStylesheet.TextureRoot),
-                UIBox2.FromDimensions(new Vector2(10, 0), new Vector2(14, 24))),
-        };
-        openLeftBox.SetPatchMargin(StyleBox.Margin.Left, 0);
-        openLeftBox.SetContentMarginOverride(StyleBox.Margin.Left, 8);
-        // openLeftBox.SetPadding(StyleBox.Margin.Left, 1);
-        return openLeftBox;
-    }
+//     public static StyleBoxTexture OpenLeftStyleBox<T>(T sheet) where T : PalettedStylesheet, IButtonConfig
+//     {
+//         var openLeftBox = new StyleBoxTexture(BaseStyleBox(sheet))
+//         {
+//             Texture = new AtlasTexture(sheet.GetTextureOr(sheet.OpenLeftButtonPath, NanotrasenStylesheet.TextureRoot),
+//                 UIBox2.FromDimensions(new Vector2(10, 0), new Vector2(14, 24))),
+//         };
+//         openLeftBox.SetPatchMargin(StyleBox.Margin.Left, 0);
+//         openLeftBox.SetContentMarginOverride(StyleBox.Margin.Left, 8);
+//         // openLeftBox.SetPadding(StyleBox.Margin.Left, 1);
+//         return openLeftBox;
+//     }
 
-    public static StyleBoxTexture OpenRightStyleBox<T>(T sheet) where T : PalettedStylesheet, IButtonConfig
-    {
-        var openRightBox = new StyleBoxTexture(BaseStyleBox(sheet))
-        {
-            Texture = new AtlasTexture(sheet.GetTextureOr(sheet.OpenRightButtonPath, NanotrasenStylesheet.TextureRoot),
-                UIBox2.FromDimensions(new Vector2(0, 0), new Vector2(14, 24))),
-        };
-        openRightBox.SetPatchMargin(StyleBox.Margin.Right, 0);
-        openRightBox.SetContentMarginOverride(StyleBox.Margin.Right, 8);
-        openRightBox.SetPadding(StyleBox.Margin.Right, 1);
-        return openRightBox;
-    }
+//     public static StyleBoxTexture OpenRightStyleBox<T>(T sheet) where T : PalettedStylesheet, IButtonConfig
+//     {
+//         var openRightBox = new StyleBoxTexture(BaseStyleBox(sheet))
+//         {
+//             Texture = new AtlasTexture(sheet.GetTextureOr(sheet.OpenRightButtonPath, NanotrasenStylesheet.TextureRoot),
+//                 UIBox2.FromDimensions(new Vector2(0, 0), new Vector2(14, 24))),
+//         };
+//         openRightBox.SetPatchMargin(StyleBox.Margin.Right, 0);
+//         openRightBox.SetContentMarginOverride(StyleBox.Margin.Right, 8);
+//         openRightBox.SetPadding(StyleBox.Margin.Right, 1);
+//         return openRightBox;
+//     }
 
-    public static StyleBoxTexture SquareStyleBox<T>(T sheet) where T : PalettedStylesheet, IButtonConfig
-    {
-        var openBothBox = new StyleBoxTexture(BaseStyleBox(sheet))
-        {
-            Texture = new AtlasTexture(sheet.GetTextureOr(sheet.OpenBothButtonPath, NanotrasenStylesheet.TextureRoot),
-                UIBox2.FromDimensions(new Vector2(10, 0), new Vector2(3, 24))),
-        };
-        openBothBox.SetPatchMargin(StyleBox.Margin.Horizontal, 0);
-        openBothBox.SetContentMarginOverride(StyleBox.Margin.Horizontal, 8);
-        openBothBox.SetPadding(StyleBox.Margin.Horizontal, 1);
-        return openBothBox;
-    }
+//     public static StyleBoxTexture SquareStyleBox<T>(T sheet) where T : PalettedStylesheet, IButtonConfig
+//     {
+//         var openBothBox = new StyleBoxTexture(BaseStyleBox(sheet))
+//         {
+//             Texture = new AtlasTexture(sheet.GetTextureOr(sheet.OpenBothButtonPath, NanotrasenStylesheet.TextureRoot),
+//                 UIBox2.FromDimensions(new Vector2(10, 0), new Vector2(3, 24))),
+//         };
+//         openBothBox.SetPatchMargin(StyleBox.Margin.Horizontal, 0);
+//         openBothBox.SetContentMarginOverride(StyleBox.Margin.Horizontal, 8);
+//         openBothBox.SetPadding(StyleBox.Margin.Horizontal, 1);
+//         return openBothBox;
+//     }
 
-    public static StyleBoxTexture SmallStyleBox<T>(T sheet) where T : PalettedStylesheet, IButtonConfig
-    {
-        var smallBox = new StyleBoxTexture
-        {
-            Texture = sheet.GetTextureOr(sheet.SmallButtonPath, NanotrasenStylesheet.TextureRoot),
-        };
-        return smallBox;
-    }
-}
+//     public static StyleBoxTexture SmallStyleBox<T>(T sheet) where T : PalettedStylesheet, IButtonConfig
+//     {
+//         var smallBox = new StyleBoxTexture
+//         {
+//             Texture = sheet.GetTextureOr(sheet.SmallButtonPath, NanotrasenStylesheet.TextureRoot),
+//         };
+//         return smallBox;
+//     }
+// }

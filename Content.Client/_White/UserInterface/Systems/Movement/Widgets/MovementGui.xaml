@@ -1,0 +1,7 @@
+<controls:MovementGui
+    xmlns="https://spacestation14.io"
+    xmlns:controls="clr-namespace:Content.Client._White.UserInterface.Systems.Movement.Widgets">
+    <TextureButton Name="MovementButton" ToggleMode="True" TexturePath="/Textures/Interface/Misc/running.png" SetSize="64 64">
+        <TextureRect Name="Walking" SetSize="64 64" TexturePath="/Textures/Interface/Misc/walking.png" Visible="False"/>
+    </TextureButton>
+</controls:MovementGui>

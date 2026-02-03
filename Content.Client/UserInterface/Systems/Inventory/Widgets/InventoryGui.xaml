@@ -10,14 +10,14 @@
     HorizontalAlignment="Center">
     <Control HorizontalAlignment="Center">
         <!-- Needs to default to invisible because if we attach to a non-slots entity this will never get unset -->
-        <controls:SlotButton
+        <!-- <controls:SlotButton
             Name="InventoryButton"
             Access="Public"
             Visible="False"
             VerticalAlignment="Bottom"
             HorizontalExpand="False"
             VerticalExpand="False"
-            ButtonTexturePath="Slots/toggle"/>
+            ButtonTexturePath="Slots/toggle"/> -->
         <inventory:ItemSlotButtonContainer
             Name="InventoryHotbar"
             Access="Public"

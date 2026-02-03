@@ -484,6 +484,11 @@ public abstract partial class SharedMoverController : VirtualController
 
     protected abstract bool CanSound();
 
+    // WD EDIT START
+    protected virtual void SprintingMovementUpdate(Entity<InputMoverComponent> entity) =>
+        RaiseLocalEvent(entity, new SprintingInputEvent(entity));
+    // WD EDIT END
+
     private bool TryGetSound(
         bool weightless,
         EntityUid uid,

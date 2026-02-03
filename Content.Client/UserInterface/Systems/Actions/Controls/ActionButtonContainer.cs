@@ -17,6 +17,7 @@ public class ActionButtonContainer : GridContainer
     public event Action<GUIBoundKeyEventArgs, ActionButton>? ActionPressed;
     public event Action<GUIBoundKeyEventArgs, ActionButton>? ActionUnpressed;
     public event Action<ActionButton>? ActionFocusExited;
+    public int ActionDisplayLimit = 5; //CARMINE EDIT: hard-limiting actions to 5 for gargoyle menu
 
     public ActionButtonContainer()
     {
@@ -35,6 +36,10 @@ public class ActionButtonContainer : GridContainer
 
         for (var i = 0; i < uniqueCount; i++)
         {
+            //carmine edit begin: limit action buttons to ActionDisplayLimit
+            if (i >= ActionDisplayLimit)
+                break;
+            //carmine edit end
             if (i >= ChildCount)
             {
                 AddChild(MakeButton(i));

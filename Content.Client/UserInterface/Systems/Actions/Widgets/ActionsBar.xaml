@@ -4,7 +4,7 @@
     xmlns:widgets="clr-namespace:Content.Client.UserInterface.Systems.Actions.Widgets"
     xmlns:controls="clr-namespace:Content.Client.UserInterface.Systems.Actions.Controls"
     VerticalExpand="False"
-    Orientation="Horizontal"
+    Orientation="Vertical"
     HorizontalExpand="False"
 >
     <BoxContainer Orientation="Vertical">
@@ -14,6 +14,7 @@
             MaxSize="64 9999"
             Name="ActionsContainer"
             Access="Public"
-            Rows="1"/>
+            Columns="1"
+            ExpandBackwards="True"/>
     </BoxContainer>
 </widgets:ActionsBar>
