@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "license": "Custom",
+  "copyright": "Made for Carmine, Do not use without permission from .2 or Ninrub",
+  "size": {
+    "x": 281,
+    "y": 53
+  },
+    "states": [
+        {
+            "name": "consolidat"
+        },
+        {
+            "name": "invernsykes"
+        },
+        {
+            "name": "khandankeyvan"
+        }
+    ]
+}
