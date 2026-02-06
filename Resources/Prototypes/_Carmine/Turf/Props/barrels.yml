@@ -229,7 +229,7 @@
   - type: Sprite
     sprite: _Carmine/Turf/Props/Barrels.rsi
     state: red_1
-    
+
 - type: entity
   parent: BaseBarrel
   id: BarrelRedLid
@@ -249,7 +249,27 @@
   - type: Sprite
     sprite: _Carmine/Turf/Props/Barrels.rsi
     state: red_3
-    
+
+- type: entity #CARMINETODO: MAKE THEM LIGHT UP
+  parent: BaseBarrel
+  id: BarrelRedFireUnlit
+  name: red barrel
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/fire_barrels.rsi
+    state: red_fire_barrel
+
+- type: entity #CARMINETODO: MAKE THEM LIGHT UP
+  parent: BaseBarrel
+  id: BarrelRedFireLit
+  name: red barrel
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/fire_barrels.rsi
+    state: red_fire_barrel_lit
+
 #-ALTERNATIVE-
 
 - type: entity
@@ -367,7 +387,7 @@
   description: CARMINETODO
   components:
   - type: Sprite
-    sprite: _Carmine/Turf/Props/Barrels.rsi
+    sprite: _Carmine/Turf/Props/barrels.rsi
     state: yellow_2
     
 - type: entity

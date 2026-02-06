@@ -1,0 +1,61 @@
+##WORKBENCHES
+
+- type: entity
+  parent: BaseWorkbench
+  id: Workbench
+  name: workbench
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/workbenches.rsi
+    state: workbench
+
+- type: entity
+  parent: BaseWorkbench
+  id: WorkbenchWeapons
+  name: workbench
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/workbenches.rsi
+    state: weaponbench
+
+- type: entity
+  parent: BaseWorkbench
+  id: WorkbenchArmor
+  name: workbench
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/workbenches.rsi
+    state: armorbench
+
+- type: entity
+  parent: BaseWorkbench
+  id: WorkbenchAmmo
+  name: workbench
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/workbenches.rsi
+    state: ammobench
+
+- type: entity
+  parent: BaseWorkbench
+  id: WorkbenchTinkering
+  name: workbench
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/workbenches.rsi
+    state: workbenchtinker
+
+- type: entity
+  parent: BaseWorkbench
+  id: WorkbenchAlchemicalSet
+  name: chemicals set
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/workbenches.rsi
+    state: chemicalset

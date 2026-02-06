@@ -1,0 +1,117 @@
+##LADDERS
+
+- type: entity
+  parent: BaseLadder
+  id: LadderBasic
+  name: ladder
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/ladders.rsi
+    state: ladder10
+
+- type: entity
+  parent: BaseLadder
+  id: LadderBasicDown
+  name: ladder
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/ladders.rsi
+    state: ladder11
+
+- type: entity
+  parent: BaseLadder
+  id: LadderBasicDownShort
+  name: ladder
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/ladders.rsi
+    state: ladder01
+
+#HATCHES
+
+- type: entity
+  parent: BaseLadder
+  id: LadderHatch
+  name: hatch
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/ladders.rsi
+    state: hatch_closed
+
+- type: entity
+  parent: BaseLadder
+  id: LadderHatchOpen
+  name: hatch ladder
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/ladders.rsi
+    state: hatch_open
+
+- type: entity
+  parent: BaseLadder
+  id: LadderHatchEnclave
+  name: hatch
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/ladders.rsi
+    state: enclave_closed
+
+- type: entity
+  parent: BaseLadder
+  id: LadderHatchOpenEnclave
+  name: hatch ladder
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/ladders.rsi
+    state: enclave_open
+
+#MANHOLE
+
+- type: entity
+  parent: BaseLadder
+  id: LadderManhole
+  name: manhole
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/ladders.rsi
+    state: manhole_closed
+
+- type: entity
+  parent: BaseLadder
+  id: LadderManholeOpen
+  name: manhole ladder
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/ladders.rsi
+    state: manhole_open
+
+#BUNKER
+
+- type: entity
+  parent: BaseLadder
+  id: LadderBunker
+  name: bunker
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/ladders.rsi
+    state: bunker_closed
+
+- type: entity
+  parent: BaseLadder
+  id: LadderBunkerOpen
+  name: bunker ladder
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/ladders.rsi
+    state: bunker_open

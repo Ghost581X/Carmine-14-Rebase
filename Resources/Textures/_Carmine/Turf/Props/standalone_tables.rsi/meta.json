@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Made by InfraredBaron and used with his permission.",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "table_metal_round"
+    },
+    {
+      "name": "table_metal_round-1"
+    },
+    {
+      "name": "table_metal_round-2"
+    },
+    {
+      "name": "cable_reel"
+    },
+    {
+      "name": "table_rolling"
+    },
+    {
+      "name": "tableframe_metal"
+    }
+  ]
+}

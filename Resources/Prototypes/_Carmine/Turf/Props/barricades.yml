@@ -1,0 +1,83 @@
+##CONCRETE BARRICADES
+
+- type: entity
+  parent: BaseBarricade
+  id: BarricadeConcrete
+  name: concrete barricade
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/barricades.rsi
+    state: concrete_barrier
+
+- type: entity
+  parent: BaseBarricade
+  id: BarricadeConcreteEdge
+  name: concrete barricade
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/barricades.rsi
+    state: concrete_barrier_1
+
+- type: entity
+  parent: BaseBarricade
+  id: BarricadeConcreteHole
+  name: concrete barricade
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/barricades.rsi
+    state: concrete_barrier_2
+
+- type: entity
+  parent: BaseBarricade
+  id: BarricadeConcreteCrumbling
+  name: concrete barricade
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/barricades.rsi
+    state: concrete_barrier_3
+
+- type: entity
+  parent: BaseBarricade
+  id: BarricadeConcreteStrayFired
+  name: concrete barricade
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/barricades.rsi
+    state: concrete_barrier_4
+
+- type: entity
+  parent: BaseBarricade
+  id: BarricadeConcreteChipped
+  name: concrete barricade
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/barricades.rsi
+    state: concrete_barrier_5
+
+#-ALTERNATIVE-
+
+- type: entity
+  parent: BaseBarricade
+  id: BarricadeConcreteAlt
+  name: concrete barricade
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/barricades.rsi
+    state: concrete_barrier_alt
+
+- type: entity
+  parent: BaseBarricade
+  id: BarricadeConcreteAltEdge
+  name: concrete barricade
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/barricades.rsi
+    state: concrete_barrier_alt_1

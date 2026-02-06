@@ -1,0 +1,49 @@
+- type: entity
+  abstract: true
+  parent: BaseStructure
+  id: BaseBigTank
+  components:
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-1,-0.5,1,0.5" #CARMINETODO: ADD PROPER HITBOX
+        density: 250
+        mask:
+        - MachineMask
+        layer:
+        - MidImpassable
+        - LowImpassable
+#  - type: MeleeSound #CARMINETODO
+#    soundGroups:
+#      Brute:
+#        path:
+#          "/Audio/Weapons/dodgeball.ogg"
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100 #CARMINETODO
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 50 #CARMINETODO
+      behaviors:
+#      - !type:PlaySoundBehavior #CARMINETODO
+#        sound:
+#          collection: MetalBreak
+#          params:
+#            volume: -6
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 1 #CARMINETODO
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]

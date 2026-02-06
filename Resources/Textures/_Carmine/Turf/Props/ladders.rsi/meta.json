@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Made by InfraredBaron and used with his permission.",
+  "size": {
+    "x": 32,
+    "y": 48
+  },
+  "states": [
+    {
+      "name": "ladder10"
+    },
+    {
+      "name": "ladder11"
+    },
+    {
+      "name": "ladder01"
+    },
+    {
+      "name": "bunker_closed"
+    },
+    {
+      "name": "bunker_open"
+    },
+    {
+      "name": "manhole_closed"
+    },
+    {
+      "name": "manhole_open"
+    },
+    {
+      "name": "hatch_closed"
+    },
+    {
+      "name": "hatch_open"
+    },
+    {
+      "name": "enclave_closed"
+    },
+    {
+      "name": "enclave_open"
+    }
+  ]
+}

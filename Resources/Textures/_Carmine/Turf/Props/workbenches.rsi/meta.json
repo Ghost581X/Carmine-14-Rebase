@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Made by InfraredBaron and used with his permission.",
+  "size": {
+    "x": 64,
+    "y": 48
+  },
+  "states": [
+    {
+      "name": "workbench"
+    },
+    {
+      "name": "ammobench"
+    },
+    {
+      "name": "armorbench"
+    },
+    {
+      "name": "weaponbench"
+    },
+    {
+      "name": "tinkerbench"
+    },
+    {
+      "name": "chemicalset"
+    }
+  ]
+}

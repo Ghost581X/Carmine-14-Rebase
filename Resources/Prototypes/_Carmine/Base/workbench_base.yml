@@ -1,0 +1,37 @@
+- type: entity
+  abstract: true
+  parent: BaseStructure
+  id: BaseWorkbench
+  components:
+#  - type: MeleeSound #CARMINETODO
+#    soundGroups:
+#      Brute:
+#        path:
+#          "/Audio/Weapons/dodgeball.ogg"
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 60 #CARMINETODO
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 30 #CARMINETODO
+      behaviors:
+#      - !type:PlaySoundBehavior #CARMINETODO
+#        sound:
+#          collection: MetalBreak
+#          params:
+#            volume: -6
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 1 #CARMINETODO
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]

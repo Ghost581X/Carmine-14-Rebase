@@ -1,0 +1,52 @@
+##GENERATOR
+
+- type: entity
+  parent: BaseLargeMachinery
+  id: MachineryLargeGeneratorOff
+  name: generator
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/largemachinery.rsi
+    state: generator_off
+
+- type: entity
+  parent: BaseLargeMachinery
+  id: MachineryLargeGeneratorOn
+  name: generator
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/largemachinery.rsi
+    state: generator_on
+
+- type: entity
+  parent: BaseLargeMachinery
+  id: MachineryLargeGeneratorIdle
+  name: generator
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/largemachinery.rsi
+    state: generator_idle
+
+#WATER TREATMENT
+- type: entity
+  parent: BaseLargeMachinery
+  id: MachineryLargeWaterPlantTreatment
+  name: water treatment plant
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/largemachinery.rsi
+    state: watertreatment
+
+- type: entity
+  parent: BaseLargeMachinery
+  id: MachineryLargeWaterTreatmentPlantBroken
+  name: broken water treatment plant
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/largemachinery.rsi
+    state: watertreatment_broken

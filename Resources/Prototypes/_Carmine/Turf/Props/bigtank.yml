@@ -1,0 +1,21 @@
+##BIG LIQUID TANK
+
+- type: entity
+  parent: BaseBigTank
+  id: BigTank
+  name: large tank
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/bigtank.rsi
+    state: big_tank
+
+- type: entity
+  parent: BaseBigTank
+  id: BigTankBroken
+  name: large tank
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/bigtank.rsi
+    state: big_tank_broken

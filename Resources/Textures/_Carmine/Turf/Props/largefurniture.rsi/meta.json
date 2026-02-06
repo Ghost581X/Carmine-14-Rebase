@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Made by InfraredBaron and used with his permission.",
+  "size": {
+    "x": 64,
+    "y": 64
+  },
+  "states": [
+    {
+      "name": "metal_shelf",
+      "directions": 4
+    },
+    {
+      "name": "shelf_shop",
+      "directions": 4
+    },
+    {
+      "name": "medshelves",
+      "directions": 4
+    },
+    {
+      "name": "wood_shelf_big",
+      "directions": 4
+    },
+    {
+      "name": "showcase"
+    },
+    {
+      "name": "desk_wood",
+      "directions": 4
+    },
+    {
+      "name": "desk_wood_small",
+      "directions": 4
+    },
+    {
+      "name": "stand_wood",
+      "directions": 4
+    },
+    {
+      "name": "stand_wood_small",
+      "directions": 4
+    },
+    {
+      "name": "desk_metal",
+      "directions": 4
+    },
+    {
+      "name": "desk_metal_small",
+      "directions": 4
+    },
+    {
+      "name": "table_metal_wide",
+      "directions": 4
+    },
+    {
+      "name": "bigshelf1_openR"
+    },
+    {
+      "name": "bigshelf1_openL"
+    },
+    {
+      "name": "bigshelf2_open"
+    }
+  ]
+}

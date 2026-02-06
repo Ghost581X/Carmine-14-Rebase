@@ -1,0 +1,299 @@
+##SHELVES
+
+- type: entity
+  parent: BaseFurniture
+  id: FurnitureBigShelfBigWoodLeftside
+  name: shelf
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/largefurniture.rsi
+    state: bigshelf1_openL
+
+- type: entity
+  parent: BaseFurniture
+  id: FurnitureBigShelfBigWoodRighside
+  name: shelf
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/largefurniture.rsi
+    state: bigshelf1_openR
+
+- type: entity
+  parent: BaseFurniture
+  id: FurnitureBigShelfBigWoodSide
+  name: shelf
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/largefurniture.rsi
+    state: bigshelf2_open
+
+- type: entity
+  parent: BaseFurniture
+  id: FurnitureBigShelfBigWoodRotational
+  name: shelf
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/largefurniture.rsi
+    state: wood_shelf_big
+
+- type: entity
+  parent: BaseFurniture
+  id: FurnitureTallShelfWood
+  name: shelf
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/tallfurniture.rsi
+    state: wood_shelf
+
+- type: entity
+  parent: BaseFurniture
+  id: FurnitureTallShelfWoodAlt
+  name: shelf
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/tallfurniture.rsi
+    state: wood_shelf-alt
+
+- type: entity
+  parent: BaseFurniture
+  id: FurnitureTallBookshelfWood
+  name: shelf
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/tallfurniture.rsi
+    state: bookshelf
+
+- type: entity
+  parent: BaseFurniture
+  id: FurnitureBigShelfMetal
+  name: shelf
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/largefurniture.rsi
+    state: metal_shelf
+
+- type: entity
+  parent: BaseFurniture
+  id: FurnitureTallShelfMetal
+  name: shelf
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/tallfurniture.rsi
+    state: metal_shelf
+
+- type: entity
+  parent: BaseFurniture
+  id: FurnitureBigShelfShop
+  name: shelf
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/largefurniture.rsi
+    state: shelf_shop
+
+- type: entity
+  parent: BaseFurniture
+  id: FurnitureTallShelfShopMetal
+  name: shelf
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/tallfurniture.rsi
+    state: store_shelf_metal
+
+- type: entity
+  parent: BaseFurniture
+  id: FurnitureTallShelfShop
+  name: shelf
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/tallfurniture.rsi
+    state: store_shelf
+
+- type: entity
+  parent: BaseFurniture
+  id: FurnitureBigShelfMedical
+  name: shelf
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/largefurniture.rsi
+    state: medshelves
+
+- type: entity
+  parent: BaseFurniture
+  id: FurnitureBigShelfShowcase
+  name: showcase shelf
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/largefurniture.rsi
+    state: showcase
+
+#DESKS
+
+- type: entity
+  parent: BaseFurniture
+  id: FurnitureBigDeskMetal
+  name: desk
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/largefurniture.rsi
+    state: desk_metal
+
+- type: entity
+  parent: BaseFurniture
+  id: FurnitureBigDeskMetalSmall
+  name: desk
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/largefurniture.rsi
+    state: desk_metal_small
+
+- type: entity
+  parent: BaseFurniture
+  id: FurnitureBigDeskMetalWide
+  name: desk
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/largefurniture.rsi
+    state: desk_metal_wide
+
+- type: entity
+  parent: BaseFurniture
+  id: FurnitureBigDeskWood
+  name: desk
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/largefurniture.rsi
+    state: desk_wood
+
+- type: entity
+  parent: BaseFurniture
+  id: FurnitureBigDeskWoodSmall
+  name: desk
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/largefurniture.rsi
+    state: desk_wood_small
+
+- type: entity
+  parent: BaseFurniture
+  id: FurnitureBigStandWood
+  name: desk
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/largefurniture.rsi
+    state: stand_wood
+
+- type: entity
+  parent: BaseFurniture
+  id: FurnitureBigStandWoodSmall
+  name: desk
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/largefurniture.rsi
+    state: stand_wood_small
+
+#TABLES
+
+- type: entity
+  parent: BaseFurniture
+  id: FurnitureTableFrameMetal
+  name: metal table frame
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/standalone_tables.rsi
+    state: tableframe_metal
+
+- type: entity
+  parent: BaseFurniture
+  id: FurnitureTableMetalRoundClean
+  name: round table
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/standalone_tables.rsi
+    state: table_metal_round-2
+
+- type: entity
+  parent: BaseFurniture
+  id: FurnitureTableMetalRoundDirty
+  name: round table
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/standalone_tables.rsi
+    state: table_metal_round-1
+
+- type: entity
+  parent: BaseFurniture
+  id: FurnitureTableMetalRoundDirty2
+  name: round table
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/standalone_tables.rsi
+    state: table_metal_round
+
+- type: entity
+  parent: BaseFurniture
+  id: FurnitureTableMetalRolling
+  name: rolling table
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/standalone_tables.rsi
+    state: table_rolling
+
+#MIRROR
+
+- type: entity
+  parent: BaseFurniture
+  id: FurnitureTallMirror
+  name: mirror
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/tallfurniture.rsi
+    state: mirror
+
+- type: entity
+  parent: BaseFurniture
+  id: FurnitureTallMirrorBroken
+  name: broken mirror
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/tallfurniture.rsi
+    state: mirror_broke
+
+#CABLE REEL
+
+- type: entity
+  parent: BaseFurniture
+  id: FurnitureCableReel
+  name: cable reel
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/standalone_tables.rsi
+    state: cable_reel
