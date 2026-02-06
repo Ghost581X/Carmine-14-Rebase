@@ -265,6 +265,7 @@ namespace Content.Server.Database
                 profile.Age,
                 sex,
                 gender,
+                profile.Faction,
                 new HumanoidCharacterAppearance
                 (
                     profile.HairName,

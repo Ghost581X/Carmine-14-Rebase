@@ -1,3 +1,4 @@
+using Content.Client._Crescent.FactionSelect;
 using Content.Client.Info;
 using Content.Client.Info.PlaytimeStats;
 using Content.Client.Resources;
@@ -25,6 +26,10 @@ namespace Content.Client.Lobby.UI
         [Dependency] private readonly IPrototypeManager _protomanager = default!;
         [Dependency] private readonly IResourceCache _resourceCache = default!;
         [Dependency] private readonly IConfigurationManager _cfg = default!;
+
+        private readonly HumanoidProfileEditor _humanoidProfileEditor; //CARMINE
+
+        public readonly FactionSelectorGui FactionSelector; //CARMINE
 
         private readonly Button _createNewCharacterButton;
 
@@ -58,6 +63,9 @@ namespace Content.Client.Lobby.UI
                 args.Event.Handle();
             };
 
+            FactionSelector = new FactionSelectorGui(_preferencesManager, _protomanager, this); //CARMINE
+            _humanoidProfileEditor = profileEditor; //CARMINE
+
             CharEditor.AddChild(profileEditor);
             RulesButton.OnPressed += _ => new RulesAndInfoWindow().Open();
 
@@ -65,6 +73,17 @@ namespace Content.Client.Lobby.UI
 
             _cfg.OnValueChanged(CCVars.SeeOwnNotes, p => AdminRemarksButton.Visible = p, true);
         }
+
+        /// <summary>
+        /// CARMINE: switches from faction selection menu to character editor
+        /// </summary>
+        public void SwitchToCharacterEditor()
+        {
+            CharEditor.RemoveAllChildren();
+            _humanoidProfileEditor.Profile = FactionSelector.Profile;
+            CharEditor.AddChild(_humanoidProfileEditor);
+        }
+
 
         /// <summary>
         /// Disposes and reloads all character picker buttons from the preferences data.
@@ -99,8 +118,17 @@ namespace Content.Client.Lobby.UI
 
                 Characters.AddChild(characterPickerButton);
 
+                HumanoidCharacterProfile profileOfCharacter = (HumanoidCharacterProfile) (character); //CARMINE
+
                 characterPickerButton.OnPressed += args =>
                 {
+                    // CARMINE BEGIN
+                    CharEditor.RemoveAllChildren();
+                    if (profileOfCharacter.Faction is null || profileOfCharacter?.Faction == "")
+                        CharEditor.AddChild(FactionSelector);
+                    else
+                        CharEditor.AddChild(_humanoidProfileEditor);
+                    // CARMINE END
                     SelectCharacter?.Invoke(slot);
                 };
 

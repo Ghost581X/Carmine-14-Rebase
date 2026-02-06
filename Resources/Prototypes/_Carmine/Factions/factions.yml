@@ -1,0 +1,45 @@
+- type: faction
+  name: "Iron Consolidat"
+  id: IC
+  descriptionPrefix: |
+    CARMINETODO - WRITE DESCRPTION
+  buttonColor: DarkSlateBlue
+  description: |
+    CARMIONETODO - WRITE DESCRIPTION
+  color: "#ed5d58"
+  weight: 8
+  enabled: true
+  icon:
+    sprite: /Textures/_Carmine/Factions/faction_icons.rsi
+    state: consolidat
+
+- type: faction
+  name: "Invern-Sykes"
+  id: IS
+  descriptionPrefix: |
+    CARMINETODO - WRITE DESCRPTION
+  buttonColor: DarkSlateBlue
+  description: |
+    CARMIONETODO - WRITE DESCRIPTION
+  color: "#589ded"
+  weight: 8
+  enabled: true
+  icon:
+    sprite: /Textures/_Carmine/Factions/faction_icons.rsi
+    state: invernsykes
+
+- type: faction
+  name: "Khandan Keyvan"
+  id: KK
+  descriptionPrefix: |
+    CARMINETODO - WRITE DESCRPTION
+  buttonColor: DarkSlateBlue
+  description: |
+    CARMIONETODO - WRITE DESCRIPTION
+  color: "#ed58e5"
+  weight: 8
+  enabled: true
+  icon:
+    sprite: /Textures/_Carmine/Factions/faction_icons.rsi
+    state: khandankeyvan
+

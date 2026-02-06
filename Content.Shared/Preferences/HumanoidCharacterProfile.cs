@@ -83,6 +83,10 @@ namespace Content.Shared.Preferences
         [DataField]
         public Gender Gender { get; private set; } = Gender.Male;
 
+        [DataField]
+        public string Faction { get; private set; } = ""; //CARMINE - FACTION SELECTOR PORT FROM HULLROT
+
+
         /// <summary>
         /// <see cref="Appearance"/>
         /// </summary>
@@ -121,7 +125,6 @@ namespace Content.Shared.Preferences
         [DataField]
         public PreferenceUnavailableMode PreferenceUnavailable { get; private set; } =
             PreferenceUnavailableMode.SpawnAsOverflow;
-
         public HumanoidCharacterProfile(
             string name,
             string flavortext,
@@ -129,6 +132,7 @@ namespace Content.Shared.Preferences
             int age,
             Sex sex,
             Gender gender,
+            string faction, //CARMINE - FACTION SELECTOR PORT FROM HULLROT
             HumanoidCharacterAppearance appearance,
             SpawnPriorityPreference spawnPriority,
             Dictionary<ProtoId<JobPrototype>, JobPriority> jobPriorities,
@@ -143,6 +147,7 @@ namespace Content.Shared.Preferences
             Age = age;
             Sex = sex;
             Gender = gender;
+            Faction = faction;
             Appearance = appearance;
             SpawnPriority = spawnPriority;
             _jobPriorities = jobPriorities;
@@ -174,6 +179,7 @@ namespace Content.Shared.Preferences
                 other.Age,
                 other.Sex,
                 other.Gender,
+                other.Faction,
                 other.Appearance.Clone(),
                 other.SpawnPriority,
                 new Dictionary<ProtoId<JobPrototype>, JobPriority>(other.JobPriorities),
@@ -288,6 +294,8 @@ namespace Content.Shared.Preferences
         {
             return new(this) { Gender = gender };
         }
+
+        public HumanoidCharacterProfile WithFaction(string newFaction) => new(this) { Faction = newFaction }; //CARMINE - FACTION SELECTOR PORT FROM HULLROT
 
         public HumanoidCharacterProfile WithSpecies(string species)
         {
@@ -464,6 +472,7 @@ namespace Content.Shared.Preferences
             if (Sex != other.Sex) return false;
             if (Gender != other.Gender) return false;
             if (Species != other.Species) return false;
+            if (Faction != other.Faction) return false;
             if (PreferenceUnavailable != other.PreferenceUnavailable) return false;
             if (SpawnPriority != other.SpawnPriority) return false;
             if (!_jobPriorities.SequenceEqual(other._jobPriorities)) return false;
@@ -508,6 +517,20 @@ namespace Content.Shared.Preferences
                 _ => Gender.Epicene // Invalid enum values.
             };
 
+            // CARMINE - FACTION SELECTOR PORT FROM HULLROT BEGIN
+            bool validFaction = false;
+            foreach (var proto in prototypeManager.EnumeratePrototypes<FactionPrototype>())
+            {
+                if (proto.ID == Faction)
+                {
+                    validFaction = true;
+                    break;
+                }
+            }
+
+            if (!validFaction)
+                Faction = "";
+            // CARMINE - FACTION SELECTOR PORT FROM HULLROT END
             string name;
             var maxNameLength = configManager.GetCVar(CCVars.MaxNameLength);
             if (string.IsNullOrEmpty(Name))
@@ -723,6 +746,7 @@ namespace Content.Shared.Preferences
             hashCode.Add(Age);
             hashCode.Add((int)Sex);
             hashCode.Add((int)Gender);
+            hashCode.Add((string)Faction);
             hashCode.Add(Appearance);
             hashCode.Add((int)SpawnPriority);
             hashCode.Add((int)PreferenceUnavailable);
