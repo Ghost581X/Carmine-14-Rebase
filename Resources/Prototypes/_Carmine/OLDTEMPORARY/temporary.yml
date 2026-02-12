@@ -406,25 +406,6 @@
   description: It's a sturdy window and a sliding door. Wow!
 
 - type: entity
-  parent: CrateBaseWeldable
-  id: CrateGenericSteel
-  name: crate
-  components:
-  - type: Icon
-    sprite: Structures/Storage/Crates/generic.rsi
-  - type: Sprite
-    sprite: Structures/Storage/Crates/generic.rsi
-  - type: Reflect
-    reflects:
-    - Energy
-    reflectProb: 0.2
-    spread: 90
-  - type: Paintable
-    group: CrateSteel
-  - type: RadiationBlockingContainer
-    resistance: 2.5
-
-- type: entity
   parent: BaseItem
   id: BaseVendingMachineRestock
   abstract: true

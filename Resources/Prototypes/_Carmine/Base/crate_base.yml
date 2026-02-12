@@ -67,7 +67,7 @@
   - type: RequireProjectileTarget
 
 - type: entity
-  parent: CrateGeneric
+  parent: CrateAluminium
   id: CrateBaseWeldable
   categories: [ HideSpawnMenu ]
   components:

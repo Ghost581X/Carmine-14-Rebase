@@ -1,8 +1,8 @@
 - type: construction
-  id: CrateGenericSteel
-  graph: CrateGenericSteel
+  id: CrateAluminium
+  graph: CrateAluminium
   startNode: start
-  targetNode: CrateGenericSteel
+  targetNode: CrateAluminium
   category: construction-category-storage
   objectType: Structure
 
