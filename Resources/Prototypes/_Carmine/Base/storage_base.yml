@@ -134,6 +134,19 @@
     damageModifierSet: StructuralMetallic
 
 - type: entity
+  parent: BaseWallmount
+  id: BaseWallmountGlass
+  abstract: true
+  components:
+  - type: MeleeSound
+    soundGroups:
+      Brute:
+        collection: GlassSmash
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Glass
+
+- type: entity
   parent: BaseWallmountMetallic
   id: BaseWallmountMachine
   abstract: true
