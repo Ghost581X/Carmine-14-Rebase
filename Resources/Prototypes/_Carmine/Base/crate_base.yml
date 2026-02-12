@@ -84,7 +84,7 @@
   - type: AccessReader
   - type: Icon
     sprite: _Carmine/Turf/Props/crates.rsi
-    state: icon
+    state: aluminum
   - type: Sprite
     sprite: _Carmine/Turf/Props/crates.rsi
     layers:
