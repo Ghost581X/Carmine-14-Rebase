@@ -390,16 +390,6 @@
       effect: !type:PlantMutateHarvest
 
 - type: entity
-  parent: CrateBaseSecure
-  id: CrateSecure
-  name: secure crate
-  components:
-    - type: Icon
-      sprite: Structures/Storage/Crates/secure.rsi
-    - type: Sprite
-      sprite: Structures/Storage/Crates/secure.rsi
-
-- type: entity
   id: WindoorSecure
   parent: BaseSecureWindoor
   name: secure windoor

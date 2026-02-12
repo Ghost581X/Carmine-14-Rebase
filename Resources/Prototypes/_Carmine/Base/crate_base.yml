@@ -9,11 +9,11 @@
   - type: Transform
     noRot: true
   - type: Icon
-    sprite: Carmine/Turf/Props/crates.rsi
+    sprite: _Carmine/Turf/Props/crates.rsi
     state: aluminum
   - type: Sprite
     noRot: true
-    sprite: Carmine/Turf/Props/crates.rsi
+    sprite: _Carmine/Turf/Props/crates.rsi
     layers:
     - state: aluminum
       map: ["enum.StorageVisualLayers.Base"]
@@ -67,7 +67,7 @@
   - type: RequireProjectileTarget
 
 - type: entity
-  parent: CrateAluminium
+  parent: CrateBase
   id: CrateBaseWeldable
   categories: [ HideSpawnMenu ]
   components:
@@ -83,15 +83,15 @@
   - type: LockVisuals
   - type: AccessReader
   - type: Icon
-    sprite: Carmine/Turf/Props/crates.rsi
+    sprite: _Carmine/Turf/Props/crates.rsi
     state: icon
   - type: Sprite
-    sprite: Carmine/Turf/Props/crates.rsi
+    sprite: _Carmine/Turf/Props/crates.rsi
     layers:
     - state: aluminumopen
     - state: aluminum
       map: ["enum.StorageVisualLayers.Door"]
-    - state: welded
+    - state: aluminum
       visible: false
       map: ["enum.WeldableLayers.BaseWelded"]
     - state: lock

@@ -16,7 +16,7 @@
       map: ["enum.StorageVisualLayers.Door"]
   - type: RadiationBlockingContainer # for blocking radiation
     resistance: 1
-
+      
 - type: entity
   parent: CrateBaseWeldable
   id: CrateArmy
