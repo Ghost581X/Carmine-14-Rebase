@@ -1,0 +1,40 @@
+- type: entity
+  id: VentBase
+  parent: BaseStructure
+  name: vent
+  description: CARMINETODO.
+  abstract: true
+  components:
+  - type: SpriteFade
+  - type: Transform
+    noRot: true
+  - type: InteractionOutline
+  - type: Sprite
+    drawdepth: Overdoors
+    offset: "0.0,0.3"
+    sprite: _Carmine/Turf/Props/storage.rsi
+    noRot: true
+  - type: Speech
+    speechVerb: Plant # for pais (In the secret stash)
+  - type: SecretStash
+    tryInsertItemSound: /Audio/Items/deconstruct.ogg
+    tryRemoveItemSound: /Audio/Items/deconstruct.ogg
+    secretStashName: secret-stash-plant
+  - type: ContainerContainer
+    containers:
+      stash: !type:ContainerSlot {}
+  - type: Pullable
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Items/deconstruct.ogg

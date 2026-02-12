@@ -1,0 +1,326 @@
+- type: entity
+  id: StorageLocker
+  parent: StorageBase
+  name: locker
+  description: CARMINETODO.
+  abstract: true
+  components:
+  - type: Animateable
+  - type: ResistLocker
+  - type: Transform
+    noRot: true
+  - type: Sprite
+    noRot: true
+    sprite: _Carmine/Turf/Props/storage.rsi
+    layers:
+    - state: locker
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: locker
+      map: ["enum.StorageVisualLayers.Door"]
+    - state: locker_door
+      visible: false
+      map: ["enum.WeldableLayers.BaseWelded"]
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateBaseClosed: locker
+    stateDoorOpen: locker_open
+    stateDoorClosed: locker_door
+
+- type: entity
+  id: StorageUnitBasic
+  parent: StorageBase
+  name: storage unit
+  description: CARMINETODO.
+  abstract: true
+  components:
+  - type: Animateable
+  - type: ResistLocker
+  - type: Transform
+    noRot: true
+  - type: Sprite
+    noRot: true
+    sprite: _Carmine/Turf/Props/storage.rsi
+    layers:
+    - state: locker
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: enclave
+      map: ["enum.StorageVisualLayers.Door"]
+    - state: enclave_door
+      visible: false
+      map: ["enum.WeldableLayers.BaseWelded"]
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateBaseClosed: enclave
+    stateDoorOpen: enclave_open
+    stateDoorClosed: generic_door
+
+- type: entity
+  id: StorageEnclave
+  parent: StorageBase
+  name: storage unit
+  description: CARMINETODO.
+  abstract: true
+  components:
+  - type: Animateable
+  - type: ResistLocker
+  - type: Transform
+    noRot: true
+  - type: Sprite
+    noRot: true
+    sprite: _Carmine/Turf/Props/storage.rsi
+    layers:
+    - state: locker
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: enclave
+      map: ["enum.StorageVisualLayers.Door"]
+    - state: enclave_door
+      visible: false
+      map: ["enum.WeldableLayers.BaseWelded"]
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateBaseClosed: enclave
+    stateDoorOpen: enclave_open
+    stateDoorClosed: enclave_door
+
+- type: entity
+  id: StorageFridge
+  parent: StorageBase
+  name: fridge
+  description: CARMINETODO.
+  abstract: true
+  components:
+  - type: Animateable
+  - type: ResistLocker
+  - type: Transform
+    noRot: true
+  - type: Sprite
+    noRot: true
+    sprite: _Carmine/Turf/Props/storage.rsi
+    layers:
+    - state: fridge1
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: fridge1
+      map: ["enum.StorageVisualLayers.Door"]
+    - state: fridge1_door
+      visible: false
+      map: ["enum.WeldableLayers.BaseWelded"]
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateBaseClosed: fridge1
+    stateDoorOpen: fridge1_open
+    stateDoorClosed: fridge1_door
+
+- type: entity
+  id: StorageFridgeAlt
+  parent: StorageBase
+  name: fridge
+  description: CARMINETODO.
+  abstract: true
+  components:
+  - type: Animateable
+  - type: ResistLocker
+  - type: Transform
+    noRot: true
+  - type: Sprite
+    noRot: true
+    sprite: _Carmine/Turf/Props/storage.rsi
+    layers:
+    - state: fridge2
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: fridge2
+      map: ["enum.StorageVisualLayers.Door"]
+    - state: fridge2_door
+      visible: false
+      map: ["enum.WeldableLayers.BaseWelded"]
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateBaseClosed: fridge2
+    stateDoorOpen: fridge2_open
+    stateDoorClosed: fridge2_door
+
+- type: entity
+  id: StorageFridgeAlt2
+  parent: StorageBase
+  name: fridge
+  description: CARMINETODO.
+  abstract: true
+  components:
+  - type: Animateable
+  - type: ResistLocker
+  - type: Transform
+    noRot: true
+  - type: Sprite
+    noRot: true
+    sprite: _Carmine/Turf/Props/storage.rsi
+    layers:
+    - state: fridge3
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: fridge3
+      map: ["enum.StorageVisualLayers.Door"]
+    - state: fridge3_door
+      visible: false
+      map: ["enum.WeldableLayers.BaseWelded"]
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateBaseClosed: fridge3
+    stateDoorOpen: fridge3_open
+    stateDoorClosed: fridge3_door
+
+- type: entity
+  id: BasicWashingMachine
+  parent: StorageBase
+  name: washing machine
+  description: CARMINETODO.
+  abstract: true
+  components:
+  - type: Animateable
+  - type: ResistLocker
+  - type: Transform
+    noRot: true
+  - type: Sprite
+    noRot: true
+    sprite: _Carmine/Turf/Props/storage.rsi
+    layers:
+    - state: normwasher
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: normwasher
+      map: ["enum.StorageVisualLayers.Door"]
+    - state: normwasher
+      visible: false
+      map: ["enum.WeldableLayers.BaseWelded"]
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateBaseClosed: normwasher
+    stateDoorOpen: normwasher_open
+    stateDoorClosed: normwasher_on
+
+- type: entity
+  id: IndustrialWashingMachine
+  parent: StorageBase
+  name: washing machine
+  description: CARMINETODO.
+  abstract: true
+  components:
+  - type: Animateable
+  - type: ResistLocker
+  - type: Transform
+    noRot: true
+  - type: Sprite
+    noRot: true
+    sprite: _Carmine/Turf/Props/storage.rsi
+    layers:
+    - state: industwasher
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: industwasher
+      map: ["enum.StorageVisualLayers.Door"]
+    - state: industwasher
+      visible: false
+      map: ["enum.WeldableLayers.BaseWelded"]
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateBaseClosed: industwasher
+    stateDoorOpen: industwasher_open
+    stateDoorClosed: industwasher_on
+
+- type: entity
+  id: StorageSafe
+  parent: StorageBase
+  name: safe
+  description: CARMINETODO.
+  abstract: true
+  components:
+  - type: Animateable
+  - type: ResistLocker
+  - type: Transform
+    noRot: true
+  - type: Sprite
+    noRot: true
+    sprite: _Carmine/Turf/Props/storage.rsi
+    layers:
+    - state: safe
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: safe-open
+      map: ["enum.StorageVisualLayers.Door"]
+    - state: safe
+      visible: false
+      map: ["enum.WeldableLayers.BaseWelded"]
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateBaseClosed: safe
+    stateDoorOpen: safe-open
+    stateDoorClosed: safe
+
+- type: entity
+  id: StorageSafeSpinner
+  parent: StorageBase
+  name: safe
+  description: CARMINETODO.
+  abstract: true
+  components:
+  - type: Animateable
+  - type: ResistLocker
+  - type: Transform
+    noRot: true
+  - type: Sprite
+    noRot: true
+    sprite: _Carmine/Turf/Props/storage.rsi
+    layers:
+    - state: safe_spinner
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: safe_spinner-open
+      map: ["enum.StorageVisualLayers.Door"]
+    - state: safe_spinner
+      visible: false
+      map: ["enum.WeldableLayers.BaseWelded"]
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateBaseClosed: safe_spinner
+    stateDoorOpen: safe_spinner-open
+    stateDoorClosed: safe_spinner
+
+#Wall storage
+- type: entity
+  id: StorageWallFirstAid
+  parent: BaseWallmountMetallic
+  description: CARMINETODO.
+  abstract: true
+  components:
+  - type: AccessReader
+  - type: Lock
+  - type: LockVisuals
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/storage.rsi
+    layers:
+    - state: firstaid
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: firstaid_door
+      map: ["enum.StorageVisualLayers.Door"]
+    - state: firstaid
+      map: ["enum.LockVisualLayers.Lock"]
+      shader: unshaded
+    - state: firstaid
+      visible: false
+      map: ["enum.WeldableLayers.BaseWelded"]
+
+- type: entity
+  id: StorageWallSafe
+  parent: BaseWallmountMetallic
+  description: CARMINETODO.
+  abstract: true
+  components:
+  - type: AccessReader
+  - type: Lock
+  - type: LockVisuals
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/storage.rsi
+    layers:
+    - state: safe_wall
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: safe_wall-door
+      map: ["enum.StorageVisualLayers.Door"]
+    - state: safe_wall
+      map: ["enum.LockVisualLayers.Lock"]
+      shader: unshaded
+    - state: safe_wall
+      visible: false
+      map: ["enum.WeldableLayers.BaseWelded"]

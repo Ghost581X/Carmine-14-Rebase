@@ -1,0 +1,117 @@
+- type: entity
+  parent: [ BaseStructureDynamic, BasePaperLabelableVisualized ]
+  id: CrateBase
+  categories: [ HideSpawnMenu ]
+  name: crate
+  description: A large container for items.
+  components:
+  - type: Animateable
+  - type: Transform
+    noRot: true
+  - type: Icon
+    sprite: Carmine/Turf/Props/crates.rsi
+    state: aluminium
+  - type: Sprite
+    noRot: true
+    sprite: Carmine/Turf/Props/crates.rsi
+    layers:
+    - state: aluminium
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: aluminiumopen
+      map: ["enum.StorageVisualLayers.Door"]
+    - state: aluminium #CARMINETODO: MAKE WELDED SPRITE
+      visible: false
+      map: ["enum.WeldableLayers.BaseWelded"]
+    - state: paper #CARMINETODO: NEW LABELS SPRITES MAYBE
+      sprite: Structures/Storage/Crates/labels.rsi
+      map: ["enum.PaperLabelVisuals.Layer"]
+  - type: InteractionOutline
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.4,-0.4,0.4,0.29"
+        density: 50
+        mask:
+        - CrateMask #this is so they can go under plastic flaps
+        layer:
+        - MachineLayer
+  - type: EntityStorage
+  - type: PlaceableSurface
+    isPlaceable: false # defaults to closed.
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+  - type: EntityStorageVisuals
+    stateDoorOpen: open
+    stateDoorClosed: closed
+  - type: ContainerContainer
+    containers:
+      entity_storage: !type:Container
+      paper_label: !type:ContainerSlot
+  - type: StaticPrice
+    price: 75
+  - type: RequireProjectileTarget
+
+- type: entity
+  parent: CrateGeneric
+  id: CrateBaseWeldable
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Weldable
+  - type: ResistLocker
+
+- type: entity
+  parent: CrateBaseWeldable
+  id: CrateBaseSecure
+  suffix: Secure
+  components:
+  - type: Lock
+  - type: LockVisuals
+  - type: AccessReader
+  - type: Icon
+    sprite: Carmine/Turf/Props/crates.rsi
+    state: icon
+  - type: Sprite
+    sprite: Carmine/Turf/Props/crates.rsi
+    layers:
+    - state: aluminiumopen
+    - state: aluminium
+      map: ["enum.StorageVisualLayers.Door"]
+    - state: welded
+      visible: false
+      map: ["enum.WeldableLayers.BaseWelded"]
+    - state: lock
+      map: ["enum.LockVisualLayers.Lock"]
+      shader: unshaded
+    - state: paper
+      sprite: Structures/Storage/Crates/labels.rsi
+      offset: "-0.5,0"
+      map: ["enum.PaperLabelVisuals.Layer"]
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 75
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak

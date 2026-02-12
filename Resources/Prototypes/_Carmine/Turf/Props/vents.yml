@@ -1,0 +1,29 @@
+- type: entity
+  parent: VentBase
+  id: Vent
+  name: vent
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/storage.rsi
+    state: vent
+
+- type: entity
+  parent: VentBase
+  id: VentOpen
+  name: vent
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/storage.rsi
+    state: vent-open
+
+- type: entity
+  parent: VentBase
+  id: VentDamaged
+  name: vent
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/storage.rsi
+    state: vent-damaged

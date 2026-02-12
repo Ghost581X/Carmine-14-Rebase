@@ -1,0 +1,200 @@
+- type: entity
+  id: StorageBase
+  parent: [ BaseStructureDynamic, BasePaperLabelableVisualized ]
+  name: storage
+  description: A standard-issue storage unit.
+  abstract: true
+  components:
+  - type: Animateable
+  - type: ResistLocker
+  - type: Transform
+    noRot: true
+  - type: Sprite
+    noRot: true
+    sprite: Carmine/Turf/Props/storage.rsi
+    layers:
+    - state: locker
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: locker
+      map: ["enum.StorageVisualLayers.Door"]
+    - state: locker_door
+      visible: false
+      map: ["enum.WeldableLayers.BaseWelded"]
+    - state: paper
+      visible: false
+      sprite: Structures/Storage/closet_labels.rsi
+      map: ["enum.PaperLabelVisuals.Layer"]
+  - type: MovedByPressure
+  - type: DamageOnHighSpeedImpact
+    damage:
+      types:
+        Blunt: 5
+    soundHit:
+      collection: MetalThud
+  - type: InteractionOutline
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.48,0.25,0.48"
+        density: 75
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: EntityStorage
+  - type: ContainerContainer
+    containers:
+      entity_storage: !type:Container
+      paper_label: !type:ContainerSlot
+  - type: Weldable
+  - type: PlaceableSurface
+    placeCentered: true
+    isPlaceable: false
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+          params:
+            volume: -6
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 1
+            max: 1
+  - type: GenericVisualizer
+    visuals:
+      enum.PaperLabelVisuals.HasLabel:
+        enum.PaperLabelVisuals.Layer:
+          True: { visible: true }
+          False: { visible: false }
+      enum.StorageVisuals.Open:
+        enum.PaperLabelVisuals.Layer:
+          True: { visible: false }
+      enum.PaperLabelVisuals.LabelType:
+        enum.PaperLabelVisuals.Layer:
+          Paper: { state: paper }
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateBaseClosed: locker
+    stateDoorOpen: locker_open
+    stateDoorClosed: locker_door
+
+#Wallmount
+- type: entity
+  id: BaseWallmount
+  abstract: true
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wallmount
+  components:
+  - type: Anchorable
+    flags:
+    - Anchorable
+  - type: Rotatable
+  - type: Physics
+    canCollide: false
+  - type: Clickable
+  - type: WallMount
+  - type: InteractionOutline
+  - type: Transform
+    anchored: true
+  - type: Tag
+    tags:
+    - Structure
+  - type: Sprite
+    drawdepth: WallMountedItems
+
+- type: entity
+  parent: BaseWallmount
+  id: BaseWallmountMetallic
+  abstract: true
+  components:
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallic
+
+#Wall Closet
+- type: entity
+  parent: BaseWallmountMetallic
+  id: BaseWallStorage
+  abstract: true
+  name: wall storage
+  description: A standard-issue wall storage unit, now on walls.
+  components:
+  - type: ResistLocker
+  - type: Weldable
+  - type: StaticPrice
+    price: 75
+  - type: Sprite
+    drawdepth: WallMountedItems
+    noRot: false
+    sprite: Carmine/Turf/Props/storage.rsi
+    layers:
+    - state: firstaid
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: firstaid_door
+      map: ["enum.StorageVisualLayers.Door"]
+    - state: firstaid_door
+      visible: false
+      map: ["enum.WeldableLayers.BaseWelded"]
+  - type: EntityStorage
+    isCollidableWhenOpen: true
+    enteringOffset: 0, -0.6
+    enteringRange: 0.03
+    closeSound:
+      path: /Audio/Items/deconstruct.ogg
+    openSound:
+      path: /Audio/Items/deconstruct.ogg
+  - type: ContainerContainer
+    containers:
+      entity_storage: !type:Container
+        ents: []
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+          params:
+            volume: -6
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 1
+            max: 1
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateBaseClosed: firstaid
+    stateDoorOpen: firstaid_open
+    stateDoorClosed: firstaid_door
