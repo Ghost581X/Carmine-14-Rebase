@@ -10,16 +10,16 @@
     noRot: true
   - type: Icon
     sprite: Carmine/Turf/Props/crates.rsi
-    state: aluminium
+    state: aluminum
   - type: Sprite
     noRot: true
     sprite: Carmine/Turf/Props/crates.rsi
     layers:
-    - state: aluminium
+    - state: aluminum
       map: ["enum.StorageVisualLayers.Base"]
-    - state: aluminiumopen
+    - state: aluminumopen
       map: ["enum.StorageVisualLayers.Door"]
-    - state: aluminium #CARMINETODO: MAKE WELDED SPRITE
+    - state: aluminum #CARMINETODO: MAKE WELDED SPRITE
       visible: false
       map: ["enum.WeldableLayers.BaseWelded"]
     - state: paper #CARMINETODO: NEW LABELS SPRITES MAYBE
@@ -88,8 +88,8 @@
   - type: Sprite
     sprite: Carmine/Turf/Props/crates.rsi
     layers:
-    - state: aluminiumopen
-    - state: aluminium
+    - state: aluminumopen
+    - state: aluminum
       map: ["enum.StorageVisualLayers.Door"]
     - state: welded
       visible: false

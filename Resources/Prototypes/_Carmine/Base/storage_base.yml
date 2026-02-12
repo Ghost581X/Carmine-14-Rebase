@@ -133,6 +133,17 @@
     damageContainer: StructuralInorganic
     damageModifierSet: StructuralMetallic
 
+- type: entity
+  parent: BaseWallmountMetallic
+  id: BaseWallmountMachine
+  abstract: true
+  components:
+  - type: ApcPowerReceiver
+    powerLoad: 100
+  - type: ExtensionCableReceiver
+  - type: LightningTarget
+    priority: 1
+
 #Wall Closet
 - type: entity
   parent: BaseWallmountMetallic

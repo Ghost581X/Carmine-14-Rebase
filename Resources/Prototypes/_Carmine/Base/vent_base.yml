@@ -14,8 +14,8 @@
     offset: "0.0,0.3"
     sprite: _Carmine/Turf/Props/storage.rsi
     noRot: true
-  - type: Speech
-    speechVerb: Plant # for pais (In the secret stash)
+#  - type: Speech
+#    speechVerb: Plant # for pais (In the secret stash)
   - type: SecretStash
     tryInsertItemSound: /Audio/Items/deconstruct.ogg
     tryRemoveItemSound: /Audio/Items/deconstruct.ogg

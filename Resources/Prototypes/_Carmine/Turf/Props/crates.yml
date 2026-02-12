@@ -5,14 +5,14 @@
   components:
   - type: Icon
     sprite: _Carmine/Turf/Props/crates.rsi
-    state: aluminium
+    state: aluminum
   - type: Sprite
     noRot: true
     sprite: _Carmine/Turf/Props/crates.rsi
     layers:
-    - state: aluminium
+    - state: aluminum
       map: ["enum.StorageVisualLayers.Base"]
-    - state: aluminiumopen
+    - state: aluminumopen
       map: ["enum.StorageVisualLayers.Door"]
   - type: RadiationBlockingContainer # for blocking radiation
     resistance: 1
