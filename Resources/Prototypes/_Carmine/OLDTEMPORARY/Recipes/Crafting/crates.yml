@@ -5,11 +5,3 @@
   targetNode: CrateAluminium
   category: construction-category-storage
   objectType: Structure
-
-- type: construction
-  id: CrateSecure
-  graph: CrateSecure
-  startNode: start
-  targetNode: cratesecure
-  category: construction-category-storage
-  objectType: Structure

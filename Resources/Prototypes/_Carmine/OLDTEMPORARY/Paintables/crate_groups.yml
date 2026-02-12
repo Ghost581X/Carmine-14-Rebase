@@ -9,20 +9,3 @@
     radiation: CrateAluminium
     science: CrateAluminium
     surgery: CrateAluminium
-
-- type: paintableGroup
-  id: CrateSecure
-  cost: 2
-  defaultStyle: basic
-  styles:
-    basic: CrateAluminium
-    chemistry: CrateAluminium
-    command: CrateAluminium
-    engineering: CrateAluminium
-    hydroponics: CrateAluminium
-    medical: CrateAluminium
-    plasma: CrateAluminium
-    private: CrateAluminium
-    science: CrateAluminium
-    secgear: CrateAluminium
-    weapon: CrateAluminium
