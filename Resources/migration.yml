@@ -8,10 +8,6 @@
 # WallSolid: Window
 # Table: null
 
-# 2023-07-04
-# Bulletproof armor is almost statistically identical to kevlar, however, before this kevlar armor was the closest thing there was to "basic" armor. It makes the most sense to replace it with this.
-ClothingOuterVestKevlar: ClothingOuterArmorBasic
-
 # 2023-07-10
 Intercom: IntercomCommon
 
@@ -267,8 +263,6 @@ RPED: null
 # 2024-03-30
 TraversalDistorterMachineCircuitboard: null
 MachineTraversalDistorter: null
-# These are technically not equivalent, but it probably makes more sense to replace any existing SCAF stuff with SOME kind of armor, instead of just deleting it outright.
-ClothingOuterArmorScaf: ClothingOuterArmorBasic
 
 # 2024-03-31
 ClothingNeckFlowerWreath: ClothingHeadHatFlowerWreath
