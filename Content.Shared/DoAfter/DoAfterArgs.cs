@@ -46,6 +46,12 @@ public sealed partial class DoAfterArgs
     [DataField]
     public bool Hidden;
 
+    // Goobstation - Show doAfter progress bar to another entity
+    [NonSerialized]
+    [DataField]
+    public EntityUid? ShowTo;
+    public NetEntity? NetShowTo;
+
     #region Event options
     /// <summary>
     ///     The event that will get raised when the DoAfter has finished. If null, this will simply raise a <see cref="SimpleDoAfterEvent"/>
@@ -192,6 +198,7 @@ public sealed partial class DoAfterArgs
     /// <param name="eventTarget">The entity at which the event will be directed. If null, the event will not be directed.</param>
     /// <param name="target">The entity being targeted by the DoAFter. Not the same as <see cref="EventTarget"/></param>.
     /// <param name="used">The entity being used during the DoAfter. E.g., a tool</param>
+    /// <param name="showTo">Goobstation - The entity that should see doafter progress bar except doAfter entity</param>
     public DoAfterArgs(
         IEntityManager entManager,
         EntityUid user,
@@ -199,7 +206,8 @@ public sealed partial class DoAfterArgs
         DoAfterEvent @event,
         EntityUid? eventTarget,
         EntityUid? target = null,
-        EntityUid? used = null)
+        EntityUid? used = null,
+        EntityUid? showTo = null) // Goobstation - Show doAfter popup to another entity)
     {
         User = user;
         Delay = delay;
@@ -207,10 +215,12 @@ public sealed partial class DoAfterArgs
         Used = used;
         EventTarget = eventTarget;
         Event = @event;
+        ShowTo = showTo; // Goobstation
 
         NetUser = entManager.GetNetEntity(User);
         NetTarget = entManager.GetNetEntity(Target);
         NetUsed = entManager.GetNetEntity(Used);
+        NetShowTo = entManager.GetNetEntity(ShowTo); // Goobstation - Show doAfter popup to another entity
     }
 
     private DoAfterArgs()
@@ -264,12 +274,14 @@ public sealed partial class DoAfterArgs
         BlockDuplicate = other.BlockDuplicate;
         CancelDuplicate = other.CancelDuplicate;
         DuplicateCondition = other.DuplicateCondition;
+        ShowTo = other.ShowTo; // Goobstation - Show doAfter popup to another entity
 
         // Networked
         NetUser = other.NetUser;
         NetTarget = other.NetTarget;
         NetUsed = other.NetUsed;
         NetEventTarget = other.NetEventTarget;
+        NetShowTo = other.NetShowTo; // Goobstation - Show doAfter popup to another entity
 
         Event = other.Event.Clone();
     }

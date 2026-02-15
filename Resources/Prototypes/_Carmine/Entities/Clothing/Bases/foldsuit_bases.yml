@@ -1,0 +1,78 @@
+- type: entity
+  parent: [ ClothingOuterBase, GeigerCounterClothing ] # Mono - add geiger
+  id: ClothingFoldsuitStandard
+  name: standard foldsuit
+  description: A non-specific foldsuit that swaps appearance when activated and provides EVA protection when expanded.
+  components:
+  - type: Appearance
+  - type: AllowSuitStorage
+  - type: Sprite
+    sprite: _Goobstation/Clothing/OuterClothing/Modsuits/standard.rsi
+    layers:
+    - state: icon
+      visible: true
+    - state: icon-unfolded
+      visible: false
+  - type: Clothing
+    equipSound: /Audio/Mecha/mechmove03.ogg
+    unequipSound: /Audio/Mecha/mechmove03.ogg
+    slots: [ outerClothing ]
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.85
+        Heat: 0.85
+        Radiation: 0.6
+  - type: ItemToggle
+  - type: ComponentToggler
+    components:
+    - type: PressureProtection
+      highPressureMultiplier: 0.3
+      lowPressureMultiplier: 1000
+    - type: TemperatureProtection
+      coolingCoefficient: 0.1
+      heatingCoefficient: 0.4
+    # - type: ClothingSpeedModifier #put speed modifier on the boots or something else because this does not work for some reason
+    #   walkModifier: 0.5
+    #   sprintModifier: 0.5
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: []
+      toggleable-clothing: !type:Container
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+      enum.ToggleClothingUiKey.Key:
+        type: ToggleableClothingBoundUserInterface
+  - type: UseDelay
+    delay: 0.5
+  - type: ExplosionResistance
+    damageCoefficient: 0.9
+  - type: ToggleableClothing
+    unfoldSound: /Audio/_Carmine/Foldsuits/airbag.ogg
+    foldSound: /Audio/_Carmine/Foldsuits/airbag_reversed.ogg
+    timeToFoldPerPiece: 0.1
+    foldDoAfterTime: 2
+    requiredSlot: outerClothing
+    blockUnequipWhenAttached: true
+    replaceCurrentClothing: true
+    clothingPrototypes:
+      head: ClothingModsuitHelmetStandard
+      gloves: ClothingModsuitGauntletsStandard
+      shoes: ClothingModsuitBootsStandard
+  - type: DoAfter
+  - type: ToggleableVisuals # for the chestplate to change sprite in the world, when toggled
+    spriteLayer: light #CARMINETODO this is probably wrong but it works for now
+    clothingVisuals:
+      outerClothing:
+      - state: equipped-OUTERCLOTHING-unfolded
+  - type: GenericVisualizer # for the chestplate to change sprite inhand/in in ventory, when toggled
+    visuals:
+      enum.ToggleableVisuals.Enabled:
+        enum.ToggleableVisuals.Layer:
+          True: {state: icon-unfolded}
+          False: {state: icon}

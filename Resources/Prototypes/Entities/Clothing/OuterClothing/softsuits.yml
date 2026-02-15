@@ -53,12 +53,13 @@
   - type: TemperatureProtection
     heatingCoefficient: 0.75
     coolingCoefficient: 0.5
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetEVALarge
+  - type: ToggleableClothing # Goobstation - Modsuits change
+    clothingPrototypes:
+      head: ClothingHeadHelmetEVALarge
     slot: head
   - type: ContainerContainer
     containers:
-      toggleable-clothing: !type:ContainerSlot {}
+      toggleable-clothing: !type:Container {}
   - type: Tag
     tags:
     - CorgiWearable
@@ -140,8 +141,9 @@
   - type: GroupExamine
   - type: StealTarget
     stealGroup: ClothingOuterHardsuitVoidParamed
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetVoidParamed
+  - type: ToggleableClothing # Goobstation - Modsuits change
+    clothingPrototypes:
+      head: ClothingHeadHelmetVoidParamed
   - type: ItemToggle
     onUse: false
     soundActivate:
@@ -168,7 +170,7 @@
     speed: 360
   - type: ContainerContainer
     containers:
-      toggleable-clothing: !type:ContainerSlot {}
+      toggleable-clothing: !type:Container {}
   - type: Tag
     tags:
     - CorgiWearable
