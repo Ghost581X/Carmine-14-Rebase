@@ -170,7 +170,7 @@
   components:
   - type: Sprite
     sprite: _Carmine/Turf/Props/largefurniture.rsi
-    state: desk_metal_wide
+    state: table_metal_wide
 
 - type: entity
   parent: BaseFurniture

@@ -1,0 +1,50 @@
+- type: entity
+  id: ToolboxBase
+  parent: BaseStorageItem
+  abstract: true
+  components:
+  - type: Sprite
+    layers:
+      - map: [ base ]
+        state: toolbox
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Items/toolbox_drop.ogg
+  - type: Storage # CARMINETODO: CHANGE THIS PROBABLY
+    maxItemSize: Normal
+    grid:
+    - 0,0,6,3
+    storageOpenSound: /Audio/Items/toolbox_open.ogg
+    storageCloseSound: /Audio/Items/toolbox_close.ogg
+    storageInsertSound: /Audio/Items/toolbox_insert.ogg
+    storageRemoveSound: /Audio/Items/toolbox_remove.ogg
+  - type: Item
+    size: Ginormous
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 20
+    soundHit:
+      path: "/Audio/Weapons/smash.ogg"
+  - type: Tag
+    tags:
+    - Toolbox
+  - type: GenericVisualizer
+    visuals:
+      enum.StorageVisuals.Open:
+        base:
+          True: { state: toolbox_open }
+          False: { state: toolbox }
+  - type: Appearance
+
+- type: entity
+  name: toolbox
+  parent: ToolboxBase
+  id: Toolbox
+  description: CARMINETODO.
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/storage.rsi
+    state: icon
+  - type: Item
+    sprite: _Carmine/Turf/Props/storage.rsi

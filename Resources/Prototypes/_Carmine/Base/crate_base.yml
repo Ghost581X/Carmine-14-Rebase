@@ -1,6 +1,6 @@
 - type: entity
   parent: [ BaseStructureDynamic, BasePaperLabelableVisualized ]
-  id: CrateGeneric
+  id: CrateBase
   categories: [ HideSpawnMenu ]
   name: crate
   description: A large container for items.
@@ -9,20 +9,20 @@
   - type: Transform
     noRot: true
   - type: Icon
-    sprite: Structures/Storage/Crates/generic.rsi
-    state: icon
+    sprite: _Carmine/Turf/Props/crates.rsi
+    state: aluminum
   - type: Sprite
     noRot: true
-    sprite: Structures/Storage/Crates/generic.rsi
+    sprite: _Carmine/Turf/Props/crates.rsi
     layers:
-    - state: base
+    - state: aluminum
       map: ["enum.StorageVisualLayers.Base"]
-    - state: closed
+    - state: aluminumopen
       map: ["enum.StorageVisualLayers.Door"]
-    - state: welded
+    - state: aluminum #CARMINETODO: MAKE WELDED SPRITE
       visible: false
       map: ["enum.WeldableLayers.BaseWelded"]
-    - state: paper
+    - state: paper #CARMINETODO: NEW LABELS SPRITES MAYBE
       sprite: Structures/Storage/Crates/labels.rsi
       map: ["enum.PaperLabelVisuals.Layer"]
   - type: InteractionOutline
@@ -64,15 +64,10 @@
       paper_label: !type:ContainerSlot
   - type: StaticPrice
     price: 75
-  - type: Construction
-    graph: CrateGenericSteel
-    node: CrateGenericSteel
-    containers:
-      - entity_storage
   - type: RequireProjectileTarget
 
 - type: entity
-  parent: CrateGeneric
+  parent: CrateBase
   id: CrateBaseWeldable
   categories: [ HideSpawnMenu ]
   components:
@@ -88,18 +83,18 @@
   - type: LockVisuals
   - type: AccessReader
   - type: Icon
-    sprite: Structures/Storage/Crates/secure.rsi
-    state: icon
+    sprite: _Carmine/Turf/Props/crates.rsi
+    state: aluminum
   - type: Sprite
-    sprite: Structures/Storage/Crates/secure.rsi
+    sprite: _Carmine/Turf/Props/crates.rsi
     layers:
-    - state: base
-    - state: closed
+    - state: aluminumopen
+    - state: aluminum
       map: ["enum.StorageVisualLayers.Door"]
-    - state: welded
+    - state: aluminum
       visible: false
       map: ["enum.WeldableLayers.BaseWelded"]
-    - state: locked
+    - state: lock
       map: ["enum.LockVisualLayers.Lock"]
       shader: unshaded
     - state: paper
@@ -120,15 +115,3 @@
       - !type:PlaySoundBehavior
         sound:
           collection: MetalBreak
-  - type: Construction
-    graph: CrateSecure
-    node: cratesecure
-    containers:
-    - entity_storage
-  - type: Reflect
-    reflects:
-    - Energy
-    reflectProb: 0.2
-    spread: 90
-  - type: Paintable
-    group: CrateSecure

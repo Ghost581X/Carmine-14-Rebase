@@ -13,7 +13,6 @@
   id: Crates
   groups:
   - CrateSteel
-  - CrateSecure
 
 - type: paintableGroupCategory
   id: Lockers

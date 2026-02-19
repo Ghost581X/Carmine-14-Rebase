@@ -1,0 +1,163 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Made by InfraredBaron and used with his permission.",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "normwasher",
+      "directions": 4
+    },
+    {
+      "name": "normwasher_open",
+      "directions": 4
+    },
+    {
+      "name": "normwasher_on",
+      "delays": [
+        [
+          0.08,
+          0.08,
+          0.08,
+          0.08,
+          0.08,
+          0.08,
+          0.08,
+          0.08,
+          0.08,
+          0.08,
+          0.08,
+          0.08,
+          0.08
+        ]
+      ]
+    },
+    {
+      "name": "industwasher",
+      "directions": 4
+    },
+    {
+      "name": "industwasher_open",
+      "directions": 4
+    },
+    {
+      "name": "industwasher_on",
+      "delays": [
+        [
+          0.08,
+          0.08,
+          0.08,
+          0.08,
+          0.08,
+          0.08,
+          0.08,
+          0.08,
+          0.08,
+          0.08,
+          0.08,
+          0.08,
+          0.08
+        ]
+      ]
+    },
+    {
+      "name": "generic_door"
+    },
+    {
+      "name": "safe"
+    },
+    {
+      "name": "safe-open"
+    },
+    {
+      "name": "safe_spinner"
+    },
+    {
+      "name": "safe_spinner-open"
+    },
+    {
+      "name": "fridge1"
+    },
+    {
+      "name": "fridge1_door"
+    },
+    {
+      "name": "fridge1_open"
+    },
+    {
+      "name": "fridge2"
+    },
+    {
+      "name": "fridge2_door"
+    },
+    {
+      "name": "fridge2_open"
+    },
+    {
+      "name": "fridge3"
+    },
+    {
+      "name": "fridge3_door"
+    },
+    {
+      "name": "fridge3_open"
+    },
+    {
+      "name": "enclave"
+    },
+    {
+      "name": "enclave_door"
+    },
+    {
+      "name": "enclave_open"
+    },
+    {
+      "name": "safe_wall"
+    },
+    {
+      "name": "safe_wall-open"
+    },
+    {
+      "name": "firstaid"
+    },
+    {
+      "name": "firstaid_door"
+    },
+    {
+      "name": "firstaid_open"
+    },
+    {
+      "name": "vent"
+    },
+    {
+      "name": "vent-damaged"
+    },
+    {
+      "name": "vent-open"
+    },
+    {
+      "name": "locker"
+    },
+    {
+      "name": "locker_door"
+    },
+    {
+      "name": "locker_open"
+    },
+    {
+      "name": "toolbox"
+    },
+    {
+      "name": "toolbox_open"
+    },
+    {
+      "name": "locker_loot"
+    },
+    {
+      "name": "toolbox_loot"
+    }
+  ]
+}

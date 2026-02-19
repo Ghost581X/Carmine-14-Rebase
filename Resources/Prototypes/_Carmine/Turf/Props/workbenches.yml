@@ -48,7 +48,7 @@
   components:
   - type: Sprite
     sprite: _Carmine/Turf/Props/workbenches.rsi
-    state: workbenchtinker
+    state: tinkerbench
 
 - type: entity
   parent: BaseWorkbench

@@ -1,0 +1,116 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Made by InfraredBaron and used with his permission.",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "vault_standard"
+    },
+    {
+      "name": "vault_standardopen"
+    },
+    {
+      "name": "vault_standard_clean"
+    },
+    {
+      "name": "vault_standard_cleanopen"
+    },
+    {
+      "name": "vault_compact"
+    },
+    {
+      "name": "vault_compactopen"
+    },
+    {
+      "name": "vault_compact_clean"
+    },
+    {
+      "name": "vault_compact_cleanopen"
+    },
+    {
+      "name": "vault_long"
+    },
+    {
+      "name": "vault_longopen"
+    },
+    {
+      "name": "vault_long_clean"
+    },
+    {
+      "name": "vault_long_cleanopen"
+    },
+    {
+      "name": "vault_big"
+    },
+    {
+      "name": "vault_bigopen"
+    },
+    {
+      "name": "vault_big_clean"
+    },
+    {
+      "name": "vault_big_cleanopen"
+    },
+    {
+      "name": "enclave",
+      "directions": 4
+    },
+    {
+      "name": "enclaveopen",
+      "directions": 4
+    },
+    {
+      "name": "register_cleanopen",
+      "directions": 4
+    },
+    {
+      "name": "register_clean",
+      "directions": 4
+    },
+    {
+      "name": "register",
+      "directions": 4
+    },
+    {
+      "name": "registeropen",
+      "directions": 4
+    },
+    {
+      "name": "army"
+    },
+    {
+      "name": "armyopen"
+    },
+    {
+      "name": "aluminum"
+    },
+    {
+      "name": "aluminumopen"
+    },
+    {
+      "name": "red"
+    },
+    {
+      "name": "redopen"
+    },
+    {
+      "name": "vault"
+    },
+    {
+      "name": "vaultopen"
+    },
+    {
+      "name": "medical"
+    },
+    {
+      "name": "medicalopen"
+    },
+    {
+      "name": "lock"
+    }
+  ]
+}
