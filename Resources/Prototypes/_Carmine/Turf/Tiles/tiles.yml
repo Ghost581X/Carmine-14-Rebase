@@ -1,0 +1,721 @@
+- type: tile
+  abstract: true
+  id: BaseTile
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  heatCapacity: 10000
+
+- type: tile #MASSIVE FUCKING CARMINETODO: ADD FOOTSTEP SOUNDS TO ALL OF THESE
+  parent: BaseTile
+  id: Armored
+  name: armored
+  sprite: /Textures/Tiles/armored.png
+  variants: 1
+  placementVariants:
+  - 1.0
+  itemDrop: FloorTileItemArmored
+
+- type: tile
+  parent: BaseTile
+  id: Black
+  name: black
+  sprite: /Textures/Tiles/black.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  itemDrop: FloorTileItemBlack
+
+- type: tile
+  parent: BaseTile
+  id: BlackFull
+  name: black_full
+  sprite: /Textures/Tiles/black_full.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  itemDrop: FloorTileItemBlackFull
+
+- type: tile
+  parent: BaseTile
+  id: BlackLarge
+  name: black_large
+  sprite: /Textures/Tiles/black_large.png
+  variants: 6
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  itemDrop: FloorTileItemBlackLarge
+
+- type: tile
+  parent: BaseTile
+  id: BlueLong
+  name: blue_long
+  sprite: /Textures/Tiles/blue_long.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  itemDrop: FloorTileItemBlueLong
+
+- type: tile
+  parent: BaseTile
+  id: Bog
+  name: bog
+  sprite: /Textures/Tiles/bog.png
+  variants: 1
+  placementVariants:
+  - 1.0
+  itemDrop: FloorTileItemBog
+
+- type: tile
+  parent: BaseTile
+  id: Brown
+  name: brown
+  sprite: /Textures/Tiles/brown.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  itemDrop: FloorTileItemBrown
+
+- type: tile
+  parent: BaseTile
+  id: BrownSmall
+  name: brown_small
+  sprite: /Textures/Tiles/brown_small.png
+  variants: 9
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  itemDrop: FloorTileItemBrownSmall
+
+- type: tile
+  parent: BaseTile
+  id: CafeLarge
+  name: cafe_large
+  sprite: /Textures/Tiles/cafe_large.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  itemDrop: FloorTileItemCafeLarge
+
+- type: tile
+  parent: BaseTile
+  id: CheckerLarge
+  name: checker_large
+  sprite: /Textures/Tiles/checker_large.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  itemDrop: FloorTileItemCheckerLarge
+
+- type: tile
+  parent: BaseTile
+  id: ConcreteBig
+  name: concrete_big
+  sprite: /Textures/Tiles/concrete_big.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  itemDrop: FloorTileItemConcreteBig
+
+- type: tile
+  parent: BaseTile
+  id: ConcreteIndustrial
+  name: concrete_industrial
+  sprite: /Textures/Tiles/concrete_industrial.png
+  variants: 1
+  placementVariants:
+  - 1.0
+  itemDrop: FloorTileItemConcreteIndustrial
+
+- type: tile
+  parent: BaseTile
+  id: ConcreteIndustrialAlt
+  name: concrete_industrial_alt
+  sprite: /Textures/Tiles/concrete_industrial_alt.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  itemDrop: FloorTileItemConcreteIndustrialAlt
+
+- type: tile
+  parent: BaseTile
+  id: ConcreteIndustrialSplit
+  name: concrete_industrial_split
+  sprite: /Textures/Tiles/concrete_industrial_split.png
+  variants: 1
+  placementVariants:
+  - 1.0
+  itemDrop: FloorTileItemConcreteIndustrialSplit
+
+- type: tile
+  parent: BaseTile
+  id: ConcreteSmall
+  name: concrete_small
+  sprite: /Textures/Tiles/concrete_small.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  itemDrop: FloorTileItemConcreteSmall
+
+- type: tile
+  parent: BaseTile
+  id: Decrepit
+  name: decrepit
+  sprite: /Textures/Tiles/decrepit.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  itemDrop: FloorTileItemDecrepit
+
+- type: tile
+  parent: BaseTile
+  id: Fancy
+  name: fancy
+  sprite: /Textures/Tiles/fancy.png
+  variants: 8
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  itemDrop: FloorTileItemFancy
+
+- type: tile
+  parent: BaseTile
+  id: Grate
+  name: grate
+  sprite: /Textures/Tiles/grate.png
+  variants: 1
+  placementVariants:
+  - 1.0
+  itemDrop: FloorTileItemGrate
+
+- type: tile
+  parent: BaseTile
+  id: GrateReinforced
+  name: grate_reinforced
+  sprite: /Textures/Tiles/grate_reinforced.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  itemDrop: FloorTileItemGrateReinforced
+
+- type: tile
+  parent: BaseTile
+  id: GrateTileHorizontal
+  name: grate_tile_horizontal
+  sprite: /Textures/Tiles/grate_tile_horizontal.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  itemDrop: FloorTileItemGrateTileHorizontal
+
+- type: tile
+  parent: BaseTile
+  id: GrateTileVertical
+  name: grate_tile_vertical
+  sprite: /Textures/Tiles/grate_tile_vertical.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  itemDrop: FloorTileItemGrateTileVertical
+
+- type: tile
+  parent: BaseTile
+  id: GreenFull
+  name: green_full
+  sprite: /Textures/Tiles/green_full.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  itemDrop: FloorTileItemGreenFull
+
+- type: tile
+  parent: BaseTile
+  id: GreenLarge
+  name: green_large
+  sprite: /Textures/Tiles/green_large.png
+  variants: 3
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  itemDrop: FloorTileItemGreenLarge
+
+- type: tile
+  parent: BaseTile
+  id: Grey
+  name: grey
+  sprite: /Textures/Tiles/grey.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  itemDrop: FloorTileItemGrey
+
+- type: tile
+  parent: BaseTile
+  id: GreyLarge
+  name: grey_large
+  sprite: /Textures/Tiles/grey_large.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  itemDrop: FloorTileItemGreyLarge
+
+- type: tile
+  parent: BaseTile
+  id: GreyLong
+  name: grey_long
+  sprite: /Textures/Tiles/grey_long.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  itemDrop: FloorTileItemGreyLong
+
+- type: tile
+  parent: BaseTile
+  id: Industrial
+  name: industrial
+  sprite: /Textures/Tiles/industrial.png
+  variants: 1
+  placementVariants:
+  - 1.0
+  itemDrop: FloorTileItemIndustrial
+
+- type: tile
+  parent: BaseTile
+  id: Mesh
+  name: mesh
+  sprite: /Textures/Tiles/mesh.png
+  variants: 1
+  placementVariants:
+  - 1.0
+  itemDrop: FloorTileItemMesh
+
+- type: tile
+  parent: BaseTile
+  id: MeshAlt
+  name: mesh_alt
+  sprite: /Textures/Tiles/mesh_alt.png
+  variants: 1
+  placementVariants:
+  - 1.0
+  itemDrop: FloorTileItemMeshAlt
+
+- type: tile
+  parent: BaseTile
+  id: Monolith
+  name: monolith
+  sprite: /Textures/Tiles/monolith.png
+  variants: 1
+  placementVariants:
+  - 1.0
+  itemDrop: FloorTileItemMonolith
+
+- type: tile
+  parent: BaseTile
+  id: Navy
+  name: navy
+  sprite: /Textures/Tiles/navy.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  itemDrop: FloorTileItemNavy
+
+- type: tile
+  parent: BaseTile
+  id: NavyFull
+  name: navy_full
+  sprite: /Textures/Tiles/navy_full.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  itemDrop: FloorTileItemNavyFull
+
+- type: tile
+  parent: BaseTile
+  id: NavyLarge
+  name: navy_large
+  sprite: /Textures/Tiles/navy_large.png
+  variants: 3
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  itemDrop: FloorTileItemNavyLarge
+
+- type: tile
+  parent: BaseTile
+  id: NavySmall
+  name: navy_small
+  sprite: /Textures/Tiles/navy_small.png
+  variants: 9
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  itemDrop: FloorTileItemNavySmall
+
+- type: tile
+  parent: BaseTile
+  id: Ornate
+  name: ornate
+  sprite: /Textures/Tiles/ornate.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  itemDrop: FloorTileItemOrnate
+
+- type: tile
+  parent: BaseTile
+  id: Plate
+  name: plate
+  sprite: /Textures/Tiles/plate.png
+  variants: 2
+  placementVariants:
+  - 1.0
+  - 1.0
+  itemDrop: FloorTileItemPlate
+
+- type: tile
+  parent: BaseTile
+  id: PolishedArmored
+  name: polished_armored
+  sprite: /Textures/Tiles/polished_armored.png
+  variants: 1
+  placementVariants:
+  - 1.0
+  itemDrop: FloorTileItemPolishedArmored
+
+- type: tile
+  parent: BaseTile
+  id: WhiteFull
+  name: white_full
+  sprite: /Textures/Tiles/white_full.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  itemDrop: FloorTileItemWhiteFull
+
+- type: tile
+  parent: BaseTile
+  id: Polished
+  name: polished
+  sprite: /Textures/Tiles/polished.png
+  variants: 1
+  placementVariants:
+  - 1.0
+  itemDrop: FloorTileItemPolished
+
+- type: tile
+  parent: BaseTile
+  id: Pavement
+  name: pavement
+  sprite: /Textures/Tiles/pavement.png
+  variants: 2
+  placementVariants:
+  - 1.0
+  - 1.0
+  itemDrop: FloorTileItemPavement
+
+- type: tile
+  parent: BaseTile
+  id: PolishedAlt
+  name: polished_alt
+  sprite: /Textures/Tiles/polished_alt.png
+  variants: 2
+  placementVariants:
+  - 1.0
+  - 1.0
+  itemDrop: FloorTileItemPolishedAlt
+
+- type: tile
+  parent: BaseTile
+  id: Sex
+  name: sex
+  sprite: /Textures/Tiles/sex.png
+  variants: 1
+  placementVariants:
+  - 1.0
+  itemDrop: FloorTileItemSex
+
+- type: tile
+  parent: BaseTile
+  id: Sierra
+  name: sierra
+  sprite: /Textures/Tiles/sierra.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  itemDrop: FloorTileItemSierra
+
+- type: tile
+  parent: BaseTile
+  id: SteelGrate
+  name: steel_grate
+  sprite: /Textures/Tiles/steel_grate.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  itemDrop: FloorTileItemSteelGrate
+
+- type: tile
+  parent: BaseTile
+  id: SteelGrateAlt
+  name: steel_grate_alt
+  sprite: /Textures/Tiles/steel_grate_alt.png
+  variants: 1
+  placementVariants:
+  - 1.0
+  itemDrop: FloorTileItemSteelGrateAlt
+
+- type: tile
+  parent: BaseTile
+  id: SteelSolid
+  name: steel_solid
+  sprite: /Textures/Tiles/steel_solid.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  itemDrop: FloorTileItemSteelSolid
+
+- type: tile
+  parent: BaseTile
+  id: SteelTiles
+  name: steel_tiles
+  sprite: /Textures/Tiles/steel_tiles.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  itemDrop: FloorTileItemSteelTiles
+
+- type: tile
+  parent: BaseTile
+  id: SteelIndustrial
+  name: steel_industrial
+  sprite: /Textures/Tiles/steel_industrial.png
+  variants: 1
+  placementVariants:
+  - 1.0
+  itemDrop: FloorTileItemSteelIndustrial
+
+- type: tile
+  parent: BaseTile
+  id: Strongplate
+  name: strongplate
+  sprite: /Textures/Tiles/strongplate.png
+  variants: 5
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  itemDrop: FloorTileItemStrongplate
+
+- type: tile
+  parent: BaseTile
+  id: Temple
+  name: temple
+  sprite: /Textures/Tiles/temple.png
+  variants: 1
+  placementVariants:
+  - 1.0
+  itemDrop: FloorTileItemTemple
+
+- type: tile
+  parent: BaseTile
+  id: WhiteLarge
+  name: white_large
+  sprite: /Textures/Tiles/white_large.png
+  variants: 3
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  itemDrop: FloorTileItemWhiteLarge
+
+- type: tile
+  parent: BaseTile
+  id: WhiteSmall
+  name: white_small
+  sprite: /Textures/Tiles/white_small.png
+  variants: 9
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  itemDrop: FloorTileItemWhiteSmall
+
+- type: tile
+  parent: BaseTile
+  id: WoodCommon
+  name: wood_common
+  sprite: /Textures/Tiles/wood_common.png
+  variants: 8
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  itemDrop: FloorTileItemWoodCommon
+
+- type: tile
+  parent: BaseTile
+  id: WoodFancy
+  name: wood_fancy
+  sprite: /Textures/Tiles/wood_fancy.png
+  variants: 8
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  itemDrop: FloorTileItemWoodFancy
+
+- type: tile
+  parent: BaseTile
+  id: WoodMosaic
+  name: wood_mosaic
+  sprite: /Textures/Tiles/wood_mosaic.png
+  variants: 8
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  itemDrop: FloorTileItemWoodMosaic
+
+- type: tile
+  parent: BaseTile
+  id: WoodWide
+  name: wood_wide
+  sprite: /Textures/Tiles/wood_wide.png
+  variants: 8
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  itemDrop: FloorTileItemWoodWide

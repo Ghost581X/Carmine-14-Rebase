@@ -1,0 +1,44 @@
+- type: entity
+  id: StairsDark
+  name: stairs
+  description: CARMINETODO
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/stairs.rsi
+    state: stairs_dark
+    drawdepth: FloorTiles #CARMINETODO SOUNDS MAYBE
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Metallic 
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 500 #CARMINETODO
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 50 #CARMINETODO
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 2
+            max: 4 #CARMINETODO
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  parent: StairsDark
+  id: StairsLight
+  name: stairs
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/stairs.rsi
+    state: stairs_light
+    drawdepth: FloorTiles #CARMINETODO SOUNDS MAYBE
