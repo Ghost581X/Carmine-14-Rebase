@@ -253,24 +253,6 @@
 
 - type: entity
   parent: BaseSign
-  id: SignAi
-  name: ai sign
-  description: A sign, indicating an AI is present.
-  components:
-  - type: Sprite
-    state: ai
-
-- type: entity
-  parent: BaseSign
-  id: SignAiUpload
-  name: ai upload sign
-  description: A sign, indicating an AI is present.
-  components:
-    - type: Sprite
-      state: ai_upload
-
-- type: entity
-  parent: BaseSign
   id: SignArcade
   name: arcade sign
   description: A sign indicating the arcade.

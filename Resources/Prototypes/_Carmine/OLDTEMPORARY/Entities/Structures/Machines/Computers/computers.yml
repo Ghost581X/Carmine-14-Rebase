@@ -1,5 +1,5 @@
 - type: entity
-  parent: BaseComputerAiAccess
+  parent: BaseComputer
   id: ComputerAlert
   name: atmospheric alerts computer
   description: Used to access the station's atmospheric automated alert system.
@@ -54,7 +54,7 @@
     - DeviceMonitoringAndControl
 
 - type: entity
-  parent: BaseComputerAiAccess
+  parent: BaseComputer
   id: ComputerAtmosMonitoring
   name: atmospheric network monitor
   description: Used to monitor the station's atmospheric networks.
@@ -114,7 +114,7 @@
     color: "#43ccb5"
 
 - type: entity
-  parent: BaseComputerAiAccess # Mono
+  parent: BaseComputer # Mono
   id: BaseComputerShuttle
   name: shuttle console
   description: Used to pilot a shuttle.
@@ -264,7 +264,7 @@
     board: CargoShuttleConsoleCircuitboard
 
 - type: entity
-  parent: BaseComputerAiAccess
+  parent: BaseComputer
   id: ComputerIFF
   name: IFF computer
   description: Allows you to control the IFF characteristics of this vessel.
@@ -317,7 +317,7 @@
     board: ComputerIFFSyndicateCircuitboard
 
 - type: entity
-  parent: BaseComputerAiAccess
+  parent: BaseComputer
   id: ComputerPowerMonitoring
   name: power monitoring computer
   description: It monitors power levels across the station.
@@ -359,7 +359,7 @@
         type: WiresBoundUserInterface
 
 - type: entity
-  parent: BaseComputerAiAccess
+  parent: BaseComputer
   id: ComputerMedicalRecords
   name: medical records computer
   description: This can be used to check medical records.
@@ -384,7 +384,7 @@
     board: MedicalRecordsComputerCircuitboard
 
 - type: entity
-  parent: BaseComputerAiAccess
+  parent: BaseComputer
   id: ComputerCriminalRecords
   name: criminal records computer
   description: This can be used to check criminal records. Only security can modify them.
@@ -418,7 +418,7 @@
     board: CriminalRecordsComputerCircuitboard
 
 - type: entity
-  parent: BaseComputerAiAccess
+  parent: BaseComputer
   id: ComputerStationRecords
   name: station records computer
   description: This can be used to check station records.
@@ -440,7 +440,7 @@
     board: StationRecordsComputerCircuitboard
 
 - type: entity
-  parent: BaseComputerAiAccess
+  parent: BaseComputer
   id: ComputerCrewMonitoring
   name: crew monitoring console
   description: Used to monitor active health sensors built into most of the crew's uniforms.
@@ -479,7 +479,7 @@
     range: 1200
 
 - type: entity
-  parent: BaseComputerAiAccess
+  parent: BaseComputer
   id: ComputerResearchAndDevelopment
   name: R&D computer
   description: A computer used to interface with R&D tools.
@@ -524,7 +524,7 @@
     color: "#b53ca1"
 
 - type: entity
-  parent: BaseComputerAiAccess
+  parent: BaseComputer
   id: ComputerAnalysisConsole
   name: analysis console
   description: A computer used to interface with the artifact analyzer.
@@ -570,7 +570,7 @@
     color: "#b53ca1"
 
 - type: entity
-  parent: BaseComputerAiAccess
+  parent: BaseComputer
   id: ComputerId
   name: ID card computer
   description: Terminal for programming Nanotrasen employee ID cards to access parts of the station.
@@ -633,7 +633,7 @@
       IdCardConsole-targetId: !type:ContainerSlot
 
 - type: entity
-  parent: BaseComputerAiAccess
+  parent: BaseComputer
   id: computerBodyScanner
   name: body scanner computer
   description: A body scanner.
@@ -648,7 +648,7 @@
     color: "#1f8c28"
 
 - type: entity
-  parent: BaseComputerAiAccess
+  parent: BaseComputer
   id: ComputerComms
   name: communications computer
   description: A computer used to make station wide announcements via keyboard, set the appropriate alert level, and call the emergency shuttle.
@@ -788,7 +788,7 @@
     color: "#00FF00"
 
 - type: entity
-  parent: BaseComputerAiAccess
+  parent: BaseComputer
   id: ComputerSolarControl
   name: solar control computer
   description: A controller for solar panel arrays.
@@ -826,7 +826,7 @@
     - Power
 
 - type: entity
-  parent: BaseComputerAiAccess
+  parent: BaseComputer
   id: ComputerRadar
   name: mass scanner computer
   description: A computer for detecting nearby bodies, displaying them by position and mass.
@@ -861,7 +861,7 @@
 
 - type: entity
   id: ComputerCargoOrders
-  parent: BaseComputerAiAccess
+  parent: BaseComputer
   name: cargo request computer
   description: Used to order supplies and approve requests.
   components:
@@ -1074,7 +1074,7 @@
 
 - type: entity
   id: ComputerCargoBounty
-  parent: BaseComputerAiAccess
+  parent: BaseComputer
   name: cargo bounty computer
   description: Used to manage currently active bounties.
   components:
@@ -1109,7 +1109,7 @@
     access: [["Maintenance"]]
 
 - type: entity
-  parent: BaseComputerAiAccess
+  parent: BaseComputer
   id: ComputerFundingAllocation
   name: funding allocation computer
   description: Terminal for controlling the distribution of funds and pay to departments.
@@ -1146,7 +1146,7 @@
     color: "#3c5eb5"
 
 - type: entity
-  parent: BaseComputerAiAccess
+  parent: BaseComputer
   id: ComputerCloningConsole
   name: cloning console computer
   description: The centerpiece of the cloning system, medicine's greatest accomplishment. It has lots of ports and wires.
@@ -1199,7 +1199,7 @@
     - Cloning
 
 - type: entity
-  parent: BaseComputerAiAccess
+  parent: BaseComputer
   id: ComputerSalvageJobBoard
   name: salvage job board
   description: Console for accessing salvage jobs, if you're tough enough.
@@ -1236,7 +1236,7 @@
 
 - type: entity
   id: ComputerSalvageExpedition
-  parent: BaseComputerAiAccess
+  parent: BaseComputer
   name: salvage expeditions computer
   description: Used to accept salvage missions, if you're tough enough.
   components:
@@ -1367,7 +1367,7 @@
 
 - type: entity
   id: ComputerPalletConsole
-  parent: BaseComputerAiAccess
+  parent: BaseComputer
   name: cargo sale computer
   description: Used to sell goods loaded onto cargo pallets.
   components:
@@ -1403,7 +1403,7 @@
     color: "#b89f25"
 
 - type: entity
-  parent: BaseComputerAiAccess
+  parent: BaseComputer
   id: ComputerMassMedia
   name: news manager console
   description: Write your message to the world!
@@ -1485,178 +1485,3 @@
     - type: WiredNetworkConnection
     - type: DeviceList
     - type: AtmosDevice
-
-- type: entity
-  parent: BaseComputerAiAccess
-  id: ComputerRoboticsControl
-  name: robotics control console
-  description: Used to remotely monitor the station's cyborgs.
-  components:
-  - type: Sprite
-    layers:
-    - map: ["computerLayerBody"]
-      state: computer
-    - map: ["computerLayerKeyboard"]
-      state: generic_keyboard
-    - map: ["computerLayerScreen"]
-      state: robot
-    - map: ["computerLayerKeys"]
-      state: rd_key
-    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
-      state: generic_panel_open
-  - type: RoboticsConsole
-    allowBorgControl: false
-  - type: ActiveRadio
-    channels:
-    - Common
-  - type: ActivatableUI
-    key: enum.RoboticsConsoleUiKey.Key
-  - type: UserInterface
-    interfaces:
-      enum.RoboticsConsoleUiKey.Key:
-        type: RoboticsConsoleBoundUserInterface
-      enum.WiresUiKey.Key:
-        type: WiresBoundUserInterface
-  - type: ApcPowerReceiver
-    powerLoad: 1000
-  - type: DeviceNetwork
-    deviceNetId: Wireless
-    receiveFrequencyId: RoboticsConsole
-    transmitFrequencyId: CyborgControl
-  - type: Computer
-    board: RoboticsConsoleCircuitboard
-  - type: AccessReader # only used for dangerous things
-    access: [["Maintenance"]]
-  - type: Lock
-    unlockOnClick: false
-
-- type: entity
-  id: StationAiUploadComputer
-  parent: BaseComputer
-  name: AI upload console
-  description: Used to update the laws of the station AI.
-  components:
-  - type: Sprite
-    layers:
-    - map: [ "computerLayerBody" ]
-      state: computer
-    - map: [ "computerLayerKeyboard" ]
-      state: generic_keyboard
-    - map: [ "computerLayerScreen" ]
-      state: aiupload
-    - map: [ "computerLayerKeys" ]
-      state: generic_keys
-    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
-      state: generic_panel_open
-  - type: ApcPowerReceiver
-    powerLoad: 1000
-  - type: Computer
-    board: StationAiUploadCircuitboard
-  - type: AccessReader
-    access: [ [ "Maintenance" ] ]
-  - type: Lock
-    unlockOnClick: false
-  - type: SiliconLawUpdater
-    components:
-    - type: StationAiHeld
-  - type: ItemSlotsLock
-    slots:
-    - circuit_holder
-  - type: ItemSlotRequiresPower
-  - type: ItemSlots
-    slots:
-      circuit_holder:
-        name: circuit-holder
-        insertSuccessPopup: silicon-laws-updated
-        whitelist:
-          requireAll: true
-          components:
-          - SiliconLawProvider
-          - Item
-  - type: ContainerContainer
-    containers:
-      circuit_holder: !type:ContainerSlot
-      board: !type:Container
-
-- type: entity
-  id: StationAiFixerComputer
-  parent: BaseComputer
-  name: AI restoration console
-  description: Used to repair damaged artifical intelligences.
-  components:
-  - type: Sprite
-    layers:
-    - map: [ "computerLayerBody" ]
-      state: computer
-    - map: [ "computerLayerKeyboard" ]
-      state: generic_keyboard
-    - map: [ "computerLayerScreen" ]
-      state: ai-fixer-empty
-    - map: [ "computerLayerKeys" ]
-      state: rd_key
-    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
-      state: generic_panel_open
-  - type: Appearance
-  - type: GenericVisualizer
-    visuals:
-      enum.ComputerVisuals.Powered:
-        computerLayerScreen:
-          True: { visible: true, shader: unshaded }
-          False: { visible: false }
-        computerLayerKeys:
-          True: { visible: true, shader: unshaded }
-          False: { visible: true, shader: shaded }
-      enum.StationAiFixerConsoleVisuals.Key:
-        computerLayerScreen:
-          Repair0: { state: ai-fixer-progress-0 }
-          Repair1: { state: ai-fixer-progress-1 }
-          Repair2: { state: ai-fixer-progress-2 }
-          Repair3: { state: ai-fixer-progress-3 }
-          Purge0: { state: ai-fixer-purge-0 }
-          Purge1: { state: ai-fixer-purge-1 }
-          Purge2: { state: ai-fixer-purge-2 }
-          Purge3: { state: ai-fixer-purge-3 }
-          Empty: { state: ai-fixer-empty }
-          Occupied: { state: ai-fixer-full }
-          Rebooting: { state: ai-fixer-404 }
-          Dead: { state: ai-fixer-404 }
-      enum.WiresVisuals.MaintenancePanelState:
-        enum.WiresVisualLayers.MaintenancePanel:
-          True: { visible: false }
-          False: { visible: true }
-  - type: ApcPowerReceiver
-    powerLoad: 1000
-  - type: Computer
-    board: StationAiFixerCircuitboard
-  - type: AccessReader
-    access: [ [ "Maintenance" ] ]
-  - type: Lock
-    unlockOnClick: false
-  - type: StationAiFixerConsole
-  - type: ItemSlotsLock
-    slots:
-    - station_ai_holder
-  - type: ItemSlotRequiresPower
-  - type: ItemSlots
-    slots:
-      station_ai_holder:
-        ejectOnBreak: true
-        lockedFailPopup: station-ai-fixer-console-is-locked
-        whitelistFailPopup: station-ai-fixer-console-station-ai-holder-required
-        whitelist:
-          requireAll: true
-          components:
-          - StationAiHolder
-          - Item
-  - type: ContainerContainer
-    containers:
-      station_ai_holder: !type:ContainerSlot
-      board: !type:Container
-  - type: ActivatableUI
-    key: enum.StationAiFixerConsoleUiKey.Key
-  - type: UserInterface
-    interfaces:
-      enum.StationAiFixerConsoleUiKey.Key:
-        type: StationAiFixerConsoleBoundUserInterface
-      enum.WiresUiKey.Key:
-        type: WiresBoundUserInterface

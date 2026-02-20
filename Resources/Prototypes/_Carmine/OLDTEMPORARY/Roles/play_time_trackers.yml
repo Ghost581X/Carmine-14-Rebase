@@ -9,8 +9,3 @@
 - type: playTimeTracker
   id: JobCaptain
 
-- type: playTimeTracker
-  id: JobBorg
-
-- type: playTimeTracker
-  id: JobStationAi

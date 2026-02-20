@@ -96,20 +96,6 @@
   source: "https://github.com/tgstation/tgstation/tree/1e8d511946d194f92f744f5f957a7c41683d84a6/sound/effects/footstep"
 
 - files:
-  - borgwalk1.ogg
-  - borgwalk2.ogg
-  license: "CC-BY-SA-4.0"
-  copyright: "Taken from IENBA freesound.org and modified by https://github.com/MilenVolf. borgwalk2 clipped my metalgearsloth."
-  source: "https://freesound.org/people/IENBA/sounds/697379/"
-
-- files:
-  - borgwalk3.ogg
-  - borgwalk4.ogg
-  license: "CC-BY-SA-4.0"
-  copyright: "Modified version from borgwalk1 and borgwalk2 by https://github.com/Samuka-C."
-  source: "https://github.com/space-wizards/space-station-14/pull/36867"
-
-- files:
   - heelsclack1.ogg
   - heelsclack2.ogg
   - heelsclack3.ogg

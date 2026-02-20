@@ -69,7 +69,6 @@ job-title-universal = Universal
 # Role timers - Make these alphabetical or I cut you
 JobAtmosphericTechnician = Atmospheric Technician
 JobBartender = Bartender
-JobBorg = Borg
 JobBotanist = Botanist
 JobCaptain = Captain
 JobCargoTechnician = Cargo Technician

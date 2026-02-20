@@ -65,11 +65,11 @@ public sealed class StationAiSystem : SharedStationAiSystem
     private readonly ProtoId<ChatNotificationPrototype> _aiLosingPowerChatNotificationPrototype = "AiLosingPower";
     private readonly ProtoId<ChatNotificationPrototype> _aiCriticalPowerChatNotificationPrototype = "AiCriticalPower";
 
-    private readonly ProtoId<JobPrototype> _stationAiJob = "StationAi";
-    private readonly EntProtoId _stationAiBrain = "StationAiBrain";
+    private readonly ProtoId<JobPrototype> _stationAiJob = "Crowbar";
+    private readonly EntProtoId _stationAiBrain = "Crowbar";
 
-    private readonly ProtoId<AlertPrototype> _batteryAlert = "AiBattery";
-    private readonly ProtoId<AlertPrototype> _damageAlert = "BorgHealth";
+    private readonly ProtoId<AlertPrototype> _batteryAlert = "Crowbar";
+    private readonly ProtoId<AlertPrototype> _damageAlert = "Crowbar";
 
     public override void Initialize()
     {

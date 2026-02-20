@@ -72,60 +72,6 @@
   id: Book # Storage whitelist: BorgModuleService, BooksBag, Bookshelf. Blacklisting on various entities whitelisting PaperComponent
 
 - type: Tag
-  id: BorgArm # ConstructionGraphs for various bots
-
-- type: Tag
-  id: BorgHead # Used by PartAssemblyComponent on CyborgEndoskeleton. Also in ConstructionGraphs for various bots
-
-- type: Tag
-  id: BorgLeg # Used by PartAssemblyComponent on VimHarness
-
-- type: Tag
-  id: BorgLArm # Used by PartAssemblyComponent on CyborgEndoskeleton
-
-- type: Tag
-  id: BorgLLeg # Used by PartAssemblyComponent on CyborgEndoskeleton
-
-- type: Tag
-  id: BorgRArm # Used by PartAssemblyComponent on CyborgEndoskeleton
-
-- type: Tag
-  id: BorgRLeg # Used by PartAssemblyComponent on CyborgEndoskeleton
-
-- type: Tag
-  id: BorgTorso # Used by PartAssemblyComponent on CyborgEndoskeleton
-
-- type: Tag
-  id: BorgModuleCargo # Cyborg module category for salvage and cargo
-
-- type: Tag
-  id: BorgModuleEngineering # Cyborg module category for engineers and saboteurs
-
-- type: Tag
-  id: BorgModuleGeneric # Cyborg module category for general purpose
-
-- type: Tag
-  id: BorgModuleJanitor # Cyborg module category for janitors
-
-- type: Tag
-  id: BorgModuleMedical # Cyborg module category for doctors
-
-- type: Tag
-  id: BorgModuleScience # Cyborg module category for scientists
-
-- type: Tag
-  id: BorgModuleService # Cyborg module category for bartenders, botanists, and more
-
-- type: Tag
-  id: BorgModuleSyndicate # Cyborg module category for evil red robots
-
-- type: Tag
-  id: BorgModuleSyndicateAssault # Cyborg module category for extra evil red robots (nukies)
-
-- type: Tag
-  id: Bot # Targeting whitelist: ChameleonProjector
-
-- type: Tag
   id: BotanyHatchet # Storage whitelist: ClothingBeltPlant. ItemMapper: ClothingBeltPlant
 
 - type: Tag
@@ -1285,12 +1231,6 @@
   id: SpreaderIgnore # Used by SpreaderSystem to block spreading in a direction when a tagged airtight entity is on the same tile.
 
 - type: Tag
-  id: StationAi # Storage whitelist: AiHolder
-
-- type: Tag
-  id: StationAiCoreElectronics # ConstructionGraph: StationAiCore
-
-- type: Tag
   id: StationMapElectronics # ConstructionGraph: StationMap
 
 - type: Tag
@@ -1499,25 +1439,6 @@
   id: WriteIgnoreStamps # Used by PaperSystem to allow tagged entity to bypass stamps.
 
 ## X ##
-
-- type: Tag
-  id: XenoborgGhostrole # spawn whitelist : SpawnPointGhostRoleXenoborg
-
-- type: Tag
-  id: XenoborgModuleEngi # Cyborg module category for evil engineer xenoborg
-
-- type: Tag
-  id: XenoborgModuleGeneric # Cyborg module category for evil xenoborg
-
-- type: Tag
-  id: XenoborgModuleHeavy # Cyborg module category for evil heavy xenoborg
-
-- type: Tag
-  id: XenoborgModuleScout # Cyborg module category for evil scout xenoborg
-
-- type: Tag
-  id: XenoborgModuleStealth # Cyborg module category for evil stealth xenoborg
-
 ## Y ##
 ## Z ##
 # ALPHABETICAL

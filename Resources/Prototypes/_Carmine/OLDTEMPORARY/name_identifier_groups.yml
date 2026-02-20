@@ -19,19 +19,3 @@
   format: name-identifier-format-silicon
   minValue: 1000
   maxValue: 9999
-
-- type: nameIdentifierGroup
-  id: StationAi
-  format: name-identifier-format-station-ai
-  minValue: 100
-
-- type: nameIdentifierGroup
-  id: Bounty
-  minValue: 0
-  maxValue: 999
-
-- type: nameIdentifierGroup
-  id: CargoTelepads
-  format: name-identifier-format-telepad
-  minValue: 0
-  maxValue: 999
