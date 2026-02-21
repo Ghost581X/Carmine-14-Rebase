@@ -42,22 +42,6 @@
 
 - type: entity
   parent: ClothingHeadHeadHatBaseFlippable
-  id: ClothingHeadHatBluesoft
-  name: blue cap
-  description: A blue baseball cap.
-  components:
-  - type: Sprite
-    sprite: Clothing/Head/Soft/bluesoft.rsi
-  - type: Clothing
-    sprite: Clothing/Head/Soft/bluesoft.rsi
-
-- type: entity
-  parent: [ClothingHeadHeadHatBaseFlipped, ClothingHeadHatBluesoft]
-  id: ClothingHeadHatBluesoftFlipped
-  name: blue cap
-
-- type: entity
-  parent: ClothingHeadHeadHatBaseFlippable
   id: ClothingHeadHatCorpsoft
   name: corporate cap
   description: A baseball cap in corporation colors.

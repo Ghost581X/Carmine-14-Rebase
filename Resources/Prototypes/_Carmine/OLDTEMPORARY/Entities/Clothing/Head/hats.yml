@@ -1,16 +1,5 @@
 - type: entity
   parent: ClothingHeadBase
-  id: ClothingHeadHatBeaverHat
-  name: beaver hat
-  description: "\"Gentlemen?\""
-  components:
-  - type: Sprite
-    sprite: Clothing/Head/Hats/beaver_hat.rsi
-  - type: Clothing
-    sprite: Clothing/Head/Hats/beaver_hat.rsi
-
-- type: entity
-  parent: ClothingHeadBase
   id: ClothingHeadHatBeret
   name: beret
   description: An artist's favorite headwear.

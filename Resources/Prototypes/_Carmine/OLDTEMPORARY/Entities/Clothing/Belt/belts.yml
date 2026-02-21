@@ -23,13 +23,13 @@
         ejectSound: /Audio/Items/unsheath.ogg
         whitelist:
           tags:
-          - CaptainSabre
+          - Sabre
   - type: ItemMapper
     mapLayers:
       sheath-sabre:
         whitelist:
           tags:
-          - CaptainSabre
+          - Sabre
   - type: Appearance
 
 ## Belts without visualizers

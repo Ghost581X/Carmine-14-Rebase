@@ -231,4 +231,3 @@
   dummyWires: 3
   wires:
   - !type:AccessWireAction
-  - !type:AiInteractWireAction

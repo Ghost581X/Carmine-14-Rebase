@@ -34,9 +34,6 @@
   whitelist:
     components:
     - Vocal
-  blacklist:
-    tags:
-    - SiliconEmotes
   chatMessages: ["chat-emote-msg-laugh"]
   chatTriggers:
     - laugh
@@ -56,24 +53,6 @@
     - chortling
 
 - type: emote
-  id: Honk
-  name: chat-emote-name-honk
-  category: Vocal
-  icon: Interface/Emotes/honk.png
-  whitelist:
-    requireAll: true
-    components:
-    - Vocal
-    tags:
-    - SiliconEmotes
-  chatMessages: ["chat-emote-msg-honk"]
-  chatTriggers:
-    - honk
-    - honks
-    - honked
-    - honking
-
-- type: emote
   id: Sigh
   name: chat-emote-name-sigh
   category: Vocal
@@ -81,9 +60,6 @@
   whitelist:
     components:
     - Vocal
-  blacklist:
-    tags:
-    - SiliconEmotes
   chatMessages: ["chat-emote-msg-sigh"]
   chatTriggers:
     - sigh
@@ -98,9 +74,6 @@
   whitelist:
     components:
     - Vocal
-  blacklist:
-    tags:
-    - SiliconEmotes
   chatMessages: ["chat-emote-msg-whistle"]
   chatTriggers:
     - whistle
@@ -115,9 +88,6 @@
   whitelist:
     components:
     - Vocal
-  blacklist:
-    tags:
-    - SiliconEmotes
   chatMessages: ["chat-emote-msg-crying"]
   chatTriggers:
     - cry
@@ -128,24 +98,6 @@
     - sobbing
 
 - type: emote
-  id: Squish
-  name: chat-emote-name-squish
-  category: Vocal
-  available: false
-  icon: Interface/Emotes/squish.png
-  whitelist:
-    components:
-    - Vocal
-  blacklist:
-    tags:
-    - SiliconEmotes
-  chatMessages: ["chat-emote-msg-squish"]
-  chatTriggers:
-    - squish
-    - squishing
-    - squishes
-
-- type: emote
   id: Click
   name: chat-emote-name-click
   category: Vocal
@@ -154,9 +106,6 @@
   whitelist:
     components:
     - Vocal
-  blacklist:
-    tags:
-    - SiliconEmotes
   chatMessages: ["chat-emote-msg-click"]
   chatTriggers:
    - click
@@ -171,9 +120,6 @@
   whitelist:
     components:
     - Hands
-  blacklist:
-    tags:
-    - SiliconEmotes
   chatMessages: ["chat-emote-msg-clap"]
   chatTriggers:
     - claps
@@ -188,9 +134,6 @@
   whitelist:
     components:
     - Hands
-  blacklist:
-    tags:
-    - SiliconEmotes
   chatMessages: [ "chat-emote-msg-clap-single" ]
   chatTriggers:
     - clap
@@ -207,9 +150,6 @@
   whitelist:
     components:
     - Hands
-  blacklist:
-    tags:
-    - SiliconEmotes
   chatMessages: ["chat-emote-msg-snap"]
   chatTriggers:
     - snap
@@ -233,9 +173,6 @@
   whitelist:
     components:
     - Hands
-  blacklist:
-    tags:
-    - SiliconEmotes
   chatMessages: ["chat-emote-msg-salute"]
   chatTriggers:
     - salute
@@ -263,100 +200,3 @@
   chatMessages: ["chat-emote-msg-deathgasp"]
   chatTriggers:
   - deathgasp
-
-- type: emote
-  id: Buzz
-  name: chat-emote-name-buzz
-  category: Vocal
-  icon: Interface/Emotes/buzz.png
-  whitelist:
-    requireAll: true
-    components:
-    - Vocal
-    tags:
-    - SiliconEmotes
-  chatMessages: ["chat-emote-msg-buzz"]
-  chatTriggers:
-    - buzzing
-    - buzz
-    - buzzed
-    - buzzes
-
-# Machine Emotes
-- type: emote
-  id: Beep
-  name: chat-emote-name-beep
-  category: Vocal
-  icon: Interface/Emotes/beep.png
-  whitelist:
-    requireAll: true
-    components:
-    - Vocal
-    tags:
-    - SiliconEmotes
-  chatMessages: ["chat-emote-msg-beep"]
-  chatTriggers:
-    - beep
-    - beeps
-    - beeped
-    - beeping
-
-- type: emote
-  id: Chime
-  name: chat-emote-name-chime
-  category: Vocal
-  icon: Interface/Emotes/chime.png
-  whitelist:
-    requireAll: true
-    components:
-    - Vocal
-    tags:
-    - SiliconEmotes
-  chatMessages: ["chat-emote-msg-chime"]
-  chatTriggers:
-    - chime
-    - chimes
-    - chimed
-    - chiming
-
-- type: emote
-  id: Buzz-Two
-  name: chat-emote-name-buzztwo
-  category: Vocal
-  icon: Interface/Emotes/buzztwo.png
-  whitelist:
-    requireAll: true
-    components:
-    - Vocal
-    tags:
-    - SiliconEmotes
-  chatMessages: ["chat-emote-msg-buzzestwo"]
-  chatTriggers:
-    - buzztwice
-    - buzzstwice
-    - buzzestwice
-    - buzzingtwice
-    - buzzedtwice
-    - buzz twice
-    - buzzs twice
-    - buzzes twice
-    - buzzing twice
-    - buzzed twice
-
-- type: emote
-  id: Ping
-  name: chat-emote-name-ping
-  category: Vocal
-  icon: Interface/Emotes/ping.png
-  whitelist:
-    requireAll: true
-    components:
-    - Vocal
-    tags:
-    - SiliconEmotes
-  chatMessages: ["chat-emote-msg-ping"]
-  chatTriggers:
-    - ping
-    - pings
-    - pinged
-    - pinging

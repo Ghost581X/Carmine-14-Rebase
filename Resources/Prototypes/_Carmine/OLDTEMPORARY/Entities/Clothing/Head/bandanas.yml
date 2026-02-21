@@ -37,21 +37,6 @@
   name: black bandana
 
 - type: entity
-  parent: [ClothingHeadBandBase, ClothingMaskBandBlue]
-  id: ClothingHeadBandBlue
-  name: blue bandana
-
-- type: entity
-  parent: [ClothingHeadBandBase, ClothingMaskBandBotany]
-  id: ClothingHeadBandBotany
-  name: botany bandana
-
-- type: entity
-  parent: [ClothingHeadBandBase, ClothingMaskBandGold]
-  id: ClothingHeadBandGold
-  name: gold bandana
-
-- type: entity
   parent: [ClothingHeadBandBase, ClothingMaskBandGreen]
   id: ClothingHeadBandGreen
   name: green bandana
@@ -75,8 +60,3 @@
   parent: [ClothingHeadBandBase, ClothingMaskBandMerc]
   id: ClothingHeadBandMerc
   name: mercenary bandana
-
-- type: entity
-  parent: [ClothingHeadBandBase, ClothingMaskBandBrown]
-  id: ClothingHeadBandBrown
-  name: brown bandana

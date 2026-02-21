@@ -28,27 +28,6 @@
           - Sharp
 
 - type: entity
-  parent: ClothingShoesClownBase
-  id: ClothingShoesClown
-  name: clown shoes
-  description: "The prankster's standard-issue clowning shoes. Damn they're huge!"
-  components:
-  - type: Sprite
-    sprite: Clothing/Shoes/Specific/clown.rsi
-  - type: Clothing
-    sprite: Clothing/Shoes/Specific/clown.rsi
-  - type: FootstepModifier
-    footstepSoundCollection:
-      collection: FootstepClown
-      params:
-        variation: 0.17
-  # for H.O.N.K. construction
-  - type: Tag
-    tags:
-    - ClownShoes
-    - WhitelistChameleon
-
-- type: entity
   parent: ClothingShoesBaseButcherable
   id: ClothingShoesSwat
   name: swat shoes

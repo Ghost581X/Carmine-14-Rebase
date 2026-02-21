@@ -17,12 +17,6 @@
     count: 2
 
 - type: localizedDataset
-  id: BoozeOMatAds
-  values:
-    prefix: advertisement-boozeomat-
-    count: 19
-
-- type: localizedDataset
   id: BruiseOMatAds
   values:
     prefix: advertisement-bruiseomat-
@@ -65,12 +59,6 @@
     count: 12
 
 - type: localizedDataset
-  id: ClothesMateAds
-  values:
-    prefix: advertisement-clothes-
-    count: 7
-
-- type: localizedDataset
   id: HotDrinksMachineAds
   values:
     prefix: advertisement-coffee-
@@ -93,12 +81,6 @@
   values:
     prefix: advertisement-smite-
     count: 8
-
-- type: localizedDataset
-  id: CondimentVendAds
-  values:
-    prefix: advertisement-condiment-
-    count: 6
 
 - type: localizedDataset
   id: CuraDrobeAds
@@ -189,18 +171,6 @@
   values:
     prefix: advertisement-medidrobe-
     count: 4
-
-- type: localizedDataset
-  id: MegaSeedAds
-  values:
-    prefix: advertisement-megaseed-
-    count: 6
-
-- type: localizedDataset
-  id: NanoMedAds
-  values:
-    prefix: advertisement-nanomed-
-    count: 9
 
 - type: localizedDataset
   id: NutriMaxAds

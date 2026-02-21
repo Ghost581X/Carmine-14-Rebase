@@ -24,9 +24,6 @@
 - type: Tag
   id: AllowGhostShownByEvent # Used by GhostSystem to show tagged ghosts (usually at round end).
 
-- type: Tag
-  id: Apron # ConstructionGraph: scraparmor
-
 ## B ##
 
 - type: Tag
@@ -58,9 +55,6 @@
 
 - type: Tag
   id: Bloodpack # Storage whitelist: ClothingBeltMedical
-
-- type: Tag
-  id: BlueprintAutolathe # Whitelist on BlueprintReceiverComponent on the autolate for linking tagged entity's BlueprintComponent.
 
 - type: Tag
   id: BodyBag # Storage whitelist: BoxBodyBag
@@ -150,7 +144,7 @@
                # Storage whitelist: BodyBag, MachineArtifactCrusher
 
 - type: Tag
-  id: CaptainSabre # Storage whitelist: ClothingBeltSheath. ItemMapper: ClothingBeltSheath
+  id: Sabre # Storage whitelist: ClothingBeltSheath. ItemMapper: ClothingBeltSheath
 
 - type: Tag
   id: Carp # CargoBounty: BountyCarp
@@ -424,9 +418,6 @@
   id: Duck # Reproductive partner key. MetamorphRecipe: FoodBurgerDuck
 
 ## E ##
-
-- type: Tag
-  id: Ectoplasm # ConstructionGraph: PlushieGhostRevenant
 
 - type: Tag
   id: Egg # Storage whitelist: FoodContainerEgg. ItemCounter: FoodContainerEgg
@@ -891,9 +882,6 @@
   id: MothershipCoreGhostrole # spawn whitelist : SpawnPointGhostRoleMothershipCore
 
 - type: Tag
-  id: MothershipModule # Cyborg module category for evil xenoborg core
-
-- type: Tag
   id: Mouse # CargoBounty: BountyMouse
 
 - type: Tag
@@ -942,9 +930,6 @@
 
 - type: Tag
   id: Paper # A writeable piece of paper. Subset of Document tag. SpecialDigestible: OrganMothStomach, OrganReptilianStomach. Storage whitelist: MailCart
-
-- type: Tag
-  id: ParadoxCloneObjectiveBlacklist # objective entities with this tag don't get copied to paradox clones
 
 - type: Tag
   id: ParcelWrapBlacklist # Tagged entities can't be wrapped in ParcelWrap.
@@ -1171,9 +1156,6 @@
 
 - type: Tag
   id: SilentStorageUser # used in SharedStorageSystem, so the entity will do all silently
-
-- type: Tag
-  id: SiliconEmotes # Whitelisted and blacklisted in various EmotePrototypes to create a silicon emote group.
 
 - type: Tag
   id: Skewer # Food sequence key

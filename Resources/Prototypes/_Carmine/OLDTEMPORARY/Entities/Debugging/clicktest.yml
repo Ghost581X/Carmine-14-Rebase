@@ -18,6 +18,7 @@
 
 - type: entity
   id: ClickTestRotatingCornerVisible
+  categories: [ HideSpawnMenu ] #carmine: hides testshit
   name: ClickTestRotatingCornerVisible
   parent: ClickTestBase
   components:
@@ -28,6 +29,7 @@
 
 - type: entity
   id: ClickTestRotatingCornerVisibleNoRot
+  categories: [ HideSpawnMenu ] #carmine: hides testshit
   name: ClickTestRotatingCornerVisibleNoRot
   parent: ClickTestRotatingCornerVisible
   components:
@@ -36,6 +38,7 @@
 
 - type: entity
   id: ClickTestRotatingCornerInvisible
+  categories: [ HideSpawnMenu ] #carmine: hides testshit
   name: ClickTestRotatingCornerInvisible
   parent: ClickTestBase
   components:
@@ -52,6 +55,7 @@
 
 - type: entity
   id: ClickTestRotatingCornerInvisibleNoRot
+  categories: [ HideSpawnMenu ] #carmine: hides testshit
   name: ClickTestRotatingCornerInvisibleNoRot
   parent: ClickTestRotatingCornerInvisible
   components:
@@ -61,6 +65,7 @@
 
 - type: entity
   id: ClickTestFixedCornerVisible
+  categories: [ HideSpawnMenu ] #carmine: hides testshit
   name: ClickTestFixedCornerVisible
   parent: ClickTestBase
   components:
@@ -71,6 +76,7 @@
 
 - type: entity
   id: ClickTestFixedCornerInvisible
+  categories: [ HideSpawnMenu ] #carmine: hides testshit
   name: ClickTestFixedCornerInvisible
   parent: ClickTestBase
   components:

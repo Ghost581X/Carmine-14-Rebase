@@ -143,6 +143,7 @@
   parent: SyndicateBomb
   id: DebugHardBomb
   name: debug bomb
+  categories: [ HideSpawnMenu ] #carmine: hide debugshit
   suffix: DEBUG
   description: Holy shit this is gonna explode.
   components:

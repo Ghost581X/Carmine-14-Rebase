@@ -69,23 +69,8 @@
           prob: 0.2
 
 - type: entity
-  abstract: true
-  id: BoxFolderFillThreePapers # Like BoxFolderFill, but always has exactly three sheets of standard paper; use for things that should always be consistent, e.g roundstart items
-  suffix: 3 papers
-  components:
-  - type: EntityTableContainerFill
-    containers:
-      storagebase:
-        id: Paper
-        amount: 3
-
-- type: entity
   parent: [BoxFolderBaseEmpty, BoxFolderFill]
   id: BoxFolderBase
-
-- type: entity
-  parent: [BoxFolderBaseEmpty, BoxFolderFillThreePapers]
-  id: BoxFolderBaseThreePapers
 
 - type: entity
   parent: BoxFolderBaseEmpty
@@ -104,11 +89,6 @@
   suffix: Red, Filled
 
 - type: entity
-  parent: [BoxFolderRedEmpty, BoxFolderFillThreePapers]
-  id: BoxFolderRedThreePapers
-  suffix: Red, 3 papers
-
-- type: entity
   parent: BoxFolderBaseEmpty
   id: BoxFolderBlueEmpty
   suffix: Blue
@@ -123,11 +103,6 @@
   parent: [BoxFolderBlueEmpty, BoxFolderFill]
   id: BoxFolderBlue
   suffix: Blue, Filled
-
-- type: entity
-  parent: [BoxFolderBlueEmpty, BoxFolderFillThreePapers]
-  id: BoxFolderBlueThreePapers
-  suffix: Blue, 3 papers
 
 - type: entity
   parent: BoxFolderBaseEmpty
@@ -146,11 +121,6 @@
   suffix: Yellow, Filled
 
 - type: entity
-  parent: [BoxFolderYellowEmpty, BoxFolderFillThreePapers]
-  id: BoxFolderYellowThreePapers
-  suffix: Yellow, 3 papers
-
-- type: entity
   parent: BoxFolderBaseEmpty
   id: BoxFolderGreyEmpty
   suffix: Grey
@@ -165,11 +135,6 @@
   parent: [BoxFolderGreyEmpty, BoxFolderFill]
   id: BoxFolderGrey
   suffix: Grey, Filled
-
-- type: entity
-  parent: [BoxFolderGreyEmpty, BoxFolderFillThreePapers]
-  id: BoxFolderGreyThreePapers
-  suffix: Grey, 3 papers
 
 - type: entity
   parent: BoxFolderBaseEmpty
@@ -188,11 +153,6 @@
   suffix: Black, Filled
 
 - type: entity
-  parent: [BoxFolderBlackEmpty, BoxFolderFillThreePapers]
-  id: BoxFolderBlackThreePapers
-  suffix: Black, 3 papers
-
-- type: entity
   parent: BoxFolderBaseEmpty
   id: BoxFolderGreenEmpty
   suffix: Green
@@ -209,11 +169,6 @@
   suffix: Green, Filled
 
 - type: entity
-  parent: [BoxFolderGreenEmpty, BoxFolderFillThreePapers]
-  id: BoxFolderGreenThreePapers
-  suffix: Green, 3 papers
-
-- type: entity
   parent: BoxFolderBaseEmpty
   id: BoxFolderWhiteEmpty
   suffix: White
@@ -227,11 +182,6 @@
   parent: [BoxFolderWhiteEmpty, BoxFolderFill]
   id: BoxFolderWhite
   suffix: White, Filled
-
-- type: entity
-  parent: [BoxFolderWhiteEmpty, BoxFolderFillThreePapers]
-  id: BoxFolderWhiteThreePapers
-  suffix: White, 3 papers
 
 - type: entity
   parent: BoxFolderBaseEmpty
@@ -298,10 +248,6 @@
   id: BoxFolderClipboard
 
 - type: entity
-  parent: [BoxFolderClipboardEmpty, BoxFolderFillThreePapers]
-  id: BoxFolderClipboardThreePapers
-
-- type: entity
   parent: BoxFolderClipboardEmpty
   id: BoxFolderPlasticClipboardEmpty
   name: plastic clipboard
@@ -331,6 +277,3 @@
   parent: [BoxFolderPlasticClipboardEmpty, BoxFolderFill]
   id: BoxFolderPlasticClipboard
 
-- type: entity
-  parent: [BoxFolderPlasticClipboardEmpty, BoxFolderFillThreePapers]
-  id: BoxFolderPlasticClipboardThreePapers

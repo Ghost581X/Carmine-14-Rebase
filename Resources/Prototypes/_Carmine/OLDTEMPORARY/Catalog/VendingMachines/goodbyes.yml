@@ -1,10 +1,4 @@
 - type: localizedDataset
-  id: BoozeOMatGoodbyes
-  values:
-    prefix: thankyou-boozeomat-
-    count: 3
-
-- type: localizedDataset
   id: BruiseOMatGoodbyes
   values:
     prefix: thankyou-bruiseomat-

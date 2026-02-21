@@ -755,36 +755,6 @@
         id: PillCharcoal
         amount: 3
 
-- type: entity
-  name: ambuzol pill
-  parent: Pill
-  id: PillAmbuzol
-  components:
-    - type: SolutionContainerManager
-      solutions:
-        food:
-          maxVol: 20
-          reagents:
-            - ReagentId: Ambuzol
-              Quantity: 10
-
-- type: entity
-  name: ambuzol plus pill
-  parent: Pill
-  id: PillAmbuzolPlus
-  components:
-    - type: Pill
-      pillType: 2
-    - type: Sprite
-      state: pill3
-    - type: SolutionContainerManager
-      solutions:
-        food:
-          maxVol: 20
-          reagents:
-            - ReagentId: AmbuzolPlus
-              Quantity: 5
-
 # Syringes
 - type: entity
   suffix: ephedrine
@@ -890,21 +860,6 @@
         reagents:
         - ReagentId: Ipecac
           Quantity: 15
-
-- type: entity
-  suffix: ambuzol
-  parent: PrefilledSyringe
-  id: SyringeAmbuzol
-  components:
-  - type: Label
-    currentLabel: reagent-name-ambuzol
-  - type: SolutionContainerManager
-    solutions:
-      injector:
-        maxVol: 15
-        reagents:
-          - ReagentId: Ambuzol
-            Quantity: 15
 
 - type: entity
   suffix: sigynate

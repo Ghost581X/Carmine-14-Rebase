@@ -1,5 +1,6 @@
 ﻿- type: entity
   id: OptionsVisualizerTest
+  categories: [ HideSpawnMenu ] #carmine: hides testshit from spawnmenu
   suffix: DEBUG
   components:
   - type: Sprite

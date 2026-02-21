@@ -31,7 +31,6 @@
   - BackwardsAccent
   - BarkAccent
   - BleatingAccent
-  - DamagedSiliconAccent
   - FrenchAccent
   - FrontalLisp
   - GermanAccent
@@ -94,13 +93,6 @@
   copyInternalStorage: false
   copyImplants: false
 
-# for paradox clones
-- type: cloningSettings
-  id: ParadoxCloningSettings
-  parent: [BaseClone, Antag]
-  components:
-  - Forensics # This is so hugging data is copied to the clone, so you can't hug metagame them
-
 # changeling identity copying
 - type: cloningSettings
   id: ChangelingCloningSettings
@@ -129,15 +121,3 @@
   copyEquipment: null
   copyInternalStorage: false
   copyImplants: false
-
-# spawner
-- type: entity
-  id: RandomCloneSpawner
-  name: Random Clone
-  suffix: Non-Antag
-  components:
-  - type: Sprite
-    sprite: Mobs/Aliens/paradox_clone.rsi
-    state: preview
-  - type: RandomCloneSpawner
-    settings: BaseClone

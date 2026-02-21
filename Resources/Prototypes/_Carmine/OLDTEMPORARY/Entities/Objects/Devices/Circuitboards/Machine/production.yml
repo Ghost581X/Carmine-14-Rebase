@@ -1,69 +1,4 @@
 ﻿- type: entity
-  id: AutolatheMachineCircuitboard
-  parent: BaseMachineCircuitboard
-  name: autolathe machine board
-  description: A machine printed circuit board for an autolathe.
-  components:
-    - type: MachineBoard
-      prototype: Autolathe
-      stackRequirements:
-        Manipulator: 4
-        Glass: 1
-
-- type: entity
-  parent: BaseMachineCircuitboard
-  id: AutolatheHyperConvectionMachineCircuitboard
-  name: hyper convection autolathe machine board
-  description: A machine printed circuit board for a hyper convection autolathe.
-  components:
-  - type: MachineBoard
-    prototype: AutolatheHyperConvection
-    stackRequirements:
-      Manipulator: 3
-      Glass: 1
-    tagRequirements:
-      Igniter:
-        amount: 1
-        defaultPrototype: Igniter
-
-- type: entity
-  id: ProtolatheMachineCircuitboard
-  parent: BaseMachineCircuitboard
-  name: protolathe machine board
-  description: A machine printed circuit board for a protolathe.
-  components:
-  - type: Sprite
-    state: science
-  - type: MachineBoard
-    prototype: Protolathe
-    stackRequirements:
-      Manipulator: 4
-    tagRequirements:
-      GlassBeaker:
-        amount: 2
-        defaultPrototype: Beaker
-
-- type: entity
-  parent: BaseMachineCircuitboard
-  id: ProtolatheHyperConvectionMachineCircuitboard
-  name: hyper convection protolathe machine board
-  description: A machine printed circuit board for a hyper convection protolathe.
-  components:
-  - type: Sprite
-    state: science
-  - type: MachineBoard
-    prototype: ProtolatheHyperConvection
-    stackRequirements:
-      Manipulator: 4
-    tagRequirements:
-      GlassBeaker:
-        amount: 2
-        defaultPrototype: Beaker
-      Igniter:
-        amount: 1
-        defaultPrototype: Igniter
-
-- type: entity
   id: BiofabricatorMachineCircuitboard
   parent: BaseMachineCircuitboard
   name: biocube fabricator machine board
@@ -95,19 +30,6 @@
           defaultPrototype: Beaker
 
 - type: entity
-  id: AmmoTechFabCircuitboard
-  parent: BaseMachineCircuitboard
-  name: ammo techfab circuit board
-  description: A machine printed circuit board for an ammo techfab.
-  components:
-    - type: Sprite
-      state: security
-    - type: MachineBoard
-      prototype: AmmoTechFab
-      stackRequirements:
-        Manipulator: 2
-
-- type: entity
   id: MedicalTechFabCircuitboard
   parent: BaseMachineCircuitboard
   name: medical techfab machine board
@@ -123,42 +45,6 @@
         GlassBeaker:
           amount: 2
           defaultPrototype: Beaker
-
-- type: entity
-  id: CircuitImprinterMachineCircuitboard
-  parent: BaseMachineCircuitboard
-  name: circuit imprinter machine board
-  components:
-  - type: Sprite
-    state: science
-  - type: MachineBoard
-    prototype: CircuitImprinter
-    stackRequirements:
-      Manipulator: 2
-    tagRequirements:
-      GlassBeaker:
-        amount: 2
-        defaultPrototype: Beaker
-
-- type: entity
-  parent: BaseMachineCircuitboard
-  id: CircuitImprinterHyperConvectionMachineCircuitboard
-  name: hyper convection circuit imprinter machine board
-  description: A machine printed circuit board for a hyper convection circuit imprinter.
-  components:
-  - type: Sprite
-    state: science
-  - type: MachineBoard
-    prototype: CircuitImprinterHyperConvection
-    stackRequirements:
-      Manipulator: 2
-    tagRequirements:
-      GlassBeaker:
-        amount: 2
-        defaultPrototype: Beaker
-      Igniter:
-        amount: 1
-        defaultPrototype: Igniter
 
 - type: entity
   id: ExosuitFabricatorMachineCircuitboard
@@ -386,44 +272,6 @@
         Cable: 1
 
 - type: entity
-  id: ChemMasterMachineCircuitboard
-  parent: BaseMachineCircuitboard
-  name: ChemMaster 4000 machine board
-  description: A machine printed circuit board for a ChemMaster 4000.
-  components:
-    - type: Sprite
-      state: medical
-    - type: MachineBoard
-      prototype: ChemMaster
-      stackRequirements:
-        Manipulator: 1
-        Glass: 1
-        Cable: 1
-      tagRequirements:
-        GlassBeaker:
-          amount: 2
-          defaultPrototype: Beaker
-
-- type: entity
-  id: ChemDispenserMachineCircuitboard
-  parent: BaseMachineCircuitboard
-  name: chem dispenser machine board
-  description: A machine printed circuit board for a chem dispenser.
-  components:
-    - type: Sprite
-      state: medical
-    - type: MachineBoard
-      prototype: ChemDispenserEmpty
-      stackRequirements:
-        Manipulator: 1
-        Glass: 1
-        Steel: 3
-      tagRequirements:
-        GlassBeaker:
-          amount: 2
-          defaultPrototype: Beaker
-
-- type: entity
   id: BiomassReclaimerMachineCircuitboard
   parent: BaseMachineCircuitboard
   name: biomass reclaimer machine board
@@ -495,25 +343,6 @@
         PowerCell:
           amount: 4
           defaultPrototype: PowerCellSmall
-
-- type: entity
-  id: SMESAdvancedMachineCircuitboard
-  parent: BaseMachineCircuitboard
-  name: advanced SMES machine board
-  description: A machine printed circuit board for an Advanced SMES.
-  components:
-  - type: Sprite
-    sprite: Objects/Misc/module.rsi
-    state: power_mod
-  - type: MachineBoard
-    prototype: SMESAdvancedEmpty
-    stackRequirements:
-      Manipulator: 2
-      CableHV: 20
-    componentRequirements:
-      PowerCell:
-        amount: 4
-        defaultPrototype: PowerCellMedium
 
 - type: entity
   id: CellRechargerCircuitboard
@@ -719,21 +548,6 @@
       Glass: 1
 
 - type: entity
-  parent: BaseMachineCircuitboard
-  id: ElectricGrillMachineCircuitboard
-  name: electric grill machine board
-  description: A machine printed circuit board for an electric grill.
-  components:
-  - type: Sprite
-    state: service
-  - type: MachineBoard
-    prototype: KitchenElectricGrill
-    stackRequirements:
-      Manipulator: 4
-      Glass: 2
-      Cable: 5
-
-- type: entity
   id: StasisBedMachineCircuitboard
   parent: BaseMachineCircuitboard
   name: stasis bed machine board
@@ -842,34 +656,6 @@
       - MicrowaveMachineBoard
 
 - type: entity
-  id: FatExtractorMachineCircuitboard
-  parent: BaseMachineCircuitboard
-  name: lipid extractor machine board
-  components:
-    - type: Sprite
-      state: service
-    - type: MachineBoard
-      prototype: FatExtractor
-      stackRequirements:
-        Manipulator: 1
-      componentRequirements:
-        Utensil:
-          amount: 1
-          defaultPrototype: ForkPlastic
-          examineName: construction-insert-info-examine-name-utensil
-
-- type: entity
-  parent: BaseMachineCircuitboard
-  id: FlatpackerMachineCircuitboard
-  name: Flatpacker 1001 machine board
-  components:
-  - type: MachineBoard
-    prototype: MachineFlatpacker
-    stackRequirements:
-      Manipulator: 3
-      Steel: 1
-
-- type: entity
   id: SurveillanceCameraRouterCircuitboard
   parent: BaseMachineCircuitboard
   name: surveillance camera router board
@@ -938,51 +724,6 @@
       Manipulator: 2
       Steel: 10
       Plasma: 5
-
-- type: entity
-  id: BoozeDispenserMachineCircuitboard
-  parent: BaseMachineCircuitboard
-  name: booze dispenser machine board
-  description: A machine printed circuit board for a booze dispenser.
-  components:
-    - type: Sprite
-      state: service
-    - type: MachineBoard
-      prototype: BoozeDispenserEmpty
-      stackRequirements:
-        Steel: 5
-      tagRequirements:
-          GlassBeaker:
-            amount: 1
-            defaultPrototype: Beaker
-
-- type: entity
-  id: CargoTelepadMachineCircuitboard
-  parent: BaseMachineCircuitboard
-  name: cargo telepad machine board
-  description: A machine printed circuit board for a cargo telepad.
-  components:
-    - type: Sprite
-      state: supply
-    - type: MachineBoard
-      prototype: CargoTelepad
-      stackRequirements:
-        Manipulator: 2
-        Steel: 5
-
-- type: entity
-  id: MailTeleporterMachineCircuitboard
-  parent: BaseMachineCircuitboard
-  name: mail teleporter machine board
-  description: A machine printed circuit board for a mail teleporter.
-  components:
-  - type: Sprite
-    state: supply
-  - type: MachineBoard
-    prototype: CargoMailTeleporter
-    stackRequirements:
-      Manipulator: 2
-      Steel: 5
 
 - type: entity
   id: SodaDispenserMachineCircuitboard
@@ -1088,18 +829,6 @@
       Steel: 2
       Glass: 5
       Cable: 2
-
-- type: entity
-  parent: BaseMachineCircuitboard
-  id: CutterMachineCircuitboard
-  name: cutter machine board
-  components:
-  - type: MachineBoard
-    prototype: CutterMachine
-    stackRequirements:
-      Steel: 2
-      Manipulator: 2
-      Cable: 1
 
 - type: entity
   parent: BaseMachineCircuitboard

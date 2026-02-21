@@ -466,9 +466,6 @@
     guides:
     - Xenoarchaeology
   # gameplay interactions
-  - type: XenoArtifact
-    effectsTable: !type:NestedSelector
-      tableId: XenoArtifactEffectsDefaultTable
   - type: Damageable
   - type: Actions
   - type: Physics
@@ -842,46 +839,6 @@
     prefix: random-sentience-event-strength-
     count: 8
 
-#FTLDiskCommand.cs and SalvageSystem.cs
-- type: entity
-  name: coordinates disk
-  parent: BaseItem
-  id: CoordinatesDisk
-  description: A disk containing the coordinates to a location in space. Necessary for any FTL-traversing vessel to reach their destination. Fits inside shuttle consoles.
-  components:
-  - type: Sprite
-    sprite: Objects/Misc/cd.rsi
-    state: icon
-  - type: StaticPrice
-    price: 100
-  - type: Tag
-    tags:
-    - CoordinatesDisk
-  - type: ShuttleDestinationCoordinates
-
-#FTLDiskCommand.cs
-- type: entity
-  name: diskcase
-  parent: BaseStorageItem
-  id: DiskCase
-  description: Case for storing a coordinates disk.
-  components:
-  - type: Sprite
-    sprite: Objects/Misc/diskcases.rsi
-    state: icon_base
-  - type: Storage
-    grid:
-    - 0,0,0,1
-    maxItemSize: Normal
-    whitelist:
-      tags:
-        - Document
-        - CoordinatesDisk
-    storageOpenSound: /Audio/Machines/screwdriveropen.ogg
-    storageCloseSound: /Audio/Machines/screwdriverclose.ogg
-    storageInsertSound: /Audio/Items/crowbar.ogg
-    storageRemoveSound: /Audio/Items/crowbar.ogg
-
 #AnomalySystem.cs
 - type: weightedRandom
   id: AnomalyBehaviorList
@@ -917,47 +874,6 @@
   pulseFrequencyModifier: 2
   earnPointModifier: 0.5
   description: anomaly-behavior-slow
-
-#GatewayGeneratorSystem.cs
-- type: localizedDataset
-  id: NamesBorer
-  values:
-    prefix: names-borer-dataset-
-    count: 69
-
-#GatewayGeneratorSystem.cs
-- type: biomeTemplate
-  id: Continental
-  # layers:
-  #   - !type:BiomeMetaLayer
-  #     template: Lava
-    # - !type:BiomeMetaLayer
-    #   template: Caves
-    #   threshold: -0.5
-    #   noise:
-    #     frequency: 0.001
-    #     noiseType: OpenSimplex2
-    #     fractalType: FBm
-    #     octaves: 2
-    #     lacunarity: 2
-    # - !type:BiomeMetaLayer
-    #   template: Grasslands
-    #   threshold: 0
-    #   noise:
-    #     frequency: 0.001
-    #     noiseType: OpenSimplex2
-    #     fractalType: FBm
-    #     octaves: 2
-    #     lacunarity: 2
-    # - !type:BiomeMetaLayer
-    #   template: Snow
-    #   threshold: 0.5
-    #   noise:
-    #     frequency: 0.001
-    #     noiseType: OpenSimplex2
-    #     fractalType: FBm
-    #     octaves: 2
-    #     lacunarity: 2
 
 - type: dungeonConfig
   id: Experiment

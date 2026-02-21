@@ -2,6 +2,7 @@
   parent: MobHuman
   id: MobDebugCounter
   name: debug counter
+  categories: [ HideSpawnMenu ] #carmine: hide debugshit
   description: He can count
   suffix: AI, DEBUG
   components:
@@ -20,6 +21,7 @@
   parent: MobHuman
   id: MobDebugRandomCounter
   name: debug random counter
+  categories: [ HideSpawnMenu ] #carmine: hide debugshit
   description: He can randomize
   suffix: AI, DEBUG
   components:
@@ -38,6 +40,7 @@
   parent: MobHuman
   id: MobDebugRandomLess
   name: debug random less
+  categories: [ HideSpawnMenu ] #carmine: hide debugshit
   description: He can lessing
   suffix: AI, DEBUG
   components:

@@ -84,139 +84,6 @@
       SpaceGlue: 5 # no change from normal lathe, overheat!!!
 
 - type: entity
-  id: Autolathe
-  parent: BaseLatheLube
-  name: autolathe
-  description: It produces basic items using metal and glass. Has the ability to process blueprints to print new recipes.
-  components:
-  - type: Sprite
-    sprite: Structures/Machines/autolathe.rsi
-    snapCardinals: true
-    layers:
-    - state: icon
-      map: ["enum.LatheVisualLayers.IsRunning"]
-    - state: unlit
-      shader: unshaded
-      map: ["enum.PowerDeviceVisualLayers.Powered"]
-    - state: inserting
-      map: ["enum.MaterialStorageVisualLayers.Inserting"]
-    - state: panel
-      map: ["enum.WiresVisualLayers.MaintenancePanel"]
-  - type: Machine
-    board: AutolatheMachineCircuitboard
-  - type: MaterialStorage
-    whitelist: &StandardMaterialWhitelist
-      tags:
-        - Sheet
-        - RawMaterial
-        - Ingot
-  - type: OreSiloClient
-  - type: Lathe
-    idleState: icon
-    runningState: building
-    unlitIdleState: unlit
-    unlitRunningState: unlit-building
-  - type: ContainerContainer
-    containers:
-      machine_board: !type:Container
-      machine_parts: !type:Container
-      blueprint: !type:Container
-  - type: EmptyOnMachineDeconstruct
-    containers:
-    - blueprint
-
-- type: entity
-  id: AutolatheHyperConvection
-  parent: [Autolathe, BaseHyperlathe]
-  name: hyper convection autolathe
-  description: A highly-experimental autolathe that harnesses the power of extreme heat to slowly create objects more cost-effectively.
-  components:
-  - type: Sprite
-    sprite: Structures/Machines/autolathe_hypercon.rsi
-  - type: Machine
-    board: AutolatheHyperConvectionMachineCircuitboard
-
-- type: entity
-  id: Protolathe
-  parent: BaseLatheLube
-  name: protolathe
-  description: Converts raw materials into advanced items.
-  components:
-  - type: Sprite
-    sprite: Structures/Machines/protolathe.rsi
-    snapCardinals: true
-    layers:
-    - state: icon
-      map: ["enum.LatheVisualLayers.IsRunning"]
-    - state: unlit
-      shader: unshaded
-      map: ["enum.PowerDeviceVisualLayers.Powered"]
-    - state: inserting
-      map: ["enum.MaterialStorageVisualLayers.Inserting"]
-    - state: panel
-      map: ["enum.WiresVisualLayers.MaintenancePanel"]
-  - type: Machine
-    board: ProtolatheMachineCircuitboard
-  - type: MaterialStorage
-    whitelist: *StandardMaterialWhitelist
-  - type: OreSiloClient
-  - type: Lathe
-    idleState: icon
-    runningState: building
-    unlitIdleState: unlit
-    unlitRunningState: unlit-building
-
-- type: entity
-  id: ProtolatheHyperConvection
-  parent: [Protolathe, BaseHyperlathe]
-  name: hyper convection protolathe
-  description: A highly-experimental protolathe that harnesses the power of extreme heat to slowly create objects more cost-effectively.
-  components:
-  - type: Sprite
-    sprite: Structures/Machines/protolathe_hypercon.rsi
-  - type: Machine
-    board: ProtolatheHyperConvectionMachineCircuitboard
-
-- type: entity
-  id: CircuitImprinter
-  parent: BaseLatheLube
-  name: circuit imprinter
-  description: Prints circuit boards for machines.
-  components:
-  - type: Sprite
-    sprite: Structures/Machines/circuit_imprinter.rsi
-    snapCardinals: true
-    layers:
-    - state: icon
-      map: ["enum.LatheVisualLayers.IsRunning"]
-    - state: unlit
-      shader: unshaded
-      map: ["enum.PowerDeviceVisualLayers.Powered"]
-    - state: panel
-      map: ["enum.WiresVisualLayers.MaintenancePanel"]
-  - type: Machine
-    board: CircuitImprinterMachineCircuitboard
-  - type: Lathe
-    producingSound: /Audio/Machines/circuitprinter.ogg
-    idleState: icon
-    runningState: building
-  - type: MaterialStorage
-    whitelist: *StandardMaterialWhitelist
-  - type: OreSiloClient
-  - type: RequireProjectileTarget
-
-- type: entity
-  id: CircuitImprinterHyperConvection
-  parent: [CircuitImprinter, BaseHyperlathe]
-  name: hyper convection circuit imprinter
-  description: A highly-experimental circuit imprinter that harnesses the power of extreme heat to slowly create objects more cost-effectively.
-  components:
-  - type: Sprite
-    sprite: Structures/Machines/circuit_imprinter_hypercon.rsi
-  - type: Machine
-    board: CircuitImprinterHyperConvectionMachineCircuitboard
-
-- type: entity
   id: ExosuitFabricator
   parent: BaseLatheLube
   name: exosuit fabricator
@@ -305,34 +172,6 @@
     channels: [Common]
 
 - type: entity
-  id: AmmoTechFab
-  parent: BaseLatheLube
-  name: ammo techfab
-  description: Prints the bare minimum of bullets that any budget military or armory could need. Nothing fancy.
-  components:
-    - type: Sprite
-      sprite: Structures/Machines/techfab.rsi
-      layers:
-        - state: icon
-          map: ["enum.LatheVisualLayers.IsRunning"]
-        - state: ammo
-        - state: unlit
-          shader: unshaded
-          map: ["enum.PowerDeviceVisualLayers.Powered"]
-        - state: inserting
-          map: ["enum.MaterialStorageVisualLayers.Inserting"]
-        - state: panel
-          map: ["enum.WiresVisualLayers.MaintenancePanel"]
-    - type: Machine
-      board: AmmoTechFabCircuitboard
-    - type: Lathe
-      idleState: icon
-      runningState: icon
-    - type: MaterialStorage
-      whitelist: *StandardMaterialWhitelist
-    - type: OreSiloClient
-
-- type: entity
   id: MedicalTechFab
   parent: BaseLatheLube
   name: medical techfab
@@ -381,7 +220,11 @@
     idleState: icon
     runningState: building
   - type: MaterialStorage
-    whitelist: *StandardMaterialWhitelist
+    whitelist: &StandardMaterialWhitelist
+      tags:
+      - Sheet
+      - RawMaterial
+      - Ingot
   - type: OreSiloClient
 
 - type: entity
@@ -496,32 +339,3 @@
   - type: Lathe
     idleState: base_machine
     runningState: base_machine_processing
-
-- type: entity
-  parent: BaseLathe
-  id: CutterMachine
-  name: cutter machine
-  description: This is a cutter. It cuts. Add variety to your station floor with eye-pleasing patterns! Don't stick your fingers in.
-  components:
-  - type: Transform
-    noRot: false
-  - type: Sprite
-    sprite: Structures/Machines/cuttermachine.rsi
-    snapCardinals: true
-    layers:
-    - state: icon
-      map: ["enum.LatheVisualLayers.IsRunning"]
-    - state: unlit
-      shader: unshaded
-      map: ["enum.PowerDeviceVisualLayers.Powered"]
-    - state: panel
-      map: ["enum.WiresVisualLayers.MaintenancePanel"]
-  - type: Machine
-    board: CutterMachineCircuitboard
-  - type: Lathe
-    producingSound: /Audio/Machines/cutter.ogg
-    idleState: icon
-    runningState: building
-  - type: MaterialStorage
-    whitelist: *StandardMaterialWhitelist
-  - type: OreSiloClient

@@ -41,7 +41,6 @@
   - type: Access
     groups:
     - AllAccess
-    - Silicon
   - type: UserInterface
     interfaces:
       enum.SolarControlConsoleUiKey.Key:

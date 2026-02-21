@@ -11,6 +11,7 @@
   id: RedTabletopPiece
   name: red piece
   parent: BaseGenericTabletopPiece
+  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     state: red
@@ -19,6 +20,7 @@
   id: GreenTabletopPiece
   name: green piece
   parent: BaseGenericTabletopPiece
+  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     state: green
@@ -27,6 +29,7 @@
   id: YellowTabletopPiece
   name: yellow piece
   parent: BaseGenericTabletopPiece
+  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     state: yellow
@@ -35,6 +38,7 @@
   id: BlueTabletopPiece
   name: blue piece
   parent: BaseGenericTabletopPiece
+  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     state: blue
@@ -43,6 +47,7 @@
   id: WhiteTabletopPiece
   name: white piece
   parent: BaseGenericTabletopPiece
+  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     state: white
@@ -51,6 +56,7 @@
   id: BlackTabletopPiece
   name: black piece
   parent: BaseGenericTabletopPiece
+  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     state: black

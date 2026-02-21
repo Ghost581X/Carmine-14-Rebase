@@ -24,9 +24,9 @@
 
 #Longswords
 - type: entity
-  name: captain's sabre
+  name: sabre
   parent: BaseSword
-  id: CaptainSabre
+  id: Sabre
   description: A ceremonial weapon belonging to the captain of the station.
   components:
   - type: Sprite
@@ -49,5 +49,5 @@
     - 0,0,0,3
   - type: Tag
     tags:
-    - CaptainSabre
+    - Sabre
   - type: DisarmMalus

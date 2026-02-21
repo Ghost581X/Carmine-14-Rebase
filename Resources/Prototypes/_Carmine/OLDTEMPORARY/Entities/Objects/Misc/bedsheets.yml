@@ -97,17 +97,6 @@
     sprite: Clothing/Neck/Bedsheets/mime.rsi
 
 - type: entity
-  id: BedsheetNT
-  parent: BedsheetBase
-  name: NT bedsheet
-  description: It has the Nanotrasen logo on it and an aura of duty.
-  components:
-  - type: Sprite
-    state: sheetNT
-  - type: Clothing
-    sprite: Clothing/Neck/Bedsheets/NT.rsi
-
-- type: entity
   id: BedsheetOrange
   parent: BedsheetBase
   name: orange bedsheet

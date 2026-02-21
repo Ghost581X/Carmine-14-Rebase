@@ -35,6 +35,7 @@
   id: *pieceWhite
   name: white checker piece
   parent: BaseTabletopPiece
+  categories: [ HideSpawnMenu ]
   components:
     - type: Sprite
       sprite: Objects/Fun/Tabletop/checker_pieces.rsi
@@ -44,6 +45,7 @@
   id: *crownWhite
   name: white checker crown
   parent: BaseTabletopPiece
+  categories: [ HideSpawnMenu ]
   components:
     - type: Sprite
       sprite: Objects/Fun/Tabletop/checker_pieces.rsi
@@ -53,6 +55,7 @@
   id: *pieceBlack
   name: black checker piece
   parent: BaseTabletopPiece
+  categories: [ HideSpawnMenu ]
   components:
     - type: Sprite
       sprite: Objects/Fun/Tabletop/checker_pieces.rsi
@@ -62,6 +65,7 @@
   id: *crownBlack
   name: black checker crown
   parent: BaseTabletopPiece
+  categories: [ HideSpawnMenu ]
   components:
     - type: Sprite
       sprite: Objects/Fun/Tabletop/checker_pieces.rsi
