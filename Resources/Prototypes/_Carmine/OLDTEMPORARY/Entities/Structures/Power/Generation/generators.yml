@@ -186,48 +186,6 @@
     containers:
       board: !type:Container
 
-- type: entity
-  parent: BaseGeneratorWallmount
-  id: GeneratorWallmountAPU
-  name: shuttle APU
-  description: An auxiliary power unit for a shuttle - 6kW.
-  suffix: APU, 6kW
-  components:
-  - type: PowerSupplier
-    supplyRate: 6000
-  - type: Construction
-    graph: WallmountGenerator
-    node: APU
-  - type: StaticPrice
-    price: 38
-  - type: ContainerFill
-    containers:
-      board: [ WallmountGeneratorAPUElectronics ]
-  - type: ContainerContainer
-    containers:
-      board: !type:Container
-  - type: GuideHelp
-    guides:
-    - ShuttleCraft
-
-- type: entity
-  parent: BaseGeneratorWallmount
-  id: GeneratorWallmountAPULV
-  name: shuttle LV APU
-  description: An advanced auxiliary power unit for a shuttle.
-  components:
-  - type: NodeContainer
-    examinable: true
-    nodes:
-      output:
-        !type:CableDeviceNode
-        nodeGroupID: Apc
-  - type: PowerSupplier
-    voltage: Apc
-    supplyRate: 20000
-    supplyRampRate: 500
-    supplyRampTolerance: 500
-
 # RTG - no fuel requirement
 
 - type: entity

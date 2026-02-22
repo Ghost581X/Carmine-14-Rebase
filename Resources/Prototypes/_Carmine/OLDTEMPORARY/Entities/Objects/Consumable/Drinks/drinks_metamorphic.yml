@@ -23,23 +23,6 @@
       state: icon
   - type: TransformableContainer
 
-- type: entity
-  parent: DrinkGlass
-  id: DrinkJar
-  name: jar
-  description: The hipster's cup.
-  components:
-  - type: Sprite
-    sprite: Objects/Consumable/Drinks/jar.rsi
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 50
-  - type: SolutionContainerVisuals
-    metamorphicDefaultSprite:
-      sprite: Objects/Consumable/Drinks/jar.rsi
-      state: icon
-
 ## Filled
 # TODO entities without IconComponent need a metamorphic sprite on the reagent
 # TODO IconComponent doesn't seem to work in spawn panel

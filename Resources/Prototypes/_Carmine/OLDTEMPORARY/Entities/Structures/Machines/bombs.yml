@@ -48,48 +48,6 @@
     - type: WiresPanel
 
 - type: entity
-  parent: BaseHardBomb
-  id: TrainingBomb
-  name: training bomb
-  description: A bomb for dummies, manual not included.
-  components:
-    - type: Wires
-      layoutId: Defusable
-      alwaysRandomize: true
-    - type: Sprite
-      sprite: Structures/Machines/bomb.rsi
-      layers:
-        - state: training-bomb
-        - state: training-bomb-active
-          visible: false
-          map: [ "primed" ]
-        - state: training-bomb-wires
-          visible: false
-          map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
-    - type: GenericVisualizer
-      visuals:
-        enum.DefusableVisuals.Active:
-          primed:
-            True: { visible: true }
-            False: { visible: false }
-        enum.WiresVisualLayers.MaintenancePanel:
-          enum.WiresVisualLayers.MaintenancePanel:
-            True: { visible: true }
-            False: { visible: false }
-    - type: PointLight
-      color: "#0063C7"
-      radius: 1.1
-      softness: 1
-    - type: Explosive
-      explosionType: Default
-      totalIntensity: 5.0
-      intensitySlope: 5
-      maxIntensity: 4
-      canCreateVacuum: false
-    - type: Defusable
-      disposable: false
-
-- type: entity
   parent: [BaseHardBomb]
   id: SyndicateBomb
   name: syndicate bomb

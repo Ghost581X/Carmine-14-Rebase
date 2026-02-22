@@ -137,7 +137,6 @@
     preinstalled:
       - CrewManifestCartridge
       - NotekeeperCartridge
-      - NewsReaderCartridge
       - LogProbeCartridge
       - MedTekCartridge
       - AstroNavCartridge

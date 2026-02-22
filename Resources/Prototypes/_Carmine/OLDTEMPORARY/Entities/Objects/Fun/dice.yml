@@ -16,20 +16,6 @@
 
 - type: entity
   parent: BaseDice
-  id: PercentileDie
-  name: percentile die
-  description: A die with ten sides. Works better for d100 rolls than a golf ball.
-  components:
-  - type: Dice
-    sides: 10
-    multiplier: 10
-    offset: 1 # first side is a 0
-    currentValue: 0
-  - type: Sprite
-    state: percentile_0
-
-- type: entity
-  parent: BaseDice
   id: d20Dice
   name: d20
   description: A die with twenty sides. The preferred die to throw at the GM.

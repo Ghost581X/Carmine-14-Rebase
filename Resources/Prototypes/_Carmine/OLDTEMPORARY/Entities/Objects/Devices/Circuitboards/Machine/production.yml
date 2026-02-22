@@ -13,40 +13,6 @@
       Glass: 1
 
 - type: entity
-  id: SecurityTechFabCircuitboard
-  parent: BaseMachineCircuitboard
-  name: security techfab machine board
-  description: A machine printed circuit board for a security techfab.
-  components:
-    - type: Sprite
-      state: security
-    - type: MachineBoard
-      prototype: SecurityTechFab
-      stackRequirements:
-        Manipulator: 4
-      tagRequirements:
-        GlassBeaker:
-          amount: 2
-          defaultPrototype: Beaker
-
-- type: entity
-  id: MedicalTechFabCircuitboard
-  parent: BaseMachineCircuitboard
-  name: medical techfab machine board
-  description: A machine printed circuit board for a medical techfab.
-  components:
-    - type: Sprite
-      state: medical
-    - type: MachineBoard
-      prototype: MedicalTechFab
-      stackRequirements:
-        Manipulator: 4
-      tagRequirements:
-        GlassBeaker:
-          amount: 2
-          defaultPrototype: Beaker
-
-- type: entity
   id: ExosuitFabricatorMachineCircuitboard
   parent: BaseMachineCircuitboard
   name: exosuit fabricator machine board
@@ -616,19 +582,6 @@
         Glass: 1
 
 - type: entity
-  parent: BaseMachineCircuitboard
-  id: OreProcessorIndustrialMachineCircuitboard
-  name: industrial ore processor machine board
-  components:
-  - type: Sprite
-    state: supply
-  - type: MachineBoard
-    prototype: OreProcessorIndustrial
-    stackRequirements:
-      Manipulator: 4
-      Glass: 1
-
-- type: entity
   id: SheetifierMachineCircuitboard
   parent: BaseMachineCircuitboard
   name: sheet-meister 2000 machine board
@@ -724,23 +677,6 @@
       Manipulator: 2
       Steel: 10
       Plasma: 5
-
-- type: entity
-  id: SodaDispenserMachineCircuitboard
-  parent: BaseMachineCircuitboard
-  name: soda dispenser machine board
-  description: A machine printed circuit board for a soda dispenser.
-  components:
-    - type: Sprite
-      state: service
-    - type: MachineBoard
-      prototype: SodaDispenserEmpty
-      stackRequirements:
-        Steel: 5
-      tagRequirements:
-          GlassBeaker:
-            amount: 1
-            defaultPrototype: Beaker
 
 - type: entity
   id: TelecomServerCircuitboard

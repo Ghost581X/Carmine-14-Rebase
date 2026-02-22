@@ -58,22 +58,6 @@
 
 - type: entity
   parent: ClothingHeadHeadHatBaseFlippable
-  id: ClothingHeadHatGreensoft
-  name: green cap
-  description: A green baseball cap.
-  components:
-  - type: Sprite
-    sprite: Clothing/Head/Soft/greensoft.rsi
-  - type: Clothing
-    sprite: Clothing/Head/Soft/greensoft.rsi
-
-- type: entity
-  parent: [ClothingHeadHeadHatBaseFlipped, ClothingHeadHatGreensoft]
-  id: ClothingHeadHatGreensoftFlipped
-  name: green cap
-
-- type: entity
-  parent: ClothingHeadHeadHatBaseFlippable
   id: ClothingHeadHatBlacksoft
   name: black cap
   description: A black baseball cap.
@@ -135,35 +119,6 @@
   parent: [ClothingHeadHeadHatBaseFlipped, ClothingHeadHatOrangesoft]
   id: ClothingHeadHatOrangesoftFlipped
   name: orange cap
-
-- type: entity
-  parent: ClothingHeadHeadHatBaseFlippable
-  id: ClothingHeadHatPurplesoft
-  name: purple cap
-  description: A purple baseball cap.
-  components:
-  - type: Sprite
-    sprite: Clothing/Head/Soft/purplesoft.rsi
-  - type: Clothing
-    sprite: Clothing/Head/Soft/purplesoft.rsi
-  - type: Tag
-    tags:
-    - ClothMade
-    - Recyclable
-    - HamsterWearable
-    - WhitelistChameleon
-
-- type: entity
-  parent: [ClothingHeadHeadHatBaseFlipped, ClothingHeadHatPurplesoft]
-  id: ClothingHeadHatPurplesoftFlipped
-  name: purple cap
-  components:
-  - type: Tag
-    tags:
-    - ClothMade
-    - Recyclable
-    - HamsterWearable
-    - WhitelistChameleon
 
 - type: entity
   parent: ClothingHeadHeadHatBaseFlippable

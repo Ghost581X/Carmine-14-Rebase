@@ -39,16 +39,6 @@
   placementMode: SnapgridCenter
   canBuildInImpassable: true
 
-- type: construction
-  id: WallmountGeneratorAPU
-  graph: WallmountGenerator
-  startNode: start
-  targetNode: APU
-  category: construction-category-utilities
-  objectType: Structure
-  placementMode: SnapgridCenter
-  canBuildInImpassable: true
-
 # DISPOSALS
 - type: construction
   id: DisposalUnit

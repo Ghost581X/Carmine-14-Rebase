@@ -5,7 +5,6 @@
     - BaseStationJobsSpawning
     - BaseStationRecords
     - BaseStationAlertLevels
-    - BaseStationNews
     - BaseStationDeliveries
     - BaseStationAllEventsEligible
   categories: [ HideSpawnMenu ]

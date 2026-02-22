@@ -37,11 +37,6 @@
   name: black bandana
 
 - type: entity
-  parent: [ClothingHeadBandBase, ClothingMaskBandGreen]
-  id: ClothingHeadBandGreen
-  name: green bandana
-
-- type: entity
   parent: [ClothingHeadBandBase, ClothingMaskBandGrey]
   id: ClothingHeadBandGrey
   name: grey bandana

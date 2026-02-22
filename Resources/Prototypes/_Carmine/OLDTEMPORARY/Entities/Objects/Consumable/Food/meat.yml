@@ -47,9 +47,6 @@
     thickness: 0.02
     area: 0.02 # arbitrary number that sounds right for a slab of meat
   - type: Material
-  - type: PhysicalComposition
-    materialComposition:
-      Meaterial: 300
 
 - type: entity
   parent: FoodMeatBase

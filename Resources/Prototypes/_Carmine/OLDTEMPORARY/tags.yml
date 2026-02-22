@@ -1350,9 +1350,6 @@
            # .cs: SharedNavMapSystem, WallmountCondition, TileWallsCommand, DungeonJob
 
 - type: Tag
-  id: WallmountGeneratorAPUElectronics # ConstructionGraph: WallmountGenerator
-
-- type: Tag
   id: WallmountGeneratorElectronics # ConstructionGraph: WallmountGenerator
 
 - type: Tag

@@ -242,28 +242,6 @@
     board: ComputerIFFCircuitboard
 
 - type: entity
-  parent: ComputerIFF
-  id: ComputerIFFSyndicate
-  name: IFF computer
-  suffix: Syndicate
-  description: Allows you to control the IFF and stealth characteristics of this vessel.
-  components:
-  - type: IFFConsole
-    allowedFlags:
-      - Hide
-      - HideLabel
-  - type: ActivatableUI
-    key: enum.IFFConsoleUiKey.Key
-  - type: UserInterface
-    interfaces:
-        enum.IFFConsoleUiKey.Key:
-          type: IFFConsoleBoundUserInterface
-        enum.WiresUiKey.Key:
-          type: WiresBoundUserInterface
-  - type: Computer
-    board: ComputerIFFSyndicateCircuitboard
-
-- type: entity
   parent: BaseComputer
   id: ComputerPowerMonitoring
   name: power monitoring computer
@@ -537,74 +515,6 @@
     damageModifierSet: StructuralMetallicStrong
 
 - type: entity
-  parent: ComputerComms
-  id: SyndicateComputerComms
-  name: syndicate communications computer
-  description: A computer capable of remotely hacking into the station's communications systems. Using this to make an announcement will alert the station to your presence.
-  components:
-  - type: Sprite
-    layers:
-    - map: ["computerLayerBody"]
-      state: computer
-    - map: ["computerLayerKeyboard"]
-      state: generic_keyboard
-    - map: ["computerLayerScreen"]
-      state: comm_syndie
-    - map: ["computerLayerKeys"]
-      state: syndie_key
-    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
-      state: generic_panel_open
-  - type: AccessReader
-    access: [[ "Maintenance" ]]
-  - type: CommunicationsConsole
-    title: comms-console-announcement-title-nukie
-    color: "#ff0000"
-    canShuttle: false
-    global: true #announce to everyone they're about to fuck shit up
-    announceSentBy: false # The title already says who they are.
-    sound: /Audio/Announcements/war.ogg
-  - type: Computer
-    board: SyndicateCommsComputerCircuitboard
-  - type: PointLight
-    radius: 1.5
-    energy: 4.0
-    color: "#f71713"
-
-- type: entity
-  parent: ComputerComms
-  id: WizardComputerComms
-  name: wizard communications computer
-  description: A computer capable of magically projecting your speech to the station. Using this to make an announcement will alert the station to your presence.
-  components:
-  - type: Sprite
-    layers:
-    - map: ["computerLayerBody"]
-      state: computer
-    - map: ["computerLayerKeyboard"]
-      state: generic_keyboard
-    - map: ["computerLayerScreen"]
-      state: comm_wizard
-    - map: ["computerLayerKeys"]
-      state: wizard_key
-    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
-      state: generic_panel_open
-  - type: AccessReader
-    access: [[ "Maintenance" ]]
-  - type: CommunicationsConsole
-    title: comms-console-announcement-title-wizard
-    color: "#ff00ff"
-    canShuttle: false
-    global: true #announce to everyone they're about to fuck shit up
-    announceSentBy: false
-    sound: /Audio/Announcements/war.ogg
-  - type: Computer
-    board: WizardCommsComputerCircuitboard
-  - type: PointLight
-    radius: 1.5
-    energy: 4.0
-    color: "#F317F3"
-
-- type: entity
   parent: BaseComputer
   id: ComputerSolarControl
   name: solar control computer
@@ -728,93 +638,6 @@
 
 - type: entity
   parent: BaseComputer
-  id: ComputerSalvageJobBoard
-  name: salvage job board
-  description: Console for accessing salvage jobs, if you're tough enough.
-  components:
-  - type: Sprite
-    layers:
-    - map: ["computerLayerBody"]
-      state: computer
-    - map: ["computerLayerKeyboard"]
-      state: generic_keyboard
-    - map: ["computerLayerScreen"]
-      state: salvjob # givin em a salvjob like hawk tuah
-    - map: ["computerLayerKeys"]
-      state: generic_keys
-    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
-      state: generic_panel_open
-  - type: SalvageJobBoardConsole
-  - type: ActivatableUI
-    key: enum.SalvageJobBoardUiKey.Key
-  - type: UserInterface
-    interfaces:
-      enum.SalvageJobBoardUiKey.Key:
-        type: SalvageJobBoardBoundUserInterface
-      enum.WiresUiKey.Key:
-        type: WiresBoundUserInterface
-  - type: ActiveRadio
-    channels: [ Common ]
-  - type: Computer
-    board: SalvageJobBoardComputerCircuitboard
-  - type: PointLight
-    radius: 1.5
-    energy: 4.0
-    color: "#b89f25"
-
-- type: entity
-  id: ComputerSalvageExpedition
-  parent: BaseComputer
-  name: salvage expeditions computer
-  description: Used to accept salvage missions, if you're tough enough.
-  components:
-    - type: Sprite
-      layers:
-        - map: ["computerLayerBody"]
-          state: computer
-        - map: ["computerLayerKeyboard"]
-          state: generic_keyboard
-        - map: [ "computerLayerScreen" ]
-          state: mining
-        - map: ["computerLayerKeys"]
-          state: tech_key
-        - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
-          state: generic_panel_open
-    - type: Appearance
-    - type: GenericVisualizer
-      visuals:
-        enum.ComputerVisuals.Powered:
-          computerLayerScreen:
-            True: { visible: true, shader: unshaded }
-            False: { visible: false }
-          computerLayerKeys:
-            True: { visible: true, shader: unshaded }
-            False: { visible: true }
-        enum.WiresVisuals.MaintenancePanelState:
-          enum.WiresVisualLayers.MaintenancePanel:
-            True: { visible: false }
-            False: { visible: true }
-    - type: SalvageExpeditionConsole
-    - type: ActivatableUI
-      key: enum.SalvageConsoleUiKey.Expedition
-    - type: ActivatableUIRequiresPower
-    - type: UserInterface
-      interfaces:
-        enum.SalvageConsoleUiKey.Expedition:
-          type: SalvageExpeditionConsoleBoundUserInterface
-        enum.WiresUiKey.Key:
-          type: WiresBoundUserInterface
-    - type: Computer
-      board: SalvageExpeditionsComputerCircuitboard
-    - type: PointLight
-      radius: 1.5
-      energy: 4.0
-      color: "#b89f25"
-    - type: AccessReader
-      access: [["Maintenance"]]
-
-- type: entity
-  parent: BaseComputer
   id: ComputerSurveillanceCameraMonitor
   name: camera monitor
   description: A surveillance camera monitor. You're watching them. Maybe.
@@ -890,42 +713,6 @@
     interfaces:
         enum.SurveillanceCameraMonitorUiKey.Key:
           type: SurveillanceCameraMonitorBoundUserInterface
-        enum.WiresUiKey.Key:
-          type: WiresBoundUserInterface
-
-- type: entity
-  parent: BaseComputer
-  id: ComputerMassMedia
-  name: news manager console
-  description: Write your message to the world!
-  components:
-  - type: Sprite
-    layers:
-    - map: ["computerLayerBody"]
-      state: computer
-    - map: ["computerLayerKeyboard"]
-      state: generic_keyboard
-    - map: ["computerLayerScreen"]
-      state: service
-    - map: ["computerLayerKeys"]
-      state: service_keys
-    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
-      state: generic_panel_open
-  - type: Computer
-    board: ComputerMassMediaCircuitboard
-  - type: DeviceNetworkRequiresPower
-  - type: NewsWriter
-  - type: AccessReader
-    access: [[ "Maintenance" ]]
-  - type: ActivatableUI
-    key: enum.NewsWriterUiKey.Key
-  - type: ActivatableUIRequiresVision
-  - type: Transform
-    anchored: true
-  - type: UserInterface
-    interfaces:
-        enum.NewsWriterUiKey.Key:
-          type: NewsWriterBoundUserInterface
         enum.WiresUiKey.Key:
           type: WiresBoundUserInterface
 

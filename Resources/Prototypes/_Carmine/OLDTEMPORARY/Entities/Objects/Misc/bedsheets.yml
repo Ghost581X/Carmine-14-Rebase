@@ -55,16 +55,6 @@
     sprite: Clothing/Neck/Bedsheets/brown.rsi
 
 - type: entity
-  id: BedsheetGreen
-  parent: BedsheetBase
-  name: green bedsheet
-  components:
-  - type: Sprite
-    state: sheetgreen
-  - type: Clothing
-    sprite: Clothing/Neck/Bedsheets/green.rsi
-
-- type: entity
   id: BedsheetGrey
   parent: BedsheetBase
   name: grey bedsheet
@@ -105,16 +95,6 @@
     state: sheetorange
   - type: Clothing
     sprite: Clothing/Neck/Bedsheets/orange.rsi
-
-- type: entity
-  id: BedsheetPurple
-  parent: BedsheetBase
-  name: purple bedsheet
-  components:
-  - type: Sprite
-    state: sheetpurple
-  - type: Clothing
-    sprite: Clothing/Neck/Bedsheets/purple.rsi
 
 - type: entity
   id: BedsheetRed
