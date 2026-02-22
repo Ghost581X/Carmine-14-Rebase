@@ -31,7 +31,6 @@ public sealed class ParallaxControl : Control
     private ShaderInstance _grainShader;
 
     private string _parallaxPrototype = "FastSpace";
-
     [ViewVariables(VVAccess.ReadWrite)] public Vector2 Offset { get; set; }
     [ViewVariables(VVAccess.ReadWrite)] public float SpeedX { get; set; } = 0.0f;
     [ViewVariables(VVAccess.ReadWrite)] public float SpeedY { get; set; } = 0.0f;
@@ -54,6 +53,14 @@ public sealed class ParallaxControl : Control
         Offset = new Vector2(_random.Next(0, 1000), _random.Next(0, 1000));
 
         RectClipContent = true;
+        //CARMINE EDIT BEGIN
+        //load all parallax prototypes instead of just hardcoding Default and Fastspace. how the hell did hullrot load them all without doing this
+        var parallaxProtos = _prototype.EnumeratePrototypes<ParallaxPrototype>();
+        foreach (var p in parallaxProtos)
+        {
+            _parallaxManager.LoadParallaxByName(p.ID);
+        };
+        //CARMINE EDIT END
         _parallaxManager.LoadParallaxByName(_parallaxPrototype);
         //WD EDIT START
         _grainShader = _prototype.Index<ShaderPrototype>("Grain").Instance().Duplicate();

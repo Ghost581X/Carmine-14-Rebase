@@ -1,4 +1,5 @@
 using System.Numerics;
+using Content.Client._Carmine.Parallax; //carmine
 using Content.Client.Parallax.Data;
 using Content.Client.Parallax.Managers;
 using Content.Shared.Parallax;
@@ -14,7 +15,7 @@ public sealed class ParallaxSystem : SharedParallaxSystem
     [Dependency] private readonly IParallaxManager _parallax = default!;
     [Dependency] private readonly SharedMapSystem _map = default!;
 
-    private static readonly ProtoId<ParallaxPrototype> Fallback = "Default";
+    public static readonly ProtoId<ParallaxPrototype> Fallback = "Default"; //carmine: private -> public
 
     public const int ParallaxZIndex = 0;
 
@@ -53,6 +54,16 @@ public sealed class ParallaxSystem : SharedParallaxSystem
         {
             _parallax.LoadParallaxByName(component.Parallax);
         }
+    }
+
+    /// <summary>
+    /// CARMINE - grabs layer of a parallax by name instead of by map. needed for ParallaxOverlay to swap parallaxes per-biome.
+    /// </summary>
+    /// <param name="name"></param>
+    /// <returns></returns>
+    public ParallaxLayerPrepared[] GetParallaxLayers(string name)
+    {
+        return _parallax.GetParallaxLayers(name);
     }
 
     public ParallaxLayerPrepared[] GetParallaxLayers(MapId mapId)
@@ -120,5 +131,22 @@ public sealed class ParallaxSystem : SharedParallaxSystem
                 worldHandle.DrawTextureRect(sprite, box, modulate);
             }
         }
+    }
+
+    /// <summary>
+    /// CARMINE - provides a way to live-swap parallaxes on a map
+    /// </summary>
+    /// <param name="uid"></param>
+    /// <param name="parallax"></param>
+    /// <param name="newParallax"></param>
+    /// <param name="duration"></param>
+    public void SwapParallax(EntityUid uid, SpaceBiomeParallaxComponent parallax, string newParallax, float duration)
+    {
+        Logger.Info("ATTEMPTING TO SWAP TO PARALLAX:" + newParallax.ToString());
+        parallax.SwappedParallax = parallax.Parallax;
+        parallax.Parallax = newParallax;
+        parallax.SwapTimer = 0;
+        parallax.SwapDuration = duration;
+        Dirty(uid, parallax);
     }
 }

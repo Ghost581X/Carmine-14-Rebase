@@ -8,6 +8,7 @@ using Robust.Client.UserInterface.XAML;
 using Robust.Shared;
 using Robust.Shared.Configuration;
 using Content.Shared._White.CCVar;
+using Content.Shared._Mono.CCVar;
 
 namespace Content.Client.Options.UI.Tabs;
 
@@ -59,6 +60,29 @@ public sealed partial class AudioTab : Control
             SliderMaxAmbienceSounds,
             _cfg.GetCVar(CCVars.MinMaxAmbientSourcesConfigured),
             _cfg.GetCVar(CCVars.MaxMaxAmbientSourcesConfigured));
+
+        // Mono begin
+        Control.AddOptionPercentSlider(
+            MonoCVars.CombatMusicVolume,
+            SliderVolumeCombatMusic,
+            scale: ContentAudioSystem.CombatMultiplier);
+
+        Control.AddOptionSlider(
+            MonoCVars.CombatMusicWindUpTime,
+            SliderWindUpCombatMusic,
+            1,
+            10,
+            (_, value) => Loc.GetString("ui-options-combat-music-sec-format", ("value", value))); // i dont think anyone is ghonna want more than 10 seconds of constant combatmode being the trigger. the actions already over
+
+        Control.AddOptionSlider(
+            MonoCVars.CombatMusicWindDownTime,
+            SliderWindDownCombatMusic,
+            1,
+            120,
+            (_, value) => Loc.GetString("ui-options-combat-music-sec-format", ("value", value))); // and also i think 2 minutes is enough of an upper limit since it refreshes anytime you turn it back on even for a second
+
+        Control.AddOptionCheckBox(MonoCVars.CombatMusicEnabled, CombatMusicCheckBox);
+        // Mono end
 
         Control.AddOptionCheckBox(CCVars.LobbyMusicEnabled, LobbyMusicCheckBox);
         Control.AddOptionCheckBox(CCVars.RestartSoundsEnabled, RestartSoundsCheckBox);

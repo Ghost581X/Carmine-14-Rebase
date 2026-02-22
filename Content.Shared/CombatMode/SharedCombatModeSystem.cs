@@ -121,7 +121,7 @@ public abstract class SharedCombatModeSystem : EntitySystem
         Dirty(entity, component);
 
         // WD EDIT START
-        RaiseLocalEvent(entity, new CombatModeToggledEvent(value, entity));
+        RaiseLocalEvent(entity, new CombatModeToggledEvent(value, entity), true); //carmine -> broadcast true because we need to listen to this for combat music
 
         /*if (component.CombatToggleActionEntity != null)
             _actionsSystem.SetToggled(component.CombatToggleActionEntity, component.IsInCombatMode);*/

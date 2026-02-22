@@ -1,0 +1,310 @@
+# GOOBSTATION MODSUITS BASES
+# CARMINE WILL EVENTUALLY RE-TOOL THESE FOR OUR FOLDSUIT IDEA, BUT THESE NEED TO BE HERE FOR TESTING
+# AND SO IK WHAT IM DOING - .2 | 2026
+
+# BACKPACK
+- type: entity
+  parent: Clothing
+  id: ClothingModsuitStandard
+  name: standard modsuit hardsuit unit
+  description: A special modular suit contol unit containing all necessary modular hardsuit parts.
+  components:
+  - type: Appearance
+  - type: Sprite
+    sprite: _Goobstation/Clothing/Back/Modsuits/standard.rsi
+    layers:
+    - state: control
+    - state: control-sealed
+      visible: false
+      shader: unshaded
+      map: [ "sealed" ]
+  - type: Item
+    size: Huge
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - back
+  - type: Storage
+    grid:
+    - 0,0,6,3
+    maxItemSize: Huge
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: []
+      toggleable-clothing: !type:Container
+      cell_slot: !type:ContainerSlot
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+      enum.ToggleClothingUiKey.Key:
+        type: ToggleableClothingBoundUserInterface
+  - type: UseDelay
+    delay: 0.5
+  - type: ExplosionResistance
+    damageCoefficient: 0.9
+  - type: ToggleableClothing
+    requiredSlot: back
+    blockUnequipWhenAttached: true
+    replaceCurrentClothing: true
+    clothingPrototypes:
+      head: ClothingModsuitHelmetStandard
+      gloves: ClothingModsuitGauntletsStandard
+      outerClothing: ClothingModsuitChestplateStandard
+      shoes: ClothingModsuitBootsStandard
+  - type: DoAfter
+  # - type: SealableClothingControl
+  # - type: SealableClothingVisuals
+  #   spriteLayer: sealed
+  #   clothingVisuals:
+  #     back:
+  #     - state: equipped-BACKPACK-sealed
+  # - type: Construction
+  #   graph: Modsuit
+  #   node: standard
+
+
+# HANDS
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingModsuitGauntletsStandard
+  name: standard modsuit gauntlets
+  description: Special modular suit gloves that protect wearer from electric shock.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Appearance
+  - type: Sprite
+    sprite: _Goobstation/Clothing/Hands/Modsuits/standard.rsi
+    layers:
+    - state: gauntlets
+    - state: gauntlets-sealed
+      visible: false
+      map: [ "sealed" ]
+  - type: Clothing
+    equipSound: /Audio/_Carmine/Foldsuits/airbag.ogg
+    unequipSound: /Audio/_Carmine/Foldsuits/airbag_reversed.ogg
+    slots: [ gloves ]
+  - type: DamageOnInteractProtection
+    damageProtection:
+      flatReductions:
+        Heat: 10
+  - type: Insulated
+  - type: FingerprintMask
+
+
+# HEAD
+- type: entity
+  abstract: true
+  # Used to put pressureProtection, layers blocker and etc components into ComponentToggler
+  id: BaseClothingModsuitHelmet
+  name: base modsuit helmet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    state: icon
+  - type: Clickable
+  - type: InteractionOutline
+  - type: GroupExamine
+  - type: Clothing
+    equipSound: /Audio/_Carmine/Foldsuits/airbag.ogg
+    unequipSound: /Audio/_Carmine/Foldsuits/airbag_reversed.ogg
+    quickEquip: false
+    equippedPrefix: off
+    slots: [ HEAD ]
+    clothingVisuals:
+      head:
+      - state: equipped-HEAD
+  # - type: Tag
+  #   tags:
+  #   - WhitelistChameleon
+
+- type: entity
+  abstract: true
+  parent: BaseClothingModsuitHelmet
+  # Used for helmets that hide your identity even if it's not sealed
+  id: BaseClothingModsuitHelmetHideIdentity
+  name: base modsuit helmet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: IdentityBlocker
+  # - type: IngestionBlocker
+  # - type: HideLayerClothing
+  #   slots:
+  #   - Hair
+  #   - Snout
+  #   - HeadTop
+  #   - HeadSide
+
+- type: entity
+  parent: BaseClothingModsuitHelmet
+  id: ClothingModsuitHelmetStandard
+  name: standard modsuit helmet
+  description: A special modular suit spaceproof helmet designed for compact folding inside modular suit control.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Appearance
+  - type: Sprite
+    sprite: _Goobstation/Clothing/Head/Modsuits/standard.rsi
+    layers:
+    - state: helmet
+    - state: helmet-sealed
+      visible: false
+      map: [ "sealed" ]
+  # - type: HideLayerClothing # This helmet don't have sprite on unsealed state
+  #   slots:
+  #   - Snout
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.90
+        Slash: 0.90
+        Piercing: 0.95
+        Heat: 0.90
+        Radiation: 0.75
+  - type: BreathMask
+  - type: PressureProtection
+    highPressureMultiplier: 0.3
+    lowPressureMultiplier: 1000
+  - type: TemperatureProtection
+    heatingCoefficient: 0.01
+    coolingCoefficient: 0.01
+  - type: IdentityBlocker
+  - type: IngestionBlocker
+    # - type: HideLayerClothing
+    #   slots:
+    #   - Hair
+    #   - Snout
+    #   - HeadTop
+    #   - HeadSide
+  #THIS WILL BE REPLACED WITH MODULE ↓↓
+  - type: ToggleableLightVisuals
+  - type: PointLight
+    enabled: false
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+    radius: 7
+    netsync: true #hardhats work without this but for some inexplicable reason, modsuit helmets dont update the client PointLight without this.
+  - type: HandheldLight
+    addPrefix: true
+    blinkingBehaviourId: blinking
+    radiatingBehaviourId: radiating
+  - type: LightBehaviour
+    behaviours:
+    - !type:FadeBehaviour
+      id: radiating
+      interpolate: Linear
+      maxDuration: 2.0
+      startValue: 3.0
+      endValue: 2.0
+      isLooped: true
+      reverseWhenFinished: true
+    - !type:PulseBehaviour
+      id: blinking
+      interpolate: Nearest
+      maxDuration: 1.0
+      startValue: 0.1
+      endValue: 2.0
+      isLooped: true
+  - type: ItemTogglePointLight
+  - type: Battery
+    maxCharge: 600 #lights drain 3/s but recharge of 2 makes this 1/s. Therefore 600 is 10 minutes of light.
+    startingCharge: 600
+  - type: BatterySelfRecharger
+    autoRechargeRate: 2
+
+
+# CHESTPLATE
+# Mono - modsuit overhaul - see #2755
+
+- type: entity
+  parent: [ ClothingOuterBase, GeigerCounterClothing ] # Mono - add geiger
+  id: ClothingModsuitChestplateStandard
+  name: standard modsuit chestplate
+  description: A special modular suit spaceproof cover designed for compact folding inside modular suit control.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Appearance
+  - type: AllowSuitStorage
+  - type: Sprite
+    sprite: _Goobstation/Clothing/OuterClothing/Modsuits/standard.rsi
+    layers:
+    - state: icon
+    - state: icon-unfolded
+      visible: false
+      map: [ "sealed" ]
+  - type: Clothing
+    equipSound: /Audio/Mecha/mechmove03.ogg
+    unequipSound: /Audio/Mecha/mechmove03.ogg
+    slots: [ outerClothing ]
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 1
+  # - type: SealableClothing
+  #   sealUpPopup: sealable-clothing-seal-up-chestplate
+  #   sealDownPopup: sealable-clothing-seal-down-chestplate
+  # - type: SealableClothingVisuals
+  #   spriteLayer: sealed
+  #   clothingVisuals:
+  #     outerClothing:
+  #     - state: equipped-OUTERCLOTHING-sealed
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.85
+        Heat: 0.85
+        Radiation: 0.6
+  - type: PressureProtection
+    highPressureMultiplier: 0.3
+    lowPressureMultiplier: 1000
+  - type: TemperatureProtection
+    coolingCoefficient: 0.1
+    heatingCoefficient: 0.4
+  - type: FireProtection
+    reduction: 0.5
+
+# SHOES
+- type: entity
+  parent: ClothingShoesBase
+  id: ClothingModsuitBootsStandard
+  name: standard modsuit boots
+  description: A special modular suit boots designed for compact folding inside modular suit control.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Appearance
+  - type: Sprite
+    sprite: _Goobstation/Clothing/Shoes/Modsuits/standard.rsi
+    layers:
+    - state: boots
+    - state: boots-sealed
+      map: [ "sealed" ]
+  - type: Clothing
+    equipSound: /Audio/_Carmine/Foldsuits/airbag.ogg
+    unequipSound: /Audio/_Carmine/Foldsuits/airbag_reversed.ogg
+    slots: [ feet ]
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+  # - type: SealableClothing
+  #   sealUpPopup: sealable-clothing-seal-up-boots
+  #   sealDownPopup: sealable-clothing-seal-down-boots
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: ItemToggle
+    onUse: false
+    onActivate: false
+  - type: ToggleClothing
+    action: ActionToggleMagboots
+    mustEquip: false
+  # - type: ComponentToggler
+  #   components:
+  #   - type: NoSlip
+  - type: Magboots
+  # - type: SealableClothingVisuals
+  #   spriteLayer: sealed
+  #   clothingVisuals:
+  #     shoes:
+  #     - state: equipped-FEET-sealed

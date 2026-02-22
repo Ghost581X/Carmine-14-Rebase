@@ -1,0 +1,8 @@
+- type: worldgenConfig
+  id: CarmineWorldgenConfig
+  components:
+  - type: WorldController
+  - type: BiomeSelection
+    biomes:
+      - Failsafe
+      - DebugTestAsteroidsA

@@ -17,8 +17,7 @@
           - id: WallRock
             prob: 1
     - type: IFF
-      flags: HideLabel
-      color: "#d67e27"
+      flags: HideLabel, HideLabelAlways, AlwaysShowColor
 
 - type: entity
   id: AsteroidDebrisSmall

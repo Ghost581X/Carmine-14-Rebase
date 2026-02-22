@@ -90,12 +90,13 @@
   parent: ClothingOuterStorageBase
   id: ClothingOuterStorageToggleableBase
   components:
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHatHoodWinterDefault
+  - type: ToggleableClothing # Goobstation - Modsuits change
+    clothingPrototypes:
+      head: ClothingHeadHatHoodWinterDefault
     slot: head
   - type: ContainerContainer
     containers:
-      toggleable-clothing: !type:ContainerSlot {}
+      toggleable-clothing: !type:Container {}
       storagebase: !type:Container
         ents: []
 
@@ -132,7 +133,7 @@
     slot: head
   - type: ContainerContainer
     containers:
-      toggleable-clothing: !type:ContainerSlot {}
+      toggleable-clothing: !type:Container {}
   - type: GroupExamine
   - type: Tag
     tags:
@@ -187,12 +188,13 @@
   name: hoodie with hood
   abstract: True
   components:
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHatHoodWinterDefault
+  - type: ToggleableClothing # Goobstation - Modsuits change
+    clothingPrototypes:
+      head: ClothingHeadHatHoodWinterDefault
     slot: head
   - type: ContainerContainer
     containers:
-      toggleable-clothing: !type:ContainerSlot {}
+      toggleable-clothing: !type:Container {}
       storagebase: !type:Container
         ents: []
 

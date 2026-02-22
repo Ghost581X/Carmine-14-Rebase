@@ -1,0 +1,13 @@
+# guide for dummies
+# higher input multiplier ---> denser
+# lower minimum ----> denser
+# lower output multiplier ---> ???
+
+- type: noiseChannel
+  id: DebugDensityHellaAsteroids
+  noiseType: Perlin
+  fractalLacunarityByPi: 0.666666666
+  remapTo0Through1: true
+  inputMultiplier: 50 # we party i nthis house
+  outputMultiplier: 1 # we party in this house
+  minimum: 1 #we party in this house
