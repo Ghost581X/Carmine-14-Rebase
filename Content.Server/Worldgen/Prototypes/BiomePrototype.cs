@@ -9,7 +9,7 @@ namespace Content.Server.Worldgen.Prototypes;
 ///     This is a prototype for biome selection, allowing the component list of a chunk to be amended based on the output
 ///     of noise channels at that location.
 /// </summary>
-[Prototype("spaceBiome")]
+[Prototype("worldgenSpaceBiome")] // carmine - rename to differentiate from ambientspacebiome
 public sealed partial class BiomePrototype : IPrototype, IInheritingPrototype
 {
     /// <inheritdoc />
@@ -43,6 +43,42 @@ public sealed partial class BiomePrototype : IPrototype, IInheritingPrototype
     [DataField("chunkComponents")]
     [AlwaysPushInheritance]
     public ComponentRegistry ChunkComponents = new();
+
+    // EE - min/max biome ranges begin
+    /// <summary>
+    ///     Minimum X coordinate (IN CHUNKS, *128) value to spawn this biome.
+    /// </summary>
+    [DataField]
+    public int? MinX;
+
+    /// <summary>
+    ///     Minimum Y coordinate (IN CHUNKS, *128) value to spawn this biome.
+    /// </summary>
+    [DataField]
+    public int? MinY;
+
+    /// <summary>
+    ///     Maximum X coordinate (IN CHUNKS, *128) value to spawn this biome.
+    /// </summary>
+    [DataField]
+    public int? MaxX;
+
+    /// <summary>
+    ///     Maximum Y coordinate (IN CHUNKS, *128) value to spawn this biome.
+    /// </summary>
+    [DataField]
+    public int? MaxY;
+    // EE - min/max biome ranges end
+
+    // Frontier: distances begin
+    /// <summary>
+    ///     The valid range of biome coordinate lengths (3000, 4000) => 5000
+    ///     Chunks with center points within this range may be generated with this biome.
+    /// </summary>
+
+    [ViewVariables]
+    public Vector2? DistanceRangeSquared { get; private set; }
+    // Frontier: distances end
 
     //TODO: Get someone to make this a method on componentregistry that does it Correctly.
     /// <summary>

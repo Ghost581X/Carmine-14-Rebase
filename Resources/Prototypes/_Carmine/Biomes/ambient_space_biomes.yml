@@ -1,0 +1,91 @@
+#fallback, don't remove
+- type: ambientSpaceBiome
+  id: BiomeDefault
+  name: Uncharted Space
+  parallax: DebugParallaxSquares
+
+#expedition biome - hardcoded in SpawnSalvageMissionJob.cs
+- type: ambientSpaceBiome
+  id: BiomeExpedition
+  name: Expedition
+  description: "Uncharted land."
+
+#ftl biome - hardcoded in ShuttleSystem.FasterThanLight.cs
+- type: ambientSpaceBiome
+  id: BiomeFTL
+  name: Hyperspace
+  description: "Upon the pale horse, with Hell behind you."
+
+#far reaches
+
+- type: ambientSpaceBiome
+  id: BiomeFarReachesIII
+  name: Far Reaches III
+  description: "Things have learnt to walk that ought to crawl."
+
+- type: ambientSpaceBiome
+  id: BiomeFarReachesII
+  name: Far Reaches II
+  description: "wiggly"
+  biomeColor: Yellow
+  titleCoordinates: 300, 0
+  vertexCoordinates: #debug concave shape
+    - 200, 800
+    - 600, 800
+    - 400, 400
+    - 800, 400
+    - 600, 0
+    - 1000, 0
+    - 800, -200
+    - 200, -400
+
+- type: ambientSpaceBiome
+  id: BiomeFarReachesI
+  name: Far Reaches I
+  description: "hexagon"
+  biomeColor: Red
+  vertexCoordinates: #debug hexagon
+    - -150, 0
+    - -50,  0
+    - 0,    -100
+    - 0,    -200
+    - -50,  -300
+    - -150, -300
+    - -200, -200
+    - -200, -100
+
+#actual biomes
+- type: ambientSpaceBiome
+  id: BiomeOuterRing
+  name: Outer Ring
+  description: "Far from radio range. Far from help. The stars here are dimmer."
+  biomeColor: White
+  parallax: DebugParallaxStarsOnly
+  vertexCoordinates: #debug square
+    - 0, 0
+    - 0, 100
+    - 100, 100
+    - 100, 0
+
+
+- type: ambientSpaceBiome
+  id: BiomeMiddleRing
+  name: Middle Ring
+  description: "Stellar outskirts, often crawling with riches and danger."
+  biomeColor: Gold
+  vertexCoordinates: #debug square
+    - 100, 0
+    - 100, 100
+    - 200, 100
+    - 200, 0
+
+- type: ambientSpaceBiome
+  id: BiomeInnerRing
+  name: Inner Ring
+  description: "Civilised space. The constellations seen from here are burned into your memory."
+  biomeColor: Blue
+  vertexCoordinates: #debug square
+    - 200, 0
+    - 200, 100
+    - 300, 100
+    - 300, 0

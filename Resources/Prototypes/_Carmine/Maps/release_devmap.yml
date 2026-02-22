@@ -30,3 +30,11 @@
           availableJobs:
             Captain: [ 10, 10 ]
             Passenger: [ 10, 10 ]
+        - type: WorldGenDistanceCarver
+          distanceThresholds:
+            # Dead zone
+            - maxDistance: 100 #looks like its chunk based so do these in 128 chunks
+              prob: 0.0
+            - maxDistance: 200 #looks like its chunk based
+              prob: 0.3
+
