@@ -210,6 +210,8 @@
     - DoorBumpOpener
     - AnomalyHost
   - type: ExaminableCharacter # WWDP
+  - type: ESViewcone #ES
+  - type: ESViewconeOccludable #ES
 
 - type: entity
   save: false
