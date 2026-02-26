@@ -1,0 +1,46 @@
+- type: worldgenSpaceBiome
+  id: DebugTestAsteroidsA
+  priority: 9000
+  minX: -3
+  maxX: 3
+  minY: -3
+  maxY: 3
+  noiseRanges: {}
+  chunkComponents:
+  - type: DebrisFeaturePlacerController
+    densityNoiseChannel: DebugDensityHellaAsteroids
+  - type: SimpleDebrisSelector
+    debrisTable:
+    - id: AsteroidDebrisSmall
+      prob: 0.5
+    - id: AsteroidDebrisMedium
+      prob: 0.5
+    - id: AsteroidDebrisLarge
+      prob: 0.7
+    - id: AsteroidDebrisLarger
+      prob: 0.4
+  - type: PointSetDistanceCarver #this must be on all biomes for WorldGenDistanceCarver to appropriately carve out asteroids
+
+
+- type: worldgenSpaceBiome
+  id: DebugTestAsteroidsB
+  priority: 9001
+  minX: 0
+  maxX: 1
+  minY: 0
+  maxY: 50
+  noiseRanges: {}
+  chunkComponents:
+  - type: DebrisFeaturePlacerController
+    densityNoiseChannel: DebugDensityHellaAsteroids
+  - type: SimpleDebrisSelector
+    debrisTable:
+    - id: AsteroidDebrisSmall
+      prob: 0.5
+    - id: AsteroidDebrisMedium
+      prob: 0.5
+    - id: AsteroidDebrisLarge
+      prob: 0.7
+    - id: AsteroidDebrisLarger
+      prob: 0.4
+  - type: PointSetDistanceCarver #this must be on all biomes for WorldGenDistanceCarver to appropriately carve out asteroids

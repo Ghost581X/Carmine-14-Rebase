@@ -32,7 +32,6 @@ public sealed class BiomeSelectionSystem : BaseWorldSystem
             if (!CheckBiomeValidity(args.Chunk, biome, coords))
                 continue;
 
-            Logger.Info("BIOME LOGGED:" + biomeId.ToString());
             biome.Apply(args.Chunk, _ser, EntityManager);
             return;
         }
