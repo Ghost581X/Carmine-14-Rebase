@@ -62,40 +62,41 @@
   - type: WirelessNetworkConnection
     range: 4000
 
-- type: entity
-  parent: BaseComputerAiAccess
-  id: ComputerDroneControl
-  name: drone control console
-  description: A console that lets you control linked drones.
-  components:
-  - type: Sprite
-    layers:
-    - map: ["computerLayerBody"]
-      state: computer
-    - map: ["computerLayerKeyboard"]
-      state: generic_keyboard
-    - map: ["computerLayerScreen"]
-      state: shuttle
-    - map: ["computerLayerKeys"]
-      state: generic_keys
-  - type: Computer
-    board: DroneControlCircuitboard
-  - type: DroneControlConsole
-  - type: ActivatableUI
-    key: enum.DroneConsoleUiKey.Key
-  - type: UserInterface
-    interfaces:
-      enum.DroneConsoleUiKey.Key:
-        type: DroneConsoleBoundUserInterface
-  - type: RadarConsole
-  - type: WorldLoader
-    radius: 256
-  - type: DeviceNetwork
-    deviceNetId: Wireless
-    transmitFrequencyId: DroneControl
-  - type: WirelessNetworkConnection
-    range: 4000
-  - type: DeviceList
+##CARMINETODO uncomment this when we have BaseComputer back
+# - type: entity
+#   parent: BaseComputerAiAccess
+#   id: ComputerDroneControl
+#   name: drone control console
+#   description: A console that lets you control linked drones.
+#   components:
+#   - type: Sprite
+#     layers:
+#     - map: ["computerLayerBody"]
+#       state: computer
+#     - map: ["computerLayerKeyboard"]
+#       state: generic_keyboard
+#     - map: ["computerLayerScreen"]
+#       state: shuttle
+#     - map: ["computerLayerKeys"]
+#       state: generic_keys
+#   - type: Computer
+#     board: DroneControlCircuitboard
+#   - type: DroneControlConsole
+#   - type: ActivatableUI
+#     key: enum.DroneConsoleUiKey.Key
+#   - type: UserInterface
+#     interfaces:
+#       enum.DroneConsoleUiKey.Key:
+#         type: DroneConsoleBoundUserInterface
+#   - type: RadarConsole
+#   - type: WorldLoader
+#     radius: 256
+#   - type: DeviceNetwork
+#     deviceNetId: Wireless
+#     transmitFrequencyId: DroneControl
+#   - type: WirelessNetworkConnection
+#     range: 4000
+#   - type: DeviceList
 
 - type: deviceFrequency
   id: DroneControl
