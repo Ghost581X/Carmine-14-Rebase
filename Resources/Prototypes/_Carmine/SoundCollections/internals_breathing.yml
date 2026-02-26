@@ -1,0 +1,4 @@
+- type: soundCollection
+  id: InternalsBreathing
+  files:
+  - /Audio/_Carmine/Internals/internals_breathing.ogg

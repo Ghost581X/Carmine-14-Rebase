@@ -4,6 +4,8 @@
   keycode: ";"
   frequency: 1459
   color: "#2cdb2c"
+  sound:
+    collection: RadioNoiseGeneric #testing
 
 - type: radioChannel
   id: CentCom
