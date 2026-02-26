@@ -9,6 +9,7 @@ public partial class SharedGunSystem
     private void InitializeClothing()
     {
         SubscribeLocalEvent<ClothingSlotAmmoProviderComponent, TakeAmmoEvent>(OnClothingTakeAmmo);
+        SubscribeLocalEvent<ClothingSlotAmmoProviderComponent, CheckShootPrototypeEvent>(OnClothingCheckProto); // Mono
         SubscribeLocalEvent<ClothingSlotAmmoProviderComponent, GetAmmoCountEvent>(OnClothingAmmoCount);
     }
 
@@ -30,5 +31,10 @@ public partial class SharedGunSystem
             return;
 
         RaiseLocalEvent(getConnectedContainerEvent.ContainerEntity.Value, ref args);
+    }
+    // Mono
+    private void OnClothingCheckProto(Entity<ClothingSlotAmmoProviderComponent> ent, ref CheckShootPrototypeEvent args)
+    {
+        return; //this is used for vacuum cleaners only and we don't care // .2 | 2026 for carmine
     }
 }

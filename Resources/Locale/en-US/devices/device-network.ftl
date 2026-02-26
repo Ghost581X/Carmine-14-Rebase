@@ -55,3 +55,9 @@ device-net-id-apc = Apc
 device-net-id-atmos-devices = Atmos Devices
 device-net-id-reserved = Reserved
 
+# mono
+## drone control
+device-frequency-prototype-name-drone-control = Drone Control
+
+signal-port-name-drone-control = Drone Control
+signal-port-description-drone-control = Controls linked drones.

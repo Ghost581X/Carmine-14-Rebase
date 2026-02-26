@@ -13,6 +13,8 @@ using JetBrains.Annotations;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
+using Robust.Shared.Map;
+using System.Numerics;
 
 namespace Content.Server.NPC.HTN;
 
@@ -373,7 +375,12 @@ public sealed class HTNSystem : EntitySystem
                 foreach (var service in currentTask.Services)
                 {
                     var serviceResult = _utility.GetEntities(blackboard, service.Prototype);
-                    blackboard.SetValue(service.Key, serviceResult.GetHighest());
+                    // Mono begin
+                    var res = serviceResult.GetHighest();
+                    blackboard.SetValue(service.Key, res);
+                    if (service.CoordinatesKey != null)
+                        blackboard.SetValue(service.CoordinatesKey, new EntityCoordinates(res, Vector2.Zero));
+                    // Mono end
                 }
 
                 component.CheckServices = false;
