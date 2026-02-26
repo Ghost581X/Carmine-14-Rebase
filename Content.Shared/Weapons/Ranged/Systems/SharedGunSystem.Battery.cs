@@ -19,6 +19,7 @@ public abstract partial class SharedGunSystem
         SubscribeLocalEvent<BatteryAmmoProviderComponent, ComponentStartup>(OnBatteryStartup);
         SubscribeLocalEvent<BatteryAmmoProviderComponent, AfterAutoHandleStateEvent>(OnAfterAutoHandleState);
         SubscribeLocalEvent<BatteryAmmoProviderComponent, TakeAmmoEvent>(OnBatteryTakeAmmo);
+        SubscribeLocalEvent<BatteryAmmoProviderComponent, CheckShootPrototypeEvent>(OnBatteryCheckProto); // Mono
         SubscribeLocalEvent<BatteryAmmoProviderComponent, GetAmmoCountEvent>(OnBatteryAmmoCount);
         SubscribeLocalEvent<BatteryAmmoProviderComponent, ExaminedEvent>(OnBatteryExamine);
         SubscribeLocalEvent<BatteryAmmoProviderComponent, DamageExamineEvent>(OnBatteryDamageExamine);
@@ -73,7 +74,12 @@ public abstract partial class SharedGunSystem
 
         TakeCharge(ent, shots);
     }
-
+    // Mono
+    private void OnBatteryCheckProto(EntityUid uid, BatteryAmmoProviderComponent comp, ref CheckShootPrototypeEvent args)
+    {
+        ProtoManager.TryIndex(comp.Prototype, out var proto);
+        args.ShootPrototype = proto;
+    }
     private void OnBatteryAmmoCount(Entity<BatteryAmmoProviderComponent> ent, ref GetAmmoCountEvent args)
     {
         args.Count = ent.Comp.Shots;

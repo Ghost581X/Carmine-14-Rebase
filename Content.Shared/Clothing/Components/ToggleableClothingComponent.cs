@@ -109,6 +109,11 @@ public sealed partial class ToggleableClothingComponent : Component
     /// </summary>
     [DataField]
     public SoundSpecifier? FoldSound;
+    /// <summary>
+    /// CARMINE: prefix to add onto the sprite state of the control piece (Chestplate usually), when the suit is UNFOLDED.
+    /// </summary>
+    [DataField(required: false)]
+    public string? UnfoldedEquippedPrefix;
     [DataField]
     public float FoldDoAfterTime = 2f; //time needed to fold/unfold each piece after the initial do-after is done
     [DataField]

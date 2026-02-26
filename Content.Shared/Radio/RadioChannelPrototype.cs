@@ -1,4 +1,5 @@
 using Robust.Shared.Prototypes;
+using Robust.Shared.Audio;
 
 namespace Content.Shared.Radio;
 
@@ -25,6 +26,12 @@ public sealed partial class RadioChannelPrototype : IPrototype
 
     [DataField("color")]
     public Color Color { get; private set; } = Color.Lime;
+
+    /// <summary>
+    /// CARMINE: plays a sound specifier when you use a specific radio channel.
+    /// </summary>
+    [DataField("sound")]
+    public SoundSpecifier? Sound;
 
     [IdDataField, ViewVariables]
     public string ID { get; private set; } = default!;

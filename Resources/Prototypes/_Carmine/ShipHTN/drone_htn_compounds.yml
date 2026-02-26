@@ -1,0 +1,49 @@
+- type: htnCompound
+  id: DroneCompound
+  branches:
+  - preconditions:
+    - !type:KeyExistsPrecondition
+      key: MoveToTarget
+    tasks:
+    - !type:HTNCompoundTask
+      task: DroneMoveCompound
+  - preconditions:
+    - !type:KeyExistsPrecondition
+      key: ShootTarget
+    tasks:
+    - !type:HTNCompoundTask
+      task: DroneAttackCompound
+
+- type: htnCompound
+  id: DroneMoveCompound
+  branches:
+  - tasks:
+    - !type:HTNPrimitiveTask
+      operator: !type:ShipMoveToOperator
+        shutdownState: TaskFinished
+        removeKeyOnFinish: true
+        inRangeMaxSpeed: 0.1
+        range: 4
+        leadingEnabled: false # nothing to lead
+        alwaysFaceTarget: true
+        targetKey: MoveToTarget
+
+- type: htnCompound
+  id: DroneAttackCompound
+  branches:
+  - tasks:
+    - !type:HTNPrimitiveTask
+      operator: !type:ShipMoveToOperator
+        shutdownState: PlanFinished
+        removeKeyOnFinish: false
+        alwaysFaceTarget: true
+        inRangeMaxSpeed: 1
+        range: 250
+        rangeTolerance: 50
+        targetKey: ShootTarget
+    - !type:HTNPrimitiveTask
+      operator: !type:ShipFireGunsOperator
+        shutdownState: TaskFinished
+        removeKeyOnFinish: true
+        leadingAccuracy: 0.4
+        targetKey: ShootTarget
