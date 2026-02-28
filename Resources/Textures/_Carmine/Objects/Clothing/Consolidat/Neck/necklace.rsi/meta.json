@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "license": "All rights reserved.",
+  "copyright": "Made for Carmine, Do not use without permission from .2 or ninruB",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "icon"
+    },
+    {
+      "name": "equipped-NECK",
+      "directions": 4
+    },
+    {
+      "name": "inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "inhand-right",
+      "directions": 4
+    }
+  ]
+}
