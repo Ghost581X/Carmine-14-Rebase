@@ -36,6 +36,7 @@ public sealed class ToggleableClothingSystem : EntitySystem
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!; //CARMINE
     [Dependency] private readonly SharedAudioSystem _audioSystem = default!; //CARMINE
     [Dependency] private readonly ComponentTogglerSystem _componentToggler = default!; //CARMINE
+    [Dependency] private readonly ClothingSystem _clothingSystem = default!; //CARMINE
 
     public override void Initialize()
     {
@@ -383,6 +384,7 @@ public sealed class ToggleableClothingSystem : EntitySystem
         if (toggleStatus == ToggleableClothingAttachedStatus.NoneToggled) //we are folding OUT
         {
             _componentToggler.ToggleComponent(toggleable, true); //CARMINE - componenttoggler on main thing activates/deactivates its comps
+            _clothingSystem.SetEquippedPrefix(toggleable, toggleable.Comp.UnfoldedEquippedPrefix); //CARMINE - set sprite prefix for main piece (usually chestplate) to show its unfolded state
             _audioSystem.PlayPredicted(toggleable.Comp.UnfoldSound, toggleable, user); //CARMINE
             var foldTime = toggleable.Comp.TimeToFoldPerPiece; //carmine - we raise this by _timeToFoldDifference for each piece, so the first one is base time, the second one is base time + difference, etc, to get a cool staggered folding/unfolding effect
             foreach (var clothing in attachedClothings)
@@ -403,6 +405,7 @@ public sealed class ToggleableClothingSystem : EntitySystem
         else //we are folding IN
         {
             _componentToggler.ToggleComponent(toggleable, false); //CARMINE - componenttoggler on main thing activates/deactivates its comps
+            _clothingSystem.SetEquippedPrefix(toggleable, null); //CARMINE - remove sprite prefix for main piece (usually chestplate) to show its unfolded state
             _audioSystem.PlayPredicted(toggleable.Comp.FoldSound, toggleable, user); //CARMINE
             var foldTime = toggleable.Comp.TimeToFoldPerPiece; //carmine - we raise this by _timeToFoldDifference for each piece, so the first one is base time, the second one is base time + difference, etc, to get a cool staggered folding/unfolding effect
             foreach (var clothing in attachedClothings)

@@ -4,3 +4,9 @@
   components:
     - type: OwnedDebris
     - type: LocalityLoader
+    - type: GCAbleObject #mono - cleans up when too far from anyone
+      queue: SpaceDebris
+    - type: IFF #mono - hides label and name, but shows color
+      flags: HideLabel, HideLabelAlways, AlwaysShowColor
+    - type: PreventPilot
+    - type: MapGrid

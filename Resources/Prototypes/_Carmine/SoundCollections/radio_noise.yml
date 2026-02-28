@@ -1,0 +1,5 @@
+- type: soundCollection
+  id: RadioNoiseGeneric
+  files:
+  - /Audio/_Carmine/Radio/radio_broadband.ogg
+  - /Audio/_Carmine/Radio/radio_other.ogg

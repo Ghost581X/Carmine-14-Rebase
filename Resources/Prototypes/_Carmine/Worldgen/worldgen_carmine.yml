@@ -5,4 +5,4 @@
   - type: BiomeSelection
     biomes:
       - Failsafe
-      - DebugTestAsteroidsA
+      #- DebugTestAsteroidsA

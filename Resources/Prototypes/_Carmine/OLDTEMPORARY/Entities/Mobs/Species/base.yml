@@ -209,6 +209,8 @@
     - FootstepSound
     - DoorBumpOpener
   - type: ExaminableCharacter # WWDP
+  - type: ESViewcone #ES
+  - type: ESViewconeOccludable #ES
 
 - type: entity
   save: false
@@ -278,6 +280,13 @@
   - type: FireVisuals
     alternateState: Standing
   - type: StunVisuals
+  - type: EmitSoundOnInternalsActive #carmine
+    sound:
+      collection: InternalsBreathing
+      params:
+        maxDistance: 3
+        rolloffFactor: 2
+        volume: -10
 
 - type: entity
   save: false
