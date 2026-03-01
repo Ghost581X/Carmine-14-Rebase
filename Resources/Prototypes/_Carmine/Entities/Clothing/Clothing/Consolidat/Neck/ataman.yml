@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckAtaman
+  name: ataman mantle
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Objects/Clothing/Consolidat/Neck/ataman.rsi
+  - type: Clothing
+    sprite: _Carmine/Objects/Clothing/Consolidat/Neck/ataman.rsi

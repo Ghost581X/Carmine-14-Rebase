@@ -11,14 +11,14 @@
       "name": "icon"
     },
     {
-      "name": "icon-unfolded"
+      "name": "unfolded-icon"
     },
     {
       "name": "equipped-OUTERCLOTHING",
       "directions": 4
     },
     {
-      "name": "equipped-OUTERCLOTHING-unfolded",
+      "name": "unfolded-equipped-OUTERCLOTHING",
       "directions": 4
     },
     {

@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformDoktor
+  name: doktor turtleneck
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Objects/Clothing/Consolidat/Uniform/doktor.rsi
+  - type: Clothing
+    sprite: _Carmine/Objects/Clothing/Consolidat/Uniform/doktor.rsi

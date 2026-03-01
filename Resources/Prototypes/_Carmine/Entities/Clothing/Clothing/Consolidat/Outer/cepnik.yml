@@ -1,0 +1,28 @@
+- type: entity
+  parent: ClothingFoldsuitBase
+  id: ClothingFoldsuitCepnik
+  name: cepnik cuirass
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Objects/Clothing/Consolidat/Outer/cepnik.rsi
+    layers:
+    - state: icon
+      visible: true
+    - state: unfolded-icon
+      visible: false
+  - type: ToggleableClothing
+    clothingPrototypes:
+      head: ClothingFoldhelmetCepnik
+      shoes: ClothingFoldbootsConsolidat
+
+- type: entity
+  parent: ClothingFoldhelmetBase
+  id: ClothingFoldhelmetCepnik
+  name: cepnik foldhelmet
+  description: CARMINETODO
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Carmine/Objects/Clothing/Consolidat/Head/cepnik.rsi
+    state: unfolded-icon

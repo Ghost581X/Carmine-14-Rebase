@@ -41,20 +41,16 @@
     requiredSlot: outerClothing
     blockUnequipWhenAttached: true
     replaceCurrentClothing: true
+    unfoldedEquippedPrefix: unfolded #so this corresponds to "unfolded-equipped-OUTERCLOTHING". this is what changes the in-world sprite.
     clothingPrototypes:
       head: ClothingModsuitHelmetStandard
       shoes: ClothingModsuitBootsStandard
   - type: DoAfter
-  - type: ToggleableVisuals # for the chestplate to change sprite in the world, when toggled
-    spriteLayer: light #CARMINETODO this is probably wrong but it works for now
-    clothingVisuals:
-      outerClothing:
-      - state: equipped-OUTERCLOTHING-unfolded
   - type: GenericVisualizer # for the chestplate to change sprite inhand/in in ventory, when toggled
     visuals:
       enum.ToggleableVisuals.Enabled:
         enum.ToggleableVisuals.Layer:
-          True: {state: icon-unfolded}
+          True: {state: unfolded-icon}
           False: {state: icon}
 
 # HEAD
@@ -84,7 +80,7 @@
     slots: [ HEAD ]
     clothingVisuals:
       head:
-      - state: equipped-HELMET
+      - state: unfolded-equipped-HELMET
 
 # SHOES
 - type: entity

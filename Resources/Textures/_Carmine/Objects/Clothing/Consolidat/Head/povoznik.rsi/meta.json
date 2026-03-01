@@ -11,7 +11,14 @@
       "name": "icon"
     },
     {
+      "name": "unfolded-icon"
+    },
+    {
       "name": "equipped-HELMET",
+      "directions": 4
+    },
+    {
+      "name": "unfolded-equipped-HELMET",
       "directions": 4
     },
     {

@@ -11,7 +11,14 @@
       "name": "icon"
     },
     {
+      "name": "unfolded-icon"
+    },
+    {
       "name": "equipped-OUTERCLOTHING",
+      "directions": 4
+    },
+    {
+      "name": "unfolded-equipped-OUTERCLOTHING",
       "directions": 4
     },
     {

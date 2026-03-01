@@ -1,0 +1,28 @@
+- type: entity
+  parent: ClothingFoldsuitBase
+  id: ClothingFoldsuitAtaman
+  name: ataman pauldrons
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Objects/Clothing/Consolidat/Outer/ataman.rsi
+    layers:
+    - state: icon
+      visible: true
+    - state: unfolded-icon
+      visible: false
+  - type: ToggleableClothing
+    clothingPrototypes:
+      head: ClothingFoldhelmetAtaman
+      shoes: ClothingFoldbootsConsolidat
+
+- type: entity
+  parent: ClothingFoldhelmetBase
+  id: ClothingFoldhelmetAtaman
+  name: ataman foldhelmet
+  description: CARMINETODO
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Carmine/Objects/Clothing/Consolidat/Head/ataman.rsi
+    state: unfolded-icon

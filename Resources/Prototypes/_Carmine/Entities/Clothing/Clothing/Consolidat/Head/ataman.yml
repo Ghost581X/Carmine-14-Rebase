@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingHeadHelmetBase
+  id: ClothingHeadAtaman
+  name: ataman helmet
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Objects/Clothing/Consolidat/Head/ataman.rsi
+  - type: Clothing
+    sprite: _Carmine/Objects/Clothing/Consolidat/Head/ataman.rsi

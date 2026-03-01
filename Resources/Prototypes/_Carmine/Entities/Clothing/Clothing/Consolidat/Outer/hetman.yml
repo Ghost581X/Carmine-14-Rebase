@@ -1,0 +1,28 @@
+- type: entity
+  parent: ClothingFoldsuitBase
+  id: ClothingFoldsuitHetman
+  name: hetman vest
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Objects/Clothing/Consolidat/Outer/hetman.rsi
+    layers:
+    - state: icon
+      visible: true
+    - state: unfolded-icon
+      visible: false
+  - type: ToggleableClothing
+    clothingPrototypes:
+      head: ClothingFoldhelmetHetman
+      shoes: ClothingFoldbootsConsolidat
+
+- type: entity
+  parent: ClothingFoldhelmetBase
+  id: ClothingFoldhelmetHetman
+  name: hetman foldhelmet
+  description: CARMINETODO
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Carmine/Objects/Clothing/Consolidat/Head/hetman.rsi
+    state: unfolded-icon

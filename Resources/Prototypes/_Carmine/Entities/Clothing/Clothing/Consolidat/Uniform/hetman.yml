@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformHetman
+  name: hetman attire
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Objects/Clothing/Consolidat/Uniform/hetman.rsi
+  - type: Clothing
+    sprite: _Carmine/Objects/Clothing/Consolidat/Uniform/hetman.rsi

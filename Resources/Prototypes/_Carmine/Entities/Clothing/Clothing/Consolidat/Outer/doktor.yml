@@ -1,0 +1,17 @@
+- type: entity
+  parent: ClothingFoldsuitBase
+  id: ClothingFoldsuitDoktor
+  name: doktor apron
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Objects/Clothing/Consolidat/Outer/doktor.rsi
+    layers:
+    - state: icon
+      visible: true
+    - state: unfolded-icon
+      visible: false
+  - type: ToggleableClothing
+    clothingPrototypes:
+      head: ClothingFoldhelmetConsolidat #doktor gets generics :'(
+      shoes: ClothingFoldbootsConsolidat

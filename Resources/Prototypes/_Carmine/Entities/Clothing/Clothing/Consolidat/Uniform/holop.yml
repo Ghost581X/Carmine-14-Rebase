@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformHolop
+  name: holop slacks
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Objects/Clothing/Consolidat/Uniform/holop.rsi
+  - type: Clothing
+    sprite: _Carmine/Objects/Clothing/Consolidat/Uniform/holop.rsi

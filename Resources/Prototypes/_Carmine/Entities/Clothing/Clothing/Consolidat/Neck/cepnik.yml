@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCepnik
+  name: cepnik necklace
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Objects/Clothing/Consolidat/Neck/cepnik.rsi
+  - type: Clothing
+    sprite: _Carmine/Objects/Clothing/Consolidat/Neck/cepnik.rsi

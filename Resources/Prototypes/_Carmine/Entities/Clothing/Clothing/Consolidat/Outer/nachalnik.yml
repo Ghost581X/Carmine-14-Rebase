@@ -9,31 +9,9 @@
     layers:
     - state: icon
       visible: true
-    - state: icon-unfolded
+    - state: unfolded-icon
       visible: false
   - type: ToggleableClothing
     clothingPrototypes:
       head: ClothingFoldhelmetConsolidat #nachalnik gets generics :'(
       shoes: ClothingFoldbootsConsolidat
-
-- type: entity
-  parent: ClothingFoldhelmetBase #generic
-  id: ClothingFoldhelmetConsolidat
-  name: consolidat foldhelmet
-  description: CARMINETODO
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: Sprite
-    sprite: _Carmine/Objects/Clothing/Consolidat/Head/generic.rsi
-    state: icon
-
-- type: entity
-  parent: ClothingFoldbootsBase #generic
-  id: ClothingFoldbootsConsolidat
-  name: consolidat foldboots
-  description: CARMINETODO
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: Sprite
-    sprite: _Carmine/Objects/Clothing/Consolidat/Feet/generic.rsi
-    state: icon
