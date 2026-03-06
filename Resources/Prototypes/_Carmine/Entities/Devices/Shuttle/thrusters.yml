@@ -61,10 +61,12 @@
   placement:
     mode: SnapgridCenter
 
+# CONSOLIDAT 1X1 THRUSTER
 - type: entity
-  id: Thruster
+  id: ThrusterConsolidat
   name: thruster
   parent: [ BaseThruster, ConstructibleMachine ]
+  suffix: CONS
   components:
   - type: Machine
     board: ThrusterMachineCircuitboard
@@ -72,13 +74,13 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 600
+        damage: 250 #half an outer wall
       behaviors:
         - !type:DoActsBehavior
           acts: ["Destruction"]
     - trigger:
         !type:DamageTrigger
-        damage: 300
+        damage: 125
       behaviors:
         - !type:DoActsBehavior
           acts: ["Destruction"]
@@ -88,7 +90,7 @@
         - !type:ChangeConstructionNodeBehavior
           node: machineFrame
   - type: Sprite
-    sprite: Structures/Shuttles/thruster.rsi
+    sprite: Structures/Shuttles/old_thruster.rsi
     layers:
     - state: base
       map: ["enum.ThrusterVisualLayers.Base"]
@@ -102,10 +104,12 @@
       visible: false
       offset: 0, 1
 
+#CONSOLIDAT THRUSTER LARGE
 - type: entity
-  id: ThrusterLarge
+  id: ThrusterLargeConsolidat
   name: large thruster
-  parent: [ BaseThruster]
+  parent: [ BaseThruster ]
+  suffix: CONS
   placement:
     mode: AlignTileAny
   components:
@@ -146,7 +150,7 @@
       types:
         Heat: 120
   - type: Sprite
-    sprite: Structures/Shuttles/thruster_large.rsi
+    sprite: Structures/Shuttles/thruster_large.rsi #CARMINETODO SPRITE - large thruster rusted ver
     offset: 0.5,-0.5
     layers:
     - state: base
@@ -165,21 +169,121 @@
   - type: StaticPrice
     price: 1500
 
+# INVERNSYKES 1X1 THRUSTER
 - type: entity
-  id: ThrusterUnanchored
-  parent: Thruster
-  suffix: Unanchored
+  id: ThrusterInvernSykes
+  name: thruster
+  parent: [ BaseThruster, ConstructibleMachine ]
+  suffix: INSY
   components:
-    - type: Transform
-      anchored: false
-    - type: Physics
-      bodyType: Dynamic
+  - type: Machine
+    board: ThrusterMachineCircuitboard
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 250 #half an outer wall
+      behaviors:
+        - !type:DoActsBehavior
+          acts: ["Destruction"]
+    - trigger:
+        !type:DamageTrigger
+        damage: 125
+      behaviors:
+        - !type:DoActsBehavior
+          acts: ["Destruction"]
+        - !type:PlaySoundBehavior
+          sound:
+            collection: MetalBreak
+        - !type:ChangeConstructionNodeBehavior
+          node: machineFrame
+  - type: Sprite
+    sprite: Structures/Shuttles/xenoborg_thruster.rsi
+    layers:
+    - state: base
+      map: ["enum.ThrusterVisualLayers.Base"]
+    - state: thrust
+      map: ["enum.ThrusterVisualLayers.ThrustOn"]
+      shader: unshaded
+      visible: false
+    - state: thrust_burn_unshaded
+      map: ["enum.ThrusterVisualLayers.ThrustingUnshaded"]
+      shader: unshaded
+      visible: false
+      offset: 0, 1
 
+#INVERNSYKES THRUSTER LARGE
 - type: entity
-  id: Gyroscope
+  id: ThrusterLargeInvernSykes
+  name: large thruster
+  parent: [ BaseThruster ]
+  suffix: INSY
+  placement:
+    mode: AlignTileAny
+  components:
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1800
+      behaviors:
+        - !type:DoActsBehavior
+          acts: ["Destruction"]
+    - trigger:
+        !type:DamageTrigger
+        damage: 900
+      behaviors:
+        - !type:DoActsBehavior
+          acts: ["Destruction"]
+        - !type:PlaySoundBehavior
+          sound:
+            collection: MetalBreak
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-1.45,1.45,0.45"
+        density: 1750
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: ApcPowerReceiver
+    powerLoad: 10000
+  - type: Thruster
+    thrust: 1600
+    burnShape: ["-0.3,0.5","0.2,1.6","0.8,1.6","1.3,0.5"]
+    damage:
+      types:
+        Heat: 120
+  - type: Sprite
+    sprite: Structures/Shuttles/thruster_large.rsi #CARMINETODO SPRITE - large thruster rusted ver
+    offset: 0.5,-0.5
+    layers:
+    - state: base
+      map: ["enum.ThrusterVisualLayers.Base"]
+    - state: thrust
+      map: ["enum.ThrusterVisualLayers.ThrustOn"]
+      shader: unshaded
+      visible: false
+    - state: thrust_burn_unshaded
+      map: ["enum.ThrusterVisualLayers.ThrustingUnshaded"]
+      shader: unshaded
+      visible: false
+      offset: 0, 2
+  - type: Anchorable
+    flags: None
+  - type: StaticPrice
+    price: 1500
+
+# GYROSCOPE CONS
+- type: entity
+  id: GyroscopeConsolidat
   parent: [ BaseThruster, ConstructibleMachine ]
   name: gyroscope
   description: Increases the shuttle's potential angular rotation.
+  suffix: CONS
   components:
   - type: Thruster
     thrusterType: Angular
@@ -187,8 +291,7 @@
     thrust: 2000
     machinePartThrust: Manipulator
   - type: Sprite
-    # Listen I'm not the biggest fan of the sprite but it was the most appropriate thing I could find.
-    sprite: Structures/Shuttles/gyroscope.rsi
+    sprite: _Carmine/Objects/Devices/gyroscope.rsi #CARMINETODO unique sprite
     snapCardinals: true
     layers:
     - state: base
@@ -239,56 +342,67 @@
   - type: StaticPrice
     price: 2000
 
+# GYROSCOPE INVERNSYKES
 - type: entity
-  id: GyroscopeUnanchored
-  parent: Gyroscope
-  suffix: Unanchored
+  id: GyroscopeInvernSykes
+  parent: [ BaseThruster, ConstructibleMachine ]
+  name: gyroscope
+  description: Increases the shuttle's potential angular rotation.
+  suffix: CONS
   components:
-    - type: Transform
-      anchored: false
-    - type: Physics
-      bodyType: Dynamic
-
-- type: entity
-  id: RustedThruster
-  parent: BaseStructureDynamic
-  name: rusted thruster
-  description: An unrepairable thruster, broken down from wear and tear. Only useful for scrapping.
-  components:
-    - type: Fixtures
-      fixtures:
-        fix1:
-          shape:
-            !type:PhysShapeAabb
-            bounds: "-0.45,-0.45,0.45,0.45"
-          density: 60
-          mask:
-          - MachineMask
-          layer:
-          - MachineLayer
-    - type: Transform
-      anchored: true
-    - type: Physics
-      bodyType: Static
-    - type: Rotatable
-      rotateWhileAnchored: true
-    - type: Sprite
-      sprite: Structures/Shuttles/old_thruster.rsi
-      state: base
-    - type: Damageable
-      damageContainer: Inorganic
-      damageModifierSet: Electronic
-    - type: Destructible
-      thresholds:
-      - trigger:
-          !type:DamageTrigger
-          damage: 100  # Considering we need a lot of thrusters didn't want to make an individual one too tanky
-        behaviors:
-          - !type:DoActsBehavior
-            acts: ["Destruction"]
-          - !type:PlaySoundBehavior
-            sound:
-              collection: MetalBreak
-    - type: PhysicalComposition
-      materialComposition:
-        Steel: 1200 # 12 sheets
+  - type: Thruster
+    thrusterType: Angular
+    requireSpace: false
+    thrust: 2000
+    machinePartThrust: Manipulator
+  - type: Sprite
+    sprite: _Carmine/Objects/Devices/gyroscope.rsi #CARMINETODO SPRITE unique sprite
+    snapCardinals: true
+    layers:
+    - state: base
+      map: ["enum.ThrusterVisualLayers.Base"]
+    - state: thrust
+      map: ["enum.ThrusterVisualLayers.ThrustOn"]
+      shader: unshaded
+      visible: false
+    - state: thrust_burn
+      map: [ "enum.ThrusterVisualLayers.Thrusting" ]
+      visible: false
+    - state: thrust_burn_unshaded
+      map: ["enum.ThrusterVisualLayers.ThrustingUnshaded"]
+      shader: unshaded
+      visible: false
+  - type: PointLight
+    radius: 1.3
+    energy: 0.8
+    enabled: false
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+    offset: "0, 0.1" # shine from the top, not bottom of the computer
+    color: "#4246b3"
+  - type: Machine
+    board: GyroscopeMachineCircuitboard
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 300
+      behaviors:
+        - !type:DoActsBehavior
+          acts: ["Destruction"]
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+        - !type:DoActsBehavior
+          acts: ["Destruction"]
+        - !type:PlaySoundBehavior
+          sound:
+            collection: MetalBreak
+        - !type:ChangeConstructionNodeBehavior
+          node: machineFrame
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Electronic
+  - type: StaticPrice
+    price: 2000
