@@ -1,0 +1,9 @@
+- type: entity
+  parent: Airlock
+  id: AirlockInvernSykes1
+  name: maintenance access
+  suffix: INSY
+  components:
+  - type: Sprite
+    noRot: true
+    sprite: _Carmine/Turf/Doors/invern_airlock_1.rsi
