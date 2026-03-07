@@ -123,7 +123,6 @@
         enum.PaperLabelVisuals.Layer:
           Paper: { state: paper }
           Bounty: { state: bounty }
-          CaptainsPaper: { state: captains_paper }
           Invoice: { state: invoice }
 
 # PowerCellSlot parents

@@ -1,0 +1,83 @@
+- type: entity
+  id: SpawnPointHetman
+  parent: SpawnPointJobBase
+  name: hetman spawn point
+  components:
+  - type: SpawnPoint
+    job_id: Hetman
+  - type: Sprite
+    layers:
+      - state: green
+      - state: hetman
+      
+- type: entity
+  id: SpawnPointAtaman
+  parent: SpawnPointJobBase
+  name: ataman spawn point
+  components:
+  - type: SpawnPoint
+    job_id: Ataman
+  - type: Sprite
+    layers:
+      - state: green
+      - state: ataman
+      
+- type: entity
+  id: SpawnPointDzhigit
+  parent: SpawnPointJobBase
+  name: dzhigit spawn point
+  components:
+  - type: SpawnPoint
+    job_id: Dzhigit
+  - type: Sprite
+    layers:
+      - state: green
+      - state: dzhigit
+      
+- type: entity
+  id: SpawnPointNachalnik
+  parent: SpawnPointJobBase
+  name: nachalnik spawn point
+  components:
+  - type: SpawnPoint
+    job_id: Nachalnik
+  - type: Sprite
+    layers:
+      - state: green
+      - state: nachalnik
+      
+- type: entity
+  id: SpawnPointCepnik
+  parent: SpawnPointJobBase
+  name: cepnik spawn point
+  components:
+  - type: SpawnPoint
+    job_id: Cepnik
+  - type: Sprite
+    layers:
+      - state: green
+      - state: cepnik
+      
+- type: entity
+  id: SpawnPointPovoznik
+  parent: SpawnPointJobBase
+  name: povoznik spawn point
+  components:
+  - type: SpawnPoint
+    job_id: Povoznik
+  - type: Sprite
+    layers:
+      - state: green
+      - state: povoznik
+      
+- type: entity
+  id: SpawnPointDoktor
+  parent: SpawnPointJobBase
+  name: doktor spawn point
+  components:
+  - type: SpawnPoint
+    job_id: Doktor
+  - type: Sprite
+    layers:
+      - state: green
+      - state: doktor

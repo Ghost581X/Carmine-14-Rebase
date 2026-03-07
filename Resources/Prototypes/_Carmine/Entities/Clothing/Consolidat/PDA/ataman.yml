@@ -1,0 +1,22 @@
+- type: entity
+  parent: ConsolidatPDAGeneric
+  id: AtamanPDA
+  name: ataman's PDA
+  description: CARMINETODO
+  components:
+  - type: Pda
+    id: ConsolidatIDAtaman
+    
+- type: entity
+  parent: ConsolidatIDGeneric
+  id: ConsolidatIDAtaman
+  name: ataman's ID
+  components:
+  - type: Sprite
+    layers:
+    - state: black
+    - sprite: /Textures/_Carmine/Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625 #3 pixels left, 2 pixels up
+      state: Ataman
+  - type: PresetIdCard
+    job: Ataman

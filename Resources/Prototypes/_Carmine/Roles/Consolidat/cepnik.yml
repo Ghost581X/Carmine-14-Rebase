@@ -1,0 +1,28 @@
+- type: job
+  id: Cepnik
+  name: Cepnik
+  description: CARMINETODO
+  playTimeTracker: JobCepnik
+  weight: 1
+  startingGear: CepnikGear
+  icon: "JobIconCepnik"
+  supervisors: CARMINETODO
+  access:
+  - Maintenance #CARMINETODO
+
+- type: startingGear
+  id: CepnikGear
+  equipment:
+    shoes: ClothingShoesConsolidatTrench
+    jumpsuit: ClothingUniformHolop
+    id: CepnikPDA
+    neck: ClothingNeckCepnik
+    outerClothing: ClothingFoldsuitCepnik
+##  pocket1:
+##  pocket2:
+    back: ClothingBackpackSatchelLeather
+    gloves: ClothingHandsConsolidatTrench
+    head: ClothingHeadCepnik
+##  mask:
+    ears: ClothingHeadsetConsolidat
+##  belt:

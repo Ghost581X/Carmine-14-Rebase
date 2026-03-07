@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformStarshina
+  name: starshina attire
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Objects/Clothing/Consolidat/Uniform/starshina.rsi
+  - type: Clothing
+    sprite: _Carmine/Objects/Clothing/Consolidat/Uniform/starshina.rsi

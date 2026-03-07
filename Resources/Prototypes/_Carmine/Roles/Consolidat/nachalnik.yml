@@ -1,0 +1,28 @@
+- type: job
+  id: Nachalnik
+  name: Nachalnik
+  description: CARMINETODO
+  playTimeTracker: JobNachalnik
+  weight: 2
+  startingGear: NachalnikGear
+  icon: "JobIconNachalnik"
+  supervisors: CARMINETODO
+  access:
+  - Maintenance #CARMINETODO
+
+- type: startingGear
+  id: NachalnikGear
+  equipment:
+    shoes: ClothingShoesConsolidatTrench
+    jumpsuit: ClothingUniformStarshina
+    id: NachalnikPDA
+##  neck:
+    outerClothing: ClothingFoldsuitNachalnik
+##  pocket1:
+##  pocket2:
+    back: ClothingBackpackSatchelLeather
+    gloves: ClothingHandsConsolidatTrench
+##  head:
+##  mask:
+    ears: ClothingHeadsetConsolidat
+##  belt:

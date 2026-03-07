@@ -1,0 +1,28 @@
+- type: job
+  id: Ataman
+  name: Ataman
+  description: CARMINETODO
+  playTimeTracker: JobAtaman
+  weight: 3
+  startingGear: AtamanGear
+  icon: "JobIconAtaman"
+  supervisors: CARMINETODO
+  access:
+  - Maintenance #CARMINETODO
+
+- type: startingGear
+  id: AtamanGear
+  equipment:
+    shoes: ClothingShoesConsolidatTrench
+    jumpsuit: ClothingUniformAtaman
+    id: AtamanPDA
+    neck: ClothingNeckAtaman
+    outerClothing: ClothingFoldsuitAtaman
+##  pocket1:
+##  pocket2:
+    back: ClothingBackpackSatchelLeather
+    gloves: ClothingHandsConsolidatFancy
+    head: ClothingHeadAtaman
+##  mask:
+    ears: ClothingHeadsetAtaman
+##  belt:

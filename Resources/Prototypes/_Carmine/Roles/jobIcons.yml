@@ -1,0 +1,60 @@
+##IRON CONSOLIDAT
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconHetman
+  icon:
+    sprite: &icon-rsi /Textures/_Carmine/Interface/Misc/job_icons.rsi
+    state: Hetman
+  jobName: Hetman
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconAtaman
+  icon:
+    sprite: *icon-rsi
+    state: Ataman
+  jobName: Ataman
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconDzhigit
+  icon:
+    sprite: *icon-rsi
+    state: Dzhigit
+  jobName: Dzhigit
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconNachalnik
+  icon:
+    sprite: *icon-rsi
+    state: Nachalnik
+  jobName: Nachalnik
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconPovoznik
+  icon:
+    sprite: *icon-rsi
+    state: Povoznik
+  jobName: Povoznik
+  
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconCepnik
+  icon:
+    sprite: *icon-rsi
+    state: Cepnik
+  jobName: Cepnik
+ 
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconDoktor
+  icon:
+    sprite: *icon-rsi
+    state: Doktor
+  jobName: Doktor
+
+##INVERN-SYKES
+
+##KHANDAN-KEYVAN

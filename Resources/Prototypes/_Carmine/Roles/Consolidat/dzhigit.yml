@@ -1,0 +1,28 @@
+- type: job
+  id: Dzhigit
+  name: Dzhigit
+  description: CARMINETODO
+  playTimeTracker: JobDzhigit
+  weight: 2
+  startingGear: DzhigitGear
+  icon: "JobIconDzhigit"
+  supervisors: CARMINETODO
+  access:
+  - Maintenance #CARMINETODO
+
+- type: startingGear
+  id: DzhigitGear
+  equipment:
+    shoes: ClothingShoesConsolidatTrench
+    jumpsuit: ClothingUniformStarshina
+    id: DzhigitPDA
+##  neck:
+    outerClothing: ClothingSuitDzhigit
+##  pocket1:
+##  pocket2:
+    back: ClothingBackpackSatchelLeather
+    gloves: ClothingHandsConsolidatTrench
+    head: ClothingHelmetDzhigit
+##  mask:
+    ears: ClothingHeadsetConsolidat
+##  belt:

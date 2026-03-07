@@ -14,17 +14,19 @@
   color: "#967101"
   # long range since otherwise it'd defeat the point of a handheld radio independent of telecomms
   longRange: true
-#These 2 below are for the linter <3
-- type: radioChannel
-  id: Security
-  name: chat-radio-security
-  keycode: 's'
-  frequency: 1359
-  color: "#ff4242"
+
+#CONSOLIDAT
 
 - type: radioChannel
-  id: Science
-  name: chat-radio-science
-  keycode: 'n'
-  frequency: 1351
-  color: "#cd7ccd"
+  id: Consolidat
+  name: Consolidat
+  keycode: 'c'
+  frequency: 1353
+  color: "#708238"
+
+- type: radioChannel
+  id: ConsolidatCouncil
+  name: Ataman council
+  keycode: 'v'
+  frequency: 1354
+  color: "#4F7942"

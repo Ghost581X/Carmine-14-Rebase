@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingShoesBase
+  id: ClothingShoesConsolidatTrench
+  name: trench boots
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Objects/Clothing/Consolidat/Feet/trenchboots.rsi
+  - type: Clothing
+    sprite: _Carmine/Objects/Clothing/Consolidat/Feet/trenchboots.rsi

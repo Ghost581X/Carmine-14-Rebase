@@ -1,0 +1,15 @@
+- type: department
+  id: Consolidat
+  name: The Iron Consolidat
+  description: CARMINETODO
+  color: "#16731a"
+  roles:
+  - Hetman #CARMINETODO this shouldnt be roundstart
+  - Ataman
+  - Dzhigit
+  - Nachalnik #CARMINETODO this shouldnt be roundstart
+  - Cepnik
+  - Povoznik
+  - Doktor
+  primary: false
+  weight: 0

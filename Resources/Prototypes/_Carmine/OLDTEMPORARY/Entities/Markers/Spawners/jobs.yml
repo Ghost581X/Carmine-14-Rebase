@@ -1,6 +1,6 @@
 # Base
 
-- type: entity
+- type: entity #carminetodo unify with everything else
   id: SpawnPointJobBase
   parent: MarkerBase
   abstract: true
@@ -9,7 +9,7 @@
   - type: SpawnPoint
     spawn_type: Job
   - type: Sprite
-    sprite: Markers/jobs.rsi
+    sprite: _Carmine/Turf/Markers/roles.rsi
 
 - type: entity
   name: observer spawn point
@@ -17,7 +17,7 @@
   parent: MarkerBase
   components:
   - type: Sprite
-    sprite: Markers/jobs.rsi
+    sprite: _Carmine/Turf/Markers/roles.rsi
     layers:
       - state: green
       - sprite: Mobs/Ghosts/ghost_human.rsi

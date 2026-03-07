@@ -1,0 +1,22 @@
+- type: entity
+  parent: ConsolidatPDAGeneric
+  id: CepnikPDA
+  name: cepnik's PDA
+  description: CARMINETODO
+  components:
+  - type: Pda
+    id: ConsolidatIDCepnik
+    
+- type: entity
+  parent: ConsolidatIDGeneric
+  id: ConsolidatIDCepnik
+  name: cepnik's ID
+  components:
+  - type: Sprite
+    layers:
+    - state: black
+    - sprite: /Textures/_Carmine/Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625 #3 pixels left, 2 pixels up
+      state: Cepnik
+  - type: PresetIdCard
+    job: Cepnik

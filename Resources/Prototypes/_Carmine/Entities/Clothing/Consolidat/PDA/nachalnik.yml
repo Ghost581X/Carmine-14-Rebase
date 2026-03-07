@@ -1,0 +1,22 @@
+- type: entity
+  parent: ConsolidatPDAGeneric
+  id: NachalnikPDA
+  name: nachalnik's PDA
+  description: CARMINETODO
+  components:
+  - type: Pda
+    id: ConsolidatIDNachalnik
+    
+- type: entity
+  parent: ConsolidatIDGeneric
+  id: ConsolidatIDNachalnik
+  name: nachalnik's ID
+  components:
+  - type: Sprite
+    layers:
+    - state: black
+    - sprite: /Textures/_Carmine/Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625 #3 pixels left, 2 pixels up
+      state: Nachalnik
+  - type: PresetIdCard
+    job: Nachalnik

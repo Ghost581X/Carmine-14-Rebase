@@ -1,0 +1,32 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Modified from /tg/ icons",
+    "size": {
+        "x": 8,
+        "y": 8
+    },
+    "states": [
+        {
+            "name": "Hetman"
+        },
+        {
+            "name": "Ataman"
+        },
+        {
+            "name": "Dzhigit"
+        },
+        {
+            "name": "Nachalnik"
+        },
+        {
+            "name": "Cepnik"
+        },
+        {
+            "name": "Povoznik"
+        },
+        {
+            "name": "Doktor"
+        }
+    ]
+}

@@ -3,9 +3,25 @@
 - type: playTimeTracker
   id: Overall
 
-- type: playTimeTracker
-  id: JobAssistant
+# CONSOLIDAT
 
 - type: playTimeTracker
-  id: JobCaptain
+  id: JobHetman
 
+- type: playTimeTracker
+  id: JobAtaman
+
+- type: playTimeTracker
+  id: JobDzhigit
+
+- type: playTimeTracker
+  id: JobNachalnik
+
+- type: playTimeTracker
+  id: JobCepnik
+
+- type: playTimeTracker
+  id: JobPovoznik
+
+- type: playTimeTracker
+  id: JobDoktor

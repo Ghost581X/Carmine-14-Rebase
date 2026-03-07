@@ -1,0 +1,22 @@
+- type: entity
+  parent: ConsolidatPDAGeneric
+  id: DzhigitPDA
+  name: dzhigit's PDA
+  description: CARMINETODO
+  components:
+  - type: Pda
+    id: ConsolidatIDDzhigit
+    
+- type: entity
+  parent: ConsolidatIDGeneric
+  id: ConsolidatIDDzhigit
+  name: dzhigit's ID
+  components:
+  - type: Sprite
+    layers:
+    - state: black
+    - sprite: /Textures/_Carmine/Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625 #3 pixels left, 2 pixels up
+      state: Dzhigit
+  - type: PresetIdCard
+    job: Dzhigit

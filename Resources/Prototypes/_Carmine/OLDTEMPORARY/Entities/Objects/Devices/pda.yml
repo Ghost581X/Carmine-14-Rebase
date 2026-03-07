@@ -109,17 +109,6 @@
 
 - type: entity
   parent: BasePDA
-  id: AssistantPDA
-  name: assistant PDA
-  description: Why isn't it gray?
-  components:
-  - type: Pda
-    id: AssistantIDCard
-  - type: PdaBorderColor
-    borderColor: "#717059"
-
-- type: entity
-  parent: BasePDA
   id: AdminPDA
   name: Admin PDA
   suffix: Admin
@@ -147,7 +136,7 @@
 - type: entity
   parent: [BasePDA, SelectableLock]
   id: ChameleonPDA
-  name: assistant PDA
+  name: chameleon PDA
   description: Why isn't it gray?
   suffix: Chameleon
   components:
@@ -158,7 +147,7 @@
     - DoorBumpOpener
   - type: ChameleonClothing
     slot: [idcard]
-    default: AssistantPDA
+    default: CepnikPDA
     requireTag: WhitelistChameleonPDA
   - type: UserInterface
     interfaces:

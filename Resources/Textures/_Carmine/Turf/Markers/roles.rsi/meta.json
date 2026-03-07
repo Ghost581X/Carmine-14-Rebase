@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "license": "All rights reserved.",
+  "copyright": "Made for Carmine, Do not use without permission from .2 or ninruB",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "green"
+    },
+    {
+      "name": "hetman"
+    },
+    {
+      "name": "ataman"
+    },
+    {
+      "name": "dzhigit"
+    },
+    {
+      "name": "nachalnik"
+    },
+    {
+      "name": "cepnik"
+    },
+    {
+      "name": "povoznik"
+    },
+    {
+      "name": "doktor"
+    },
+    {
+      "name": "generic"
+    }
+  ]
+}

@@ -14,7 +14,6 @@
   - type: Item
     size: Small
     heldPrefix: default
-    storedRotation: -90
   - type: Access
   - type: IdCard
   - type: StationRecordKeyStorage
@@ -26,47 +25,6 @@
 
 #IDs with layers
 
-- type: entity
-  parent: IDCardStandard
-  id: AssistantIDCard
-  name: assistant ID card
-  components:
-  - type: Sprite
-    layers:
-    - state: default
-    - sprite: &icon-rsi Interface/Misc/job_icons.rsi
-      offset: &icon-offset -0.09375, 0.0625 #3 pixels left, 2 pixels up
-      state: Passenger
-  - type: PresetIdCard
-    job: Assistant
-
-#Command
-
-- type: entity
-  parent: [IDCardStandard]
-  id: CaptainIDCard
-  name: captain ID card
-  components:
-  - type: Sprite
-    layers:
-    - state: gold
-    - state: stripe_top
-      color: "#1b67a5"
-    - state: stripe_bottom
-      color: "#0e4069"
-    - sprite: *icon-rsi
-      offset: *icon-offset
-      state: Captain
-  - type: Item
-    heldPrefix: gold
-  - type: PresetIdCard
-    job: Captain
-  - type: Tag
-    tags:
-    - DoorBumpOpener
-    - WhitelistChameleon
-    - WhitelistChameleonIdCard
-    - HighRiskItem
 #Admin
 
 - type: entity
@@ -80,8 +38,8 @@
     sprite: Objects/Misc/id_cards.rsi
     layers:
     - state: admin
-    - sprite: *icon-rsi
-      offset: *icon-offset
+    - sprite: &icon-rsi Interface/Misc/job_icons.rsi
+      offset: &icon-offset -0.09375, 0.0625 #3 pixels left, 2 pixels up
       state: Admin
   - type: Clothing
     sprite: Objects/Misc/id_cards.rsi

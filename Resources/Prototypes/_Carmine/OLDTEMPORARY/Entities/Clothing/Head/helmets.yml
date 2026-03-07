@@ -13,6 +13,8 @@
     layers:
       HeadTop : HEAD
       HeadSide : HEAD
+      Hair : HEAD #CARMINETODO actually do some real reparenting and allow for non-full helmets
+      FacialHair : HEAD
 
 - type: entity
   parent: ClothingHeadHelmetBase

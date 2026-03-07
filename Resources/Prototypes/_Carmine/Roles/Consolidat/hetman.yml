@@ -1,0 +1,28 @@
+- type: job
+  id: Hetman
+  name: Hetman
+  description: CARMINETODO
+  playTimeTracker: JobHetman
+  weight: 4
+  startingGear: HetmanGear
+  icon: "JobIconHetman"
+  supervisors: CARMINETODO
+  access:
+  - Maintenance #CARMINETODO
+
+- type: startingGear
+  id: HetmanGear
+  equipment:
+    shoes: ClothingShoesConsolidatFancy
+    jumpsuit: ClothingUniformHetman
+    id: HetmanPDA
+##  neck: 
+    outerClothing: ClothingFoldsuitHetman
+##  pocket1:
+##  pocket2:
+    back: ClothingBackpackSatchelLeather
+    gloves: ClothingHandsConsolidatFancy
+    head: ClothingHeadHetman
+##  mask:
+    ears: ClothingHeadsetAtaman
+##  belt:

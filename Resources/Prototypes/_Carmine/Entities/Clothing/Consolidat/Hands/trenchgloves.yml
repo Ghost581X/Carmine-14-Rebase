@@ -1,0 +1,12 @@
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsConsolidatTrench
+  name: trenchgloves
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Objects/Clothing/Consolidat/Hands/trenchgloves.rsi
+  - type: Clothing
+    sprite: _Carmine/Objects/Clothing/Consolidat/Hands/trenchgloves.rsi
+  - type: Insulated
+  - type: FingerprintMask

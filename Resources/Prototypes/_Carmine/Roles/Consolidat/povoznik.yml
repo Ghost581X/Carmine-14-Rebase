@@ -1,0 +1,28 @@
+- type: job
+  id: Povoznik
+  name: Povoznik
+  description: CARMINETODO
+  playTimeTracker: JobPovoznik
+  weight: 1
+  startingGear: PovoznikGear
+  icon: "JobIconPovoznik"
+  supervisors: CARMINETODO
+  access:
+  - Maintenance #CARMINETODO
+
+- type: startingGear
+  id: PovoznikGear
+  equipment:
+    shoes: ClothingShoesConsolidatTrench
+    jumpsuit: ClothingUniformHolop
+    id: PovoznikPDA
+##  neck:
+    outerClothing: ClothingFoldsuitPovoznik
+##  pocket1:
+##  pocket2:
+    back: ClothingBackpackSatchelLeather
+    gloves: ClothingHandsConsolidatTrench
+    head: ClothingHeadPovoznik
+##  mask:
+    ears: ClothingHeadsetConsolidat
+##  belt:

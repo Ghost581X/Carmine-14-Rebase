@@ -1,0 +1,28 @@
+- type: job
+  id: Doktor
+  name: Doktor
+  description: CARMINETODO
+  playTimeTracker: JobDoktor
+  weight: 1
+  startingGear: DoktorGear
+  icon: "JobIconDoktor"
+  supervisors: CARMINETODO
+  access:
+  - Maintenance #CARMINETODO
+
+- type: startingGear
+  id: DoktorGear
+  equipment:
+    shoes: ClothingShoesConsolidatTrench
+    jumpsuit: ClothingUniformDoktor
+    id: DoktorPDA
+##  neck:
+    outerClothing: ClothingFoldsuitDoktor
+##  pocket1:
+##  pocket2:
+    back: ClothingBackpackSatchelLeather
+    gloves: ClothingHandsConsolidatTrench
+##  head:
+##  mask:
+    ears: ClothingHeadsetConsolidat
+##  belt:

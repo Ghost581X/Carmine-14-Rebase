@@ -30,23 +30,3 @@
     sprite: *icon-rsi
     state: Admin
   allowSelection: false
-
-# Assistant
-
-- type: jobIcon
-  parent: JobIcon
-  id: JobIconAssistant
-  icon:
-    sprite: *icon-rsi
-    state: Passenger
-  jobName: job-name-assistant
-
-# Command
-
-- type: jobIcon
-  parent: JobIcon
-  id: JobIconCaptain
-  icon:
-    sprite: *icon-rsi
-    state: Captain
-  jobName: job-name-captain

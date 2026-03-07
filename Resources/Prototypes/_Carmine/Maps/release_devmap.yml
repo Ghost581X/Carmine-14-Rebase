@@ -28,5 +28,5 @@
             proper: true
         - type: StationJobs
           availableJobs:
-            Captain: [ 10, 10 ]
-            Assistant: [ 10, 10 ]
+            Cepnik: [ 10, 10 ]
+            Hetman: [ 10, 10 ]

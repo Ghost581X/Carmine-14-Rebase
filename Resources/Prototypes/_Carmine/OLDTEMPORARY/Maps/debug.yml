@@ -12,7 +12,7 @@
           mapNameTemplate: "Sepna Starsystem"
         # - type: StationJobs
         #   availableJobs:
-        #     Assistant: [ 0, 0 ]
+        #     Cepnik: [ 0, 0 ]
 
 - type: gameMap
   id: Dev
@@ -27,4 +27,10 @@
           mapNameTemplate: "Dev"
         - type: StationJobs
           availableJobs:
-            Captain: [ -1, -1 ]
+            Hetman: [ 10, 10 ]
+            Ataman: [ 10, 10 ]
+            Dzhigit: [ 10, 10 ]
+            Nachalnik: [ 10, 10 ]
+            Doktor: [ 10, 10 ]
+            Povoznik: [ 10, 10 ]
+            Cepnik: [ 10, 10 ]
