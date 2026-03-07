@@ -189,3 +189,53 @@
       visible: true
     - state: circabinet_torquise_tall-open
       map: ["enum.OpenableVisuals.Layer"]
+
+- type: entity
+  abstract: true
+  parent: BaseCabinet
+  id: CabinetMailbox
+  name: mailbox
+  components:
+  - type: GenericVisualizer
+    visuals:
+      enum.ItemCabinetVisuals.ContainsItem:
+        enum.ItemCabinetVisuals.Layer:
+          True: { visible: true }
+          False: { visible: false }
+      enum.OpenableVisuals.Opened:
+        enum.OpenableVisuals.Layer:
+          True: { state: mailbox-open }
+          False: { state: mailbox }
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    layers:
+    - state: mailbox
+      map: ["enum.ItemCabinetVisuals.Layer"]
+      visible: true
+    - state: mailbox-open
+      map: ["enum.OpenableVisuals.Layer"]
+
+- type: entity
+  abstract: true
+  parent: BaseCabinet
+  id: CabinetMailboxOld
+  name: mailbox
+  components:
+  - type: GenericVisualizer
+    visuals:
+      enum.ItemCabinetVisuals.ContainsItem:
+        enum.ItemCabinetVisuals.Layer:
+          True: { visible: true }
+          False: { visible: false }
+      enum.OpenableVisuals.Opened:
+        enum.OpenableVisuals.Layer:
+          True: { state: mailbox_old-open }
+          False: { state: mailbox_old }
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    layers:
+    - state: mailbox_old
+      map: ["enum.ItemCabinetVisuals.Layer"]
+      visible: true
+    - state: mailbox_old-open
+      map: ["enum.OpenableVisuals.Layer"]

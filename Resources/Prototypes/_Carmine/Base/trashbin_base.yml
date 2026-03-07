@@ -1,0 +1,63 @@
+- type: entity
+  abstract: true
+  id: BaseTrashbin
+  parent: BaseStructure
+  name: trashbin
+  description: A trashbin.
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Disposal
+  components:
+  - type: Climbable
+    vaultable: false
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: trashbin
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.45"
+        density: 55
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+          params:
+            volume: -6
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 1
+            max: 1
+  - type: Appearance
+  - type: ContainerContainer
+    containers:
+      disposals: !type:Container
+  - type: ThrowInsertContainer
+    containerId: disposals
+    probability: 0.67
+  - type: RequireProjectileTarget
+  - type: StaticPrice
+    price: 70

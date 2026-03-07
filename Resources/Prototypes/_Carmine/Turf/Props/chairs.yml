@@ -1,0 +1,371 @@
+- type: entity
+  name: chair
+  id: ChairArmchair
+  parent: ChairBase
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Chairs/basic_chairs.rsi
+    state: armchair
+
+- type: entity
+  name: chair
+  id: ChairCaptain
+  parent: ChairBase
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Chairs/basic_chairs.rsi
+    state: captain_chair
+
+- type: entity
+  name: chair
+  id: ChairDiner
+  parent: ChairBase
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Chairs/basic_chairs.rsi
+    state: diner_chair
+
+- type: entity
+  name: chair
+  id: ChairErgonomic
+  parent: ChairBase
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Chairs/basic_chairs.rsi
+    state: ergo_chair
+
+- type: entity
+  name: chair
+  id: ChairRetro
+  parent: ChairBase
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Chairs/basic_chairs.rsi
+    state: retro_chair
+
+- type: entity
+  name: chair
+  id: ChairCursed
+  parent: ChairWooden
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Chairs/wood_chair.rsi
+    state: base
+  - type: Strap
+    buckleSound:
+      collection: MaleScreams
+
+- type: entity
+  parent: [SeatBase, BaseDeployFoldable]
+  id: ChairFolding
+  name: folding chair
+  description: A foldable chair.
+  components:
+  - type: Rotatable
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Chairs/metal_chair_folding.rsi
+    layers:
+    - state: base
+      map: ["unfoldedLayer"]
+    - state: folded
+      map: ["foldedLayer"]
+      visible: false
+  - type: Item
+    size: Huge
+  - type: Appearance
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 10
+    soundHit:
+      collection: MetalThud
+  - type: DamageExaminable
+
+- type: entity
+  parent: ChairFolding
+  id: ChairFoldingSpawnFolded
+  suffix: folded
+  components:
+  - type: Foldable
+    folded: true
+  - type: Strap
+    enabled: False
+
+- type: entity
+  name: stool
+  id: ChairBarStool
+  parent: StoolBase
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Chairs/bar_stool.rsi
+    state: base
+
+- type: entity
+  name: stool
+  id: ChairBarStoolToppled
+  parent: StoolBase
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Chairs/bar_stool.rsi
+    state: toppled
+
+- type: entity
+  name: chair
+  id: ChairMetalGreen
+  parent: ChairBase
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Chairs/metal_chair_green.rsi
+    state: base
+
+- type: entity
+  name: chair
+  id: ChairMetalGreenBroken
+  parent: ChairBase
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Chairs/metal_chair_green.rsi
+    state: broken
+
+- type: entity
+  name: chair
+  id: ChairMetalGreenUnfinished
+  parent: ChairBase
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Chairs/metal_chair_green.rsi
+    state: unfinished
+
+- type: entity
+  name: chair
+  id: ChairMetalGreenToppled
+  parent: ChairBase
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Chairs/metal_chair_green.rsi
+    state: toppled
+
+- type: entity
+  name: chair
+  id: ChairMetalGreenUnfinishedToppled
+  parent: ChairBase
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Chairs/metal_chair_green.rsi
+    state: unfinished_toppled
+
+- type: entity
+  name: chair
+  id: ChairMetalBlue
+  parent: ChairBase
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Chairs/metal_chair_blue.rsi
+    state: base
+
+- type: entity
+  name: chair
+  id: ChairMetalBlueBroken
+  parent: ChairBase
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Chairs/metal_chair_blue.rsi
+    state: broken
+
+- type: entity
+  name: chair
+  id: ChairMetalBlueUnfinished
+  parent: ChairBase
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Chairs/metal_chair_blue.rsi
+    state: unfinished
+
+- type: entity
+  name: chair
+  id: ChairMetalBlueToppled
+  parent: ChairBase
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Chairs/metal_chair_blue.rsi
+    state: toppled
+
+- type: entity
+  name: chair
+  id: ChairMetalBlueUnfinishedToppled
+  parent: ChairBase
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Chairs/metal_chair_blue.rsi
+    state: unfinished_toppled
+
+- type: entity
+  name: chair
+  id: ChairMetalRed
+  parent: ChairBase
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Chairs/metal_chair_red.rsi
+    state: base
+
+- type: entity
+  name: chair
+  id: ChairMetalRedBroken
+  parent: ChairBase
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Chairs/metal_chair_red.rsi
+    state: broken
+
+- type: entity
+  name: chair
+  id: ChairMetalRedUnfinished
+  parent: ChairBase
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Chairs/metal_chair_red.rsi
+    state: unfinished
+
+- type: entity
+  name: chair
+  id: ChairMetalRedToppled
+  parent: ChairBase
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Chairs/metal_chair_red.rsi
+    state: toppled
+
+- type: entity
+  name: chair
+  id: ChairMetalRedUnfinishedToppled
+  parent: ChairBase
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Chairs/metal_chair_red.rsi
+    state: unfinished_toppled
+
+- type: entity
+  name: chair
+  id: ChairOfficeRed
+  parent: RotatableChairBase
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Chairs/office_chair_red.rsi
+    state: base
+
+- type: entity
+  name: chair
+  id: ChairOfficeRedBroken
+  parent: RotatableChairBase
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Chairs/office_chair_red.rsi
+    state: broken
+
+- type: entity
+  name: chair
+  id: ChairOfficeRedToppled
+  parent: RotatableChairBase
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Chairs/office_chair_red.rsi
+    state: toppled
+
+- type: entity
+  name: chair
+  id: ChairOfficeRedToppledBroken
+  parent: RotatableChairBase
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Chairs/office_chair_red.rsi
+    state: toppled_broken
+
+- type: entity
+  name: chair
+  id: ChairOfficeBlue
+  parent: RotatableChairBase
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Chairs/office_chair_blue.rsi
+    state: base
+
+- type: entity
+  name: chair
+  id: ChairOfficeBlueBroken
+  parent: RotatableChairBase
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Chairs/office_chair_blue.rsi
+    state: broken
+
+- type: entity
+  name: chair
+  id: ChairOfficeBlueToppled
+  parent: RotatableChairBase
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Chairs/office_chair_blue.rsi
+    state: toppled
+
+- type: entity
+  name: chair
+  id: ChairOfficeBlueToppledBroken
+  parent: RotatableChairBase
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Chairs/office_chair_blue.rsi
+    state: toppled_broken
+
+- type: entity
+  name: chair
+  id: ChairPlastic
+  parent: ChairBase
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Chairs/plastic_chair.rsi
+    state: base
+
+- type: entity
+  name: chair
+  id: ChairPlasticToppled
+  parent: ChairBase
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Chairs/plastic_chair.rsi
+    state: toppled
+
+- type: entity
+  name: chair
+  id: ChairWood
+  parent: ChairWooden
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Chairs/wood_chair.rsi
+    state: base
+
+- type: entity
+  name: chair
+  id: ChairWoodToppled
+  parent: ChairWooden
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Chairs/wood_chair.rsi
+    state: toppled
+
+- type: entity
+  name: chair
+  id: ChairWoodPadded
+  parent: ChairWooden
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Chairs/wood_chair_padded.rsi
+    state: base
+
+- type: entity
+  name: chair
+  id: ChairWoodPaddedToppled
+  parent: ChairWooden
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Chairs/wood_chair_padded.rsi
+    state: toppled

@@ -286,6 +286,84 @@
     sprite: _Carmine/Turf/Props/tallfurniture.rsi
     state: mirror_broke
 
+#SINK
+
+- type: entity
+  parent: BaseSink
+  id: FurnitureSink
+  name: sink
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: sink
+
+#TOILET
+
+- type: entity
+  parent: BaseToilet
+  id: FurnitureToilet
+  name: toilet
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: toilet
+
+#SHOWER
+
+- type: entity
+  parent: BaseFurniture
+  id: FurnitureShower
+  name: shower
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: shower
+
+# TRASHBIN
+
+- type: entity
+  parent: BaseTrashbin
+  id: FurnitureTrashbin1
+  name: trash bin
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: trashbin
+
+- type: entity
+  parent: BaseTrashbin
+  id: FurnitureTrashbin2
+  name: trash bin
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: trashbin-1
+
+- type: entity
+  parent: BaseTrashbin
+  id: FurnitureTrashbin3
+  name: trash bin
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: trashbin-2
+
+- type: entity
+  parent: BaseTrashbin
+  id: FurnitureTrashbin4
+  name: trash bin
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: trashbin-3
+
 #CABLE REEL
 
 - type: entity
@@ -297,3 +375,155 @@
   - type: Sprite
     sprite: _Carmine/Turf/Props/standalone_tables.rsi
     state: cable_reel
+
+#PAYPHONES
+
+- type: entity
+  parent: BaseFurniture
+  id: FurniturePayphone
+  name: payphone
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: payphone
+
+- type: entity
+  parent: BaseFurniture
+  id: FurniturePayphoneAlt
+  name: payphone
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: payphone_alt
+
+#PHONES
+
+- type: entity
+  parent: BaseFurniture
+  id: FurniturePhoneRed
+  name: phone
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: phone_red
+
+- type: entity
+  parent: BaseFurniture
+  id: FurniturePhoneBlack
+  name: phone
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: phone_black
+
+#SMELTER
+
+- type: entity
+  parent: BaseFurniture
+  id: FurnitureSmelter
+  name: smelter
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/smelter.rsi
+    state: smelter
+
+#DELI STAND
+
+- type: entity
+  parent: BaseFurniture
+  id: FurnitureDeliStand
+  name: stand
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/stand_deli.rsi
+    state: deli_stand
+
+#PLANT POTS
+
+- type: entity
+  parent: BasePlantPot
+  id: FurniturePlantPot1
+  name: pot
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: pot_1
+
+- type: entity
+  parent: BasePlantPot
+  id: FurniturePlantPot2
+  name: pot
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: pot_2
+
+- type: entity
+  parent: BasePlantPot
+  id: FurniturePlantPot3
+  name: pot
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: pot_3
+
+- type: entity
+  parent: BasePlantPot
+  id: FurniturePlantPot4
+  name: pot
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: pot_4
+
+# MATS
+
+- type: entity
+  id: MiscellaneousMatBlank
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/rugs.rsi
+    state: mat_blank
+
+- type: entity
+  id: MiscellaneousMatWelcome
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/rugs.rsi
+    state: mat_welcome
+
+- type: entity
+  id: MiscellaneousMatTown
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/rugs.rsi
+    state: mat_town
+
+- type: entity
+  id: MiscellaneousMatVulgar1
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/rugs.rsi
+    state: mat_vulgar
+
+- type: entity
+  id: MiscellaneousMatVulgar2
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/rugs.rsi
+    state: mat_vulgar_2

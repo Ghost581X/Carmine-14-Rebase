@@ -1,0 +1,84 @@
+##BIG LIQUID TANK
+
+- type: entity
+  parent: BaseLiquidTank
+  id: BigTank
+  name: tank
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Tanks/bigtank.rsi
+    state: bigtank
+
+- type: entity
+  parent: BaseLiquidTank
+  id: BigTankBroken
+  name: tank
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Tanks/bigtank.rsi
+    state: bigtank_broken
+
+
+## LARGE LIQUID TANK
+
+- type: entity
+  parent: BaseLiquidTank
+  id: LargeTankContainer
+  name: tank
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Tanks/largetank.rsi
+    state: chemical_container
+
+- type: entity
+  parent: BaseLiquidTank
+  id: LargeTankContainerBroken
+  name: tank
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Tanks/largetank.rsi
+    state: chemical_container_broken
+
+- type: entity
+  parent: BaseLiquidTank
+  id: LargeTank
+  name: tank
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Tanks/largetank.rsi
+    state: largetank
+
+- type: entity
+  parent: BaseLiquidTank
+  id: LargeTankChemical
+  name: tank
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Tanks/largetank.rsi
+    state: largetank_chemical
+
+- type: entity
+  parent: BaseLiquidTank
+  id: LargeTankMarked
+  name: tank
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Tanks/largetank.rsi
+    state: largetank_pipe
+
+- type: entity
+  parent: BaseLiquidTank
+  id: LargeTankChemicalHuge
+  name: tank
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Tanks/largetank.rsi
+    state: largetank_chemical_huge

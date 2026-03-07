@@ -1,0 +1,603 @@
+## FLOORBOARDS
+
+- type: entity
+  id: MiscellaneousFloorboardsDrought1
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/floorboards.rsi
+    state: boards_drought_ns-1
+
+- type: entity
+  id: MiscellaneousFloorboardsDrought2
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/floorboards.rsi
+    state: boards_drought_ns-2
+
+- type: entity
+  id: MiscellaneousFloorboardsDrought3
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/floorboards.rsi
+    state: boards_drought_ns-3
+
+- type: entity
+  id: MiscellaneousFloorboardsDrought4
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/floorboards.rsi
+    state: boards_drought_ns-4
+
+- type: entity
+  id: MiscellaneousFloorboardsDrought5
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/floorboards.rsi
+    state: boards_drought_ns-5
+
+- type: entity
+  id: MiscellaneousFloorboardsDrought6
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/floorboards.rsi
+    state: boards_drought_ns-6
+
+- type: entity
+  id: MiscellaneousFloorboardsDroughtVariant1
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/floorboards.rsi
+    state: boards_drought_we-1
+
+- type: entity
+  id: MiscellaneousFloorboardsDroughtVariant2
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/floorboards.rsi
+    state: boards_drought_we-2
+
+- type: entity
+  id: MiscellaneousFloorboardsDroughtVariant3
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/floorboards.rsi
+    state: boards_drought_we-3
+
+- type: entity
+  id: MiscellaneousFloorboardsDroughtVariant4
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/floorboards.rsi
+    state: boards_drought_we-4
+
+- type: entity
+  id: MiscellaneousFloorboardsDroughtVariant5
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/floorboards.rsi
+    state: boards_drought_we-5
+
+- type: entity
+  id: MiscellaneousFloorboardsDroughtVariant6
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/floorboards.rsi
+    state: boards_drought_we-6
+
+- type: entity
+  id: MiscellaneousFloorboardsMammoth1
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/floorboards.rsi
+    state: boards_mammoth_ns-1
+
+- type: entity
+  id: MiscellaneousFloorboardsMammoth2
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/floorboards.rsi
+    state: boards_mammoth_ns-2
+
+- type: entity
+  id: MiscellaneousFloorboardsMammoth3
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/floorboards.rsi
+    state: boards_mammoth_ns-3
+
+- type: entity
+  id: MiscellaneousFloorboardsMammoth4
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/floorboards.rsi
+    state: boards_mammoth_ns-4
+
+- type: entity
+  id: MiscellaneousFloorboardsMammoth5
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/floorboards.rsi
+    state: boards_mammoth_ns-5
+
+- type: entity
+  id: MiscellaneousFloorboardsMammoth6
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/floorboards.rsi
+    state: boards_mammoth_ns-6
+
+- type: entity
+  id: MiscellaneousFloorboardsMammothVariant1
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/floorboards.rsi
+    state: boards_mammoth_we-1
+
+- type: entity
+  id: MiscellaneousFloorboardsMammothVariant2
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/floorboards.rsi
+    state: boards_mammoth_we-2
+
+- type: entity
+  id: MiscellaneousFloorboardsMammothVariant3
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/floorboards.rsi
+    state: boards_mammoth_we-3
+
+- type: entity
+  id: MiscellaneousFloorboardsMammothVariant4
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/floorboards.rsi
+    state: boards_mammoth_we-4
+
+- type: entity
+  id: MiscellaneousFloorboardsMammothVariant5
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/floorboards.rsi
+    state: boards_mammoth_we-5
+
+- type: entity
+  id: MiscellaneousFloorboardsMammothVariant6
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/floorboards.rsi
+    state: boards_mammoth_we-6
+
+## BOOK PILES
+
+- type: entity
+  id: MiscellaneousBookPile1
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: bookpile_1
+
+- type: entity
+  id: MiscellaneousBookPile2
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: bookpile_2
+
+- type: entity
+  id: MiscellaneousBookPile3
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: bookpile_3
+
+- type: entity
+  id: MiscellaneousBookPile4
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: bookpile_4
+
+- type: entity
+  id: MiscellaneousBookPile5
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: bookpile_5
+
+- type: entity
+  id: MiscellaneousBookPile6
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: bookpile_6
+
+- type: entity
+  id: MiscellaneousBookStack1
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: bookstack_1
+
+- type: entity
+  id: MiscellaneousBookStack2
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: bookstack_2
+
+- type: entity
+  id: MiscellaneousBookStack3
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: bookstack_3
+
+## GARBAGE
+
+- type: entity
+  id: MiscellaneousFoodstuff1
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: foodstuff_1
+
+- type: entity
+  id: MiscellaneousFoodstuff2
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: foodstuff_2
+
+- type: entity
+  id: MiscellaneousFoodstuff3
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: foodstuff_3
+
+- type: entity
+  id: MiscellaneousFoodstuff4
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: foodstuff_4
+
+- type: entity
+  id: MiscellaneousFoodstuff5
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: foodstuff_5
+
+- type: entity
+  id: MiscellaneousFoodstuff6
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: foodstuff_6
+
+- type: entity
+  id: MiscellaneousGlass1
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: glass_1
+
+- type: entity
+  id: MiscellaneousGlass2
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: glass_2
+
+- type: entity
+  id: MiscellaneousGlass3
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: glass_3
+
+- type: entity
+  id: MiscellaneousGlass4
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: glass_4
+
+- type: entity
+  id: MiscellaneousGlass5
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: glass_5
+
+- type: entity
+  id: MiscellaneousGlass6
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: glass_6
+
+- type: entity
+  id: MiscellaneousPallet
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: pallet
+
+- type: entity
+  id: MiscellaneousPalletStack
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: pallet_stack
+
+- type: entity
+  id: MiscellaneousPapers1
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: papers_1
+
+- type: entity
+  id: MiscellaneousPapers2
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: papers_2
+
+- type: entity
+  id: MiscellaneousPapers3
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: papers_3
+
+#SKELETON
+
+- type: entity
+  parent: BaseMiscellaneous
+  id: MiscellaneousSkeleton
+  name: skeleton
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: skeleton
+
+- type: entity
+  id: MiscellaneousTrashBags1
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: trashbags_1
+
+- type: entity
+  id: MiscellaneousTrashBags2
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: trashbags_2
+
+- type: entity
+  id: MiscellaneousTrashBags3
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: trashbags_3
+
+- type: entity
+  id: MiscellaneousTrashBags4
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: trashbags_4
+
+- type: entity
+  id: MiscellaneousTrashBags5
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: trashbags_5
+
+- type: entity
+  id: MiscellaneousTrashBags6
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: trashbags_6
+
+- type: entity
+  id: MiscellaneousBricksRubble
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/large_misc.rsi
+    state: brickrubble
+
+- type: entity
+  id: MiscellaneousCardboardBoxes
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/large_misc.rsi
+    state: cardboard
+
+- type: entity
+  id: MiscellaneousPapersScattered
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/large_misc.rsi
+    state: scattered_papers
+
+- type: entity
+  id: MiscellaneousWoodScrap
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/large_misc.rsi
+    state: woodscrap
+
+#LOOSE RUBBER RUGS
+
+- type: entity
+  id: MiscellaneousRugRubber1
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/rugs.rsi
+    state: rubber
+
+- type: entity
+  id: MiscellaneousRugRubber2
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/rugs.rsi
+    state: rubber_1
+
+- type: entity
+  id: MiscellaneousRubber3
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/rugs.rsi
+    state: rubber_2
+
+- type: entity
+  id: MiscellaneousRubber4
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/rugs.rsi
+    state: rubber_3
+
+- type: entity
+  id: MiscellaneousRubber5
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/rugs.rsi
+    state: rubber_4
+
+- type: entity
+  id: MiscellaneousRugRubber6
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/rugs.rsi
+    state: rubber_5
+
+- type: entity
+  id: MiscellaneousRugRubber7
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/rugs.rsi
+    state: rubber_6
+
+- type: entity
+  id: MiscellaneousRubber8
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/rugs.rsi
+    state: rubber_7
+
+- type: entity
+  id: MiscellaneousRubber9
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/rugs.rsi
+    state: rubber_8
+
+- type: entity
+  id: MiscellaneousRubber10
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/rugs.rsi
+    state: rubber_9
+
+- type: entity
+  id: MiscellaneousRubber11
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/rugs.rsi
+    state: rubber_10
+
+- type: entity
+  id: MiscellaneousRubber12
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/rugs.rsi
+    state: rubber_11
+
+- type: entity
+  id: MiscellaneousRubber13
+  parent: BaseMiscellaneous
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/rugs.rsi
+    state: rubber_single

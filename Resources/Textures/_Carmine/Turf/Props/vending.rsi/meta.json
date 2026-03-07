@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Made by InfraredBaron and used with his permission.",
+  "size": {
+    "x": 32,
+    "y": 48
+  },
+  "states": [
+    {
+      "name": "nuka_old",
+      "directions": 4
+    },
+    {
+      "name": "nuka_new",
+      "directions": 4
+    },
+    {
+      "name": "sarsaparilla",
+      "directions": 4
+    },
+    {
+      "name": "cigarette",
+      "directions": 4
+    }
+  ]
+}

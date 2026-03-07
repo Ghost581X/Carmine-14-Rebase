@@ -1,0 +1,47 @@
+# TODO move all of this to tiles once tile smoothing is supported
+- type: entity
+  id: BaseMiscellaneous
+  parent: BaseStructureDynamic
+  name: garbage
+  description: "Garbage. Nothing useful."
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Miscellaneous/small_misc.rsi
+    state: brickpile
+    drawdepth: FloorTiles
+  - type: Tag
+    tags:
+    - ForceFixRotations
+  - type: Physics
+    canCollide: true
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.45"
+        density: 5
+        layer:
+        - DoorPassable
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 90
+        behaviors: #excess damage (nuke?). avoid computational cost of spawning entities.
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+      - trigger:
+          !type:DamageTrigger
+          damage: 60
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+          - !type:SpawnEntitiesBehavior
+            spawn:
+              MaterialWood:
+                min: 1
+                max: 1
+  - type: TrayScanReveal

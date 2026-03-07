@@ -1,0 +1,96 @@
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineCigarette
+  name: cigarette autodealer
+  description: A vendor.
+  components:
+  - type: VendingMachine
+    pack: BoozeOMatInventory #CARMINETODO: MAKE ALL OF THESE FOR OURS
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+    denyState: deny-unshaded
+    loopDeny: false
+  - type: DatasetVocalizer #CARMINETODO: MAKE ALL OF THESE FOR OURS
+    dataset: BoozeOMatAds
+  - type: SpeakOnUIClosed #CARMINETODO: MAKE ALL OF THESE FOR OURS
+    pack: BoozeOMatGoodbyes 
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/vending.rsi
+    state: cigarette
+#    layers:                                                 #CARMINETODO: FIGURE OUT IF WE WANT ALL OF THESE THINGS BELOW HERE OR NOT
+#    - state: "off"
+#      map: ["enum.VendingMachineVisualLayers.Base"]
+#    - state: "off"
+#      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+#      shader: unshaded
+#    - state: panel
+#      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+#  - type: AccessReader
+#    access: [["Maintenance"]]
+#  - type: GuideHelp
+#    guides:
+#    - Drinks
+
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineFoodstamp
+  name: foodstamp autodealer
+  description: A vendor.
+  components:
+  - type: VendingMachine
+    pack: BoozeOMatInventory #CARMINETODO: MAKE ALL OF THESE FOR OURS
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+    denyState: deny-unshaded
+    loopDeny: false
+  - type: DatasetVocalizer #CARMINETODO: MAKE ALL OF THESE FOR OURS
+    dataset: BoozeOMatAds
+  - type: SpeakOnUIClosed #CARMINETODO: MAKE ALL OF THESE FOR OURS
+    pack: BoozeOMatGoodbyes 
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/vending.rsi
+    state: nuka_new
+
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineRusty
+  name: old autodealer
+  description: A vendor.
+  components:
+  - type: VendingMachine
+    pack: BoozeOMatInventory #CARMINETODO: MAKE ALL OF THESE FOR OURS
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+    denyState: deny-unshaded
+    loopDeny: false
+  - type: DatasetVocalizer #CARMINETODO: MAKE ALL OF THESE FOR OURS
+    dataset: BoozeOMatAds
+  - type: SpeakOnUIClosed #CARMINETODO: MAKE ALL OF THESE FOR OURS
+    pack: BoozeOMatGoodbyes 
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/vending.rsi
+    state: nuka_old
+
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineSarsaparilla
+  name: anti-rad dose autodealer
+  description: A vendor.
+  components:
+  - type: VendingMachine
+    pack: BoozeOMatInventory #CARMINETODO: MAKE ALL OF THESE FOR OURS
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+    denyState: deny-unshaded
+    loopDeny: false
+  - type: DatasetVocalizer #CARMINETODO: MAKE ALL OF THESE FOR OURS
+    dataset: BoozeOMatAds
+  - type: SpeakOnUIClosed #CARMINETODO: MAKE ALL OF THESE FOR OURS
+    pack: BoozeOMatGoodbyes 
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/vending.rsi
+    state: sarsaparilla

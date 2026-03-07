@@ -4,16 +4,11 @@
   name: crate
   components:
   - type: Icon
-    sprite: _Carmine/Turf/Props/crates.rsi
-    state: aluminum
+    sprite: _Carmine/Turf/Props/Crates/crate_aluminum.rsi
+    state: closed
   - type: Sprite
     noRot: true
-    sprite: _Carmine/Turf/Props/crates.rsi
-    layers:
-    - state: aluminum
-      map: ["enum.StorageVisualLayers.Base"]
-    - state: aluminumopen
-      map: ["enum.StorageVisualLayers.Door"]
+    sprite: _Carmine/Turf/Props/Crates/crate_aluminum.rsi
   - type: RadiationBlockingContainer # for blocking radiation
     resistance: 1
       
@@ -23,15 +18,15 @@
   name: crate
   components:
   - type: Icon
-    sprite: _Carmine/Turf/Props/crates.rsi
-    state: army
+    sprite: _Carmine/Turf/Props/Crates/crate_army.rsi
+    state: closed
   - type: Sprite
     noRot: true
-    sprite: _Carmine/Turf/Props/crates.rsi
+    sprite: _Carmine/Turf/Props/Crates/crate_army.rsi
     layers:
-    - state: army
+    - state: closed
       map: ["enum.StorageVisualLayers.Base"]
-    - state: armyopen
+    - state: open
       map: ["enum.StorageVisualLayers.Door"]
 
 - type: entity
@@ -40,15 +35,15 @@
   name: crate
   components:
   - type: Icon
-    sprite: _Carmine/Turf/Props/crates.rsi
-    state: enclave
+    sprite: _Carmine/Turf/Props/Crates/crate_enclave.rsi
+    state: closed
   - type: Sprite
     noRot: true
-    sprite: _Carmine/Turf/Props/crates.rsi
+    sprite: _Carmine/Turf/Props/Crates/crate_enclave.rsi
     layers:
-    - state: enclave
+    - state: closed
       map: ["enum.StorageVisualLayers.Base"]
-    - state: enclaveopen
+    - state: open
       map: ["enum.StorageVisualLayers.Door"]
 
 - type: entity
@@ -57,15 +52,15 @@
   name: crate
   components:
   - type: Icon
-    sprite: _Carmine/Turf/Props/crates.rsi
-    state: medical
+    sprite: _Carmine/Turf/Props/Crates/crate_medical.rsi
+    state: closed
   - type: Sprite
     noRot: true
-    sprite: _Carmine/Turf/Props/crates.rsi
+    sprite: _Carmine/Turf/Props/Crates/crate_medical.rsi
     layers:
-    - state: army
+    - state: closed
       map: ["enum.StorageVisualLayers.Base"]
-    - state: medicalopen
+    - state: open
       map: ["enum.StorageVisualLayers.Door"]
 - type: entity
   parent: CrateBaseWeldable
@@ -73,15 +68,15 @@
   name: crate
   components:
   - type: Icon
-    sprite: _Carmine/Turf/Props/crates.rsi
-    state: red
+    sprite: _Carmine/Turf/Props/Crates/crate_red.rsi
+    state: closed
   - type: Sprite
     noRot: true
-    sprite: _Carmine/Turf/Props/crates.rsi
+    sprite: _Carmine/Turf/Props/Crates/crate_red.rsi
     layers:
-    - state: red
+    - state: closed
       map: ["enum.StorageVisualLayers.Base"]
-    - state: redopen
+    - state: open
       map: ["enum.StorageVisualLayers.Door"]
 
 - type: entity
@@ -90,32 +85,32 @@
   name: register
   components:
   - type: Icon
-    sprite: _Carmine/Turf/Props/crates.rsi
-    state: register_clean
+    sprite: _Carmine/Turf/Props/Crates/register_clean.rsi
+    state: closed
   - type: Sprite
     noRot: true
-    sprite: _Carmine/Turf/Props/crates.rsi
+    sprite: _Carmine/Turf/Props/Crates/register_clean.rsi
     layers:
-    - state: register_clean
+    - state: closed
       map: ["enum.StorageVisualLayers.Base"]
-    - state: register_cleanopen
+    - state: open
       map: ["enum.StorageVisualLayers.Door"]
 
 - type: entity
   parent: CrateBaseWeldable
-  id: CrateRegisterOld
+  id: CrateRegisterRusty
   name: register
   components:
   - type: Icon
-    sprite: _Carmine/Turf/Props/crates.rsi
-    state: register
+    sprite: _Carmine/Turf/Props/Crates/register.rsi
+    state: closed
   - type: Sprite
     noRot: true
-    sprite: _Carmine/Turf/Props/crates.rsi
+    sprite: _Carmine/Turf/Props/Crates/register.rsi
     layers:
-    - state: register
+    - state: closed
       map: ["enum.StorageVisualLayers.Base"]
-    - state: registeropen
+    - state: open
       map: ["enum.StorageVisualLayers.Door"]
 
 - type: entity
@@ -124,15 +119,15 @@
   name: crate
   components:
   - type: Icon
-    sprite: _Carmine/Turf/Props/crates.rsi
-    state: vault
+    sprite: _Carmine/Turf/Props/Crates/crate_vault.rsi
+    state: closed
   - type: Sprite
     noRot: true
-    sprite: _Carmine/Turf/Props/crates.rsi
+    sprite: _Carmine/Turf/Props/Crates/crate_vault.rsi
     layers:
-    - state: vault
+    - state: closed
       map: ["enum.StorageVisualLayers.Base"]
-    - state: vaultopen
+    - state: open
       map: ["enum.StorageVisualLayers.Door"]
 
 - type: entity
@@ -141,32 +136,32 @@
   name: crate
   components:
   - type: Icon
-    sprite: _Carmine/Turf/Props/crates.rsi
-    state: vault_standard_clean
+    sprite: _Carmine/Turf/Props/Crates/crate_vault_standard_clean.rsi
+    state: closed
   - type: Sprite
     noRot: true
-    sprite: _Carmine/Turf/Props/crates.rsi
+    sprite: _Carmine/Turf/Props/Crates/crate_vault_standard_clean.rsi
     layers:
-    - state: vault_standard_clean
+    - state: closed
       map: ["enum.StorageVisualLayers.Base"]
-    - state: vault_standard_cleanopen
+    - state: open
       map: ["enum.StorageVisualLayers.Door"]
 
 - type: entity
   parent: CrateBaseWeldable
-  id: CrateVaultOld
+  id: CrateVaultRusty
   name: crate
   components:
   - type: Icon
-    sprite: _Carmine/Turf/Props/crates.rsi
-    state: vault_standard
+    sprite: _Carmine/Turf/Props/Crates/crate_vault_standard.rsi
+    state: closed
   - type: Sprite
     noRot: true
-    sprite: _Carmine/Turf/Props/crates.rsi
+    sprite: _Carmine/Turf/Props/Crates/crate_vault_standard.rsi
     layers:
-    - state: vault_standard
+    - state: closed
       map: ["enum.StorageVisualLayers.Base"]
-    - state: vault_standardopen
+    - state: open
       map: ["enum.StorageVisualLayers.Door"]
 
 - type: entity
@@ -175,32 +170,32 @@
   name: crate
   components:
   - type: Icon
-    sprite: _Carmine/Turf/Props/crates.rsi
-    state: vault_long_clean
+    sprite: _Carmine/Turf/Props/Crates/crate_vault_long_clean.rsi
+    state: closed
   - type: Sprite
     noRot: true
-    sprite: _Carmine/Turf/Props/crates.rsi
+    sprite: _Carmine/Turf/Props/Crates/crate_vault_long_clean.rsi
     layers:
-    - state: vault_long_clean
+    - state: closed
       map: ["enum.StorageVisualLayers.Base"]
-    - state: vault_long_cleanopen
+    - state: open
       map: ["enum.StorageVisualLayers.Door"]
 
 - type: entity
   parent: CrateBaseWeldable
-  id: CrateVaultLongOld
+  id: CrateVaultLongRusty
   name: crate
   components:
   - type: Icon
-    sprite: _Carmine/Turf/Props/crates.rsi
-    state: vault_standard
+    sprite: _Carmine/Turf/Props/Crates/crate_vault_long.rsi
+    state: closed
   - type: Sprite
     noRot: true
-    sprite: _Carmine/Turf/Props/crates.rsi
+    sprite: _Carmine/Turf/Props/Crates/crate_vault_long.rsi
     layers:
-    - state: vault_long
+    - state: closed
       map: ["enum.StorageVisualLayers.Base"]
-    - state: vault_longopen
+    - state: open
       map: ["enum.StorageVisualLayers.Door"]
 
 - type: entity
@@ -209,32 +204,32 @@
   name: crate
   components:
   - type: Icon
-    sprite: _Carmine/Turf/Props/crates.rsi
-    state: register
+    sprite: _Carmine/Turf/Props/Crates/crate_vault_big_clean.rsi
+    state: closed
   - type: Sprite
     noRot: true
-    sprite: _Carmine/Turf/Props/crates.rsi
+    sprite: _Carmine/Turf/Props/Crates/crate_vault_big_clean.rsi
     layers:
-    - state: vault_big_clean
+    - state: closed
       map: ["enum.StorageVisualLayers.Base"]
-    - state: vault_big_cleanopen
+    - state: open
       map: ["enum.StorageVisualLayers.Door"]
 
 - type: entity
   parent: CrateBaseWeldable
-  id: CrateVaultBigOld
+  id: CrateVaultBigRusty
   name: crate
   components:
   - type: Icon
-    sprite: _Carmine/Turf/Props/crates.rsi
-    state: register
+    sprite: _Carmine/Turf/Props/Crates/crate_vault_big.rsi
+    state: closed
   - type: Sprite
     noRot: true
-    sprite: _Carmine/Turf/Props/crates.rsi
+    sprite: _Carmine/Turf/Props/Crates/crate_vault_big.rsi
     layers:
-    - state: vault_big
+    - state: closed
       map: ["enum.StorageVisualLayers.Base"]
-    - state: vault_bigopen
+    - state: open
       map: ["enum.StorageVisualLayers.Door"]
 
 - type: entity
@@ -243,13 +238,30 @@
   name: crate
   components:
   - type: Icon
-    sprite: _Carmine/Turf/Props/crates.rsi
-    state: register
+    sprite: _Carmine/Turf/Props/Crates/crate_vault_compact_clean.rsi
+    state: closed
   - type: Sprite
     noRot: true
-    sprite: _Carmine/Turf/Props/crates.rsi
+    sprite: _Carmine/Turf/Props/Crates/crate_vault_compact_clean.rsi
     layers:
-    - state: vault_compact_clean
+    - state: closed
       map: ["enum.StorageVisualLayers.Base"]
-    - state: vault_compact_cleanopen
+    - state: open
+      map: ["enum.StorageVisualLayers.Door"]
+
+- type: entity
+  parent: CrateBaseWeldable
+  id: CrateVaultCompactRusty
+  name: crate
+  components:
+  - type: Icon
+    sprite: _Carmine/Turf/Props/Crates/crate_vault_compact.rsi
+    state: closed
+  - type: Sprite
+    noRot: true
+    sprite: _Carmine/Turf/Props/Crates/crate_vault_compact.rsi
+    layers:
+    - state: closed
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: open
       map: ["enum.StorageVisualLayers.Door"]

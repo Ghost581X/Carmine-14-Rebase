@@ -1,0 +1,135 @@
+- type: entity
+  name: chair
+  id: SeatBase
+  abstract: true
+  description: A chair.
+  placement:
+    mode: PlaceFree
+  components:
+  - type: Animateable
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Dynamic
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.2
+        density: 100
+        mask:
+        - TableMask
+  - type: Sprite
+    sprite: _Carmine/Turf/Props/Chairs/metal_chair_green.rsi
+    state: base
+    noRot: true
+  - type: Strap
+    position: Stand
+    buckleOffset: "0,-0.05"
+  - type: Pullable
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 160
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 80
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+  - type: StaticPrice
+    price: 50
+
+#Starts unanchored, cannot be rotated while anchored
+- type: entity
+  name: chair
+  id: UnanchoredChairBase
+  parent: SeatBase
+  abstract: true
+  components:
+  - type: Anchorable
+  - type: Rotatable
+
+#Start anchored, cannot be rotated while anchored
+- type: entity
+  name: chair
+  id: ChairBase
+  abstract: true
+  parent: UnanchoredChairBase
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Physics
+    bodyType: Static
+  - type: Transform
+    anchored: true
+
+#Starts unanchored, can be rotated while anchored
+- type: entity
+  name: chair
+  id: RotatableChairBase
+  parent: UnanchoredChairBase
+  abstract: true
+  components:
+  - type: Rotatable
+    rotateWhileAnchored: true
+
+#Starts anchored, can be rotated while anchored
+- type: entity
+  name: stool
+  id: StoolBase
+  parent: RotatableChairBase
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Physics
+    bodyType: Static
+  - type: Transform
+    anchored: true
+
+- type: entity
+  name: chair
+  id: ChairWooden
+  parent: UnanchoredChairBase
+  components:
+  - type: Damageable
+    damageModifierSet: Wood
+  - type: Destructible
+    thresholds:
+    - trigger: # Excess damage, don't spawn entities
+        !type:DamageTrigger
+        damage: 120
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WoodDestroy
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+    - trigger:
+        !type:DamageTrigger
+        damage: 60
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WoodDestroy
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          MaterialWoodPlank:
+            min: 1
+            max: 1
+  - type: Tag
+    tags:
+    - Wooden

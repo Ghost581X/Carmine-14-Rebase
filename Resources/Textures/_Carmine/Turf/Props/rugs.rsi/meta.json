@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Made by InfraredBaron and used with his permission.",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "mat_welcome",
+      "directions": 4
+    },
+    {
+      "name": "mat_blank",
+      "directions": 4
+    },
+    {
+      "name": "mat_vulgar",
+      "directions": 4
+    },
+    {
+      "name": "mat_vulgar_2",
+      "directions": 4
+    },
+    {
+      "name": "mat_town",
+      "directions": 4
+    },
+    {
+      "name": "rubber_single"
+    },
+    {
+      "name": "rubber"
+    },
+    {
+      "name": "rubber_1"
+    },
+    {
+      "name": "rubber_2"
+    },
+    {
+      "name": "rubber_3"
+    },
+    {
+      "name": "rubber_4"
+    },
+    {
+      "name": "rubber_5"
+    },
+    {
+      "name": "rubber_6"
+    },
+    {
+      "name": "rubber_7"
+    },
+    {
+      "name": "rubber_8"
+    },
+    {
+      "name": "rubber_9"
+    },
+    {
+      "name": "rubber_10"
+    },
+    {
+      "name": "rubber_11"
+    }
+  ]
+}

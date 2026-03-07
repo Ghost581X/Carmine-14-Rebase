@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Made by InfraredBaron and used with his permission.",
+  "size": {
+    "x": 96,
+    "y": 48
+  },
+  "states": [
+    {
+      "name": "bigtank"
+    },
+    {
+      "name": "bigtank_broken"
+    }
+  ]
+}

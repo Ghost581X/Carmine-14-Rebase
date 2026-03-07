@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Made by InfraredBaron and used with his permission.",
+  "size": {
+    "x": 32,
+    "y": 48
+  },
+  "states": [
+    {
+      "name": "armchair",
+      "directions": 4
+    },
+    {
+      "name": "captain_chair",
+      "directions": 4
+    },
+    {
+      "name": "diner_chair",
+      "directions": 4
+    },
+    {
+      "name": "ergo_chair",
+      "directions": 4
+    },
+    {
+      "name": "retro_chair",
+      "directions": 4
+    }
+  ]
+}
