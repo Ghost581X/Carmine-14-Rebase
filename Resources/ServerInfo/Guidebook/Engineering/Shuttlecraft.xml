@@ -66,7 +66,7 @@
   The little numb on the bottom of the docking port determines the direction of the docking port.
 
   <Box>
-    <GuideEntityEmbed Entity="AirlockShuttle"/>
+    <GuideEntityEmbed Entity="BaseDock"/>
     <GuideEntityEmbed Entity="AirlockGlassShuttle"/>
   </Box>
 

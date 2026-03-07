@@ -1,6 +1,6 @@
-﻿- type: entity
+- type: entity
   parent: BaseAirlockRCDResistant
-  id: AirlockShuttle
+  id: BaseDock
   suffix: Docking
   name: external airlock
   description: Necessary for connecting two space craft together.
@@ -30,6 +30,7 @@
         hard: false
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Standard/shuttle.rsi
+    noRot: true #needed for how i setup airlocks .2 | 2026
     snapCardinals: false
     layers:
     - state: closed
@@ -80,15 +81,18 @@
     tags:
       - ForceNoFixRotations
   - type: Construction
-    graph: AirlockShuttle
+    graph: BaseDock
     node: airlock
   - type: StaticPrice
     price: 350
   - type: Paintable
     group: null
+  - type: IconSmooth #iconsmooths walls into the door
+    key: walls
+    mode: NoSprite
 
 - type: entity
-  id: AirlockShuttleAssembly
+  id: BaseDockAssembly
   parent: AirlockAssembly
   name: external airlock assembly
   suffix: Docking
@@ -103,5 +107,5 @@
     state: closed
     snapCardinals: false
   - type: Construction
-    graph: AirlockShuttle
+    graph: BaseDock
     node: assembly
