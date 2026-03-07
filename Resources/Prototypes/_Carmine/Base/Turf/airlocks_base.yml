@@ -1,5 +1,5 @@
-﻿- type: entity
-  id: Airlock
+- type: entity
+  id: BaseAirlock
   parent: BaseStructure
   name: airlock
   description: It opens, it closes, and maybe crushes you.
@@ -15,6 +15,7 @@
           "/Audio/Weapons/smash.ogg"
   - type: InteractionOutline
   - type: Sprite
+    noRot: true #needed for how i set up airlock sprites .2 | 2026
     sprite: Structures/Doors/Airlocks/Standard/basic.rsi
     snapCardinals: true
     layers:
@@ -180,20 +181,24 @@
     - Airlocks
     - WirePanels
     - Networking
+  - type: IconSmooth #iconsmooths walls into the door
+    key: walls
+    mode: NoSprite
   placement:
     mode: SnapgridCenter
 
+
 - type: entity
-  id: AirlockRCDResistant
-  parent: Airlock
+  id: BaseAirlockRCDResistant
+  parent: BaseAirlock
   abstract: true
   components:
   - type: RCDDeconstructable
     deconstructable: false
 
 - type: entity
-  id: AirlockGlass
-  parent: Airlock
+  id: BaseAirlockGlass
+  parent: BaseAirlock
   name: glass airlock
   components:
   - type: MeleeSound

@@ -1,5 +1,5 @@
 ﻿- type: entity
-  parent: AirlockRCDResistant
+  parent: BaseAirlockRCDResistant
   id: AirlockShuttle
   suffix: Docking
   name: external airlock

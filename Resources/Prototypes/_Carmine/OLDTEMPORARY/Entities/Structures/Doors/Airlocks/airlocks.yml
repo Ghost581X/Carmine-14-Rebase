@@ -1,7 +1,0 @@
-- type: entity
-  parent: Airlock
-  id: AirlockMaint
-  name: maintenance access
-  components:
-  - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
