@@ -77,6 +77,7 @@ public sealed class RadioSystem : EntitySystem
             return;
 
         var evt = new TransformSpeakerNameEvent(messageSource, MetaData(messageSource).EntityName);
+        evt.fromRadio = true; //CARMINE
         RaiseLocalEvent(messageSource, evt);
 
         var name = evt.VoiceName;
