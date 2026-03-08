@@ -15,7 +15,7 @@ public sealed class TransformSpeakerNameEvent : EntityEventArgs, IInventoryRelay
     public EntityUid Sender;
     public string VoiceName;
     public ProtoId<SpeechVerbPrototype>? SpeechVerb;
-
+    public bool fromRadio = false; //carmine
     public TransformSpeakerNameEvent(EntityUid sender, string name)
     {
         Sender = sender;

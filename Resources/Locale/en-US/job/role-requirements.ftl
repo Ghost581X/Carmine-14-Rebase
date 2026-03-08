@@ -10,6 +10,10 @@ role-timer-whitelisted-species = Your character must be one of the following spe
 role-timer-blacklisted-species = Your character must not be one of the following species for you to select this:
 role-timer-whitelisted-traits = Your character must have one of the following traits for you to select this:
 role-timer-blacklisted-traits = Your character must not have any of the following traits for you to select this:
+role-timer-faction-must-equal = Your character must be part of [color=yellow]{$faction}[/color] for you to choose this.
+role-timer-faction-must-not-equal = Your character must NOT be part of [color=yellow]{$faction}[/color] for you to choose this.
+role-timer-sex-must-equal = Your character's sex must be [color=yellow]{$sex}[/color] for you to choose this.
+role-timer-sex-must-not-equal = Your character's sex must NOT be [color=yellow]{$sex}[/color] for you to choose this.
 
 role-timer-locked = Locked (hover for details)
 
