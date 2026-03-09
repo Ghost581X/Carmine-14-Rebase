@@ -1,5 +1,5 @@
 ﻿- type: constructionGraph
-  id: AirlockShuttle
+  id: BaseDock
   start: start
   graph:
   - node: start
@@ -14,7 +14,7 @@
         doAfter: 2
 
   - node: assembly
-    entity: AirlockShuttleAssembly
+    entity: BaseDockAssembly
     actions:
     - !type:SnapToGrid {}
     - !type:SetAnchor {}
@@ -124,7 +124,7 @@
         doAfter: 2
 
   - node: skeletonSilver
-    entity: AirlockShuttleAssembly
+    entity: BaseDockAssembly
     edges:
     - to: airlock
       conditions:
@@ -149,7 +149,7 @@
         doAfter: 2
 
   - node: airlock
-    entity: AirlockShuttle
+    entity: BaseDock
     edges:
     - to: skeletonSilver
       conditions:
@@ -163,7 +163,7 @@
         doAfter: 5
 
   - node: skeletonGlass
-    entity: AirlockShuttleAssembly
+    entity: BaseDockAssembly
     edges:
     - to: skeletonSilver
       completed:

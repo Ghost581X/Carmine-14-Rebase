@@ -1,0 +1,46 @@
+{
+    "version": 1,
+    "license": "All rights reserved",
+    "copyright": "Created by Meoman for use in Carmine. Do not use without permission from Meoman && (.2 || Ninrub)",
+    "size": {
+      "x": 32,
+      "y": 32
+    },
+    "states": [
+      {
+        "name": "full"
+      },
+      {
+        "name": "wall_0",
+        "directions": 4
+      },
+      {
+        "name": "wall_1",
+        "directions": 4
+      },
+      {
+        "name": "wall_2",
+        "directions": 4
+      },
+      {
+        "name": "wall_3",
+        "directions": 4
+      },
+      {
+        "name": "wall_4",
+        "directions": 4
+      },
+      {
+        "name": "wall_5",
+        "directions": 4
+      },
+      {
+        "name": "wall_6",
+        "directions": 4
+      },
+      {
+        "name": "wall_7",
+        "directions": 4
+      }
+    ]
+  }

@@ -1,0 +1,52 @@
+# Wizden Substations
+
+- type: entity
+  parent: BaseSubstation
+  id: SubstationFull
+  suffix: Basic, 2.5MJ, Full
+  components:
+  - type: Battery
+    maxCharge: 2500000
+    startingCharge: 2500000
+
+- type: entity
+  parent: SubstationBasic
+  id: SubstationBasicEmpty
+  suffix: Empty
+  components:
+  - type: Battery
+    startingCharge: 0
+
+# Faction Substations
+
+# Consolidat
+- type: entity
+  id: SubstationConsolidat
+  parent: SubstationFull
+  name: substation
+  suffix: CONS, Full
+  description: Stores electricity and converts it from HV to MV.
+  components:
+  - type: Sprite # TODO: add sprite for maintenance panel open
+    sprite: _Carmine/Objects/Devices/substation.rsi
+    snapCardinals: true
+    layers:
+    - state: consolidat
+    - state: full
+      shader: unshaded
+
+# Consolidat
+- type: entity
+  id: SubstationInvernSykes
+  parent: SubstationFull
+  name: substation
+  suffix: INSY, Full
+  description: Stores electricity and converts it from HV to MV.
+  components:
+  - type: Sprite # TODO: add sprite for maintenance panel open
+    sprite: _Carmine/Objects/Devices/substation.rsi
+    snapCardinals: true
+    layers:
+    - state: invern
+    - state: full
+      shader: unshaded

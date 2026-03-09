@@ -1,0 +1,29 @@
+- type: entity
+  parent: BaseAirlock
+  id: AirlockInvernSykes1
+  name: AC-37 Airseal Mechanism
+  suffix: INSY
+  components:
+  - type: Sprite
+    noRot: true #needed for how i set up doors - .2 | 2026
+    sprite: _Carmine/Turf/Doors/invern_airlock_1.rsi
+
+- type: entity
+  parent: BaseAirlock
+  id: AirlockInvernSykes2
+  name: AC-42 Airseal Mechanism
+  suffix: INSY
+  components:
+  - type: Sprite
+    noRot: true #needed for how i set up doors - .2 | 2026
+    sprite: _Carmine/Turf/Doors/invern_airlock_1.rsi
+
+- type: entity
+  parent: BaseAirlock
+  id: AirlockInvernSykesDock
+  name: D-01 Spaceproof Docking Port
+  suffix: INSY
+  components:
+  - type: Sprite
+    noRot: true #needed for how i set up doors - .2 | 2026
+    sprite: _Carmine/Turf/Doors/invern_airlock_1.rsi

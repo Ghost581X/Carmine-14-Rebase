@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Made by InfraredBaron and used with his permission. Edited by .2.",
+  "size": {
+    "x": 64,
+    "y": 64
+  },
+  "states": [
+    {
+      "name": "unpowered",
+      "directions": 4
+    },
+    {
+      "name": "powered",
+      "directions": 4,
+      "delays": [
+          [
+              0.7,
+              0.7
+          ],
+          [
+              0.7,
+              0.7
+          ],
+          [
+              0.7,
+              0.7
+          ],
+          [
+              0.7,
+              0.7
+          ]
+      ]
+    },
+    {
+      "name": "maint_panel",
+      "directions": 4
+    }
+  ]
+}

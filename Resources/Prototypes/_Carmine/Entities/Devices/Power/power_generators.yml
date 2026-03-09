@@ -1,0 +1,272 @@
+#
+# You can use this Desmos sheet to calculate fuel burn rate values:
+# https://www.desmos.com/calculator/qcektq5dqs
+#
+
+# CONSOLIDAT SMALL GENERATOR
+- type: entity
+  name: "'CHIBRIT' compact generator"
+  description: |-
+    A staple of consolidat power systems in the sector.
+    Tops at 20 kW. Runs on hopes and dreams.
+  parent: PowerGeneratorSwitchableBase
+  id: GeneratorConsolidatSmall
+  suffix: Plasma, 20 kW
+  components:
+    - type: Sprite
+      sprite: _Carmine/Objects/Devices/consolidat_generator_small.rsi
+      layers:
+        - state: base #switches to `anim`` in genericVisualizer
+          map: [ "enum.GeneratorVisualLayers.Body" ]
+        - state: lights
+          map: [ "enum.GeneratorVisualLayers.Unlit" ]
+          shader: unshaded
+          visible: false
+    - type: GenericVisualizer
+      visuals:
+        enum.GeneratorVisuals.Running:
+          enum.GeneratorVisualLayers.Body:
+            True: { state: anim }
+            False: { state: base }
+          enum.GeneratorVisualLayers.Unlit:
+            True: { visible: true }
+            False: { visible: false }
+    - type: Machine
+      board: PortableGeneratorPacmanMachineCircuitboard
+    - type: FuelGenerator
+      minTargetPower: 5000
+      maxTargetPower: 20000
+      targetPower: 20000
+      optimalPower: 20000
+      # 15 minutes at max output
+      optimalBurnRate: 0.0333333
+      # a decent curve that goes up to about an hour at 5 kW.
+      fuelEfficiencyConstant: 0.75
+    - type: SolidFuelGeneratorAdapter
+      fuelMaterial: Plasma
+      multiplier: 0.01
+    - type: MaterialStorage
+      storageLimit: 3000
+      materialWhiteList: [Plasma]
+    - type: PortableGenerator
+      startChance: 0.8
+    - type: GeneratorExhaustGas
+      gasType: CarbonDioxide
+      # 2 moles of gas for every sheet of plasma.
+      moleRatio: 2
+    - type: PowerMonitoringDevice
+      group: Generator
+      loadNodes:
+        - output_hv
+        - output_mv
+      sprite: Structures/Power/Generation/portable_generator.rsi
+      state: base
+    - type: PowerSupplier
+      supplyRampRate: 5000
+      supplyRampTolerance: 1500
+    - type: AmbientSound
+      range: 5
+      volume: -5
+      sound:
+        path: /Audio/Ambience/Objects/engine_hum.ogg #CARMINETODO AUDIO better sound
+
+# CONSOLIDAT LARGE GENERATOR
+- type: entity
+  name: "'CARBUNE' large generator"
+  description: |-
+    A staple of consolidat power systems in the sector.
+    Tops at 50 kW. Runs on fears and nightmares.
+  parent: PowerGeneratorSwitchableBase
+  id: GeneratorConsolidatLarge
+  suffix: Plasma, 50 kW
+  components:
+    - type: Sprite
+      sprite: _Carmine/Objects/Devices/consolidat_generator_big.rsi
+      layers:
+        - state: base #switches to `anim`` in genericVisualizer
+          map: [ "enum.GeneratorVisualLayers.Body" ]
+        - state: lights
+          map: [ "enum.GeneratorVisualLayers.Unlit" ]
+          shader: unshaded
+          visible: false
+    - type: GenericVisualizer
+      visuals:
+        enum.GeneratorVisuals.Running:
+          enum.GeneratorVisualLayers.Body:
+            True: { state: anim }
+            False: { state: base }
+          enum.GeneratorVisualLayers.Unlit:
+            True: { visible: true }
+            False: { visible: false }
+    - type: Machine
+      board: PortableGeneratorPacmanMachineCircuitboard
+    - type: FuelGenerator
+      minTargetPower: 5000
+      maxTargetPower: 50000
+      targetPower: 50000
+      optimalPower: 50000
+      # 15 minutes at max output
+      optimalBurnRate: 0.0333333
+      # a decent curve that goes up to about an hour at 5 kW.
+      fuelEfficiencyConstant: 0.75
+    - type: SolidFuelGeneratorAdapter
+      fuelMaterial: Plasma
+      multiplier: 0.01
+    - type: MaterialStorage
+      storageLimit: 3000
+      materialWhiteList: [Plasma]
+    - type: PortableGenerator
+      startChance: 0.8
+    - type: GeneratorExhaustGas
+      gasType: CarbonDioxide
+      # 2 moles of gas for every sheet of plasma.
+      moleRatio: 2
+    - type: PowerMonitoringDevice
+      group: Generator
+      loadNodes:
+        - output_hv
+        - output_mv
+      sprite: Structures/Power/Generation/portable_generator.rsi
+      state: base
+    - type: PowerSupplier
+      supplyRampRate: 5000
+      supplyRampTolerance: 1500
+    - type: AmbientSound
+      range: 5
+      volume: -5
+      sound:
+        path: /Audio/Ambience/Objects/engine_hum.ogg #CARMINETODO AUDIO better sound
+
+# INVERN SMALL GENERATOR
+- type: entity
+  name: "GC-01 compact generator"
+  description: |-
+    A staple of Invern-Sykes power systems in the sector.
+    Tops at 20 kW. Needs a permit to operate.
+  parent: PowerGeneratorSwitchableBase
+  id: GeneratorInvernSykesSmall
+  suffix: Plasma, 20 kW
+  components:
+    - type: Sprite
+      sprite: _Carmine/Objects/Devices/invern_generator_small.rsi
+      layers:
+        - state: base #switches to `anim`` in genericVisualizer
+          map: [ "enum.GeneratorVisualLayers.Body" ]
+        - state: lights
+          map: [ "enum.GeneratorVisualLayers.Unlit" ]
+          shader: unshaded
+          visible: false
+    - type: GenericVisualizer
+      visuals:
+        enum.GeneratorVisuals.Running:
+          enum.GeneratorVisualLayers.Body:
+            True: { state: anim }
+            False: { state: base }
+          enum.GeneratorVisualLayers.Unlit:
+            True: { visible: true }
+            False: { visible: false }
+    - type: Machine
+      board: PortableGeneratorPacmanMachineCircuitboard
+    - type: FuelGenerator
+      minTargetPower: 5000
+      maxTargetPower: 20000
+      targetPower: 20000
+      optimalPower: 20000
+      # 15 minutes at max output
+      optimalBurnRate: 0.0333333
+      # a decent curve that goes up to about an hour at 5 kW.
+      fuelEfficiencyConstant: 0.75
+    - type: SolidFuelGeneratorAdapter
+      fuelMaterial: Plasma
+      multiplier: 0.01
+    - type: MaterialStorage
+      storageLimit: 3000
+      materialWhiteList: [Plasma]
+    - type: PortableGenerator
+      startChance: 0.8
+    - type: GeneratorExhaustGas
+      gasType: CarbonDioxide
+      # 2 moles of gas for every sheet of plasma.
+      moleRatio: 2
+    - type: PowerMonitoringDevice
+      group: Generator
+      loadNodes:
+        - output_hv
+        - output_mv
+      sprite: _Carmine/Objects/Devices/invern_generator_small.rsi
+      state: base
+    - type: PowerSupplier
+      supplyRampRate: 5000
+      supplyRampTolerance: 1500
+    - type: AmbientSound
+      range: 5
+      volume: -5
+      sound:
+        path: /Audio/Ambience/Objects/engine_hum.ogg #CARMINETODO AUDIO better sound
+
+# INVERN LARGE GENERATOR
+- type: entity
+  name: "GC-02 large generator"
+  description: |-
+    A staple of Invern-Sykes power systems in the sector.
+    Tops at 50 kW. Needs a master's degree to operate.
+  parent: PowerGeneratorSwitchableBase
+  id: GeneratorInvernSykesLarge
+  suffix: Plasma, 50 kW
+  components:
+    - type: Sprite
+      sprite: _Carmine/Objects/Devices/invern_generator_big.rsi
+      layers:
+        - state: base #switches to `anim`` in genericVisualizer
+          map: [ "enum.GeneratorVisualLayers.Body" ]
+        - state: lights
+          map: [ "enum.GeneratorVisualLayers.Unlit" ]
+          shader: unshaded
+          visible: false
+    - type: GenericVisualizer
+      visuals:
+        enum.GeneratorVisuals.Running:
+          enum.GeneratorVisualLayers.Body:
+            True: { state: anim }
+            False: { state: base }
+          enum.GeneratorVisualLayers.Unlit:
+            True: { visible: true }
+            False: { visible: false }
+    - type: Machine
+      board: PortableGeneratorPacmanMachineCircuitboard
+    - type: FuelGenerator
+      minTargetPower: 5000
+      maxTargetPower: 50000
+      targetPower: 50000
+      optimalPower: 50000
+      # 15 minutes at max output
+      optimalBurnRate: 0.0333333
+      # a decent curve that goes up to about an hour at 5 kW.
+      fuelEfficiencyConstant: 0.75
+    - type: SolidFuelGeneratorAdapter
+      fuelMaterial: Plasma
+      multiplier: 0.01
+    - type: MaterialStorage
+      storageLimit: 3000
+      materialWhiteList: [Plasma]
+    - type: PortableGenerator
+      startChance: 0.8
+    - type: GeneratorExhaustGas
+      gasType: CarbonDioxide
+      # 2 moles of gas for every sheet of plasma.
+      moleRatio: 2
+    - type: PowerMonitoringDevice
+      group: Generator
+      loadNodes:
+        - output_hv
+        - output_mv
+      sprite: _Carmine/Objects/Devices/invern_generator_big.rsi
+      state: base
+    - type: PowerSupplier
+      supplyRampRate: 5000
+      supplyRampTolerance: 1500
+    - type: AmbientSound
+      range: 5
+      volume: -5
+      sound:
+        path: /Audio/Ambience/Objects/engine_hum.ogg #CARMINETODO AUDIO better sound

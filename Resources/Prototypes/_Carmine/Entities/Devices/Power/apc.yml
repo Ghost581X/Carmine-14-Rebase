@@ -1,0 +1,37 @@
+# APC full/empty
+# CARMINE NOTE: sex maxcharge here
+- type: entity
+  parent: BaseAPC
+  id: APCFull
+  suffix: Basic, 50kJ
+  components:
+  - type: Battery
+    maxCharge: 50000
+    startingCharge: 50000
+
+- type: entity
+  parent: BaseAPC
+  id: APCEmpty
+  suffix: Basic, 50kJ, Empty
+  components:
+  - type: Battery
+    maxCharge: 50000
+    startingCharge: 0
+
+# Consolidat APC
+- type: entity
+  parent: APCFull
+  id: APCConsolidat
+  suffix: CONS, 50kJ
+  components:
+  - type: Sprite
+    sprite: _Carmine/Objects/Devices/cons_apc.rsi
+
+# Consolidat APC
+- type: entity
+  parent: APCFull
+  id: APCInvernSykes
+  suffix: INSY, 50kJ
+  components:
+  - type: Sprite
+    sprite: _Carmine/Objects/Devices/invern_apc.rsi

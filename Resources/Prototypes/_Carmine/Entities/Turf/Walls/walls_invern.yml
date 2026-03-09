@@ -1,0 +1,159 @@
+- type: entity
+  parent: BaseWall
+  id: WallInvernSykesInner1
+  name: inner hull
+  suffix: "200 HP"
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Walls/invernsykes_inner_1.rsi
+  - type: Icon
+    sprite: _Carmine/Turf/Walls/invernsykes_inner_1.rsi
+    state: full
+  - type: Construction
+    graph: Girder
+    node: reinforcedWall
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallicStrong
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+      - !type:ChangeConstructionNodeBehavior
+        node: girder
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+
+- type: entity
+  parent: BaseWall
+  id: WallInvernSykesOuter1
+  name: outer hull
+  suffix: "500 HP"
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Walls/invernsykes_outer_1.rsi
+  - type: Icon
+    sprite: _Carmine/Turf/Walls/invernsykes_outer_1.rsi
+    state: full
+  - type: Construction
+    graph: Girder
+    node: reinforcedWall
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallicStrong
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+    - trigger:
+        !type:DamageTrigger
+        damage: 250
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+      - !type:ChangeConstructionNodeBehavior
+        node: girder
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+
+- type: entity
+  parent: BaseWall
+  id: WallInvernSykesOuter2
+  name: outer hull
+  suffix: "500 HP"
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Walls/invernsykes_outer_2.rsi
+  - type: Icon
+    sprite: _Carmine/Turf/Walls/invernsykes_outer_2.rsi
+    state: full
+  - type: Construction
+    graph: Girder
+    node: reinforcedWall
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallicStrong
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+    - trigger:
+        !type:DamageTrigger
+        damage: 250
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+      - !type:ChangeConstructionNodeBehavior
+        node: girder
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+
+- type: entity
+  parent: BaseWall
+  id: WallInvernSykesArmored1
+  name: armored hull
+  suffix: "1000 HP"
+  components:
+  - type: Sprite
+    sprite: _Carmine/Turf/Walls/invernsykes_armored_1.rsi
+  - type: Icon
+    sprite: _Carmine/Turf/Walls/invernsykes_armored_1.rsi
+    state: full
+  - type: Construction
+    graph: Girder
+    node: reinforcedWall
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallicStrong
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+    - trigger:
+        !type:DamageTrigger
+        damage: 250
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+      - !type:ChangeConstructionNodeBehavior
+        node: girder
+      - !type:DoActsBehavior
+        acts: ["Destruction"]

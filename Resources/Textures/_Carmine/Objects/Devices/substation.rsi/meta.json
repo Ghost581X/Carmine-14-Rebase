@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Made by InfraredBaron and used with his permission. Edited by .2.",
+  "size": {
+    "x": 64,
+    "y": 64
+  },
+  "states": [
+    {
+      "name": "consolidat"
+    },
+    {
+      "name": "invern"
+    },
+    {
+      "name": "dead",
+      "delays": [
+          [
+              0.7,
+              0.7
+          ]
+      ]
+    },
+    {
+      "name": "charging",
+      "delays": [
+          [
+              0.7,
+              0.7
+          ]
+      ]
+    },
+    {
+      "name": "full",
+      "delays": [
+          [
+              0.7,
+              0.7
+          ]
+      ]
+    }
+  ]
+}
