@@ -1,0 +1,8 @@
+- type: entity
+  parent: ClothingBackpackBase
+  id: ClothingBackpackSatchelLeather
+  name: leather satchel
+  description: CARMINETODO
+  components:
+  - type: Sprite
+    sprite: Clothing/Back/Satchels/leather.rsi

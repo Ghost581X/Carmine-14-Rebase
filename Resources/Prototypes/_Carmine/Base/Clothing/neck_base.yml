@@ -1,0 +1,16 @@
+- type: entity
+  abstract: true
+  parent: Clothing
+  id: ClothingNeckBase
+  components:
+  - type: Item
+    size: Small
+  - type: Clothing
+    quickEquip: true
+    slots:
+    - neck
+  - type: Sprite
+    state: icon
+  - type: Tag
+    tags:
+    - WhitelistChameleon

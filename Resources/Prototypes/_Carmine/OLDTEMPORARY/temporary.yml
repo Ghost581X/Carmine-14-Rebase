@@ -71,15 +71,6 @@
     stateDoorClosed: bio_door
 
 - type: entity
-  parent: ClothingBackpackDuffel
-  id: ClothingBackpackDuffelMedical
-  name: medical duffel bag
-  description: A large duffel bag for holding extra medical supplies.
-  components:
-  - type: Sprite
-    sprite: Clothing/Back/Duffels/medical.rsi
-
-- type: entity
   abstract: true
   parent: BaseItem
   id: BaseAmmoProvider

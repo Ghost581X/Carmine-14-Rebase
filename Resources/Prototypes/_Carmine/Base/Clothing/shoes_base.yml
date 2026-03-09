@@ -1,0 +1,16 @@
+- type: entity
+  abstract: true
+  parent: Clothing
+  id: ClothingShoesBase
+  components:
+  - type: Clothing
+    slots:
+    - FEET
+  - type: Sprite
+    state: icon
+  - type: Item
+    size: Normal
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+  - type: ProtectedFromStepTriggers

@@ -1,0 +1,57 @@
+- type: entity
+  parent: ClothingMaskPullableBase
+  id: ClothingMaskGas
+  name: gas mask
+  description: A face-covering mask that can be connected to an air supply.
+  components:
+  - type: Sprite
+    sprite: Clothing/Mask/gas.rsi
+  - type: Clothing
+    sprite: Clothing/Mask/gas.rsi
+  - type: BreathMask
+  - type: IngestionBlocker
+  - type: IdentityBlocker
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+  - type: HideLayerClothing
+    layers:
+      Snout: Mask
+    hideOnToggle: true
+
+- type: entity
+  parent: ClothingMaskPullableBase
+  id: ClothingMaskSterile
+  name: sterile mask
+  description: A sterile mask designed to help prevent the spread of diseases.
+  components:
+  - type: Sprite
+    sprite: Clothing/Mask/sterile.rsi
+  - type: Clothing
+    sprite: Clothing/Mask/sterile.rsi
+  - type: IngestionBlocker
+  - type: Item
+    size: Tiny
+  - type: IdentityBlocker
+    coverage: MOUTH
+
+- type: entity
+  parent: ClothingMaskBase
+  id: ClothingMaskMuzzle
+  name: muzzle
+  description: To stop that awful noise.
+  components:
+  - type: Item
+    size: Tiny
+  - type: Sprite
+    sprite: Clothing/Mask/muzzle.rsi
+  - type: Clothing
+    sprite: Clothing/Mask/muzzle.rsi
+    equipDelay: 3
+    unequipDelay: 3
+  - type: IngestionBlocker
+  - type: AddAccentClothing
+    accent: MumbleAccent
+  - type: EmoteBlocker
+    blocksCategories:
+    - Vocal

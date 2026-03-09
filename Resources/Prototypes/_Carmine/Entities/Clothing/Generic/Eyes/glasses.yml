@@ -1,0 +1,34 @@
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesGlasses
+  name: glasses
+  description: A pair of spectacular spectacles with prescription lenses.
+  components:
+  - type: Sprite
+    sprite: Clothing/Eyes/Glasses/glasses.rsi
+  - type: Clothing
+    sprite: Clothing/Eyes/Glasses/glasses.rsi
+  - type: VisionCorrection
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesGlassesSunglasses
+  name: sun glasses
+  description: A pair of black sunglasses.
+  components:
+  - type: Sprite
+    sprite: Clothing/Eyes/Glasses/sunglasses.rsi
+  - type: Clothing
+    sprite: Clothing/Eyes/Glasses/sunglasses.rsi
+  - type: IdentityBlocker
+    coverage: EYES
+  - type: FlashImmunity
+  - type: EyeProtection
+    protectionTime: 5
+  - type: Tag
+    tags:
+    - Sunglasses
+    - WhitelistChameleon

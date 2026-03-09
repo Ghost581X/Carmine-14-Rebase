@@ -1,0 +1,35 @@
+- type: entity
+  parent: [ClothingEyesBase, BaseChameleon]
+  id: ClothingEyesChameleon # no flash immunity, sorry
+  name: sun glasses
+  description: Useful both for security and cargonia.
+  suffix: Chameleon
+  components:
+    - type: Tag
+      tags: # intentionally no WhitelistChameleon tag
+      - PetWearable
+    - type: Sprite
+      sprite: Clothing/Eyes/Glasses/sunglasses.rsi
+    - type: Clothing
+      sprite: Clothing/Eyes/Glasses/sunglasses.rsi
+    - type: ChameleonClothing
+      slot: [eyes]
+      default: ClothingEyesGlassesSunglasses
+
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesBlindfold
+  name: blindfold
+  description: The bind leading the blind.
+  components:
+  - type: Sprite
+    sprite: Clothing/Eyes/Misc/blindfold.rsi
+  - type: Clothing
+    sprite: Clothing/Eyes/Misc/blindfold.rsi
+    equipDelay: 3
+    unequipDelay: 3
+  - type: Blindfold
+  - type: Construction
+    graph: Blindfold
+    node: blindfold
+  - type: FlashImmunity

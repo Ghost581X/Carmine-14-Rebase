@@ -144,9 +144,6 @@
                # Storage whitelist: BodyBag, MachineArtifactCrusher
 
 - type: Tag
-  id: Sabre # Storage whitelist: ClothingBeltSheath. ItemMapper: ClothingBeltSheath
-
-- type: Tag
   id: Carp # CargoBounty: BountyCarp
 
 - type: Tag
@@ -1205,9 +1202,6 @@
 - type: Tag
   id: Spray # Storage whitelist: ClothingBeltJanitor, ClothingBeltMedical, JanitorialTrolley.
             # ItemMapper: ClothingBeltJanitor, ClothingBeltMedical, JanitorialTrolley
-
-- type: Tag
-  id: SprayNozzle # Storage whitelist: ClothingBackpackWaterTank. ItemMapper: ClothingBackpackWaterTank
 
 - type: Tag
   id: SpreaderIgnore # Used by SpreaderSystem to block spreading in a direction when a tagged airtight entity is on the same tile.

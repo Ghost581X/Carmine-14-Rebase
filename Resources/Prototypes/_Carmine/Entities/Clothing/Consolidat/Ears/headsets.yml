@@ -14,7 +14,7 @@
     layers:
     - state: crypt_gray
     - state: common_label
-    
+
 - type: entity
   parent: EncryptionKey
   id: EncryptionKeyAtaman
@@ -33,7 +33,7 @@
 #HEADSETS
 
 - type: entity
-  parent: ClothingHeadset
+  parent: ClothingHeadsetBase
   id: ClothingHeadsetConsolidat
   name: consolidat headset
   description: CARMINETODO
@@ -47,7 +47,7 @@
     sprite: Clothing/Ears/Headsets/mining.rsi
   - type: Clothing
     sprite: Clothing/Ears/Headsets/mining.rsi
-    
+
 - type: entity
   parent: ClothingHeadsetConsolidat
   id: ClothingHeadsetAtaman

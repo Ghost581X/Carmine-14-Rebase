@@ -1,0 +1,31 @@
+- type: entity
+  abstract: true
+  parent: Clothing
+  id: ClothingHeadBase
+  components:
+  - type: Clothing
+    slots:
+    - HEAD
+  - type: Sprite
+    state: icon
+  - type: Item
+    size: Small
+    storedRotation: -90
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHelmetBase
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+  - type: HideLayerClothing
+    layers:
+      HeadTop : HEAD
+      HeadSide : HEAD
+      Hair : HEAD #CARMINETODO actually do some real reparenting and allow for non-full helmets
+      FacialHair : HEAD

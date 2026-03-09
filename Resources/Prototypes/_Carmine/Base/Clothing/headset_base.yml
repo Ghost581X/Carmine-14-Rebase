@@ -1,0 +1,26 @@
+- type: entity
+  abstract: true
+  parent: Clothing
+  id: ClothingHeadsetBase
+  components:
+  - type: ContainerContainer
+    containers:
+      key_slots: !type:Container
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCommon
+  - type: Headset
+  - type: EncryptionKeyHolder
+    keySlots: 4
+  - type: Sprite
+    state: icon
+  - type: Item
+    size: Small
+  - type: Clothing
+    slots:
+    - ears
+    sprite: Clothing/Ears/Headsets/base.rsi
+  - type: GuideHelp
+    guides:
+    - Radio
