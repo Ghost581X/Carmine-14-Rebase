@@ -8,7 +8,15 @@
   icon: "JobIconPovoznik"
   supervisors: CARMINETODO
   access:
-  - Maintenance #CARMINETODO
+  - Consolidat
+  requirements:
+    - !type:FactionRequirement
+      requiredFaction: "IC"
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: ChatRank
+        rank: Povoznik
 
 - type: startingGear
   id: PovoznikGear

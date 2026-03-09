@@ -1,0 +1,15 @@
+- type: accessLevel
+  id: Hetman
+  name: Hetman  
+
+- type: accessLevel
+  id: Ataman
+  name: Ataman
+
+- type: accessLevel
+  id: Starshina
+  name: Starshina
+  
+- type: accessLevel
+  id: Consolidat
+  name: Consolidat

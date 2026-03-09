@@ -41,8 +41,6 @@
           tags:
           - FireAxe
   - type: Lock
-  - type: AccessReader
-    access: [["Command"], ["Maintenance"]]
 
 - type: entity
   parent: FireAxeCabinet

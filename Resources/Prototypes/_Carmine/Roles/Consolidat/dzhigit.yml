@@ -8,7 +8,18 @@
   icon: "JobIconDzhigit"
   supervisors: CARMINETODO
   access:
-  - Maintenance #CARMINETODO
+  - Consolidat
+  - Starshina
+  requirements:
+    - !type:FactionRequirement
+      requiredFaction: "IC"
+    - !type:SexRequirement
+      requiredSex: "Male"
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: ChatRank
+        rank: Dzhigit
 
 - type: startingGear
   id: DzhigitGear

@@ -8,7 +8,15 @@
   icon: "JobIconDoktor"
   supervisors: CARMINETODO
   access:
-  - Maintenance #CARMINETODO
+  - Consolidat
+  requirements:
+    - !type:FactionRequirement
+      requiredFaction: "IC"
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: ChatRank
+        rank: Doktor
 
 - type: startingGear
   id: DoktorGear

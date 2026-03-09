@@ -8,7 +8,16 @@
   icon: "JobIconNachalnik"
   supervisors: CARMINETODO
   access:
-  - Maintenance #CARMINETODO
+  - Consolidat
+  - Starshina
+  requirements:
+    - !type:FactionRequirement
+      requiredFaction: "IC"
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: ChatRank
+        rank: Nachalnik
 
 - type: startingGear
   id: NachalnikGear

@@ -72,6 +72,12 @@
   - type: Clickable
   - type: InteractionOutline
   - type: GroupExamine
+  - type: HideLayerClothing
+    layers:
+      HeadTop: HEAD
+      HeadSide: HEAD
+      Hair: HEAD #carminetodo: reparent this someday
+      FacialHair: HEAD
   - type: Clothing
     equipSound: /Audio/_Carmine/Foldsuits/airbag.ogg
     unequipSound: /Audio/_Carmine/Foldsuits/airbag_reversed.ogg

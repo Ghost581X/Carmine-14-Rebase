@@ -8,7 +8,15 @@
   icon: "JobIconCepnik"
   supervisors: CARMINETODO
   access:
-  - Maintenance #CARMINETODO
+  - Consolidat
+  requirements:
+    - !type:FactionRequirement
+      requiredFaction: "IC"
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: ChatRank
+        rank: Cepnik
 
 - type: startingGear
   id: CepnikGear

@@ -19,8 +19,6 @@
     color: "#3db83b"
     castShadows: false
     netsync: false
-  - type: AccessReader
-    access: [["Maintenance"]]
   - type: Sprite
     drawdepth: WallMountedItems
     sprite: Structures/Power/apc.rsi

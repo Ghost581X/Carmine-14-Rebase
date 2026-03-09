@@ -8,7 +8,18 @@
   icon: "JobIconHetman"
   supervisors: CARMINETODO
   access:
-  - Maintenance #CARMINETODO
+  - Hetman
+  - Ataman
+  - Starshina
+  - Consolidat
+  requirements:
+    - !type:FactionRequirement
+      requiredFaction: "IC"
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: ChatRank
+        rank: Hetman
 
 - type: startingGear
   id: HetmanGear

@@ -130,8 +130,6 @@
       arc: 360
     - type: StaticPrice
       price: 150
-    - type: AccessReader
-      access: [ [ "Maintenance" ] ]
       examinationText: access-reader-examination-functionality-restricted
     - type: PryUnpowered
       pryModifier: 0.5

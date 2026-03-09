@@ -20,9 +20,6 @@
         type: CryostorageBoundUserInterface
   - type: ActivatableUI
     key: enum.CryostorageUIKey.Key
-  - type: AccessReader
-    breakOnAccessBreaker: false
-    access: [["Maintenance"]]
     examinationText: access-reader-examination-functionality-restricted
   - type: InteractionOutline
   - type: Cryostorage

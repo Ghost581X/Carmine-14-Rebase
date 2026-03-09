@@ -8,7 +8,17 @@
   icon: "JobIconAtaman"
   supervisors: CARMINETODO
   access:
-  - Maintenance #CARMINETODO
+  - Ataman
+  - Starshina
+  - Consolidat
+  requirements:
+    - !type:FactionRequirement
+      requiredFaction: "IC"
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: ChatRank
+        rank: Ataman
 
 - type: startingGear
   id: AtamanGear

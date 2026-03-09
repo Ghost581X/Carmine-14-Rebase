@@ -407,8 +407,6 @@
     powerLoad: 1000
   - type: Computer
     board: ResearchComputerCircuitboard
-  - type: AccessReader
-    access: [["Maintenance"]]
   - type: PointLight
     radius: 1.5
     energy: 4.0
@@ -492,8 +490,6 @@
       state: generic_keys
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
-  - type: AccessReader
-    access: [[ "Maintenance" ]]
   - type: CommunicationsConsole
     title: comms-console-announcement-title-station
   - type: ActivatableUI

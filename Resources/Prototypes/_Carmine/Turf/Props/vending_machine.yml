@@ -14,7 +14,7 @@
   - type: DatasetVocalizer #CARMINETODO: MAKE ALL OF THESE FOR OURS
     dataset: BoozeOMatAds
   - type: SpeakOnUIClosed #CARMINETODO: MAKE ALL OF THESE FOR OURS
-    pack: BoozeOMatGoodbyes 
+    pack: BoozeOMatGoodbyes
   - type: Sprite
     sprite: _Carmine/Turf/Props/vending.rsi
     state: cigarette
@@ -26,8 +26,6 @@
 #      shader: unshaded
 #    - state: panel
 #      map: ["enum.WiresVisualLayers.MaintenancePanel"]
-#  - type: AccessReader
-#    access: [["Maintenance"]]
 #  - type: GuideHelp
 #    guides:
 #    - Drinks
@@ -48,7 +46,7 @@
   - type: DatasetVocalizer #CARMINETODO: MAKE ALL OF THESE FOR OURS
     dataset: BoozeOMatAds
   - type: SpeakOnUIClosed #CARMINETODO: MAKE ALL OF THESE FOR OURS
-    pack: BoozeOMatGoodbyes 
+    pack: BoozeOMatGoodbyes
   - type: Sprite
     sprite: _Carmine/Turf/Props/vending.rsi
     state: nuka_new
@@ -69,7 +67,7 @@
   - type: DatasetVocalizer #CARMINETODO: MAKE ALL OF THESE FOR OURS
     dataset: BoozeOMatAds
   - type: SpeakOnUIClosed #CARMINETODO: MAKE ALL OF THESE FOR OURS
-    pack: BoozeOMatGoodbyes 
+    pack: BoozeOMatGoodbyes
   - type: Sprite
     sprite: _Carmine/Turf/Props/vending.rsi
     state: nuka_old
@@ -90,7 +88,7 @@
   - type: DatasetVocalizer #CARMINETODO: MAKE ALL OF THESE FOR OURS
     dataset: BoozeOMatAds
   - type: SpeakOnUIClosed #CARMINETODO: MAKE ALL OF THESE FOR OURS
-    pack: BoozeOMatGoodbyes 
+    pack: BoozeOMatGoodbyes
   - type: Sprite
     sprite: _Carmine/Turf/Props/vending.rsi
     state: sarsaparilla
