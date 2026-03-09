@@ -1,4 +1,10 @@
 - type: npcFaction
+  id: Consolidat
+
+- type: npcFaction
+  id: InvernSykes
+
+- type: npcFaction
   id: Passive
 
 - type: npcFaction

@@ -210,3 +210,7 @@
       tags:
       - Meat
       - Ruminant
+
+- type: edgeSpreader
+  id: Kudzu
+  updatesPerSecond: 1

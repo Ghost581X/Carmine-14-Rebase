@@ -31,6 +31,10 @@
         maxVol: 600
         canReact: false
 
+- type: edgeSpreader
+  id: Smoke
+  updatesPerSecond: 8
+
 - type: entity
   parent: BaseFoam
   id: Smoke
@@ -136,6 +140,11 @@
   - type: FoamVisuals
     animationTime: 0.6
     animationState: m_foam-dissolve
+
+- type: edgeSpreader
+  id: MetalFoam
+  updatesPerSecond: 16
+  preventSpreadOnSpaced: false
 
 - type: entity
   id: IronMetalFoam

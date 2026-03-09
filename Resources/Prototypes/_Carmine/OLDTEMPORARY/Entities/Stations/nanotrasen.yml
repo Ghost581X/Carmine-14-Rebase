@@ -8,6 +8,23 @@
   categories: [ HideSpawnMenu ]
   components:
     - type: Transform
+
+- type: entity
+  id: ConsolidatStation
+  parent:
+    - StandardStation
+  categories: [ HideSpawnMenu ]
+  components:
     - type: NpcFactionMember
       factions:
-      - SimpleNeutral #CARMINETODO: split up into per-faction variants
+      - Consolidat
+
+- type: entity
+  id: InvernSykesStation
+  parent:
+  - StandardStation
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: NpcFactionMember
+    factions:
+    - InvernSykes

@@ -85,3 +85,7 @@
   - type: Tag
     tags:
     - DNASolutionScannable
+
+- type: edgeSpreader
+  id: Puddle
+  updatesPerSecond: 16
