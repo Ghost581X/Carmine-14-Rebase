@@ -4,12 +4,10 @@
     - BaseStation
     - BaseStationJobsSpawning
     - BaseStationRecords
-    - BaseStationAlertLevels
-    - BaseStationDeliveries
-    - BaseStationAllEventsEligible
+#    - BaseStationAllEventsEligible #CARMINETODO: reintroduce when readding events
   categories: [ HideSpawnMenu ]
   components:
     - type: Transform
     - type: NpcFactionMember
       factions:
-      - SimpleNeutral
+      - SimpleNeutral #CARMINETODO: split up into per-faction variants

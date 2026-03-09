@@ -240,38 +240,6 @@
   - type: Stack
     count: 1
 
-- type: entity
-  parent: BaseHealingItem
-  id: HealingToolbox
-  name: healing toolbox
-  description: A powerful toolbox imbued with robust energy. It can heal your wounds and fill you with murderous intent.
-  categories: [ DoNotMap ]
-  components:
-  - type: Sprite
-    sprite: Objects/Specific/Medical/healing_toolbox.rsi
-    state: icon
-  - type: Healing
-    damageContainers:
-    - Biological
-    damage:
-      groups: # these are all split across multiple types
-        Brute: -150
-        Burn: -150
-        Toxin: -150
-    bloodlossModifier: -20
-    delay: 1
-    selfHealPenaltyMultiplier: 0
-    healingBeginSound:
-      path: "/Audio/Items/Medical/ointment_begin.ogg"
-      params:
-        volume: 1.0
-        variation: 0.125
-    healingEndSound:
-      path: "/Audio/Items/Medical/ointment_end.ogg"
-      params:
-        volume: 1.0
-        variation: 0.125
-
 # Pills
 - type: entity
   name: pill
