@@ -1,3 +1,5 @@
 - type: roundAnnouncement
   id: Welcome
   sound: /Audio/Announcements/welcome.ogg
+
+#CARMINETODO: get a sound for this

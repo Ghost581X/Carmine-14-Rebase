@@ -1,8 +1,0 @@
-# this is a test for transferring some visual appearance stuff
-- type: polymorph
-  id: TestHumanMorph
-  configuration:
-    entity: MobHuman
-    transferName: true
-    transferHumanoidAppearance: true
-    inventory: Transfer

@@ -1,9 +1,0 @@
-- type: typingIndicator
-  id: default
-  typingState: default0
-  idleState: default3
-
-- type: typingIndicator
-  id: robot
-  typingState: robot0
-  idleState: robot3

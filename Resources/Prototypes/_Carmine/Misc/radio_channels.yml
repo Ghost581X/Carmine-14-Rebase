@@ -1,6 +1,6 @@
 - type: radioChannel
   id: Common
-  name: chat-radio-common
+  name: chat-radio-common #CARMINETODO: do shortband/broadband separation
   keycode: ";"
   frequency: 1459
   color: "#2cdb2c"
